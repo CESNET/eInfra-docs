@@ -7,6 +7,7 @@ Python features a dynamic type system and automatic memory management and suppor
 * [Documentation for Python 3.X][a]
 * [Documentation for Python 2.X][b]
 * [PEP 8 -- Style Guide for Python Code][c]
+* [Get into Python -- Tutorial][d]
 
 ## Python on the IT4Innovations Clusters
 
@@ -189,3 +190,4 @@ Successfully installed scipy-0.19.1
 [a]: https://docs.python.org/3/
 [b]: https://docs.python.org/2/
 [c]: https://www.python.org/dev/peps/pep-0008/
+[d]: https://jobtensor.com/Tutorial/Python/en/Introduction
