@@ -142,35 +142,6 @@ ACLs on a Lustre file system work exactly like ACLs on any Linux file system. Th
 
 For more information, see the [Access Control List][11] section of the documentation.
 
-```console
-[vop999@login1.salomon ~]$ umask 027
-[vop999@login1.salomon ~]$ mkdir test
-[vop999@login1.salomon ~]$ ls -ld test
-drwxr-x--- 2 vop999 vop999 4096 Nov 5 14:17 test
-[vop999@login1.salomon ~]$ getfacl test
-# file: test
-# owner: vop999
-# group: vop999
-user::rwx
-group::r-x
-other::---
-
-[vop999@login1.salomon ~]$ setfacl -m user:johnsm:rwx test
-[vop999@login1.salomon ~]$ ls -ld test
-drwxrwx---+ 2 vop999 vop999 4096 Nov 5 14:17 test
-[vop999@login1.salomon ~]$ getfacl test
-# file: test
-# owner: vop999
-# group: vop999
-user::rwx
-user:johnsm:rwx
-group::r-x
-mask::rwx
-other::---
-```
-
-Default ACL mechanism can be used to replace setuid/setgid permissions on directories. Setting a default ACL on a directory (-d flag to setfacl) will cause the ACL permissions to be inherited by any newly created file or subdirectory within the directory. Refer to this page for more information on Linux ACL at [Red Hat guide][c].
-
 ## Shared Workspaces
 
 ### Home
