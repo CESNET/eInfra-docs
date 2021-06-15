@@ -1,0 +1,256 @@
+site_name: IT4Innovations Documentation
+docs_dir: docs.it4i
+site_url: https://docs.it4i.cz/
+extra_css:
+   - src/css.css?id=2018100501
+   - https://unpkg.com/mermaid@7.0.5/dist/mermaid.css
+
+extra_javascript:
+   - https://unpkg.com/mermaid@7.0.5/dist/mermaid.min.js
+
+# Repository
+repo_name: sccs/docs.it4i.cz
+repo_url: https://code.it4i.cz/sccs/docs.it4i.cz
+
+# Copyright
+copyright: Copyright (c) 2013-__YEAR__ IT4Innovations__VERSION__
+
+theme:
+  name: material
+  custom_dir: material
+  language: 'en'
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  features:
+    - navigation.tabs
+    #- tabs
+    #- instant
+
+  icon:
+    logo: fontawesome/solid/book-open
+    repo: fontawesome/brands/gitlab
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+
+  favicon: img/favicon.ico
+
+nav:
+  - General:
+    - Home: index.md
+    - Obtaining Login Credentials: general/obtaining-login-credentials/obtaining-login-credentials.md
+    - Accessing the Clusters: general/shell-and-data-access.md
+    - Applying for Resources: general/applying-for-resources.md
+    - Certificates FAQ: general/obtaining-login-credentials/certificates-faq.md
+    - Resource Allocation and Job Execution: 
+      - Introduction: general/resource_allocation_and_job_execution.md
+      - Resources Allocation Policy: general/resources-allocation-policy.md
+      - Job Priority: general/job-priority.md
+      - Job Submission and Execution: general/job-submission-and-execution.md
+      - Capacity Computing: general/capacity-computing.md
+    - Connect to the Clusters:
+      - OpenSSH Keys (UNIX): general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
+      - PuTTY (Windows): general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
+      - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
+      - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
+      - VPN Access: general/accessing-the-clusters/vpn-access.md
+    - Satisfaction and Feedback: general/feedback.md  
+    - PRACE User Support: prace.md
+    - API Documentation: apiv1.md
+    - Withdrawal from service: anselm-salomon-shutdown.md
+    - PROJECT Storage Availability: project-storage-availability.md
+  - Storage:
+    - PROJECT: storage/project-storage.md
+    - CESNET: storage/cesnet-storage.md
+  - Clusters:
+    - Barbora:          
+      - Introduction: barbora/introduction.md
+      - Hardware Overview: barbora/hardware-overview.md
+      - Compute Nodes: barbora/compute-nodes.md
+      - Storage: barbora/storage.md
+      - Network: barbora/network.md
+      - Visualization Servers: barbora/visualization.md
+    - NVIDIA DGX-2:
+      - Introduction: dgx2/introduction.md
+      - Accessing the DGX-2: dgx2/accessing.md
+      - Resource Allocation and Job Execution: dgx2/job_execution.md
+      - Software deployment: dgx2/software.md
+    - Salomon: 
+      - Introduction: salomon/introduction.md
+      - Hardware Overview: salomon/hardware-overview.md
+      - Compute Nodes: salomon/compute-nodes.md
+      - Network:
+        - InfiniBand Network: salomon/network.md
+        - IB Single-Plane Topology: salomon/ib-single-plane-topology.md
+        - 7D Enhanced Hypercube: salomon/7d-enhanced-hypercube.md
+      - Storage: salomon/storage.md
+      - Visualization Servers: salomon/visualization.md
+    - Archive:
+        - Introduction: archive/archive-intro.md
+        - Anselm:
+          - Introduction: anselm/introduction.md
+          - Hardware Overview: anselm/hardware-overview.md
+          - Compute Nodes: anselm/compute-nodes.md
+          - Storage: anselm/storage.md
+          - Network: anselm/network.md
+  - Software:
+    - Environment and Modules: environment-and-modules.md
+    - Modules:
+      - New Software Installation Request: software/modules/new-software.md      
+      - Lmod Environment: software/modules/lmod.md
+      - Intel Xeon Phi Environment: software/mic/mic_environment.md
+      - Modules Matrix: modules-matrix.md
+      - Job Features: job-features.md
+      - Available Barbora Modules: modules-barbora.md
+      - Available Salomon Modules: modules-salomon.md
+      - Available Salomon Modules on UV: modules-salomon-uv.md
+      - Available Salomon Modules on PHI Cards: modules-salomon-phi.md
+      - Available DGX-2 Modules: modules-dgx.md  
+    - ISV Licenses: software/isv_licenses.md
+    - CAE:
+      - COMSOL:
+        - COMSOL: software/cae/comsol/comsol-multiphysics.md
+        - Licensing and Available Versions: software/cae/comsol/licensing-and-available-versions.md
+    - Chemistry:
+      - VASP: software/chemistry/vasp.md
+      - Gaussian: software/chemistry/gaussian.md
+      - Molpro: software/chemistry/molpro.md
+      - NWChem: software/chemistry/nwchem.md
+      - Orca: software/chemistry/orca.md
+      - Phono3py: software/chemistry/phono3py.md
+      - Phonopy: software/chemistry/phonopy.md
+    - Compilers: software/compilers.md
+    - Data Science:
+        - Dask: software/data-science/dask.md
+    - Debuggers:
+      - Introduction: software/debuggers/introduction.md
+      - Aislinn: software/debuggers/aislinn.md
+      - Allinea Forge (DDT,MAP): software/debuggers/allinea-ddt.md
+      - Allinea Performance Reports: software/debuggers/allinea-performance-reports.md
+      - CUBE: software/debuggers/cube.md
+      - Intel Performance Counter Monitor: software/debuggers/intel-performance-counter-monitor.md
+      - Intel VTune Amplifier XE: software/debuggers/intel-vtune-amplifier.md
+      - Intel VTune Profiler: software/debuggers/intel-vtune-profiler.md  
+      - PAPI: software/debuggers/papi.md
+      - Scalasca: software/debuggers/scalasca.md
+      - Score-P: software/debuggers/score-p.md
+      - Total View: software/debuggers/total-view.md
+      - Valgrind: software/debuggers/valgrind.md
+      - Vampir: software/debuggers/vampir.md
+    - GPU:
+      - NVIDIA CUDA: software/nvidia-cuda.md
+    - Intel:
+      - Intel Suite:
+        - Introduction: software/intel/intel-suite/intel-parallel-studio-introduction.md
+        - Intel Advisor: software/intel/intel-suite/intel-advisor.md
+        - Intel Compilers: software/intel/intel-suite/intel-compilers.md
+        - Intel Debugger: software/intel/intel-suite/intel-debugger.md
+        - Intel IPP: software/intel/intel-suite/intel-integrated-performance-primitives.md
+        - Intel Inspector: software/intel/intel-suite/intel-inspector.md
+        - Intel MKL: software/intel/intel-suite/intel-mkl.md
+        - Intel TBB: software/intel/intel-suite/intel-tbb.md
+        - Intel Trace Analyzer and Collector: software/intel/intel-suite/intel-trace-analyzer-and-collector.md
+      - Intel Xeon Phi:
+        - Intel Xeon Phi Salomon: software/intel/intel-xeon-phi-salomon.md
+    - Machine Learning:
+      - Introduction: software/machine-learning/introduction.md
+      - TensorFlow: software/machine-learning/tensorflow.md
+    - MPI:
+      - Introduction: software/mpi/mpi.md
+      - OpenMPI Examples: software/mpi/ompi-examples.md
+      - MPI4Py (MPI for Python): software/mpi/mpi4py-mpi-for-python.md
+      - Running OpenMPI: software/mpi/running_openmpi.md
+      - Running MPICH2: software/mpi/running-mpich2.md
+    - Numerical Languages:
+      - Introduction: software/numerical-languages/introduction.md
+      - Clp: salomon/software/numerical-libraries/Clp.md
+      - R: software/numerical-languages/r.md
+      - Matlab: software/numerical-languages/matlab.md
+      - Matlab 2013-2014: software/numerical-languages/matlab_1314.md
+      - Octave: software/numerical-languages/octave.md
+      - OpenCoarrays: software/numerical-languages/opencoarrays.md
+    - Numerical Libraries:
+      - FFTW: software/numerical-libraries/fftw.md
+      - GSL: software/numerical-libraries/gsl.md
+      - HDF5: software/numerical-libraries/hdf5.md
+      - Intel Numerical Libraries: software/numerical-libraries/intel-numerical-libraries.md
+      - PETSc: software/numerical-libraries/petsc.md
+      - Trilinos: software/numerical-libraries/trilinos.md
+    - Languages:
+      - Java: software/lang/java.md
+      - C#: software/lang/csc.md
+      - Python: software/lang/python.md
+      - Python-Conda: software/lang/conda.md
+      - JuliaLang: software/lang/julialang.md
+    - Phys:
+      - LMGC90: salomon/software/phys/LMGC90.md
+      - PragTic: salomon/software/phys/PragTic.md
+    - Tools:
+      - ANSYS:
+        - Introduction: software/tools/ansys/ansys.md
+        - ANSYS CFX: software/tools/ansys/ansys-cfx.md
+        - ANSYS Fluent: software/tools/ansys/ansys-fluent.md
+        - ANSYS LS-DYNA: software/tools/ansys/ansys-ls-dyna.md
+        - ANSYS MAPDL: software/tools/ansys/ansys-mechanical-apdl.md
+        - LS-DYNA: software/tools/ansys/ls-dyna.md
+        - Workbench: software/tools/ansys/workbench.md
+        - Setting License Preferences: software/tools/ansys/licensing.md
+        - Licensing and Available Versions: software/tools/ansys/setting-license-preferences.md
+      - EasyBuild:
+        - Introduction: software/tools/easybuild.md
+        - Generating Container Recipes and Images: software/tools/easybuild-images.md
+      - Singularity Container:
+        - Singularity: software/tools/singularity.md
+        - Singularity on IT4Innovations: software/tools/singularity-it4i.md
+      - Spack: software/tools/spack.md
+      - Virtualization: software/tools/virtualization.md
+    - Visualisation:
+      - GPI-2: software/viz/gpi2.md
+      - OpenFOAM: software/viz/openfoam.md
+      - ParaView: software/viz/paraview.md
+      - In situ: software/viz/insitu.md
+      - NICE DCV: software/viz/NICEDCVsoftware.md
+      - VirtualGL: software/viz/vgl.md
+      - VESTA: software/viz/vesta.md
+    - PBS Pro Documentation: pbspro.md
+
+extra:
+  disqus: 'test-3whnesz3gq'
+  social:
+    - icon: 'fontawesome/brands/gitlab'
+      link: 'https://code.it4i.cz/sccs/docs.it4i.cz'
+    - icon: fontawesome/solid/globe-europe
+      link: https://www.it4i.cz
+
+plugins:
+  - search:
+      separator: '[\s\.]+'
+      lang:
+        - en
+
+markdown_extensions:
+  - codehilite
+  - markdown.extensions.admonition:
+  - pymdownx.arithmatex:
+  - markdown.extensions.toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.snippets:
+      base_path: snippets
+  - pymdownx.tabbed:
+  - pymdownx.superfences
+
+google_analytics:
+  - 'UA-90498826-1'
+  - 'auto'

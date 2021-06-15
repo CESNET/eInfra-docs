@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"lint-md": "remark ."
+	},
+
+	"remarkConfig": {
+		"presets": ["lint-recommended"]
+	}
+}

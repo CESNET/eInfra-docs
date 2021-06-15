@@ -1,0 +1,54 @@
+{% import "partials/language.html" as lang with context %}
+<nav class="md-nav md-nav--secondary" aria-label="{{ lang.t('toc.title') }}">
+  {% set toc_ = page.toc %}
+  {% if toc_ | first is defined and "\x3ch1 id=" in page.content %}
+    {% set toc_ = (toc_ | first).children %}
+  {% endif %}
+  {% if page.url == '' %}
+    {% set it4i_link = config.repo_url + '/edit/master/docs.it4i/index.md' %}
+    {% set it4i_page = '/index.md' %}
+    {% set it4i_url = 'https://docs.it4i.cz' %}
+  {% else %}
+    {% set it4i_link = config.repo_url + '/edit/master/docs.it4i/' + page.url.rstrip('/') + '.md' %}
+    {% set it4i_page = page.abs_url.rstrip('index.html').rstrip('/') + '.md' %}
+    {% set it4i_url = 'https://docs.it4i.cz' +  page.abs_url %}
+  {% endif %}
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        {% include ".icons/material/arrow-left.svg" %}
+      </span>
+      {{ lang.t("toc.title") }}
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      {% for toc_item in toc_ %}
+        {% include "partials/toc-item.html" %}
+      {% endfor %}
+    </ul>
+    <label class="md-nav__title">Actions</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href="{{ it4i_link }}" title="Edit This Page" class="md-nav__it4i_link" target="_blank">
+        <span class="md-nav__icon md-icon">
+          {% include ".icons/fontawesome/solid/pen.svg" %}
+        </span>
+	Edit This Page
+      </a>
+    </li>
+    <li class="md-nav__item">
+      <a href="https://code.it4i.cz/sccs/docs.it4i.cz/issues/new?issue%5Bdescription%5D=Requested change in page [{{ it4i_page }}]({{ it4i_url }}) /cc @hrb33 @kru0052" title="Request Change" class="md-nav__it4i_link" target="_blank">
+        <span class="md-nav__icon md-icon">
+          {% include ".icons/fontawesome/solid/check.svg" %}
+        </span>
+	Request Change
+      </a>
+    </li>
+    <li class="md-nav__item">
+      <a href="https://support.it4i.cz/rt" title="Get Support" class="md-nav__it4i_link" target="_blank">
+        <span class="md-nav__icon md-icon">
+          {% include ".icons/fontawesome/regular/question-circle.svg" %}
+        </span>
+	Get Support
+      </a>
+    </li>
+    </ul>
+</nav>
