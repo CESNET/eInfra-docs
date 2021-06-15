@@ -8,7 +8,7 @@ versions of popular Python data science libraries like
 [Pandas](https://docs.dask.org/en/latest/dataframe.html).
 
 !!! tip
-   For links to Python documentation, style guide, and introductory tutorial, see the [Python page][a]. 
+    For links to Python documentation, style guide, and introductory tutorial, see the [Python page][a]. 
 
 ## Installation
 
