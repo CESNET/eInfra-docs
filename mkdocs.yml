@@ -73,6 +73,9 @@ nav:
   - Storage:
     - PROJECT: storage/project-storage.md
     - CESNET: storage/cesnet-storage.md
+    - Access Control List:
+      - Standard File ACL: storage/standard-file-acl.md
+      - NFSv4 File ACL: storage/nfs4-file-acl.md
   - Clusters:
     - Barbora:          
       - Introduction: barbora/introduction.md
