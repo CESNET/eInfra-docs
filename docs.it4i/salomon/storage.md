@@ -138,7 +138,9 @@ $ man du
 
 Extended ACLs provide another security mechanism beside the standard POSIX ACLs which are defined by three entries (for owner/group/others). Extended ACLs have more than the three basic entries. In addition, they also contain a mask entry and may contain any number of named user and named group entries.
 
-ACLs on a Lustre file system work exactly like ACLs on any Linux file system. They are manipulated with the standard tools in the standard manner. Below, we create a directory and allow a specific user access.
+ACLs on a Lustre file system work exactly like ACLs on any Linux file system. They are manipulated with the standard tools in the standard manner.
+
+For more information, see the [Access Control List][11] section of the documentation.
 
 ```console
 [vop999@login1.salomon ~]$ umask 027
@@ -408,6 +410,7 @@ N = number of compute nodes in the job.
 [8]: #scratch-filesystem
 [9]: #shared-workspaces
 [10]: ../general/obtaining-login-credentials/obtaining-login-credentials.md
+[11]: ../storage/standard-file-acl.md
 
 [c]: https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.0/html/Administration_Guide/ch09s05.html
 [d]: https://support.it4i.cz/rt
