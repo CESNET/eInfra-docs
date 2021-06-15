@@ -212,26 +212,9 @@ To have a better understanding of previous commands, you can read man pages:
 
 Extended ACLs provide another security mechanism beside the standard POSIX ACLs, which are defined by three entries (for owner/group/others). Extended ACLs have more than the three basic entries. In addition, they also contain a mask entry and may contain any number of named user and named group entries.
 
-ACLs on a Lustre file system work exactly like ACLs on any Linux file system. They are manipulated with the standard tools in the standard manner. Below, we create a directory and allow a specific user access.
+ACLs on a Lustre file system work exactly like ACLs on any Linux file system. They are manipulated with the standard tools in the standard manner.
 
-* [nfs4_setfacl][e]
-* [nfs4_getfacl][l]
-
-```console
-vop999@login1:~$ nfs4_getfacl test
-# file: test
-A::OWNER@:rwaxtTcCy
-A::GROUP@:rwatcy
-A::EVERYONE@:rtcy
-vop999@login1:~$ nfs4_setfacl -a A::GROUP@:RWX test
-vop999@login1:~$ nfs4_getfacl test
-# file: test
-A::OWNER@:rwaxtTcCy
-A::GROUP@:rwaxtcy
-A::EVERYONE@:rtcy
-```
-
-Default ACL mechanism can be used to replace setuid/setgid permissions on directories. Setting a default ACL on a directory will cause the ACL permissions to be inherited by any newly created file or subdirectory within the directory.
+For more information, see the [Access Control List][7] section of the documentation.
 
 ## Local Filesystems
 
@@ -257,6 +240,7 @@ Each node is equipped with RAMDISK storage accessible at /tmp, /lscratch and /ra
 [4]: ../general/obtaining-login-credentials/obtaining-login-credentials.md
 [5]: #project-file-system
 [6]: ../storage/project-storage.md
+[7]: ../storage/standard-file-acl.md
 
 [a]: http://www.nas.nasa.gov
 [b]: http://www.nas.nasa.gov/hecc/support/kb/Lustre_Basics_224.html#striping
