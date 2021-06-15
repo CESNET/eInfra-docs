@@ -7,6 +7,9 @@ versions of popular Python data science libraries like
 [numpy](https://docs.dask.org/en/latest/array.html) or
 [Pandas](https://docs.dask.org/en/latest/dataframe.html).
 
+!!! tip
+   For links to Python documentation, style guide, and introductory tutorial, see the [Python page][a]. 
+
 ## Installation
 
 To install Dask, load a recent version of Python 3 and install Dask using `pip`. We heavily
@@ -278,3 +281,5 @@ If you need to run a large amount of tasks and Dask does not perform well enough
 use [RSDS](https://github.com/It4innovations/rsds). It is our version of Dask which is optimized
 for HPC use cases, and it should provide better scaling than Dask. You can read more about RSDS
 in this [article](https://arxiv.org/abs/2010.11105).
+
+[a]: https://docs.it4i.cz/software/lang/python/#python
