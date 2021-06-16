@@ -803,6 +803,8 @@ node-pre-gyp
 npm
  - node_modules/spawn-sync/README.md
 iojs
->>>>>>> readme
 UCX
 Dask-ssh
+SCRATCH
+HOME
+PROJECT

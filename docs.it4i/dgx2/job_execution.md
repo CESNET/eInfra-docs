@@ -2,23 +2,14 @@
 
 To run a job, computational resources of DGX-2 must be allocated.
 
-DGX-2 uses an independent PBS scheduler. To access the scheduler, load the DGX-2 module:
-
-```console
-$ml DGX-2
-```
-
 ## Resources Allocation Policy
 
 The resources are allocated to the job in a fair-share fashion, subject to constraints set by the queue. The queue provides prioritized and exclusive access to computational resources.
 
-* **qdgx**, the queue for DGX-2 machine
+The queue for the DGX-2 machine is called **qdgx**.
 
 !!! note
-    Maximum walltime of a job is **48** hours.
-
-!!! note
-    The qdgx queue is configured to run one job and accept one job in a queue per user.
+    The qdgx queue is configured to run one job and accept one job in a queue per user with the maximum walltime of a job being **48** hours.
 
 ## Job Submission and Execution
 
@@ -28,9 +19,9 @@ The `qsub` submits the job into the queue. The command creates a request to the 
 
 When allocating computational resources for the job, specify:
 
-1. a queue for your job (the default is **qdgx**)
-1. the maximum wall time allocated to your calculation (default is **4 hour**, maximum is **48 hour**)
-1. a Jobscript or interactive switch
+1. a queue for your job (the default is **qdgx**);
+1. the maximum wall time allocated to your calculation (default is **4 hour**, maximum is **48 hour**);
+1. a jobscript or interactive switch.
 
 !!! info
     You can access the DGX PBS scheduler by loading the "DGX-2" module.
@@ -40,16 +31,14 @@ Submit the job using the `qsub` command:
 **Example**
 
 ```console
-[kru0052@login4.salomon ~]$ ml DGX-2
-PBS 18.1.3 for DGX-2 machine
-[kru0052@login4.salomon ~]$ qsub -q qdgx -l walltime=02:00:00 -I
-qsub: waiting for job 258.ldgx to start
-qsub: job 258.ldgx ready
+[kru0052@login2.barbora ~]$ qsub -q qdgx -l walltime=02:00:00 -I
+qsub: waiting for job 258.dgx to start
+qsub: job 258.dgx ready
 
-kru0052@dgx:~$ nvidia-smi
-Thu Mar 14 07:46:32 2019
+kru0052@cn202:~$ nvidia-smi
+Wed Jun 16 07:46:32 2021
 +-----------------------------------------------------------------------------+
-| NVIDIA-SMI 410.104      Driver Version: 410.104      CUDA Version: 10.0     |
+|  NVIDIA-SMI 465.19.01    Driver Version: 465.19.01    CUDA Version: 11.3    |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
@@ -102,10 +91,7 @@ Thu Mar 14 07:46:32 2019
 |  15  Tesla V100-SXM3...  On   | 00000000:E7:00.0 Off |                    0 |
 | N/A   34C    P0    50W / 350W |      0MiB / 32480MiB |      0%      Default |
 +-------------------------------+----------------------+----------------------+
-kru0052@dgx:~$ exit
-[kru0052@login4.salomon ~]$ ml purge
-PBS 13.1.1 for cluster Salomon
-[kru0052@login4.salomon ~]$
+kru0052@cn202:~$ exit
 ```
 
 !!! tip
@@ -124,13 +110,11 @@ to download the container via singularity, see the example below:
 #### Example - Singularity Run Tensorflow
 
 ```console
-[kru0052@login4.salomon ~]$ ml DGX-2
-PBS 18.1.3 for DGX-2 machine
-$ qsub -q qdgx -l walltime=01:00:00 -I
-qsub: waiting for job 96.ldgx to start
-qsub: job 96.ldgx ready
+[kru0052@login2.barbora ~]$ qsub -q qdgx -l walltime=01:00:00 -I
+qsub: waiting for job 96.dgx to start
+qsub: job 96.dgx ready
 
-kru0052@dgx:~$ singularity shell docker://nvcr.io/nvidia/tensorflow:19.02-py3
+kru0052@cn202:~$ singularity shell docker://nvcr.io/nvidia/tensorflow:19.02-py3
 Singularity tensorflow_19.02-py3.sif:~>
 Singularity tensorflow_19.02-py3.sif:~> mpiexec --bind-to socket -np 16 python /opt/tensorflow/nvidia-examples/cnn/resnet.py --layers=18 --precision=fp16 --batch_size=512
 PY 3.5.2 (default, Nov 12 2018, 13:43:14)
@@ -164,10 +148,7 @@ PY 3.5.2 (default, Nov 12 2018, 13:43:14)
     70  70.0 30763.2  0.001  0.324 0.10889
     80  80.0 30845.5  0.001  0.324 0.02988
     90  90.0 26350.9  0.001  0.324 0.00025
-kru0052@dgx:~$ exit
-[kru0052@login4.salomon ~]$ ml purge
-PBS 13.1.1 for cluster Salomon
-[kru0052@login4.salomon ~]$
+kru0052@cn202:~$ exit
 ```
 
 **GPU stat**
