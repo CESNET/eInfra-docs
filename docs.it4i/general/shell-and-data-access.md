@@ -7,6 +7,16 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 !!! note
     The **cluster-name.it4i.cz** alias is currently not available through VPN connection. Use **loginX.cluster-name.it4i.cz** when connected to VPN.
 
+### Karolina Cluster
+
+| Login address           | Port | Protocol | Login node                            |
+| ----------------------- | ---- | -------- | ------------------------------------- |
+| karolina.it4i.cz        | 22   | SSH      | round-robin DNS record for login[1-4] |
+| login1.karolina.it4i.cz | 22   | SSH      | login1                                |
+| login2.karolina.it4i.cz | 22   | SSH      | login2                                |
+| login3.karolina.it4i.cz | 22   | SSH      | login3                                |
+| login4.karolina.it4i.cz | 22   | SSH      | login4                                |
+
 ### Barbora Cluster
 
 | Login address             | Port | Protocol | Login node                            |
@@ -101,9 +111,19 @@ Last login: Tue Jul 9 15:57:38 2013 from your-host.example.com
 
 Data in and out of the system may be transferred by SCP and SFTP protocols.
 
+### Karolina Cluster
+
+| Address                 | Port | Protocol  |
+| ----------------------- | ---- | --------- |
+| karolina.it4i.cz        | 22   | SCP, SFTP |
+| login1.karolina.it4i.cz | 22   | SCP, SFTP |
+| login2.karolina.it4i.cz | 22   | SCP, SFTP |
+| login3.karolina.it4i.cz | 22   | SCP, SFTP |
+| login4.karolina.it4i.cz | 22   | SCP, SFTP |
+
 ### Barbora Cluster
 
-| Address                  | Port | Protocol |
+| Address                   | Port | Protocol |
 | ------------------------- | ---- | ------- |
 | barbora.it4i.cz           | 22   | SCP     |
 | login1.barbora.it4i.cz    | 22   | SCP     |

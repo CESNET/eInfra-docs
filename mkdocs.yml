@@ -77,6 +77,13 @@ nav:
       - Standard File ACL: storage/standard-file-acl.md
       - NFSv4 File ACL: storage/nfs4-file-acl.md
   - Clusters:
+    - Karolina:          
+      - Introduction: karolina/introduction.md
+      - Hardware Overview: karolina/hardware-overview.md
+      - Compute Nodes: karolina/compute-nodes.md
+      - Storage: karolina/storage.md
+      - Network: karolina/network.md
+      - Visualization Servers: karolina/visualization.md
     - Barbora:          
       - Introduction: barbora/introduction.md
       - Hardware Overview: barbora/hardware-overview.md
