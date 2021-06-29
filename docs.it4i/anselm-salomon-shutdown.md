@@ -1,7 +1,7 @@
 # Anselm and Salomon Supercomputers Withdrawal From Service
 
 !!! note
-    Content updated on 25.5.2021
+    Content updated on 29.6.2021
 
 Due to installation of the new Karolina supercomputer, the **Anselm supercomputer was withdrawn from service on 25.1.2021**. The Salomon supercomputer may run at reduced capacity as of 1.3.2021. The Barbora and DGX-2 supercomputers continue regular operation.
 
