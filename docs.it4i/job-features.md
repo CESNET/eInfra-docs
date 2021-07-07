@@ -65,7 +65,7 @@ The Global RAM disk allows for high performance sharing of data among compute no
 | ------------------ | --------------------------------------------------------------------------|
 | Mountpoint         | /mnt/global_ramdisk                                                       |
 | Accesspoint        | /mnt/global_ramdisk                                                       |
-| Capacity           | Salomon (N*110)GB<br>Barbora (N*180)GB                                    |
+| Capacity           | Salomon (Nx110)GB<br>Barbora (Nx180)GB                                    |
 | User quota         | none                                                                      |
 
 N = number of compute nodes in the job.
