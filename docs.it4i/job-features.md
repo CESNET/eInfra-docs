@@ -18,11 +18,58 @@ $ qsub ... -l vtune=version_string
 
 ## Global RAM Disk
 
-Create a global shared file system consisting of RAM disks of allocated nodes. File-system is mounted on /mnt/global_ramdisk.
+The Global RAM disk deploys BeeGFS On Demand parallel filesystem,
+using local (i.e. allocated nodes') RAM disks as a storage backend.
+
+The Global RAM disk is mounted at `/mnt/global_ramdisk`.
 
 ```console
 $ qsub ... -l global_ramdisk=true
 ```
+
+![Global RAM disk](../img/global_ramdisk.png)
+
+### Example
+
+```console
+$ qsub -q qprod -l select=4,global_ramdisk=true ./jobscript
+```
+
+This command submits a 4-node job in the `qprod` queue;
+once running, a 440GB RAM disk shared across the 4 nodes will be created.
+The RAM disk will be accessible at `/mnt/global_ramdisk`
+and files written to this RAM disk will be visible on all 4 nodes.
+
+The file system is private to a job and shared among the nodes,
+created when the job starts and deleted at the job's end.
+
+!!! note
+    The Global RAM disk will be deleted immediately after the calculation end.
+    Users should take care to save the output data from within the jobscript.
+
+The files on the Global RAM disk will be equally striped across all the nodes, using 512k stripe size.
+Check the Global RAM disk status:
+
+```console
+$ beegfs-df -p /mnt/global_ramdisk
+$ beegfs-ctl --mount=/mnt/global_ramdisk --getentryinfo /mnt/global_ramdisk
+```
+
+Use Global RAM disk in case you need very large RAM disk space.
+The Global RAM disk allows for high performance sharing of data among compute nodes within a job.
+
+!!! warning
+     Use of Global RAM disk file system is at the expense of operational memory.
+
+| Global RAM disk    |                                                                           |
+| ------------------ | --------------------------------------------------------------------------|
+| Mountpoint         | /mnt/global_ramdisk                                                       |
+| Accesspoint        | /mnt/global_ramdisk                                                       |
+| Capacity           | (N*110)GB                                                                 |
+| Throughput         | 3*(N+1)GB/s, 2GB/s single POSIX thread                                    |
+| User quota         | none                                                                      |
+
+N = number of compute nodes in the job.
 
 !!! Warning
     Available on Salomon and Barbora nodes only.
