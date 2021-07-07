@@ -224,7 +224,12 @@ Each node is equipped with local /tmp RAMDISK directory. The /tmp directory shou
 
 ### SCRATCH and RAMDISK
 
-Each node is equipped with RAMDISK storage accessible at /tmp, /lscratch and /ramdisk . The RAMDISK capacity is 180GB. Data placed on RAMDISK occupy the node RAM memory of 192GB total. The RAMDISK directory should only be used to work with  temporary files, where very high throughput or I/O performance is required. Old files on RAMDISK directory are automatically purged with jobs end.
+Each node is equipped with RAMDISK storage accessible at /tmp, /lscratch and /ramdisk. The RAMDISK capacity is 180GB. Data placed on RAMDISK occupies the node RAM memory of 192GB total. The RAMDISK directory should only be used to work with  temporary files, where very high throughput or I/O performance is required. Old files in RAMDISK directory are automatically purged with job's end.
+
+#### Global RAM Disk
+
+The Global RAM disk spans the local RAM disks of all the allocated nodes within a single job.
+For more information, see the [Job Features][8] section.
 
 ## Summary
 
@@ -241,6 +246,7 @@ Each node is equipped with RAMDISK storage accessible at /tmp, /lscratch and /ra
 [5]: #project-file-system
 [6]: ../storage/project-storage.md
 [7]: ../storage/standard-file-acl.md
+[8]: ../job-features.md#global-ram-disk
 
 [a]: http://www.nas.nasa.gov
 [b]: http://www.nas.nasa.gov/hecc/support/kb/Lustre_Basics_224.html#striping
