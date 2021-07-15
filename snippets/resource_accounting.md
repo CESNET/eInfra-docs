@@ -20,7 +20,7 @@ All jobs are accounted in normalized core-hours, using factor F valid at the tim
 | --------------| ---: | --------                  |
 | Barbora CPU   | 1.40 |  2020-02-01 to 2021-06-30 |
 | Barbora GPU   | 4.50 |  2020-04-01 to 2021-06-30 |
-| DGX-2         |11.00 |  2020-04-01 to 2021-06-30 |
+| DGX-2         | 5.50 |  2020-04-01 to 2021-06-30 |
 | Salomon       | 1.00 |  2017-09-11 to 2021-06-30 |
 
 
