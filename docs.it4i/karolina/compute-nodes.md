@@ -8,7 +8,7 @@ Standard compute nodes without accelerators (such as GPUs or FPGAs) are based on
 
 * 720 nodes
 * 92,160 cores in total
-* 2x AMD Zen 2 EPYC™ 7H12, 64-core, 2.6 GHz processors per node
+* 2x AMD EPYC™ 7H12, 64-core, 2.6 GHz processors per node
 * 256 GB DDR4 3200MT/s of physical memory per node
 * 5,324.8 GFLOP/s per compute node
 * 1x 100 Gb/s Ethernet
@@ -21,16 +21,15 @@ Standard compute nodes without accelerators (such as GPUs or FPGAs) are based on
 
 Accelerated compute nodes deliver most of the compute power usable for HPC as well as excellent performance in HPDA and AI workloads, especially in the learning phase of Deep Neural Networks.
 
-* 70 nodes
-* 4,480 cores in total
-* 2x AMD Zen 2 EPYC™ 7452, 32-core, 2.35 GHz processors per node
-* 512 GB DDR4 3200MT/s of physical memory per node
+* 72 nodes
+* 9,216 cores in total
+* 2x AMD EPYC™ 7763, 64-core, 2.45 GHz processors per node
+* 1024 GB DDR4 3200MT/s of physical memory per node
 * 8x GPU accelerator NVIDIA A100 per node
-* 2,406.4 GFLOP/s per compute node
-* GPU-to-GPU All-to-All NVLINK 2.0, GPU-Direct(?)
+* 5,017.6 GFLOP/s per compute node
 * 4x 200 Gb/s Ethernet
 * 4x 200 Gb/s IB port
-* Acn[01-70]
+* Acn[01-72]
 
 ![](img/hpeapollo6500.png)
 
@@ -41,7 +40,7 @@ Data analytics compute node is oriented on supporting huge memory jobs by implem
 * 1x HPE Superdome Flex server
 * 768 cores in total
 * 32x Intel® Xeon® Platinum, 24-core, 2.9 GHz, 205W
-* 24 TiB DDR4 2993MT/s of physical memory per node
+* 24 TB DDR4 2993MT/s of physical memory per node
 * 2x 200 Gb/s Ethernet
 * 2x 200 Gb/s IB port
 * 71.2704 TFLOP/s
@@ -55,7 +54,7 @@ Cloud compute nodes support both the research and operation of the Infrastructur
 
 * 36 nodes
 * 4,608 cores in total
-* 2x AMD Zen 2 EPYC™ 7H12, 64-core, 2.6 GHz processors per node
+* 2x AMD EPYC™ 7H12, 64-core, 2.6 GHz processors per node
 * 256 GB DDR4 3200MT/s of physical memory per node
 * HPE ProLiant XL225n Gen10 Plus servers
 * 5,324.8 GFLOP/s per compute node
@@ -68,15 +67,15 @@ Cloud compute nodes support both the research and operation of the Infrastructur
 | Node type                    | Count | Range       | Memory  | Cores          | Queues (?)                  |
 | ---------------------------- | ----- | ----------- | ------  | -----------    | -------------------------- |
 | Nodes without an accelerator | 720   | Cn[001-720]  | 256 GB  | 128 @ 2.6 GHz  | qexp, qprod, qlong, qfree  |
-| Nodes with a GPU accelerator | 70    | Acn[01-70]   | 512 GB  | 64 @ 2.35 GHz  | qnvidia                    |
+| Nodes with a GPU accelerator | 72    | Acn[01-72]   | 1024 GB  | 64 @ 2.45 GHz  | qnvidia                    |
 | Data analytics nodes         | 1     | DAcn1        | 24 TB   | 768 @ 2.9 GHz  | qfat                       |
 | Cloud partiton               | 36    | CLn[01-36]   | 256 GB  | 128 @ 2.6 GHz  |                            |
 
 ## Processor Architecture
 
-Karolina is equipped with AMD Zen 2 EPYC™ 7H12 (nodes without accelerators, Cloud partiton), AMD Zen 2 EPYC™ 7452 (nodes with accelerators), and Intel Cascade Lake Xeon-SC 8268 (Data analytics partition).
+Karolina is equipped with AMD EPYC™ 7H12 (nodes without accelerators, Cloud partiton), AMD EPYC™ 7763 (nodes with accelerators), and Intel Cascade Lake Xeon-SC 8268 (Data analytics partition).
 
-### AMD [Zen 2 EPYC™ 7H12][d]
+### AMD [Epyc™ 7H12][d]
 
 EPYC™ 7H12 is a 64-bit 64-core x86 server microprocessor designed and introduced by AMD in late 2019. This multi-chip processor, which is based on the Zen 2 microarchitecture, incorporates logic fabricated TSMC 7 nm process and I/O fabricated on GlobalFoundries 14 nm process. The 7H12 has a TDP of 280 W with a base frequency of 2.6 GHz and a boost frequency of up to 3.3 GHz. This processor supports up to two-way SMP and up to 4 TiB of eight channels DDR4-3200 memory per socket.
 
@@ -93,22 +92,22 @@ EPYC™ 7H12 is a 64-bit 64-core x86 server microprocessor designed and introduc
 * **Process**: 7 nm, 14 nm
 * **TDP**: 280 W
 
-### AMD [Zen 2 EPYC™ 7452][e]
+### AMD [Epyc™ 7763][e]
 
-EPYC™ 7452 is a 64-bit dotriaconta-core x86 server microprocessor designed and introduced by AMD in mid-2019. This multi-chip processor, which is based on the Zen 2 microarchitecture, incorporates logic fabricated TSMC 7 nm process and I/O fabricated on GlobalFoundries 14 nm process. The 7452 has a TDP of 155 W with a base frequency of 2.2 GHz and a boost frequency of up to 3.35 GHz. This processor supports up to two-way SMP and up to 4 TiB of eight channels DDR4-3200 memory per socket.
+EPYC 7763 is a 64-bit 64-core x86 server microprocessor designed and introduced by AMD in March 2021. This multi-chip processor, which is based on the Zen 3 microarchitecture, incorporates eight Core Complex Dies fabricated on a TSMC advanced 7 nm process and a large I/O die manufactured by GlobalFoundries. The 7763 has a TDP of 280 W with a base frequency of 2.45 GHz and a boost frequency of up to 3.5 GHz. This processor supports up to two-way SMP and up to 4 TiB of eight channel DDR4-3200 memory per socket.
 
 * **Family**: EPYC™
-* **Cores**: 32
-* **Threads**: 64
-* **L1I Cache**: 1 MiB, 32x32 KiB, 8-way set associative
-* **L1D Cache**: 1 MiB,	32x32 KiB, 8-way set associative
-* **L2 Cache**: 16 MiB, 32x512 KiB, 8-way set associative
-* **L3 Cache**: 128 MiB, 18x16 MiB, 8-way set associative, write-back
-* **Instructions**: x86-64, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA3, F16C, BMI, BMI2, VT-x, VT-d, TXT, TSX, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVE, SGX, MPX, AVX-512
-* **Frequency**: 2.35 GHz
-* **Max turbo**: 3.35 GHz
-* **Process**: 7 nm, 14 nm
-* **TDP**: 155 W
+* **Cores**: 64
+* **Threads**: 128
+* **L1I Cache**: 2 MiB, 64x32 KiB, 8-way set associative, write-back
+* **L1D Cache**: 2 MiB,	64x32 KiB, 8-way set associative, write-back
+* **L2 Cache**: 32 MiB, 64x512 KiB, 8-way set associative, write-back
+* **L3 Cache**: 256 MiB, 8x32 MiB, 16-way set associative, write-back
+* **Instructions**: x86-16, x86-32, x86-64, MMX, EMMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, SSE4a, AVX, AVX2, AES, CLMUL, RdRanD, FMA3, F16C, ABM, BMI1, BMI2, AMD-Vi, AMD-V, SHA, ADX, Real, Protected, SMM, FPU, NX, SMT, SME, TSME, SEV, SenseMI
+* **Frequency**: 2.45 GHz
+* **Max turbo**: 3.5 GHz
+* **Process**: 7 nm
+* **TDP**: 280 W
 
 ### Intel [Skylake Platinum 8268][f]
 
@@ -151,6 +150,6 @@ Karolina is equipped with an [NVIDIA A100][g] accelerator.
 
 [c]: https://en.wikichip.org/wiki/x86/avx512vnni
 [d]: https://en.wikichip.org/wiki/amd/epyc/7h12
-[e]: https://en.wikichip.org/wiki/amd/epyc/7452
+[e]: https://en.wikichip.org/wiki/amd/epyc/7763
 [f]: https://en.wikichip.org/wiki/intel/xeon_platinum/8268
 [g]: https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/a100-80gb-datasheet-update-nvidia-us-1521051-r2-web.pdf
