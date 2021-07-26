@@ -180,13 +180,76 @@ You can see, that the program was running with 64 parallel MPI-processes. In ver
 * SOC
 * Numerical Gradients and Frequencies
 
+## Running ORCA version 5.0.0 in parallel
+
+On Barbora cluster, version 5.0.0 is available. However, to run it in parallel you need to specify execution nodes via `inputfilename.nodes` file. Additionally, all calculations **must** be run on SCRATCH.
+
+Example submission script would look like this:
+
+```
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -A OPEN-00-00
+#PBS -N jobname
+#PBS -q qprod
+#PBS -l select=2
+#PBS -l walltime=00:05:00
+
+ml purge
+ml ORCA/5.0.0-OpenMPI-4.1.1
+
+echo $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
+
+# create /scratch dir
+b=$(basename $PBS_O_WORKDIR)
+SCRDIR=/scratch/project/OPEN-00-00/$USER/${b}_${PBS_JOBID}/
+echo $SCRDIR
+mkdir -p $SCRDIR
+cd $SCRDIR || exit
+
+### specify nodes used for the parallel run
+cat $(echo $PBS_NODEFILE) > ${PBS_JOBNAME}.nodes
+###
+
+# get number of cores used for our job
+ncpus=$(qstat -f $PBS_JOBID | grep resources_used.ncpus | awk '{print $3}')
+
+
+### create ORCA input file
+cat > ${PBS_JOBNAME}.inp <<EOF
+! HF def2-TZVP
+%pal
+  nprocs $ncpus
+end
+* xyz 0 1
+C 0.0 0.0
+ 0.0
+O 0.0 0.0
+ 1.13
+*
+EOF
+###
+
+# copy input files to /scratch
+cp -r $PBS_O_WORKDIR/* .
+
+# run calculations
+/apps/all/ORCA/5.0.0-OpenMPI-4.1.1/orca ${PBS_JOBNAME}.inp > $PBS_O_WORKDIR/${PBS_JOBNAME}.out
+
+# copy output files to home, delete the rest
+cp * $PBS_O_WORKDIR/ && cd $PBS_O_WORKDIR
+rm -rf $SCRDIR
+exit
+```
+
 ## Register as a User
 
 You are encouraged to register as a user of ORCA [here][a] in order to take advantage of updates, announcements, and the users forum.
 
 ## Documentation
 
-A comprehensive [manual][b] is available online.
+A comprehensive [manual][b] is available online for registered users.
 
-[a]: https://orcaforum.kofo.mpg.de/
-[b]: https://kofo.mpg.de/media/2/D19114521/4329011608/orca_manual-opt.pdf
+[a]: https://orcaforum.kofo.mpg.de/app.php/portal
+[b]: https://orcaforum.kofo.mpg.de/app.php/dlext/?cat=1
