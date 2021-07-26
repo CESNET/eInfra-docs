@@ -180,7 +180,7 @@ You can see, that the program was running with 64 parallel MPI-processes. In ver
 * SOC
 * Numerical Gradients and Frequencies
 
-## Running ORCA version 5.0.0 in parallel
+## Running ORCA Version 5.0.0 in Parallel
 
 On Barbora cluster, version 5.0.0 is available. However, to run it in parallel you need to specify execution nodes via `inputfilename.nodes` file. Additionally, all calculations **must** be run on SCRATCH.
 
