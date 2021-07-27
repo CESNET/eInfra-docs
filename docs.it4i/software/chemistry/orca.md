@@ -180,9 +180,9 @@ You can see, that the program was running with 64 parallel MPI-processes. In ver
 * SOC
 * Numerical Gradients and Frequencies
 
-## Running ORCA Version 5.0.0 in Parallel
+## Running ORCA 5.0.0 and Higher in Parallel
 
-On Barbora cluster, version 5.0.0 is available. However, to run it in parallel you need to specify execution nodes via `inputfilename.nodes` file. Additionally, all calculations **must** be run on SCRATCH.
+On Barbora cluster, version 5.0.1 is available. However, to run it in parallel you need to specify execution nodes via `inputfilename.nodes` file. Additionally, all calculations **must** be run on SCRATCH.
 
 Example submission script would look like this:
 
@@ -196,7 +196,7 @@ Example submission script would look like this:
 #PBS -l walltime=00:05:00
 
 ml purge
-ml ORCA/5.0.0-OpenMPI-4.1.1
+ml ORCA/5.0.1-OpenMPI-4.1.1
 
 echo $PBS_O_WORKDIR
 cd $PBS_O_WORKDIR
@@ -235,7 +235,7 @@ EOF
 cp -r $PBS_O_WORKDIR/* .
 
 # run calculations
-/apps/all/ORCA/5.0.0-OpenMPI-4.1.1/orca ${PBS_JOBNAME}.inp > $PBS_O_WORKDIR/${PBS_JOBNAME}.out
+/apps/all/ORCA/5.0.1-OpenMPI-4.1.1/orca ${PBS_JOBNAME}.inp > $PBS_O_WORKDIR/${PBS_JOBNAME}.out
 
 # copy output files to home, delete the rest
 cp * $PBS_O_WORKDIR/ && cd $PBS_O_WORKDIR
