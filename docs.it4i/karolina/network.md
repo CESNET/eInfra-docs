@@ -4,7 +4,7 @@ All of the compute and login nodes of Karolina are interconnected through a [Mel
 
 The Compute network is configured as a non-blocking Fat Tree which consists of 60 x 40-ports Mellanox Quantum™ HDR switches (40 Leaf HDR switches and 20 Spine HDR switches).
 
-![](img/compute_network_topology.png)
+![](img/compute_network_topology_v2.png)<br>*For a higher resolution, open the image in a new browser tab.*
 
 Compute nodes and the service infrastructure is connected by the HDR100 technology that allows one 200Gbps HDR port (aggregation 4x 50Gbps) divided into 2 HDR100 ports with 100Gbps (2x 50Gbps) bandwidth. The cabling between the L1 and L2 layer is realized by HDR cabling, connecting the end devices is realized by so called Y or splitter cable (1x HDR200 - 2x HDR100).
 
