@@ -11,7 +11,6 @@ Standard compute nodes without accelerators (such as GPUs or FPGAs) are based on
 * 2x AMD EPYC™ 7H12, 64-core, 2.6 GHz processors per node
 * 256 GB DDR4 3200MT/s of physical memory per node
 * 5,324.8 GFLOP/s per compute node
-* 1x 100 Gb/s Ethernet
 * 1x 100 Gb/s IB port
 * Cn[001-720]
 
@@ -25,9 +24,8 @@ Accelerated compute nodes deliver most of the compute power usable for HPC as we
 * 9,216 cores in total
 * 2x AMD EPYC™ 7763, 64-core, 2.45 GHz processors per node
 * 1024 GB DDR4 3200MT/s of physical memory per node
-* 8x GPU accelerator NVIDIA A100 per node
+* 8x GPU accelerator NVIDIA A100 per node, 320GB HBM2 memory per node
 * 5,017.6 GFLOP/s per compute node
-* 4x 200 Gb/s Ethernet
 * 4x 200 Gb/s IB port
 * Acn[01-72]
 
@@ -41,10 +39,9 @@ Data analytics compute node is oriented on supporting huge memory jobs by implem
 * 768 cores in total
 * 32x Intel® Xeon® Platinum, 24-core, 2.9 GHz, 205W
 * 24 TB DDR4 2993MT/s of physical memory per node
-* 2x 200 Gb/s Ethernet
 * 2x 200 Gb/s IB port
 * 71.2704 TFLOP/s
-* DAcn1
+* Sdf1
 
 ![](img/superdomeflex.png)
 
@@ -58,17 +55,17 @@ Cloud compute nodes support both the research and operation of the Infrastructur
 * 256 GB DDR4 3200MT/s of physical memory per node
 * HPE ProLiant XL225n Gen10 Plus servers
 * 5,324.8 GFLOP/s per compute node
-* 1x 100 Gb/s Ethernet
+* 2x 10 Gb/s Ethernet
 * 1x 100 Gb/s IB port
 * CLn[01-36]
 
 ## Compute Node Summary
 
-| Node type                    | Count | Range       | Memory  | Cores          | Queues (?)                  |
-| ---------------------------- | ----- | ----------- | ------  | -----------    | -------------------------- |
+| Node type                    | Count | Range        | Memory  | Cores          | Queues (?)                 |
+| ---------------------------- | ----- | ------------ | ------- | -------------- | -------------------------- |
 | Nodes without an accelerator | 720   | Cn[001-720]  | 256 GB  | 128 @ 2.6 GHz  | qexp, qprod, qlong, qfree  |
-| Nodes with a GPU accelerator | 72    | Acn[01-72]   | 1024 GB  | 64 @ 2.45 GHz  | qnvidia                    |
-| Data analytics nodes         | 1     | DAcn1        | 24 TB   | 768 @ 2.9 GHz  | qfat                       |
+| Nodes with a GPU accelerator | 72    | Acn[01-72]   | 1024 GB | 64 @ 2.45 GHz  | qnvidia                    |
+| Data analytics nodes         | 1     | Sdf1         | 24 TB   | 768 @ 2.9 GHz  | qfat                       |
 | Cloud partiton               | 36    | CLn[01-36]   | 256 GB  | 128 @ 2.6 GHz  |                            |
 
 ## Processor Architecture
@@ -86,7 +83,7 @@ EPYC™ 7H12 is a 64-bit 64-core x86 server microprocessor designed and introduc
 * **L1D Cache**: 2 MiB, 64x32 KiB, 8-way set associative
 * **L2 Cache**: 32 MiB, 64x512 KiB, 8-way set associative, write-back
 * **L3 Cache**: 256 MiB, 16x16 MiB
-* **Instructions**(?): x86-64, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA3, F16C, BMI, BMI2, VT-x, VT-d, TXT, TSX, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVE, SGX, MPX, AVX-512 (New instructions for [Vector Neural Network Instructions][c])
+* **Instructions**: x86-16, x86-32, x86-64, MMX, EMMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, SSE4a, AVX, AVX2, AES, CLMUL, RdRanD, FMA3, F16C, ABM, BMI1, BMI2, AMD-Vi, AMD-V, SHA, ADX, Real, Protected, SMM, FPU, NX, SMT, SME, TSME, SEV, SenseMI, Boost2
 * **Frequency**: 2.6 GHz
 * **Max turbo**: 3.3 GHz
 * **Process**: 7 nm, 14 nm
