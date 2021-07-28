@@ -8,8 +8,8 @@ Karolina includes two nodes for remote visualization with [VirtualGL 2][3] and T
 * HPE ProLiant DL385 Gen10 Plus servers
 * 2406.4 GFLOP/s per compute node
 * NVIDIA Quadro RTX 6000 card with OpenGL support
-* 2x 100 GB Ethernet and 1x 1 GB Ethernet
-* 1x HDR100 IB port
+* 2x 100 Gb/s Ethernet and 1x 1 Gb/s Ethernet
+* 1x HDR 200 Gb/s IB port
 * 2x SSD 480 GB in RAID1
 
 ![](img/proliantdl385.png)
