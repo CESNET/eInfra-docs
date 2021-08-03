@@ -80,7 +80,7 @@ your_local_machine $  docker ps -a
 your_local_machine $  docker commit 837a575cf8dc
 your_local_machine $  docker image  ls
 your_local_machine $  docker tag 4dd97cefde62 ubuntu_gvim
-your_local_machine $  docker save -o ubuntu_gvim.tar 4dd97cefde62 ubuntu_gvim
+your_local_machine $  docker save -o ubuntu_gvim.tar ubuntu_gvim
 ```
 
 copy the `ubuntu_gvim.tar` archive to IT4I supercomputers, convert to Singularity image and run:
