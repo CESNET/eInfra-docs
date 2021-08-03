@@ -68,6 +68,31 @@ Singularity container built: ubuntu.img
 Cleaning up...
 ```
 
+alternatively, you can create your own docker image and import it to singularity.
+For example, we show how to create and run ubuntu docker image with gvim installed:
+
+```console
+your_local_machine $  docker pull ubuntu
+your_local_machine $  docker run --rm -it ubuntu bash
+# apt update
+# apt install vim-gtk
+your_local_machine $  docker ps -a
+your_local_machine $  docker commit 837a575cf8dc
+your_local_machine $  docker image  ls
+your_local_machine $  docker tag 4dd97cefde62 ubuntu_gvim
+your_local_machine $  docker save -o ubuntu_gvim.tar 4dd97cefde62 ubuntu_gvim
+```
+
+copy the `ubuntu_gvim.tar` archive to IT4I supercomputers, convert to Singularity image and run:
+
+```console
+$ ml Singularity
+$ singularity build ubuntu_givm.img docker-archive://ubuntu_gvim.tar
+$ singularity shell -B /usr/user/$ID ubuntu_gvim.img
+```
+
+Note the bind to `/usr/user/$ID` directory.
+
 ## Launching the Container
 
 The interactive shell can be invoked by the `singularity shell` command. This is useful for development purposes. Use the `-w | --writable` option to make changes inside the container permanent.
