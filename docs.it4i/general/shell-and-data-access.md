@@ -9,6 +9,12 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 
 ### Karolina Cluster
 
+!!! important
+    Karolina has gone into production with updated security requirements.
+    Only clients based on OpenSSH 7.4p1 and later will be able to connect (including other SSH clients with compatible security algorithms).
+    This means that starting with RHEL/Centos 7, Debian 9 or Ubuntu 18.04, you are good to go.
+    Some users which still have DSA keys will be also unable to connect and are urged to update their keypairs, preferably to Ed25519 format.
+
 | Login address           | Port | Protocol | Login node                            |
 | ----------------------- | ---- | -------- | ------------------------------------- |
 | karolina.it4i.cz        | 22   | SSH      | round-robin DNS record for login[1-4] |
@@ -18,6 +24,14 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 | login4.karolina.it4i.cz | 22   | SSH      | login4                                |
 
 ### Barbora Cluster
+
+!!! important
+    Barbora will have its security requirements updated.
+    Only clients based on OpenSSH 7.4p1 and later will be able to connect (including other SSH clients with compatible security algorithms).
+    This means that starting with RHEL/Centos 7, Debian 9 or Ubuntu 18.04, you are good to go.
+    Some users which still have DSA keys will be also unable to connect and are urged to update their keypairs, preferably to Ed25519 format.
+
+    This change will be implemented in early October 2021.
 
 | Login address             | Port | Protocol | Login node                            |
 | ------------------------- | ---- | -------- | ------------------------------------- |
