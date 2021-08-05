@@ -93,7 +93,7 @@ Salomon:
 !!! note
     SSH fingerprints are identical on all login nodes.
 
-Private key authentication:
+### Private key authentication:
 
 On **Linux** or **Mac**, use:
 
