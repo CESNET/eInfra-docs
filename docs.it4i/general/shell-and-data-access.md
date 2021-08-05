@@ -53,6 +53,13 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 
 Authentication is available by [private key][1] only. Verify SSH fingerprints during the first logon:
 
+Karolina
+
+```console
+    ssh-rsa: AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
+    ssh-ed25519: AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
+```
+
 Barbora:
 
 ```console
