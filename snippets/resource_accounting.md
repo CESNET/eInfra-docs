@@ -18,10 +18,11 @@ All jobs are accounted in normalized core-hours, using factor F valid at the tim
 
 | System        | F    | Validity                  |
 | --------------| ---: | --------                  |
-| Barbora CPU   | 1.40 |  2020-02-01 to 2021-06-30 |
-| Barbora GPU   | 4.50 |  2020-04-01 to 2021-06-30 |
-| DGX-2         | 5.50 |  2020-04-01 to 2021-06-30 |
-| Salomon       | 1.00 |  2017-09-11 to 2021-06-30 |
+| Karolina      | 1.00 |  2021-08-02 to 2021-09-06 |
+| Barbora CPU   | 1.40 |  2020-02-01 to 2021-09-06 |
+| Barbora GPU   | 4.50 |  2020-04-01 to 2021-09-06 |
+| DGX-2         | 5.50 |  2020-04-01 to 2021-09-06 |
+| Salomon       | 1.00 |  2017-09-11 to 2021-09-06 |
 
 
 The accounting runs whenever the computational cores are allocated via the PBS Pro workload manager (the qsub command), regardless of whether
