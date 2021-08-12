@@ -227,10 +227,11 @@ nav:
       - Virtualization: software/tools/virtualization.md
     - Visualisation:
       - GPI-2: software/viz/gpi2.md
-      - OpenFOAM: software/viz/openfoam.md
-      - ParaView: software/viz/paraview.md
       - In situ: software/viz/insitu.md
       - NICE DCV: software/viz/NICEDCVsoftware.md
+      - OpenFOAM: software/viz/openfoam.md
+      - ParaView: software/viz/paraview.md
+      - QtiPlot: software/viz/qtiplot.md       
       - VirtualGL: software/viz/vgl.md
       - VESTA: software/viz/vesta.md
     - PBS Pro Documentation: pbspro.md
