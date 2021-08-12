@@ -4,12 +4,12 @@
 
 The table shows which shells are supported on the IT4Innovations clusters.
 
-| Cluster Name    | bash | tcsh | zsh | ksh |
-| --------------- | ---- | ---- | --- | --- |
-| Karolina        | yes  | yes  | yes | yes |
-| Barbora         | yes  | yes  | yes | yes |
-| Salomon         | yes  | yes  | yes | yes |
-| DGX-2           | yes  | no   | no  | no  |
+| Cluster Name    | bash | tcsh | zsh | ksh | dash | 
+| --------------- | ---- | ---- | --- | --- | ---- |
+| Karolina        | yes  | yes  | yes | yes | yes  |
+| Barbora         | yes  | yes  | yes | yes | no   |
+| Salomon         | yes  | yes  | yes | yes | no   |
+| DGX-2           | yes  | no   | no  | no  | no   |
 
 !!! info
     BASH is the default shell. Should you need a different shell, contact support@it4i.cz.
