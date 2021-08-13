@@ -4,7 +4,7 @@
 
 The table shows which shells are supported on the IT4Innovations clusters.
 
-| Cluster Name    | bash | tcsh | zsh | ksh | dash | 
+| Cluster Name    | bash | tcsh | zsh | ksh | dash |
 | --------------- | ---- | ---- | --- | --- | ---- |
 | Karolina        | yes  | yes  | yes | yes | yes  |
 | Barbora         | yes  | yes  | yes | yes | no   |
