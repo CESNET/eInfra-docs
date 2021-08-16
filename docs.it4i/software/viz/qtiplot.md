@@ -20,7 +20,7 @@ $ ml av QtiPlot
 ## Running QtiPlot
 
 !!! important
-    You must first enable [VNC][a] or [X Window System][b] GUI environment.
+    You must first enable the [VNC][a] or [X Window System][b] GUI environment.
 
 To run QtiPlot, use:
 
