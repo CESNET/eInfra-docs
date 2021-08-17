@@ -250,7 +250,7 @@ These messages will inform about the projected removal date and will prompt the 
 
 [a]: https://support.it4i.cz/rt/
 [b]: mailto:support@it4i.cz
-[c]: https://www.it4i.cz/file/cf3134ccf6bae32181d7efb90faa2976/5208/AUP2020-v3-CZE-ENG.final.signed.pdf
+[c]: https://www.it4i.cz/file/0fbfdcd6ec8e7a3999998cf96b50916e/5391/acceptable-use-policy.pdf
 [d]: http://support.it4i.cz/
 [e]: https://scs.it4i.cz
 [f]: http://www.igtf.net/
