@@ -38,8 +38,9 @@ The PROJECT storage can be accessed via the following nodes:
 
 | Cluster       | Node(s)                       |
 | ------------- | ----------------------------- |
-| Salomon       | Login                         |
+| Karolina      | Login, Compute, Visualization |
 | Barbora       | Login, Compute, Visualization |
+| Salomon       | Login                         |
 
 To show the path to your project's directory on the PROJECT storage, use the `it4i-get-project-dir` command:
 
@@ -50,7 +51,7 @@ $ it4i-get-project-dir OPEN-XX-XX
 
 ### Project Quotas
 
-The PROJECT storage enforces limits (quotas) on projects' usage (used capacity and allocated inodes).
+The PROJECT storage enforces quotas on projects' usage (used capacity and allocated inodes).
 Default quotas for capacity and amount of inodes per project are set by IT4Innovations.
 
 | Project default quota |        |
@@ -62,17 +63,19 @@ You can check the actual usage of the PROJECT storage (e.g. location of project 
 
 ```console
 [vop999@login1.barbora ~]$ it4ifsusage
-Type           Cluster / PID    File System    Space used    Space limit    Entries used    Entries limit    Last update
+Quota Type     Cluster / PID    File System    Space used    Space limit    Entries used    Entries limit    Last update
 -------------  ---------------  -------------  ------------  -------------  --------------  ---------------  -------------------
-User Quota     barbora          /home          11.1 MB       25.0 GB        122             500,000          2021-03-17 10:50:10
-User Quota     salomon          /home          407.0 MB      250.0 GB       5,522           500,000          2021-03-17 11:20:09
-User Quota     barbora          /scratch       256.5 GB      10.0 TB        169             10,000,000       2021-03-17 10:50:26
-User Quota     salomon          /scratch       3.7 TB        100.0 TB       212,252         10,000,000       2021-03-17 11:21:11
-User Quota     salomon          /scratch/temp  3.1 TB        N/A            50.328                           2021-03-17 11:21:27
-User Quota     salomon          /scratch/work  2.8 TB        N/A            207,594                          2021-03-17 11:21:19
-Project Quota  open-XX-XX       proj1          3.9 TB        20.0 TB        212,377         5,000,000        2021-03-17 11:20:02
-Project Quota  open-YY-YY       proj3          9.5 MB        20.0 TB        182             5,000,000        2021-03-17 11:20:02
-Project Quota  open-ZZ-ZZ       proj2          844.4 GB      20.0 TB        797             5,000,000        2021-03-17 11:20:03
+User           barbora          /home          11.1 MB       25.0 GB        122             500,000          2021-08-24 07:50:09
+User           karolina         /home          354.6 MB      25.0 GB        3,194           500,000          2021-08-24 08:20:08
+User           salomon          /home          407.0 MB      250.0 GB       5,522           500,000          2021-08-24 08:20:08
+User           barbora          /scratch       256.5 GB      10.0 TB        169             10,000,000       2021-08-24 07:50:19
+User           karolina         /scratch       52.5 GB       100.0 TB       967             20,000,000       2021-08-24 08:20:18
+User           salomon          /scratch       3.7 TB        100.0 TB       212,252         10,000,000       2021-08-24 08:20:41
+User           salomon          /scratch/temp  3.1 TB        N/A            50.328                           2021-08-24 08:20:54
+User           salomon          /scratch/work  2.8 TB        N/A            207,594                          2021-08-24 08:20:47
+Project        open-XX-XX       proj1          3.9 TB        20.0 TB        212,377         5,000,000        2021-08-24 08:20:02
+Project        open-YY-YY       proj3          9.5 MB        20.0 TB        182             5,000,000        2021-08-24 08:20:02
+Project        open-ZZ-ZZ       proj2          844.4 GB      20.0 TB        797             5,000,000        2021-08-24 08:20:02
 ```
 
 The information can also be found in IT4Innovations' [SCS information system][b].
