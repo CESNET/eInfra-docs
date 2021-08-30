@@ -250,7 +250,7 @@ These messages will inform about the projected removal date and will prompt the 
 
 [a]: https://support.it4i.cz/rt/
 [b]: mailto:support@it4i.cz
-[c]: https://www.it4i.cz/file/0fbfdcd6ec8e7a3999998cf96b50916e/5391/acceptable-use-policy.pdf
+[c]: https://www.it4i.cz/cs/file/f4afe72710863f0e8d119a31389e7bfb/5422/acceptable-use-policy.pdf
 [d]: http://support.it4i.cz/
 [e]: https://scs.it4i.cz
 [f]: http://www.igtf.net/
