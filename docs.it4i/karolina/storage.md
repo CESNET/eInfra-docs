@@ -16,7 +16,7 @@ The HOME filesystem is an HA cluster of two active-passive NFS servers. This fil
 
 The files on HOME filesystem will not be deleted until the end of the [user's lifecycle][4].
 
-The filesystem is backed up, so that it can be restored in case of a catastrophic failure resulting in significant data loss. However, this backup is not intended to restore old versions of user data or to restore (accidentally) deleted files.
+The filesystem is backed up, so that it can be restored in case of a catastrophic failure resulting in significant data loss. However, this backup is not intended to restore old versions of user data or to restore deleted files.
 
 | HOME filesystem      |                                |
 | -------------------- | ------------------------------ |
@@ -55,7 +55,7 @@ The filesystem is backed up, so that it can be restored in case of a catastrophi
 
 The SCRATCH filesystem is realized as a parallel Lustre filesystem. It is accessible via the Infiniband network and is available from all login and computational nodes. Extended ACLs are provided on the Lustre filesystems for sharing data with other users using fine-grained control. For basic information about Lustre, see the [Understanding the Lustre Filesystem][7] subsection of the Barbora's storage documentation.*
 
-The SCRATCH filesystem is mounted in directory /scratch. Users may freely create subdirectories and files on the filesystem. Accessible capacity is 1000 TB, shared among all users. Individual users are restricted by filesystem usage quotas, set to 9.3 TB per user. The purpose of this quota is to prevent runaway programs from filling the entire filesystem and deny service to other users. Should 9.3 TB prove insufficient, contact [support][d], the quota may be lifted upon request.
+The SCRATCH filesystem is mounted in directory /scratch. Users may freely create subdirectories and files on the filesystem. Accessible capacity is 1000 TB, shared among all users. Individual users are restricted by filesystem usage quotas, set to 9.3 TB per user. The purpose of this quota is to prevent runaway programs from filling the entire filesystem and deny service to other users. Should 9.3 TB prove insufficient, contact [support][d], the quota may be increased upon request.
 
 !!! note
     The Scratch filesystem is intended for temporary scratch data generated during the calculation as well as for high-performance access to input and output files. All I/O intensive jobs must use the SCRATCH filesystem as their working directory.
