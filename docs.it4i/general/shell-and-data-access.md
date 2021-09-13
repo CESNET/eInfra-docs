@@ -109,21 +109,7 @@ $ chmod 600 /path/to/id_rsa
 
 On **Windows**, use the [PuTTY SSH client][2].
 
-After logging in, you will see the command prompt:
-
-```console
-
-  ___   _____   _  _     ___                                           _     _
- |_ _| |_   _| | || |   |_ _|  _ __    _ __     ___   __   __   __ _  | |_  (_)   ___    _ __    ___
-  | |    | |   | || |_   | |  | '_ \  | '_ \   / _ \  \ \ / /  / _` | | __| | |  / _ \  | '_ \  / __|
-  | |    | |   |__   _|  | |  | | | | | | | | | (_) |  \ V /  | (_| | | |_  | | | (_) | | | | | \__ \
- |___|   |_|      |_|   |___| |_| |_| |_| |_|  \___/    \_/    \__,_|  \__| |_|  \___/  |_| |_| |___/
-
-                                     http://www.it4i.cz/?lang=en
-
-Last login: Tue Jul 9 15:57:38 2013 from your-host.example.com
-[username@login2.cluster-name ~]$
-```
+After logging in, you will see the command prompt with the name of the cluster and the message of the day.
 
 !!! note
     The environment is **not** shared between login nodes, except for [shared filesystems][3].
@@ -132,38 +118,13 @@ Last login: Tue Jul 9 15:57:38 2013 from your-host.example.com
 
 Data in and out of the system may be transferred by SCP and SFTP protocols.
 
-### Karolina Cluster
-
-| Address                 | Port | Protocol  |
-| ----------------------- | ---- | --------- |
-| karolina.it4i.cz        | 22   | SCP, SFTP |
-| login1.karolina.it4i.cz | 22   | SCP, SFTP |
-| login2.karolina.it4i.cz | 22   | SCP, SFTP |
-| login3.karolina.it4i.cz | 22   | SCP, SFTP |
-| login4.karolina.it4i.cz | 22   | SCP, SFTP |
-
-### Barbora Cluster
-
-| Address                   | Port | Protocol |
-| ------------------------- | ---- | ------- |
-| barbora.it4i.cz           | 22   | SCP     |
-| login1.barbora.it4i.cz    | 22   | SCP     |
-| login2.barbora.it4i.cz    | 22   | SCP     |
-
-### Salomon Cluster
-
-| Address                | Port | Protocol  |
-| ---------------------- | ---- | --------- |
-| salomon.it4i.cz        | 22   | SCP, SFTP |
-| login1.salomon.it4i.cz | 22   | SCP, SFTP |
-| login2.salomon.it4i.cz | 22   | SCP, SFTP |
-| login3.salomon.it4i.cz | 22   | SCP, SFTP |
-| login4.salomon.it4i.cz | 22   | SCP, SFTP |
+| Cluster  | Port | Protocol  |
+| -------- | ---- | --------- |
+| Karolina | 22   | SCP, SFTP |
+| Barbora  | 22   | SCP       |
+| Salomon  | 22   | SCP, SFTP |
 
 Authentication is by [private key][1] only.
-
-!!! note
-    If you experience degraded data transfer performance, consult your local network provider.
 
 On Linux or Mac, use an SCP or SFTP client to transfer data to Barbora:
 
