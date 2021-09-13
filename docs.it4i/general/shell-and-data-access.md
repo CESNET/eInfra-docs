@@ -126,7 +126,7 @@ Data in and out of the system may be transferred by SCP and SFTP protocols.
 
 Authentication is by [private key][1] only.
 
-On Linux or Mac, use an SCP or SFTP client to transfer data to Barbora:
+On Linux or Mac, use an SCP or SFTP client to transfer data to the cluster:
 
 ```console
 $ scp -i /path/to/id_rsa my-local-file username@cluster-name.it4i.cz:directory/file
@@ -142,13 +142,13 @@ or
 $ sftp -o IdentityFile=/path/to/id_rsa username@cluster-name.it4i.cz
 ```
 
-A very convenient way to transfer files in and out of cluster is via the fuse filesystem [SSHFS][b].
+A very convenient way to transfer files in and out of the cluster is via the fuse filesystem [SSHFS][b].
 
 ```console
 $ sshfs -o IdentityFile=/path/to/id_rsa username@cluster-name.it4i.cz:. mountpoint
 ```
 
-Using SSHFS, the user's Barbora home directory will be mounted on your local computer, just like an external disk.
+Using SSHFS, the user's home directory will be mounted on your local computer, just like an external disk.
 
 Learn more about SSH, SCP, and SSHFS by reading the manpages:
 
