@@ -230,15 +230,15 @@ A FAQ about certificates can be found here: [Certificates FAQ][7].
 
 ## End of User Account Lifecycle
 
-User accounts are supported by membership in active project(s) or by affiliation to IT4Innovations. User accounts that lose the support (i.e. are not attached to an active project and are not affiliated with IT4I) will be deleted 1 year after the last project expires to which they were attached.
+A user account that is not attached to an active project is deleted 1 year after the last project expires to which it was attached.
 
-Users will get 3 automatically generated warning email messages of the pending removal:.
+The user will be notified by 3 automatically generated emails of the pending removal:
 
-* First message will be sent 3 months before the removal
-* Second message will be sent 1 month before the removal
-* Third message will be sent 1 week before the removal.
+* First email will be sent 3 months before the removal
+* Second email will be sent 1 month before the removal
+* Third email will be sent 1 week before the removal.
 
-These messages will inform about the projected removal date and will prompt the user to migrate their data.
+These emails will inform about the projected removal date and will prompt the user to migrate their data.
 
 [1]: https://docs.it4i.cz/general/obtaining-login-credentials/obtaining-login-credentials/#certificates-for-digital-signatures
 [2]: #authorization-by-web
