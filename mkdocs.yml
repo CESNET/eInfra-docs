@@ -122,6 +122,7 @@ nav:
       - Intel Xeon Phi Environment: software/mic/mic_environment.md
       - Modules Matrix: modules-matrix.md
       - Job Features: job-features.md
+      - Available Karolina Modules: modules-karolina.md
       - Available Barbora Modules: modules-barbora.md
       - Available Salomon Modules: modules-salomon.md
       - Available Salomon Modules on UV: modules-salomon-uv.md

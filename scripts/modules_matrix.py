@@ -35,7 +35,7 @@ def get_data(filename):
 def get_datalist():
     """ get_datalist """
     datalist = []
-    for name in ['anselm', 'salomon', 'uv2000', 'phi', 'dgx', 'barbora']:
+    for name in ['karolina', 'salomon', 'uv2000', 'phi', 'dgx', 'barbora']:
         path = os.path.join('scripts', "{}.csv".format(name))
         datalist += get_data(path)
     return datalist
@@ -50,7 +50,7 @@ def get_counts(datalist):
 def get_matrix():
     """ get_matrix """
     #     1    2    4    8    16   32
-    chars = ['A', 'S', 'U', 'P', 'D', 'B']
+    chars = ['K', 'S', 'U', 'P', 'D', 'B']
     arr = []
     mask = ''.join(reversed(chars))
     for bits in itertools.product([0, 1], repeat=len(chars)):
@@ -107,9 +107,9 @@ def print_hint():
     """ print_hint """
     print('!!! Hint "Cluster Acronyms"')
     print('    ```')
-    print('    B D P U S A')
+    print('    B D P U S K')
     print('    | | | | | |')
-    print('    | | | | | +----> Anselm')
+    print('    | | | | | +----> Karolina')
     print('    | | | | +------> Salomon')
     print('    | | | +--------> UV2000')
     print('    | | +----------> Phi')
