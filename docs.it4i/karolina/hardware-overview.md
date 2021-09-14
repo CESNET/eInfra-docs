@@ -23,10 +23,10 @@ The parameters are summarized in the following tables:
 | Compute network                             | InfiniBand HDR                                 |
 | Universal compute node                      | 720, Cn[001-720]                               |
 | Accelerated compute nodes                   | 72, Acn[01-72]                                 |
-| Data analytics compute nodes                | 1, Sdf1                                       |
+| Data analytics compute nodes                | 1, Sdf1                                        |
 | Cloud compute nodes                         | 36, CLn[01-36]                                 |
 | **In total**                                |                                                |
-| Total theoretical peak performance  (Rpeak) | 15.2 PFLOP/s                                   |
+| Total theoretical peak performance  (Rpeak) | 15.7 PFLOP/s                                   |
 | Total amount of RAM                         | 313 TB                                         |
 
 | Node                     | Processor                                | Memory  | Accelerator                  |
