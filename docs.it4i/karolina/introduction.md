@@ -1,6 +1,6 @@
 # Introduction
 
-Karolina is the latest and most powerful supercomputer cluster built for IT4Innovations in Q2 of 2021. The Karolina cluster consists of 829 compute nodes, totaling 106,752 compute cores with 313 TB RAM, giving over 15.2 PFLOP/s theoretical peak performance and is ranked in the top 10 of the most powerful supercomputers in Europe.
+Karolina is the latest and most powerful supercomputer cluster built for IT4Innovations in Q2 of 2021. The Karolina cluster consists of 829 compute nodes, totaling 106,752 compute cores with 313 TB RAM, giving over 15.7 PFLOP/s theoretical peak performance and is ranked in the top 10 of the most powerful supercomputers in Europe.
 
 Nodes are interconnected through a fully non-blocking fat-tree InfiniBand network, and are equipped with AMD Zen 2, Zen3, and Intel Cascade Lake architecture processors. Seventy two nodes are also equipped with NVIDIA A100 accelerators. Read more in [Hardware Overview][1].
 
