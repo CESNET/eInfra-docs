@@ -115,7 +115,7 @@ def print_hint():
     print('    | | | +----------> Phi')
     print('    | | +------------> DGX-2')
     print('    | +--------------> Barbora')
-    print ('   +----------------> Karolina')
+    print('    +----------------> Karolina')
     print('    ```')
     print()
     print("{} {} {}".format('| Module </br><form><input id="searchInput" placeholder="🔍 Filter"',
