@@ -35,7 +35,7 @@ def get_data(filename):
 def get_datalist():
     """ get_datalist """
     datalist = []
-    for name in ['anselm', 'salomon', 'uv2000', 'phi', 'dgx', 'barbora']:
+    for name in ['karolina', 'salomon', 'uv2000', 'phi', 'dgx', 'barbora']:
         path = os.path.join('scripts', "{}.csv".format(name))
         datalist += get_data(path)
     return datalist
