@@ -10,8 +10,7 @@ However, executing a huge number of jobs via the PBS queue may strain the system
     Follow one of the procedures below, in case you wish to schedule more than 100 jobs at a time.
 
 * Use [Job arrays][1] when running a huge number of [multithread][2] (bound to one node only) or multinode (multithread across several nodes) jobs.
-* Use [GNU parallel][3] when running single core jobs.
-* Combine [GNU parallel with Job arrays][4] when running huge number of single core jobs.
+* Use [HyperQueue][3] when running single core jobs.
 
 ## Policy
 
@@ -151,162 +150,73 @@ $ qstat -u $USER -tJ
 
 For more information on job arrays, see the [PBSPro Users guide][6].
 
-## GNU Parallel
+## HyperQueue
 
-!!! note
-    Use GNU parallel to run many single core tasks on one node.
+HyperQueue lets you build a computation plan consisting of a large amount of tasks and then execute it transparently over a system like SLURM/PBS. It dynamically groups jobs into SLURM/PBS jobs and distributes them to fully utilize allocated nodes. You thus do not have to manually aggregate your tasks into SLURM/PBS jobs. See the [project repository][a].
 
-GNU parallel is a shell tool for executing jobs in parallel using one or more computers. A job can be a single command or a small script that has to be run for each of the lines in the input. GNU parallel is most useful when running single core jobs via the queue systems.
+![](../img/hq-idea-s.png)
 
-For more information and examples, see the parallel man page:
+### Features
 
-```console
-$ module add parallel
-$ man parallel
-```
+* **Transparent task execution on top of a Slurm/PBS cluster**
 
-### GNU Parallel Jobscript
+    Automatic task distribution amongst jobs, nodes, and cores
 
-The GNU parallel shell executes multiple instances of the jobscript using all cores on the node. The instances execute different work, controlled by the `$PARALLEL_SEQ` variable.
+* **Dynamic load balancing across jobs**
 
-Example:
+    Work-stealing scheduler<br>NUMA-aware, core planning, task priorities, task arrays<br> Nodes and tasks may be added/removed on the fly
 
-Assume we have 101 input files with each name beginning with "file" (e.g. file001, ..., file101). Assume we would like to use each of these input files with the myprog.x program executable, each as a separate single core job. We call these single core jobs tasks.
+* **Scalable**
 
-First, we create a tasklist file listing all tasks - all input files in our example:
+    Low overhead per task (~100μs)<br>Handles hundreds of nodes and millions of tasks<br>Output streaming avoids creating many files on network filesystems
 
-```console
-$ find . -name 'file*' > tasklist
-```
+* **Easy deployment**
 
-Then we create a jobscript:
+    Single binary, no installation, depends only on *libc*<br>No elevated privileges required
 
-```bash
-#!/bin/bash
-#PBS -A PROJECT_ID
-#PBS -q qprod
-#PBS -l select=1:ncpus=16,walltime=02:00:00
+* **Open source**
 
-[ -z "$PARALLEL_SEQ" ] &&
-{ module add parallel ; exec parallel -a $PBS_O_WORKDIR/tasklist $0 ; }
+### Architecture
 
-# change to local scratch directory
-SCR=/lscratch/$PBS_JOBID/$PARALLEL_SEQ
-mkdir -p $SCR ; cd $SCR || exit
+![](../img/hq-architecture.png)
 
-# get individual task from tasklist
-TASK=$1
+### Installation
 
-# copy input file and executable to scratch
-cp $PBS_O_WORKDIR/$TASK input
+To install/compile HyperQueue, follow the steps on the [official webpage][b].
 
-# execute the calculation
-cat input > output
+### Submiting a Simple Task
 
-# copy output file to submit directory
-cp output $PBS_O_WORKDIR/$TASK.out
-```
+* Start server (e.g. on a login node or in a cluster partition)
 
-In this example, tasks from the tasklist are executed via the GNU parallel. The jobscript executes multiple instances of itself in parallel, on all cores of the node. Once an instace of the jobscript is finished, a new instance starts until all entries in the tasklist are processed. Currently processed entries of the joblist may be retrieved via the `$1` variable. The `$TASK` variable expands to one of the input filenames from the tasklist. We copy the input file to the local scratch memory, execute myprog.x, and copy the output file back to the submit directory under the $TASK.out name.
+    `$ hq server start &`
 
-### Submit the Job
+* Submit a job (command `echo 'Hello world'` in this case)
 
-To submit the job, use the `qsub` command. The 101 task job of the [example above][7] may be submitted as follows:
+    `$ hq submit echo 'Hello world'`
 
-```console
-$ qsub -N JOBNAME jobscript
-12345.dm2
-```
+* Ask for computing resources
 
-In this example, we submit a job of 101 tasks. 16 input files will be processed in parallel. The 101 tasks on 16 cores are assumed to complete in less than 2 hours.
+  * Start worker manually
 
-!!! hint
-    Use #PBS directives at the beginning of the jobscript file, do not forget to set your valid `PROJECT_ID` and the desired queue.
+    `$ hq worker start &`
 
-## Job Arrays and GNU Parallel
+  * Automatic resource request
 
-!!! note
-    Combine the Job arrays and GNU parallel for the best throughput of single core jobs
+    [Not implemented yet]
 
-While job arrays are able to utilize all available computational nodes, the GNU parallel can be used to efficiently run multiple single-core jobs on a single node. The two approaches may be combined to utilize all available (current and future) resources to execute single core jobs.
+  * Manual request in PBS
 
-!!! note
-    Every subjob in an array runs GNU parallel to utilize all cores on the node
+    * Start worker on the first node of a PBS job
 
-### GNU Parallel, Shared jobscript
+       `$ qsub <your-params-of-qsub> -- hq worker start`
 
-A combined approach, very similar to job arrays, can be taken. A job array is submitted to the queuing system. The subjobs run GNU parallel. The GNU parallel shell executes multiple instances of the jobscript using all of the cores on the node. The instances execute different work, controlled by the `$PBS_JOB_ARRAY` and the `$PARALLEL_SEQ` variables.
+    * Start worker on all nodes of a PBS job
 
-Example:
+       ``$ qsub <your-params-of-qsub> -- `which pbsdsh` hq worker start``
 
-Assume we have 992 input files with each name beginning with "file" (e. g. file001, ..., file992). Assume we would like to use each of these input files with the myprog.x program executable, each as a separate single core job. We call these single core jobs tasks.
+* Monitor the state of jobs
 
-First, we create a tasklist file listing all tasks - all input files in our example:
-
-```console
-$ find . -name 'file*' > tasklist
-```
-
-Next we create a file, controlling how many tasks will be executed in one subjob:
-
-```console
-$ seq 32 > numtasks
-```
-
-Then we create a jobscript:
-
-```bash
-#!/bin/bash
-#PBS -A PROJECT_ID
-#PBS -q qprod
-#PBS -l select=1:ncpus=16,walltime=02:00:00
-
-[ -z "$PARALLEL_SEQ" ] &&
-{ module add parallel ; exec parallel -a $PBS_O_WORKDIR/numtasks $0 ; }
-
-# change to local scratch directory
-SCR=/lscratch/$PBS_JOBID/$PARALLEL_SEQ
-mkdir -p $SCR ; cd $SCR || exit
-
-# get individual task from tasklist with index from PBS JOB ARRAY and index form Parallel
-IDX=$(($PBS_ARRAY_INDEX + $PARALLEL_SEQ - 1))
-TASK=$(sed -n "${IDX}p" $PBS_O_WORKDIR/tasklist)
-[ -z "$TASK" ] && exit
-
-# copy input file and executable to scratch
-cp $PBS_O_WORKDIR/$TASK input
-
-# execute the calculation
-cat input > output
-
-# copy output file to submit directory
-cp output $PBS_O_WORKDIR/$TASK.out
-```
-
-In this example, the jobscript executes in multiple instances in parallel, on all cores of a computing node. The `$TASK` variable expands to one of the input filenames from the tasklist. We copy the input file to local scratch memory, execute myprog.x and copy the output file back to the submit directory, under the $TASK.out name.  The numtasks file controls how many tasks will be run per subjob. Once a task is finished, a new task starts, until the number of tasks in the numtasks file is reached.
-
-!!! note
-    Select the subjob walltime and the number of tasks per subjob carefully
-
-When deciding these values, keep in mind the following guiding rules:
-
-1. Let n=N/16. Inequality (n+1) \* T < W should hold. N is the number of tasks per subjob, T is the expected single task walltime and W is subjob walltime. A short subjob walltime improves scheduling and job throughput.
-1. The number of tasks should be modulo 16.
-1. These rules are valid only when all tasks have similar task walltimes T.
-
-### Submit the Job Array (-J)
-
-To submit the job array, use the `qsub -J` command. The 992 task jobs of the [example above][8] may be submitted like this:
-
-```console
-$ qsub -N JOBNAME -J 1-992:32 jobscript
-12345[].dm2
-```
-
-In this example, we submit a job array of 31 subjobs. Note the -J 1-992:**32**, this must be the same as the number sent to numtasks file. Each subjob will run on one full node and process 16 input files in parallel, 32 in total per subjob. Every subjob is assumed to complete in less than 2 hours.
-
-!!! hint
-    Use #PBS directives at the beginning of the jobscript file, do not forget to set your valid PROJECT_ID and desired queue.
+    `$ hq jobs`
 
 ## Examples
 
@@ -321,10 +231,10 @@ $ cat README
 
 [1]: #job-arrays
 [2]: #shared-jobscript-on-one-node
-[3]: #gnu-parallel
-[4]: #job-arrays-and-gnu-parallel
+[3]: #hyperqueue
 [5]: ##shared-jobscript
 [6]: ../pbspro.md
-[7]: #gnu-parallel-jobscript
-[8]: #gnu-parallel-shared-jobscript
 [9]: capacity.zip
+
+[a]: https://github.com/It4innovations/hyperqueue
+[b]: https://it4innovations.github.io/hyperqueue/install/
