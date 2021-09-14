@@ -50,7 +50,7 @@ def get_counts(datalist):
 def get_matrix():
     """ get_matrix """
     #     1    2    4    8    16   32
-    chars = ['A', 'S', 'U', 'P', 'D', 'B']
+    chars = ['A', 'S', 'U', 'P', 'D', 'B', 'K']
     arr = []
     mask = ''.join(reversed(chars))
     for bits in itertools.product([0, 1], repeat=len(chars)):
@@ -107,14 +107,15 @@ def print_hint():
     """ print_hint """
     print('!!! Hint "Cluster Acronyms"')
     print('    ```')
-    print('    B D P U S A')
-    print('    | | | | | |')
-    print('    | | | | | +----> Anselm')
-    print('    | | | | +------> Salomon')
-    print('    | | | +--------> UV2000')
-    print('    | | +----------> Phi')
-    print('    | +------------> DGX-2')
-    print('    +--------------> Barbora')
+    print('    K B D P U S A')
+    print('    | | | | | | |')
+    print('    | | | | | | +----> Anselm')
+    print('    | | | | | +------> Salomon')
+    print('    | | | | +--------> UV2000')
+    print('    | | | +----------> Phi')
+    print('    | | +------------> DGX-2')
+    print('    | +--------------> Barbora')
+    print ('   +----------------> Karolina')
     print('    ```')
     print()
     print("{} {} {}".format('| Module </br><form><input id="searchInput" placeholder="🔍 Filter"',

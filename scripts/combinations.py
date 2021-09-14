@@ -7,7 +7,7 @@ from __future__ import print_function
 import itertools
 import re
 
-CHARS = ['A', 'S', 'U', 'T', 'D']
+CHARS = ['A', 'S', 'U', 'T', 'D', 'K']
 MASK = ''.join(reversed(CHARS))
 for i in range(1, len(CHARS)+1):
     for comb in itertools.combinations(CHARS, i):
