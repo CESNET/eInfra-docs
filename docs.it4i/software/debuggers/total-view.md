@@ -18,7 +18,7 @@ On the cluster, users can debug OpenMP or MPI code that runs up to 64 parallel p
 
 Debugging of GPU accelerated codes is also supported.
 
-You can check the status of the licenses for [Salomon][a] or [Barbora][b]:
+You can check the status of the licenses for [Karolina][a] or [Barbora][b]:
 
 ```console
 $ cat /apps/user/licenses/totalview_features_state.txt
@@ -39,20 +39,20 @@ $ cat /apps/user/licenses/totalview_features_state.txt
 Load all necessary modules to compile the code. For example:
 
 ```console
-    ml intel
+$ ml intel/2020b
 ```
 
 Load the TotalView module:
 
 ```console
-    ml TotalView
+$ ml TotalView/2021.2.14
 ```
 
 Compile the code:
 
 ```console
-    mpicc -g -O0 -o test_debug test.c
-    mpif90 -g -O0 -o test_debug test.f
+$ mpicc -g -O0 -o test_debug test.c
+$ mpif90 -g -O0 -o test_debug test.f
 ```
 
 ### Compiler Flags
@@ -69,7 +69,7 @@ Before debugging, you need to compile your code with theses flags:
 Be sure to log in with an X window forwarding enabled. This could mean using the `-X` in the `ssh`:
 
 ```console
-ssh -X username@salomon.it4i.cz
+local $ssh -X username@login1.karolina.it4i.cz
 ```
 
 Another option is to access the login node using VNC.
@@ -77,7 +77,7 @@ Another option is to access the login node using VNC.
 From the login node an interactive session with X windows forwarding (`-X` option) can be started by the following command:
 
 ```console
-$ qsub -I -X -A NONE-0-0 -q qexp -lselect=1:ncpus=24:mpiprocs=24,walltime=01:00:00
+$ qsub -I -X -A NONE-0-0 -q qexp -l select=1:ncpus=128:mpiprocs=128,walltime=01:00:00
 ```
 
 Then launch the debugger with the totalview command followed by the name of the executable to debug.
@@ -87,7 +87,7 @@ Then launch the debugger with the totalview command followed by the name of the 
 To debug a serial code, use:
 
 ```console
-totalview test_debug
+$ totalview test_debug
 ```
 
 ### Debugging a Parallel Code - Option 1
@@ -120,14 +120,14 @@ dlappend TV::image_load_callbacks mpi_auto_run_starter
 The source code of this function can be also found in
 
 ```console
-$ /apps/all/OpenMPI/1.10.1-GNU-4.9.3-2.25/etc/openmpi-totalview.tcl #Salomon
+$ $EBROOTOPENMPI/etc/openmpi-totalview.tcl
 ```
 
 You can also add only following line to your ~/.tvdrc file instead of
 the entire function:
 
 ```console
-$ source /apps/all/OpenMPI/1.10.1-GNU-4.9.3-2.25/etc/openmpi-totalview.tcl #Salomon
+$ source $EBROOTOPENMPI/etc/openmpi-totalview.tcl
 ```
 
 You need to do this step only once. See also [OpenMPI FAQ entry][c].
@@ -153,8 +153,7 @@ Another option to start a new parallel debugging session from a command line is 
 The following example shows how to start a debugging session with the Intel MPI:
 
 ```console
-$ ml intel
-$ ml TotalView/8.15.4-6-linux-x86-64
+$ ml intel/2020b TotalView/2021.2.14
 $ totalview -mpi "Intel MPI-Hydra" -np 8 ./hello_debug_impi
 ```
 
@@ -166,7 +165,7 @@ More information regarding the command line parameters of the TotalView can be f
 
 [1] The [TotalView documentation][d] web page is a good source for learning more about some of the advanced TotalView features.
 
-[a]: https://extranet.it4i.cz/rsweb/salomon/license/Totalview
+[a]: https://extranet.it4i.cz/rsweb/karolina/license/Totalview
 [b]: https://extranet.it4i.cz/rsweb/barbora/license/Totalview
 [c]: https://www.open-mpi.org/faq/?category=running#run-with-tv
 [d]: http://www.roguewave.com/support/product-documentation/totalview-family.aspx#totalview
