@@ -19,16 +19,16 @@ $ ml av VTune
 
 ## Usage
 
-To profile an application with VTune Profiler, special kernel modules need to be loaded. The modules are not loaded on the login nodes, thus direct profiling on login nodes is not possible. By default, the kernel modules are not loaded on compute nodes either. In order to have the modules loaded, you need to specify the `vtune=version` PBS resource at job submit. The version is the same as for the environment module. For example, to use VTune/2020_update2-GCC:
+To profile an application with VTune Profiler, special kernel modules need to be loaded. The modules are not loaded on the login nodes, thus direct profiling on login nodes is not possible. By default, the kernel modules are not loaded on compute nodes either. In order to have the modules loaded, you need to specify the `vtune=version` PBS resource at job submit. The version is the same as for the environment module. For example, to use VTune/2020_update3:
 
 ```console
-$ qsub -q qexp -A OPEN-0-0 -I -l select=1,vtune=2020_update2-GCC
+$ qsub -q qexp -A OPEN-0-0 -I -l select=1,vtune=2020_update3
 ```
 
 After that, you can verify that the modules `sep*`, `pax`, and `vtsspp` are present in the kernel:
 
 ```console
-login@cn191:~$ lsmod | grep -e sep -e pax -e vtsspp
+$ lsmod | grep -e sep -e pax -e vtsspp
 vtsspp                367418  0
 sep5                  885333  0
 socperf3              595104  2 sep5,socwatch2_12
@@ -38,7 +38,7 @@ pax                    13820  0
 To launch the GUI, first load the module:
 
 ```console
-$ ml VTune/2020_update2-GCC
+$ ml VTune/2020_update3
 ```
 
 and launch the GUI:
@@ -61,7 +61,7 @@ VTune Profiler also allows a form of remote analysis. In this mode, data for ana
 The command line will look like this:
 
 ```console
-/apps/all/VTune/2020_update2-GCC/vtune_profiler_2020.2.0.610396/bin64/vtune -collect hotspots -app-working-dir /home/$USER/tmp -- /home/$USER/tmp/sgemm
+vtune -collect hotspots -app-working-dir /home/$USER/tmp -- /home/$USER/tmp/sgemm
 ```
 
 !!! Warning
