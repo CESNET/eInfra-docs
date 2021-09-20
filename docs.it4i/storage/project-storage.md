@@ -84,7 +84,7 @@ The information can also be found in IT4Innovations' [SCS information system][b]
     At this time, only PIs can see the quotas of their respective projects in IT4Innovations' SCS information system.
     We are working on making this information available to all users assigned to their projects.
 
-#### Lifting Project Quotas
+#### Increasing Project Quotas
 
 It is preferred that you request additional storage space allocation in advance in you application for computational resources.
 Alternatively, if the project is already active, contact [IT4I support][a].
