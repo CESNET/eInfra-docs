@@ -27,17 +27,20 @@ uid=1000(user) gid=1000(user) groups=1000(user),1234(open-0-0),7310(gaussian)
 
 ## Installed Version
 
-Gaussian is available on Salomon, Barbora, and DGX-2 systems in the latest version Gaussian 16 rev. c0.
+Gaussian is available on Karolina, Salomon, Barbora, and DGX-2 systems in the latest version Gaussian 16 rev. c0 and versions 09-a02, a09-d01.
 
-| Module                                | CPU support | GPU support  | Parallelization | Note               | Barbora | Salomon | DGX-2 |
-|--------------------------------------|-------------|--------------|-----------------|---------------------|---------|---------|-------|
-| Gaussian/16_rev_c0-binary            | AVX2        | Yes          | SMP             | Binary distribution | Yes     | No      | Yes   |
-| Gaussian/16_rev_c0-binary-Linda      | AVX2        | Yes          | SMP + Linda     | Binary distribution | Yes     | Yes     | No    |
-| Gaussian/16_rev_c0-CascadeLake       | AVX-512     | No           | SMP             | IT4I compiled       | Yes     | No      | No    |
-| Gaussian/16_rev_c0-CascadeLake-Linda | AVX-512     | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    |
-| Gaussian/16_rev_c0-GPU-Linda         | AVX-512     | Yes          | SMP + Linda     | IT4I compiled       | Yes     | No      | No    |
-| Gaussian/16_rev_c0-GPU               | AVX-512     | Yes          | SMP             | IT4I compiled       | No      | No      | Yes   |
-| Gaussian/16_rev_c0-Linda             | AVX         | No           | SMP + Linda     | IT4I compiled       | No      | No      | No    |
+| Module                                | CPU support | GPU support  | Parallelization | Note               | Barbora | Salomon | DGX-2 | Karolina |
+|--------------------------------------|-------------|--------------|-----------------|---------------------|---------|---------|-------| -------- |
+| Gaussian/09-a02                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | Yes      |
+| Gaussian/09-d01                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | Yes      |    
+| Gaussian/16_rev_c0-binary            | AVX2        | Yes          | SMP             | Binary distribution | Yes     | No      | Yes   | No       |
+| Gaussian/16_rev_c0-binary-Linda      | AVX2        | Yes          | SMP + Linda     | Binary distribution | Yes     | Yes     | No    | No       |
+| Gaussian/16_rev_c0-CascadeLake       | AVX-512     | No           | SMP             | IT4I compiled       | Yes     | No      | No    | No       |
+| Gaussian/16_rev_c0-CascadeLake-Linda | AVX-512     | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | No       |
+| Gaussian/16_rev_c0-GPU-Linda         | AVX2        | Yes          | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | No       |
+| Gaussian/16_rev_c0-GPU               | AVX2        | Yes          | SMP             | IT4I compiled       | No      | No      | Yes   | No       |
+| Gaussian/16_rev_c0-Linda             | AVX2        | No           | SMP + Linda     | IT4I compiled       | No      | No      | No    | Yes      |
+| Gaussian/16_rev_c0                   | AVX2        | No           | SMP + Linda     | IT4I compiled       | No      | No      | No    | Yes      |
 
 Speedup may be observed on Barbora and DGX-2 systems when using the `CascadeLake` and `GPU` modules compared to the `binary` module.
 
@@ -254,8 +257,6 @@ rm -rf $GAUSS_SCRDIR
 #end
 exit
 ```
-
-[1]: ../../salomon/storage.md
 
 [a]: https://gaussian.com/gaussian16/
 [b]: mailto:support@it4i.cz
