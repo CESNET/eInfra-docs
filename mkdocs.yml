@@ -149,7 +149,6 @@ nav:
       - Allinea Forge (DDT,MAP): software/debuggers/allinea-ddt.md
       - Allinea Performance Reports: software/debuggers/allinea-performance-reports.md
       - CUBE: software/debuggers/cube.md
-      - Intel Performance Counter Monitor: software/debuggers/intel-performance-counter-monitor.md
       - Intel VTune Amplifier XE: software/debuggers/intel-vtune-amplifier.md
       - Intel VTune Profiler: software/debuggers/intel-vtune-profiler.md  
       - PAPI: software/debuggers/papi.md
