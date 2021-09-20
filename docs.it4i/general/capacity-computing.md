@@ -9,8 +9,9 @@ However, executing a huge number of jobs via the PBS queue may strain the system
 !!! note
     Follow one of the procedures below, in case you wish to schedule more than 100 jobs at a time.
 
-* Use [Job arrays][1] when running a huge number of [multithread][2] (bound to one node only) or multinode (multithread across several nodes) jobs.
-* Use [HyperQueue][3] when running single core jobs.
+* Use [Job arrays][1] when running a huge number of multithread (bound to one node only) or multinode (multithread across several nodes) jobs.
+* Use [HyperQueue][3] when running a huge number of multithread jobs. HyperQueue can help overcome
+the limits of job arrays. 
 
 ## Policy
 
@@ -150,9 +151,22 @@ $ qstat -u $USER -tJ
 
 For more information on job arrays, see the [PBSPro Users guide][6].
 
+### Examples
+
+Download the examples in [capacity.zip][9], illustrating the above listed ways to run a huge number of jobs. We recommend trying out the examples before using this for running production jobs.
+
+Unzip the archive in an empty directory on cluster and follow the instructions in the README file-
+
+```console
+$ unzip capacity.zip
+$ cat README
+```
+
 ## HyperQueue
 
-HyperQueue lets you build a computation plan consisting of a large amount of tasks and then execute it transparently over a system like SLURM/PBS. It dynamically groups jobs into SLURM/PBS jobs and distributes them to fully utilize allocated nodes. You thus do not have to manually aggregate your tasks into SLURM/PBS jobs. See the [project repository][a].
+HyperQueue lets you build a computation plan consisting of a large amount of tasks and then execute it transparently over a system like SLURM/PBS.
+It dynamically groups tasks into PBS jobs and distributes them to fully utilize allocated nodes.
+You thus do not have to manually aggregate your tasks into PBS jobs. See the [project repository][a].
 
 ![](../img/hq-idea-s.png)
 
@@ -174,65 +188,76 @@ HyperQueue lets you build a computation plan consisting of a large amount of tas
 
     Single binary, no installation, depends only on *libc*<br>No elevated privileges required
 
-* **Open source**
-
-### Architecture
-
-![](../img/hq-architecture.png)
-
 ### Installation
 
-To install/compile HyperQueue, follow the steps on the [official webpage][b].
+* On Barbora and Karolina, you can simply load the HyperQueue module:
 
-### Submiting a Simple Task
+     `$ ml HyperQueue`
 
-* Start server (e.g. on a login node or in a cluster partition)
+* If you want to install/compile HyperQueue manually, follow the steps on the [official webpage][b].
 
-    `$ hq server start &`
+### Usage
+#### Starting the Server
+To use HyperQueue, you first have to start the HyperQueue server. It is a long-lived process that
+is supposed to be running on a login node. You can start it with the following command:
 
-* Submit a job (command `echo 'Hello world'` in this case)
+    $ hq server start
+
+#### Submitting Computation
+Once the HyperQueue server is running, you can submit jobs into it. Here are a few examples of
+job submissions. You can find more information in the [documentation][2].
+
+* Submit a simple job (command `echo 'Hello world'` in this case)
 
     `$ hq submit echo 'Hello world'`
 
-* Ask for computing resources
+* Submit a job with 10000 tasks
 
-  * Start worker manually
+    `$ hq submit --array 1-10000 my-script.sh`
 
-    `$ hq worker start &`
+Once you start some jobs, you can observe their status using the following commands:
 
-  * Automatic resource request
+```
+# Display status of a single job
+$ hq job <job-id>
 
-    [Not implemented yet]
-
-  * Manual request in PBS
-
-    * Start worker on the first node of a PBS job
-
-       `$ qsub <your-params-of-qsub> -- hq worker start`
-
-    * Start worker on all nodes of a PBS job
-
-       ``$ qsub <your-params-of-qsub> -- `which pbsdsh` hq worker start``
-
-* Monitor the state of jobs
-
-    `$ hq jobs`
-
-## Examples
-
-Download the examples in [capacity.zip][9], illustrating the above listed ways to run a huge number of jobs. We recommend trying out the examples before using this for running production jobs.
-
-Unzip the archive in an empty directory on cluster and follow the instructions in the README file-
-
-```console
-$ unzip capacity.zip
-$ cat README
+# Display status of all jobs
+$ hq jobs
 ```
 
+!!! important
+    Before the jobs can start executing, you have to provide HyperQueue with some computational resources.
+
+#### Providing Computational Resources
+Before HyperQueue can execute your jobs, it needs to have access to some computational resources.
+You can provide these by starting HyperQueue *workers*, which connect to the server and execute
+your jobs. The workers should run on computing nodes, so you can start them using PBS.
+
+* Start a worker on a single PBS node:
+
+    ``$ qsub <qsub-params> -- `which hq` worker start``
+
+* Start a worker on all allocated PBS nodes:
+
+    ``$ qsub <qsub-params> -- `which pbsdsh` `which hq` worker start``
+
+In an upcoming version, HyperQueue will be able to automatically submit PBS jobs with workers
+on your behalf.
+
+!!! tip
+    For debugging purposes, you can also start the worker e.g. on a login using simply by running
+    `$ hq worker start`. Do not use such worker for any long-running computations.
+
+### Architecture
+Here you can see the architecture of HyperQueue. The user submits jobs into the server, which
+schedules them onto a set of workers running on compute nodes.
+
+![](../img/hq-architecture.png)
+
 [1]: #job-arrays
-[2]: #shared-jobscript-on-one-node
+[2]: https://it4innovations.github.io/hyperqueue/jobs/
 [3]: #hyperqueue
-[5]: ##shared-jobscript
+[5]: #shared-jobscript
 [6]: ../pbspro.md
 [9]: capacity.zip
 
