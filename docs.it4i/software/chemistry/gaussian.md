@@ -94,9 +94,15 @@ $ echo $GAUSS_WDEF
 If a different amount of Linda workers is required, unset or modify
 the GAUSS_WDEF environment variable accordingly.
 
-### GPU Accelerated Execution (Single Node/Multi Node)
+### GPU-Accelerated Execution (Single Node/Multi Node)
 
-On Barbora supercomputer, the GPU acceleration may be combined with the Linda parallelization.
+#### Karolina
+
+At this time, GPU-accelereated execution on Karolina is not available, since Gaussian 16 does not support NVIDIA A100 GPUs.
+
+#### Barbora
+
+On Barbora, the GPU acceleration may be combined with the Linda parallelization.
 Load Linda-enabled binary module:
 
 ```bash
@@ -121,8 +127,9 @@ If multi-node computation is intended, include the `%UseSSH` keyword, as well. T
 %UseSSH
 ```
 
-GPU accelerated calculations on the **DGX-2** are supported
-with Gaussian binary module
+#### DGX-2
+
+GPU accelerated calculations on the **DGX-2** are supported with Gaussian binary module
 
 ```bash
 $ ml Gaussian/16_rev_c0-binary
