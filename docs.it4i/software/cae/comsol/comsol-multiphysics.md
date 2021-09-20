@@ -32,16 +32,39 @@ By default, the **EDU variant** will be loaded. If you needs other version or va
 $ ml av COMSOL
 ```
 
-To prepare COMSOL jobs in the interactive mode, we recommend using COMSOL on the compute nodes via the PBS Pro scheduler. To run the COMSOL Desktop GUI on Windows, we recommend using the [Virtual Network Computing (VNC)][2].
+To prepare COMSOL jobs in the interactive mode, we recommend using COMSOL on the compute nodes via the PBS Pro scheduler. To run the COMSOL Desktop GUI on Windows.
 
-Example for Salomon:
+!!! Note
+   We recommend using the [Virtual Network Computing (VNC)][2].
+
+Example for Barbora:
 
 ```console
-$ xhost +
-$ qsub -I -X -A PROJECT_ID -q qprod -l select=1:ppn=24
-$ ml COMSOL
-$ comsol
+$ qsub -I -X -A PROJECT_ID -q qprod -l select=1:ncpus=36
+$ ml av COMSOL
+
+------------------------------ /apps/modules/phys ------------------------------
+   COMSOL/5.2.0-COM    COMSOL/5.2.0-EDU (D)
+
+$ ml COMSOL/5.2.0-EDU
+$ comsol -3drend sw
 ```
+
+!!! info
+    If you receive errors at startup, for example, of the following type:
+
+   ```console
+FL3D: error at line 814 in file fl3dglcontext_x11common.c: 
+   PBuffers are not supported by the system. 
+FL3D: error at line 235 in file fl3dglcontext_x11common.c: 
+   assert: x11Handle
+   ```
+
+   you need to run COMSOL with additional parameters:
+
+   ```console
+$ comsol -3drend sw
+   ```
 
 To run COMSOL in batch mode without the COMSOL Desktop GUI environment, utilize the default (comsol.pbs) job script and execute it via the `qsub` command:
 
