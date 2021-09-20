@@ -20,7 +20,7 @@ On the clusters, COMSOL is available in the latest stable version. There are two
 
 * **Commercial** or so called **COM variant**, which can used also for commercial activities. **COM variant** has only subset of features compared to the **EDU variant** available. More about licensing [here][1].
 
-To load the default `COMSOL` module ([**not** recommended][4]), use: 
+To load the default `COMSOL` module ([**not** recommended][4]), use:
 
 ```console
 $ ml COMSOL
