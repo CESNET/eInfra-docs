@@ -35,7 +35,7 @@ $ ml av COMSOL
 To prepare COMSOL jobs in the interactive mode, we recommend using COMSOL on the compute nodes via the PBS Pro scheduler. To run the COMSOL Desktop GUI on Windows.
 
 !!! Note
-   We recommend using the [Virtual Network Computing (VNC)][2].
+  We recommend using the [Virtual Network Computing (VNC)][2].
 
 Example for Barbora:
 
@@ -52,19 +52,16 @@ $ comsol -3drend sw
 
 !!! info
     If you receive errors at startup, for example, of the following type:
-
-   ```console
+```console
 FL3D: error at line 814 in file fl3dglcontext_x11common.c: 
    PBuffers are not supported by the system. 
 FL3D: error at line 235 in file fl3dglcontext_x11common.c: 
    assert: x11Handle
-   ```
-
-   you need to run COMSOL with additional parameters:
-
-   ```console
+```
+you need to run COMSOL with additional parameters:
+```console
 $ comsol -3drend sw
-   ```
+```
 
 To run COMSOL in batch mode without the COMSOL Desktop GUI environment, utilize the default (comsol.pbs) job script and execute it via the `qsub` command:
 
