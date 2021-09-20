@@ -52,7 +52,7 @@ $ comsol -3drend sw
 
 !!! info
     If you receive errors at startup, for example, of the following type:
-    
+
     ```console
 FL3D: error at line 814 in file fl3dglcontext_x11common.c:
    PBuffers are not supported by the system.
@@ -60,11 +60,11 @@ FL3D: error at line 235 in file fl3dglcontext_x11common.c:
    assert: x11Handle
    ```
 
-   you need to run COMSOL with additional parameters:
+    you need to run COMSOL with additional parameters:
 
-   ```console
+    ```console
 $ comsol -3drend sw
-   ```
+    ```
 
 To run COMSOL in batch mode without the COMSOL Desktop GUI environment, utilize the default (comsol.pbs) job script and execute it via the `qsub` command:
 
