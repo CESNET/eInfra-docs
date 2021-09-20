@@ -19,7 +19,7 @@ $ ml av itac
 ITAC can collect traces from applications that are using Intel MPI. To generate a trace, simply add the `-trace` option to your `mpirun` command:
 
 ```console
-$ ml itac/9.1.2.024
+$ ml itac/2020.3.036
 $ mpirun -trace myapp
 ```
 
@@ -30,7 +30,7 @@ The trace will be saved in the myapp.stf file in the current directory.
 To view and analyze the trace, open the ITAC GUI in a [graphical environment][1]:
 
 ```console
-$ ml itac/9.1.2.024
+$ ml itac/2020.3.036
 $ traceanalyzer
 ```
 
