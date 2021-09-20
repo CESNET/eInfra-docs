@@ -51,7 +51,7 @@ $ comsol -3drend sw
 ```
 
 !!! info
-    If you receive errors at startup, for example, of the following type:
+  If you receive errors at startup, for example, of the following type:
 ```console
 FL3D: error at line 814 in file fl3dglcontext_x11common.c: 
    PBuffers are not supported by the system. 
