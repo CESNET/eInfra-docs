@@ -140,7 +140,7 @@ This example shows how to run LiveLink for MATLAB with the following configurati
 [1]: licensing-and-available-versions.md
 [2]: ../../../general/accessing-the-clusters/graphical-user-interface/x-window-system.md
 [3]: ../../isv_licenses.md
-[4]: ../modules/lmod/
+[4]: ../../../modules/lmod/
 
 [a]: http://www.comsol.com
 [b]: http://www.comsol.com/structural-mechanics-module
