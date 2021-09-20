@@ -43,7 +43,7 @@ Example for Barbora:
 $ qsub -I -X -A PROJECT_ID -q qprod -l select=1:ncpus=36:mpiprocs=36
 $ ml av COMSOL
 
------------------------------- /apps/modules/phys ------------------------------
+------------------------------ /apps/modules/phys -----------------------------
    COMSOL/5.2.0-COM    COMSOL/5.2.0-EDU (D)
 
 $ ml COMSOL/5.2.0-EDU
