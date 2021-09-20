@@ -129,7 +129,7 @@ If multi-node computation is intended, include the `%UseSSH` keyword, as well. T
 
 #### DGX-2
 
-GPU accelerated calculations on the **DGX-2** are supported with Gaussian binary module
+GPU-accelerated calculations on the **DGX-2** are supported with Gaussian binary module:
 
 ```bash
 $ ml Gaussian/16_rev_c0-binary
