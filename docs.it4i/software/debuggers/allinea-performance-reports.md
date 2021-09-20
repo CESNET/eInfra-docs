@@ -13,7 +13,7 @@ Our license is limited to 64 MPI processes.
 For the current list of installed versions, use:
 
 ```console
-$ ml av PerformanceReports
+$ ml av Forge
 ```
 
 The module sets up environment variables, required for using the Allinea Performance Reports.
@@ -35,15 +35,15 @@ In this example, we will be profiling the mympiprog.x MPI program, using Allinea
 First, we allocate nodes via the express queue:
 
 ```console
-$ qsub -q qexp -l select=2:ppn=24:mpiprocs=24:ompthreads=1 -I
-    qsub: waiting for job 262197.dm2 to start
-    qsub: job 262197.dm2 ready
+$ qsub -q qexp -l select=2:ncpus=128:mpiprocs=128:ompthreads=1 -I
+    qsub: waiting for job 262197.infra-pbs to start
+    qsub: job 262197.infra-pbs ready
 ```
 
 Then we load the modules and run the program the usual way:
 
 ```console
-$ ml intel
+$ ml intel/2020b Forge/20.1.1
 $ ml PerfReports/6.0
 $ mpirun ./mympiprog.x
 ```
