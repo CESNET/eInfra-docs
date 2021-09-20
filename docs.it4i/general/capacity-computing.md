@@ -10,8 +10,7 @@ However, executing a huge number of jobs via the PBS queue may strain the system
     Follow one of the procedures below, in case you wish to schedule more than 100 jobs at a time.
 
 * Use [Job arrays][1] when running a huge number of multithread (bound to one node only) or multinode (multithread across several nodes) jobs.
-* Use [HyperQueue][3] when running a huge number of multithread jobs. HyperQueue can help overcome
-the limits of job arrays. 
+* Use [HyperQueue][3] when running a huge number of multithread jobs. HyperQueue can help overcome the limits of job arrays.
 
 ## Policy
 
@@ -192,20 +191,23 @@ You thus do not have to manually aggregate your tasks into PBS jobs. See the [pr
 
 * On Barbora and Karolina, you can simply load the HyperQueue module:
 
-     `$ ml HyperQueue`
+    `$ ml HyperQueue`
 
 * If you want to install/compile HyperQueue manually, follow the steps on the [official webpage][b].
 
 ### Usage
+
 #### Starting the Server
+
 To use HyperQueue, you first have to start the HyperQueue server. It is a long-lived process that
 is supposed to be running on a login node. You can start it with the following command:
 
-    $ hq server start
+    `$ hq server start`
 
 #### Submitting Computation
-Once the HyperQueue server is running, you can submit jobs into it. Here are a few examples of
-job submissions. You can find more information in the [documentation][2].
+
+Once the HyperQueue server is running, you can submit jobs into it. Here are a few examples of job submissions.
+You can find more information in the [documentation][2].
 
 * Submit a simple job (command `echo 'Hello world'` in this case)
 
@@ -229,9 +231,10 @@ $ hq jobs
     Before the jobs can start executing, you have to provide HyperQueue with some computational resources.
 
 #### Providing Computational Resources
+
 Before HyperQueue can execute your jobs, it needs to have access to some computational resources.
-You can provide these by starting HyperQueue *workers*, which connect to the server and execute
-your jobs. The workers should run on computing nodes, so you can start them using PBS.
+You can provide these by starting HyperQueue *workers* which connect to the server and execute your jobs.
+The workers should run on computing nodes, so you can start them using PBS.
 
 * Start a worker on a single PBS node:
 
@@ -245,12 +248,13 @@ In an upcoming version, HyperQueue will be able to automatically submit PBS jobs
 on your behalf.
 
 !!! tip
-    For debugging purposes, you can also start the worker e.g. on a login using simply by running
+    For debugging purposes, you can also start the worker, e.g. on a login using simply by running
     `$ hq worker start`. Do not use such worker for any long-running computations.
 
 ### Architecture
-Here you can see the architecture of HyperQueue. The user submits jobs into the server, which
-schedules them onto a set of workers running on compute nodes.
+
+Here you can see the architecture of HyperQueue.
+The user submits jobs into the server which schedules them onto a set of workers running on compute nodes.
 
 ![](../img/hq-architecture.png)
 
