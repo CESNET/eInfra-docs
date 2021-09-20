@@ -35,7 +35,7 @@ After the application is instrumented, runtime measurement can be performed with
 An example:
 
 ```console
-   $ scalasca -analyze mpirun -np 4 ./mympiprogram
+$ scalasca -analyze mpirun -np 4 ./mympiprogram
 ```
 
 Some notable Scalasca options are:
@@ -44,27 +44,27 @@ Some notable Scalasca options are:
 * `-e <directory>` specifies a directory to which the collected data is saved. By default, Scalasca saves the data to a directory with the scorep\_ prefix, followed by the name of the executable and the launch configuration.
 
 !!! note
-    Scalasca can generate a huge amount of data, especially if tracing is enabled. Consider saving the data to a [scratch directory][6].
+    Scalasca can generate a huge amount of data, especially if tracing is enabled. Consider saving the data to a scratch directory.
 
 ### Analysis of Reports
 
-For the analysis, you must have the [Score-P][5] and [CUBE][7] modules loaded. The analysis is done in two steps. First, the data is preprocessed and then, the CUBE GUI tool is launched.
+For the analysis, you must have the [Score-P][5] and [CUBE][6] modules loaded. The analysis is done in two steps. First, the data is preprocessed and then, the CUBE GUI tool is launched.
 
 To launch the analysis, run:
 
 ```console
-scalasca -examine [options] <experiment_directory>
+$ scalasca -examine [options] <experiment_directory>
 ```
 
 If you do not wish to launch the GUI tool, use the `-s` option:
 
 ```console
-scalasca -examine -s <experiment_directory>
+$ scalasca -examine -s <experiment_directory>
 ```
 
 Alternatively, you can open CUBE and load the data directly from here. Keep in mind that in this case, the pre-processing is not done and not all metrics will be shown in the viewer.
 
-Refer to the [CUBE documentation][7] on usage of the GUI viewer.
+Refer to the [CUBE documentation][6] on usage of the GUI viewer.
 
 ## References
 
@@ -75,7 +75,6 @@ Refer to the [CUBE documentation][7] on usage of the GUI viewer.
 [3]: ../mpi/running_openmpi.md
 [4]: ../mpi/running-mpich2.md
 [5]: score-p.md
-[6]: ../../salomon/storage.md
-[7]: cube.md
+[6]: cube.md
 
 [a]: http://www.scalasca.org/
