@@ -33,13 +33,8 @@ VASP can be ran using several different binaries, each being compiled for a spec
 * `vasp_std` is the standard VASP binary for regular jobs
 * `vasp_ncl` must be used when running non-collinear (spin-orbit coupling) jobs
 * `vasp_gam` is optimized for calculations at the Gamma point
-
-<!---
-
 * `vasp_gpu_std` is a compilation for GPU calculations
 * `vasp_gpu_ncl` has to be used when running a non-collinear job on GPU
-
--->
 
 ## Tutorials and Examples
 
