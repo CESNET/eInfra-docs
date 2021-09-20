@@ -191,7 +191,7 @@ You thus do not have to manually aggregate your tasks into PBS jobs. See the [pr
 
 * On Barbora and Karolina, you can simply load the HyperQueue module:
 
-    `$ ml HyperQueue`
+`$ ml HyperQueue`
 
 * If you want to install/compile HyperQueue manually, follow the steps on the [official webpage][b].
 
@@ -202,7 +202,7 @@ You thus do not have to manually aggregate your tasks into PBS jobs. See the [pr
 To use HyperQueue, you first have to start the HyperQueue server. It is a long-lived process that
 is supposed to be running on a login node. You can start it with the following command:
 
-    `$ hq server start`
+`$ hq server start`
 
 #### Submitting Computation
 
