@@ -170,8 +170,6 @@ nav:
         - Intel MKL: software/intel/intel-suite/intel-mkl.md
         - Intel TBB: software/intel/intel-suite/intel-tbb.md
         - Intel Trace Analyzer and Collector: software/intel/intel-suite/intel-trace-analyzer-and-collector.md
-      - Intel Xeon Phi:
-        - Intel Xeon Phi Salomon: software/intel/intel-xeon-phi-salomon.md
     - Machine Learning:
       - Introduction: software/machine-learning/introduction.md
       - TensorFlow: software/machine-learning/tensorflow.md
