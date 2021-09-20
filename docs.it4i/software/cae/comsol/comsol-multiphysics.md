@@ -37,10 +37,10 @@ To prepare COMSOL jobs in the interactive mode, we recommend using COMSOL on the
 !!! Note
     We recommend using the [Virtual Network Computing (VNC)][2].
 
-Example for Barbora:
+Example for Karolina:
 
 ```console
-$ qsub -I -X -A PROJECT_ID -q qprod -l select=1:ncpus=36:mpiprocs=36
+$ qsub -I -X -A PROJECT_ID -q qprod -l select=1:ncpus=128:mpiprocs=128
 $ ml av COMSOL
 
 ------------------------------ /apps/modules/phys -----------------------------
@@ -69,7 +69,7 @@ To run COMSOL in batch mode without the COMSOL Desktop GUI environment, utilize 
 
 ```bash
 #!/bin/bash
-#PBS -l select=3:ncpus=36:mpiprocs=36
+#PBS -l select=3:ncpus=128:mpiprocs=128
 #PBS -q qprod
 #PBS -N JOB_NAME
 #PBS -A PROJECT_ID
@@ -100,7 +100,7 @@ COMSOL is a software package for the numerical solution of partial differential 
 LiveLink for MATLAB is available in both **EDU** and **COM** **variant** of the COMSOL release. On the clusters there is 1 commercial (**COM**) and 5 educational (**EDU**) licenses of LiveLink for MATLAB (see the [ISV Licenses][3]). The following example shows how to start COMSOL model from MATLAB via LiveLink in the interactive mode.
 
 ```console
-$ qsub -I -X -A PROJECT_ID -q qexp -l select=1:ncpus=36:mpiprocs=36
+$ qsub -I -X -A PROJECT_ID -q qexp -l select=1:ncpus=128:mpiprocs=128
 $ ml MATLAB/R2015b COMSOL/5.2.0-EDU
 $ comsol -3drend sw server MATLAB
 ```
@@ -111,7 +111,7 @@ To run LiveLink for MATLAB in batch mode with (comsol_matlab.pbs) job script, yo
 
 ```bash
 #!/bin/bash
-#PBS -l select=3:ncpus=36:mpiprocs=36
+#PBS -l select=3:ncpus=128:mpiprocs=128
 #PBS -q qprod
 #PBS -N JOB_NAME
 #PBS -A PROJECT_ID
@@ -135,7 +135,7 @@ cd $EBROOTCOMSOL/mli
 matlab -nodesktop -nosplash -r "mphstart; addpath /scratch/project/PROJECT_ID; test_job"
 ```
 
-This example shows how to run LiveLink for MATLAB with the following configuration: 3 nodes and 36 cores per node. A working directory has to be created before submitting (comsol_matlab.pbs) job script into the queue. The input file (test_job.m) has to be in the working directory or a full path to the input file has to be specified. The Matlab command option (`-r ”mphstart”`) created a connection with a COMSOL server using the default port number.
+This example shows how to run LiveLink for MATLAB with the following configuration: 3 nodes and 128 cores per node. A working directory has to be created before submitting (comsol_matlab.pbs) job script into the queue. The input file (test_job.m) has to be in the working directory or a full path to the input file has to be specified. The Matlab command option (`-r ”mphstart”`) created a connection with a COMSOL server using the default port number.
 
 [1]: licensing-and-available-versions.md
 [2]: ../../../general/accessing-the-clusters/graphical-user-interface/x-window-system.md
