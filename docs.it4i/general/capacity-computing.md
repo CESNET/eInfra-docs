@@ -191,7 +191,9 @@ You thus do not have to manually aggregate your tasks into PBS jobs. See the [pr
 
 * On Barbora and Karolina, you can simply load the HyperQueue module:
 
-`$ ml HyperQueue`
+```console
+$ ml HyperQueue
+```
 
 * If you want to install/compile HyperQueue manually, follow the steps on the [official webpage][b].
 
@@ -202,7 +204,9 @@ You thus do not have to manually aggregate your tasks into PBS jobs. See the [pr
 To use HyperQueue, you first have to start the HyperQueue server. It is a long-lived process that
 is supposed to be running on a login node. You can start it with the following command:
 
-`$ hq server start`
+```console
+$ hq server start
+```
 
 #### Submitting Computation
 
@@ -211,15 +215,19 @@ You can find more information in the [documentation][2].
 
 * Submit a simple job (command `echo 'Hello world'` in this case)
 
-    `$ hq submit echo 'Hello world'`
+    ```console
+    $ hq submit echo 'Hello world'
+    ```
 
 * Submit a job with 10000 tasks
 
-    `$ hq submit --array 1-10000 my-script.sh`
+    ```console
+    $ hq submit --array 1-10000 my-script.sh
+    ```
 
 Once you start some jobs, you can observe their status using the following commands:
 
-```
+```console
 # Display status of a single job
 $ hq job <job-id>
 
@@ -238,17 +246,21 @@ The workers should run on computing nodes, so you can start them using PBS.
 
 * Start a worker on a single PBS node:
 
-    ``$ qsub <qsub-params> -- `which hq` worker start``
+    ```console
+    $ qsub <qsub-params> -- `which hq` worker start
+    ```
 
 * Start a worker on all allocated PBS nodes:
 
-    ``$ qsub <qsub-params> -- `which pbsdsh` `which hq` worker start``
+    ```console
+    $ qsub <qsub-params> -- `which pbsdsh` `which hq` worker start
+    ```
 
 In an upcoming version, HyperQueue will be able to automatically submit PBS jobs with workers
 on your behalf.
 
 !!! tip
-    For debugging purposes, you can also start the worker, e.g. on a login using simply by running
+    For debugging purposes, you can also start the worker, e.g. on a login node, simply by running
     `$ hq worker start`. Do not use such worker for any long-running computations.
 
 ### Architecture
