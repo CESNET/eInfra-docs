@@ -146,7 +146,6 @@ nav:
         - Dask: software/data-science/dask.md
     - Debuggers:
       - Introduction: software/debuggers/introduction.md
-      - Aislinn: software/debuggers/aislinn.md
       - Allinea Forge (DDT,MAP): software/debuggers/allinea-ddt.md
       - Allinea Performance Reports: software/debuggers/allinea-performance-reports.md
       - CUBE: software/debuggers/cube.md
