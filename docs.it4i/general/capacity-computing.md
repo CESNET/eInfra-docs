@@ -191,9 +191,9 @@ You thus do not have to manually aggregate your tasks into PBS jobs. See the [pr
 
 * On Barbora and Karolina, you can simply load the HyperQueue module:
 
-```console
-$ ml HyperQueue
-```
+    ```console
+    $ ml HyperQueue
+    ```
 
 * If you want to install/compile HyperQueue manually, follow the steps on the [official webpage][b].
 
