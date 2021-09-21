@@ -3,7 +3,7 @@
 Java is available on the cluster. Activate Java by loading the Java module:
 
 ```console
-$ ml Java
+$ ml Java/1.8.0_221
 ```
 
 Note that the Java module must be loaded on the compute nodes as well, in order to run Java on compute nodes.
