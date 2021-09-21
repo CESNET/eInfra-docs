@@ -51,8 +51,7 @@ class Hello {
 ```
 
 ```console
-$ ml Java/1.8.0_144
-$ ml OpenMPI/1.8.0_144
+$ ml Java/1.8.0_221 OpenMPI/4.1.1-GCC-10.2.0-Java-1.8.0_221
 $ mpijavac Hello.java
 $ mpirun java Hello
 Hello world from rank 23 of 28
