@@ -178,7 +178,7 @@ nav:
       - OpenMPI Examples: software/mpi/ompi-examples.md
       - MPI4Py (MPI for Python): software/mpi/mpi4py-mpi-for-python.md
       - Running OpenMPI: software/mpi/running_openmpi.md
-      - Running MPICH2: software/mpi/running-mpich2.md
+      - Running MPICH: software/mpi/mpich.md
     - Numerical Languages:
       - Introduction: software/numerical-languages/introduction.md
       - Clp: salomon/software/numerical-libraries/Clp.md

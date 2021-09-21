@@ -1,8 +1,8 @@
-# Running MPICH2
+# Running MPICH
 
-## MPICH2 Program Execution
+## MPICH Program Execution
 
-The MPICH2 programs use MPD daemon or SSH connection to spawn processes, no PBS support is needed. However, the PBS allocation is required to access compute nodes.
+The MPICH programs use MPD daemon or SSH connection to spawn processes, no PBS support is needed. However, the PBS allocation is required to access compute nodes.
 
 ### Basic Usage
 
@@ -12,34 +12,11 @@ The MPICH2 programs use MPD daemon or SSH connection to spawn processes, no PBS 
 Example:
 
 ```console
-$ qsub -q qexp -l select=4:ncpus=16 -I
-    qsub: waiting for job 15210.srv11 to start
-    qsub: job 15210.srv11 ready
-$ ml impi
-$ mpirun -ppn 1 -hostfile $PBS_NODEFILE ./helloworld_mpi.x
-    Hello world! from rank 0 of 4 on host cn17
-    Hello world! from rank 1 of 4 on host cn108
-    Hello world! from rank 2 of 4 on host cn109
-    Hello world! from rank 3 of 4 on host cn110
+$ qsub -q qprod -l select=4:ncpus=128:mpiprocs=128 -I
+$ ml MPICH/3.3.2-GCC-10.2.0
+$ mpirun hostname | wc -l
+512
 ```
-
-In this example, we allocate 4 nodes via the express queue interactively. We set up the intel MPI environment and interactively run the helloworld_mpi.x program. We request MPI to spawn 1 process per node.
-Note that the executable helloworld_mpi.x must be available within the same path on all nodes. This is automatically fulfilled on the /home and /scratch filesystem.
-
-You need to preload the executable if running on the local scratch /lscratch filesystem:
-
-```console
-$ pwd
-    /lscratch/15210.srv11
-$ mpirun -ppn 1 -hostfile $PBS_NODEFILE cp /home/username/helloworld_mpi.x .
-$ mpirun -ppn 1 -hostfile $PBS_NODEFILE ./helloworld_mpi.x
-    Hello world! from rank 0 of 4 on host cn17
-    Hello world! from rank 1 of 4 on host cn108
-    Hello world! from rank 2 of 4 on host cn109
-    Hello world! from rank 3 of 4 on host cn110
-```
-
-In this example, we assume the executable helloworld_mpi.x is present on shared home directory. We run the `cp` command via `mpirun`, copying the executable from shared home to local scratch. Second `mpirun` will execute the binary in the /lscratch/15210.srv11 directory on nodes cn17, cn108, cn109 and cn110, one process per node.
 
 !!! note
     MPI process mapping may be controlled by PBS parameters.
@@ -51,7 +28,7 @@ The `mpiprocs` and `ompthreads` parameters allow for selection of number of runn
 Follow this example to run one MPI process per node, 16 threads per process. Note that no options to `mpirun` are needed
 
 ```console
-$ qsub -q qexp -l select=4:ncpus=16:mpiprocs=1:ompthreads=16 -I
+$ qsub -q qexp -l select=2:ncpus=128:mpiprocs=1:ompthreads=128 -I
 $ ml mvapich2
 $ mpirun ./helloworld_mpi.x
 ```
