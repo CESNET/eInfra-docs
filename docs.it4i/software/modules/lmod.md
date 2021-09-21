@@ -203,7 +203,7 @@ setenv("EBEXTSLISTPYTHON","setuptools-20.1.1,pip-8.0.2,nose-1.3.7")
 
 !!! warning
     Always specify the name **and** the version when loading a module.
-    Loading a default module in your script (e.g. `$ ml intel`) will cause divergent results in the case the default module is upgraded.
+    Loading a default module in your script (e.g. `$&nbsp;ml&nbsp;intel`) will cause divergent results in the case the default module is upgraded.
     **IT4Innovations is not responsible for any loss of allocated core-hours resulting from the use of improper modules in your calculations.**
 
 To effectively apply the changes to the environment that are specified by a module, use `ml` and specify the name of the module.
