@@ -8,7 +8,7 @@ There are two MPI examples, each using one of six different MPI interfaces:
 
 ### Hello World
 
-```c tab="C"
+```
 /*
  * Copyright (c) 2004-2006 The Trustees of Indiana University and Indiana
  *                         University Research and Technology
@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-```c++ tab="C++"
+```
 //
 // Copyright (c) 2004-2006 The Trustees of Indiana University and Indiana
 //                         University Research and Technology
@@ -78,7 +78,7 @@ int main(int argc, char **argv)
 }
 ```
 
-```fortran tab="F mpi.h"
+```
 C
 C Copyright (c) 2004-2006 The Trustees of Indiana University and Indiana
 C                         University Research and Technology
@@ -108,7 +108,7 @@ C
         end
 ```
 
-```fortran tab="F use mpi"
+```
 !
 ! Copyright (c) 2004-2006 The Trustees of Indiana University and Indiana
 !                         University Research and Technology
@@ -139,7 +139,7 @@ program main
 end
 ```
 
-```java tab="Java"
+```
 /*
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -219,7 +219,7 @@ The Makefile assumes that the wrapper compilers mpicc, mpic++, and mpifort are i
 Although the Makefile is tailored for OpenMPI (e.g., it checks the *mpi_info* command to see if you have support for C++, mpif.h, use mpi, and use mpi_f08 F90), all of the example programs are pure MPI, and therefore not specific to OpenMPI.  Hence, you can use a different MPI implementation to compile and run these programs if you wish.
 
 ```console
-[login@cn204.anselm ]$ tar xvf ompi.tar.gz
+$ tar xvf ompi.tar.gz
 ./
 ./connectivity_c.c
 ./Hello.java
@@ -228,8 +228,8 @@ Although the Makefile is tailored for OpenMPI (e.g., it checks the *mpi_info* co
 ...
 ...
 ./hello_cxx.cc
-[login@cn204.anselm ]$ ml OpenMPI/2.1.1-GCC-6.3.0-2.27
-[login@cn204.anselm ]$ make
+$ ml OpenMPI/4.1.1-GCC-10.2.0
+$ make
 mpicc -g  hello_c.c  -o hello_c
 mpicc -g  ring_c.c  -o ring_c
 mpicc -g  connectivity_c.c  -o connectivity_c
@@ -255,7 +255,7 @@ shmemcc -g  oshmem_strided_puts.c  -o oshmem_strided_puts
 shmemcc -g  oshmem_symmetric_data.c  -o oshmem_symmetric_data
 shmemfort -g  hello_oshmemfh.f90  -o hello_oshmemfh
 shmemfort -g  ring_oshmemfh.f90  -o ring_oshmemfh
-[login@cn204.anselm ]$ find . -executable -type f
+$ find . -executable -type f
 ./hello_oshmem
 ./dtrace/myppriv.sh
 ./dtrace/partrace.sh
