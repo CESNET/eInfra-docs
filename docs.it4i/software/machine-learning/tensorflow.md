@@ -7,6 +7,7 @@ For searching available modules type:
 $ ml av Tensorflow
 ```
 
+<!---
 ## Salomon Modules
 
 Salomon provides (besides other) these TensorFlow modules:
@@ -22,6 +23,7 @@ Salomon provides (besides other) these TensorFlow modules:
 * GCC/7.1.0-2.28
 * Python/3.6.1
 * protobuf/3.2.0-GCC-7.1.0-2.28-Python-3.6.1
+-->
 
 ## TensorFlow Application Example
 
