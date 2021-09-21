@@ -98,7 +98,7 @@ the GAUSS_WDEF environment variable accordingly.
 
 #### Karolina
 
-At this time, GPU-accelereated execution on Karolina is not available, since Gaussian 16 does not support NVIDIA A100 GPUs.
+Karolina is equipped with NVIDIA A100 GPUs and the Ampere architecture requires new CUDA and compiler versions which are not currently supported by Gaussian 16. As a result, GPU-accelerated execution on Karolina is currently **not available**.
 
 #### Barbora
 
