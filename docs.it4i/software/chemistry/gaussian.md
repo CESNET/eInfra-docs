@@ -32,7 +32,7 @@ Gaussian is available on Karolina, Salomon, Barbora, and DGX-2 systems in the la
 | Module                                | CPU support | GPU support  | Parallelization | Note               | Barbora | Salomon | DGX-2 | Karolina |
 |--------------------------------------|-------------|--------------|-----------------|---------------------|---------|---------|-------| -------- |
 | Gaussian/09-a02                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | Yes      |
-| Gaussian/09-d01                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | Yes      |    
+| Gaussian/09-d01                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | Yes      |
 | Gaussian/16_rev_c0-binary            | AVX2        | Yes          | SMP             | Binary distribution | Yes     | No      | Yes   | No       |
 | Gaussian/16_rev_c0-binary-Linda      | AVX2        | Yes          | SMP + Linda     | Binary distribution | Yes     | Yes     | No    | No       |
 | Gaussian/16_rev_c0-CascadeLake       | AVX-512     | No           | SMP             | IT4I compiled       | Yes     | No      | No    | No       |
