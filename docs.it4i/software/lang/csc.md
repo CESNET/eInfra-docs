@@ -82,6 +82,7 @@ csharp> from f in Directory.GetFiles ("mydirectory")
 ```
 
 <!--
+
 ## MPI.NET
 
 MPI is available for mono:
@@ -119,6 +120,7 @@ Greetings from node 0 of 4 running on cn204
 Greetings from node 3 of 4 running on cn199
 Greetings from node 1 of 4 running on cn199
 ```
+
 -->
 
 For more information, see the [Mono documentation page][a].
