@@ -28,7 +28,7 @@ Intel compilers provide vectorization of the code via the AVX-2/AVX-512 instruct
 
 For maximum performance on the Barbora cluster compute nodes, compile your programs using the AVX-512 instructions, with reporting where the vectorization was used. We recommend the following compilation options for high performance.
 
-``` info
+!!! info
     Barbora non-accelerated nodes support AVX-512 instructions (cn1-cn192).
 
 ```console
@@ -43,7 +43,7 @@ For maximum performance on the Barbora GPU nodes or Karolina cluster compute nod
 $ icc -ipo -O3 -xCORE-AVX2 -qopt-report1 -qopt-report-phase=vec myprog.c mysubroutines.c -o myprog.x
 ```
 
-``` warn
+!!! warn
     Karolina cluster has AMD cpu, use compiler options `-march=core-avx2`.
 
 In this example, we compile the program enabling interprocedural optimizations between source files (`-ipo`), aggressive loop optimizations (`-O3`), and vectorization (`-xCORE-AVX2`).
