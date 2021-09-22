@@ -190,7 +190,6 @@ nav:
       - HDF5: software/numerical-libraries/hdf5.md
       - Intel Numerical Libraries: software/numerical-libraries/intel-numerical-libraries.md
       - PETSc: software/numerical-libraries/petsc.md
-      - Trilinos: software/numerical-libraries/trilinos.md
     - Languages:
       - Java: software/lang/java.md
       - C#: software/lang/csc.md

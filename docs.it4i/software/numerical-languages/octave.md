@@ -8,6 +8,8 @@ For a list of available modules, type:
 
 ```console
 $ ml av octave
+------------------------------- /apps/modules/math -------------------------------
+   Octave/6.3.0-intel-2020b-without-X11
 ```
 
 ## Modules and Execution
@@ -18,7 +20,7 @@ To load the latest version of Octave load the module:
 $ ml Octave
 ```
 
-Octave on clusters is linked to a highly optimized MKL mathematical library. This provides threaded parallelization to many Octave kernels, notably the linear algebra subroutines. Octave runs these heavy calculation kernels without any penalty. By default, Octave would parallelize to 24 threads on Salomon. You may control the threads by setting the `OMP_NUM_THREADS` environment variable.
+Octave on clusters is linked to a highly optimized MKL mathematical library. This provides threaded parallelization to many Octave kernels, notably the linear algebra subroutines. Octave runs these heavy calculation kernels without any penalty. By default, Octave would parallelize to 128 threads on Karolina. You may control the threads by setting the `OMP_NUM_THREADS` environment variable.
 
 To run Octave interactively, log in with the `ssh -X` parameter for X11 forwarding. Run Octave:
 
@@ -26,7 +28,7 @@ To run Octave interactively, log in with the `ssh -X` parameter for X11 forwardi
 $ octave
 ```
 
-To run Octave in batch mode, write an Octave script, then write a bash jobscript and execute via the `qsub` command. By default, Octave will use 24 threads on Salomon when running MKL kernels.
+To run Octave in batch mode, write an Octave script, then write a bash jobscript and execute via the `qsub` command. By default, Octave will use 128 threads on Karolina when running MKL kernels.
 
 ```bash
 #!/bin/bash
