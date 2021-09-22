@@ -315,6 +315,16 @@ $ spack install git@2.29.0
 ######################################################################## 100.0%
 ...
 ...
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/8f/8f3bf70ddb515674ce2e19572920a39b1be96af12032b77f1dd57898981fb151.tar.gz
+################################################################################################################################################################################################################################ 100.0%
+==> Moving resource stage
+        source : /tmp/kru0052/resource-git-manpages-cabbbb7qozeijgspy2wl3hf6on6f4b4c/spack-src/
+        destination : /tmp/kru0052/spack-stage-git-2.29.0-cabbbb7qozeijgspy2wl3hf6on6f4b4c/spack-src/git-manpages
+==> git: Executing phase: 'autoreconf'
+==> git: Executing phase: 'configure'
+==> git: Executing phase: 'build'
+==> git: Executing phase: 'install'
+[+] /home/kru0052/Spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/git-2.29.0-cabbbb7qozeijgspy2wl3hf6on6f4b4c
 ```
 
 !!! warning
@@ -328,44 +338,6 @@ $ spack edit git
 
 !!! note
     To change the source link (`ftp://` to `http://`), use `spack create URL -f` to regenerate rules.
-
-#### **Example**
-
-```console
-$ spack install git
-==> Installing git
-==> Installing pcre
-==> Fetching ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.bz2
-curl: (7) couldn't connect to host
-==> Fetching from ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.bz2 failed.
-==> Error: FetchError: All fetchers failed for pcre-8.39-bm3lumpbghly2l7bkjsi4n2l3jyam6ax
-...
-
-$ spack create http://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.bz2 -f
-==> This looks like a URL for pcre
-==> Found 2 versions of pcre:
-
-  8.41  http://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.41.tar.bz2
-  8.40  http://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.40.tar.bz2
-
-How many would you like to checksum? (default is 1, q to abort) 1
-==> Downloading...
-==> Fetching http://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.41.tar.bz2
-######################################################################## 100,0%
-==> Checksummed 1 version of pcre
-==> This package looks like it uses the cmake build system
-==> Created template for pcre package
-==> Created package file: ~/.local/easybuild/software/Spack/0.10.0/var/spack/repos/builtin/packages/pcre/package.py
-$
-$ spack install git
-==> Installing git
-==> Installing pcre
-==> Installing cmake
-==> Installing ncurses
-==> Fetching http://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.0.tar.gz
-######################################################################## 100,0%
-...
-```
 
 ## Available Spack Module
 
@@ -382,6 +354,36 @@ Spack colorizes output.
 
 ```console
 $ spack find | less -R
+-- linux-centos7-x86_64 / gcc@4.8.5 -----------------------------
+autoconf@2.69
+automake@1.16.2
+berkeley-db@18.1.40
+bzip2@1.0.8
+curl@7.72.0
+diffutils@3.7
+expat@2.2.10
+gdbm@1.18.1
+gettext@0.21
+git@2.29.0
+libbsd@0.10.0
+libedit@3.1-20191231
+libiconv@1.16
+libidn2@2.3.0
+libsigsegv@2.12
+libtool@2.4.6
+libunistring@0.9.10
+libxml2@2.9.10
+m4@1.4.18
+ncurses@6.2
+openssh@8.4p1
+openssl@1.1.1h
+pcre2@10.35
+perl@5.32.0
+pkgconf@1.7.3
+readline@8.0
+tar@1.32
+xz@5.2.5
+zlib@1.2.11
 ```
 
 `spack find` shows the specs of installed packages. A spec is like a name, but it has a version, compiler, architecture, and build options associated with it. In Spack, you can have many installations of the same package with different specs.
@@ -398,24 +400,24 @@ $ spack load git
   the commands below.  Choose the right command for your shell.
 
   For bash and zsh:
-      . ~/.local/easybuild/software/Spack/0.10.0/share/spack/setup-env.sh
+      . ~/.local/easybuild/software/Spack/0.16.2/share/spack/setup-env.sh
 
   For csh and tcsh:
-      setenv SPACK_ROOT ~/.local/easybuild/software/Spack/0.10.0
-      source ~/.local/easybuild/software/Spack/0.10.0/share/spack/setup-env.csh
+      setenv SPACK_ROOT ~/.local/easybuild/software/Spack/0.16.2
+      source ~/.local/easybuild/software/Spack/0.16.2/share/spack/setup-env.csh
 ```
 
 ### First Usage
 
 ```console
-$ . ~/.local/easybuild/software/Spack/0.10.0/share/spack/setup-env.sh
+$ . ~/.local/easybuild/software/Spack/0.16.2/share/spack/setup-env.sh
 ```
 
 ```console
 $ git version 1.7.1
 $ spack load git
 $ git --version
-git version 2.11.0
+git version 2.29.0
 $ spack unload git
 $ git --version
 git version 1.7.1
@@ -431,13 +433,13 @@ You may force uninstall a package with the `--force` option.
 $ spack uninstall git
 ==> The following packages will be uninstalled :
 
--- linux-centos6-x86_64 / gcc@4.4.7 -----------------------------
-xmh3hmb git@2.11.0%gcc
+-- linux-centos7-x86_64 / gcc@4.4.7 -----------------------------
+xmh3hmb git@2.29.0%gcc
 
 
 ==> Do you want to proceed ? [y/n]
 y
-==> Successfully uninstalled git@2.11.0%gcc@4.4.7 arch=linux-centos6-x86_64 -xmh3hmb
+==> Successfully uninstalled git@2.29.00%gcc@4.8.5 arch=linux-centos6-x86_64 -xmh3hmb
 
 ```
 
