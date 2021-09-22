@@ -19,7 +19,6 @@ R version 3.1.1 is available on the cluster, along with GUI interface RStudio
 | Application | Version           | module              |
 | ----------- | ----------------- | ------------------- |
 | **R**       | R 3.1.1           | R/3.1.1-intel-2015b |
-| **RStudio** | RStudio 0.98.1103 | RStudio             |
 
 ```console
 $ ml R
@@ -48,7 +47,9 @@ Example jobscript:
 #!/bin/bash
 
 # change to local scratch directory
-cd /lscratch/$PBS_JOBID || exit
+DIR=/scratch/project/PROJECT_ID/$PBS_JOBID
+mkdir -p "$DIR"
+cd "$DIR" || exit
 
 # copy input file to scratch
 cp $PBS_O_WORKDIR/rscript.R .
@@ -370,18 +371,18 @@ An example jobscript for [static Rmpi][4] parallel R execution, running 1 proces
 #PBS -l select=100:ncpus=24:mpiprocs=24:ompthreads=1
 
 # change to scratch directory
-SCRDIR=/scratch/work/user/$USER/myjob
-cd $SCRDIR || exit
+DIR=/scratch/project/PROJECT_ID/$PBS_JOBID
+mkdir -p "$DIR"
+cd "$DIR" || exit
 
 # copy input file to scratch
 cp $PBS_O_WORKDIR/rscript.R .
 
 # load R and openmpi module
-ml R
-ml OpenMPI
+ml R OpenMPI
 
 # execute the calculation
-mpiexec -bycore -bind-to-core R --slave --no-save --no-restore -f rscript.R
+mpirun -bycore -bind-to-core R --slave --no-save --no-restore -f rscript.R
 
 # copy output file to home
 cp routput.out $PBS_O_WORKDIR/.
@@ -392,22 +393,10 @@ exit
 
 For more information about jobscripts and MPI execution, refer to the [Job submission][1] and general [MPI][5] sections.
 
-## Xeon Phi Offload
-
-By leveraging MKL, R can accelerate certain computations, most notably linear algebra operations on the Xeon Phi accelerator by using Automated Offload. To use MKL Automated Offload, you need to first set this environment variable before R execution:
-
-```console
-$ export MKL_MIC_ENABLE=1
-```
-
-Read more about automatic offload [here][6].
-
 [1]: ../../general/job-submission-and-execution.md
 [2]: #interactive-execution
-[3]: ../mpi/running_openmpi.md
 [4]: #static-rmpi
 [5]: ../mpi/mpi.md
-[6]: ../intel/intel-xeon-phi-salomon.md
 
 [a]: http://www.r-project.org/
 [b]: http://cran.r-project.org/doc/manuals/r-release/R-lang.html

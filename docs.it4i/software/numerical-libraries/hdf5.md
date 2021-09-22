@@ -9,7 +9,12 @@ Hierarchical Data Format library. Serial and MPI parallel version.
 For the current list of installed versions, use:
 
 ```console
-$ ml av HDF
+$ ml av HDF5
+----------------------------------------------------- /apps/modules/data ------------------------------------------------------
+   HDF5/1.10.6-foss-2020b-parallel     HDF5/1.10.6-intel-2020a             HDF5/1.10.7-gompi-2021a
+   HDF5/1.10.6-iimpi-2020a             HDF5/1.10.6-intel-2020b-parallel    HDF5/1.10.7-gompic-2020b
+   HDF5/1.10.6-intel-2020a-parallel    HDF5/1.10.7-gompi-2020b             HDF5/1.10.7-iimpi-2020b  (D)
+
 ```
 
 To load the module, use the `ml` command.
@@ -67,15 +72,10 @@ The module sets up environment variables required for linking and running HDF5 e
 Load modules and compile:
 
 ```console
-$ ml intel
-$ ml hdf5-parallel
+$ ml intel/2020b HDF5/1.10.6-intel-2020b-parallel
 $ mpicc hdf5test.c -o hdf5test.x -Wl,-rpath=$LIBRARY_PATH $HDF5_INC $HDF5_SHLIB
 ```
 
-Run the example as [Intel MPI program][1].
-
 For further information, see the [website][a].
-
-[1]: ../mpi/running-mpich2.md
 
 [a]: http://www.hdfgroup.org/HDF5/

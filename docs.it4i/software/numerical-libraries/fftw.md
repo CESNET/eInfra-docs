@@ -4,21 +4,18 @@ The discrete Fourier transform in one or more dimensions, MPI parallel
 
 FFTW is a C subroutine library for computing the discrete Fourier transform in one or more dimensions, of arbitrary input size, and of both real and complex data (as well as of even/odd data, e.g. the discrete cosine/sine transforms or DCT/DST). The FFTW library allows for MPI parallel, in-place discrete Fourier transform, with data distributed over number of nodes.
 
-Two versions, **3.3.x** and **2.1.5** of FFTW are available, each compiled for **Intel MPI** and **OpenMPI** using **Intel** and **gnu** compilers. These are available via modules:
+```console
+$ ml av FFTW
 
-| Version        | Parallelization | module              | linker options                      |
-| -------------- | --------------- | ------------------- | ----------------------------------- |
-| FFTW3 gcc3.3.3 | pthread, OpenMP | fftw3/3.3.3-gcc     | -lfftw3, -lfftw3_threads-lfftw3_omp |
-| FFTW3 icc3.3.3 | pthread, OpenMP | fftw3               | -lfftw3, -lfftw3_threads-lfftw3_omp |
-| FFTW2 gcc2.1.5 | pthread         | fftw2/2.1.5-gcc     | -lfftw, -lfftw_threads              |
-| FFTW2 icc2.1.5 | pthread         | fftw2               | -lfftw, -lfftw_threads              |
-| FFTW3 gcc3.3.3 | OpenMPI         | fftw-mpi3/3.3.3-gcc | -lfftw3_mpi                         |
-| FFTW3 icc3.3.3 | Intel MPI       | fftw3-mpi           | -lfftw3_mpi                         |
-| FFTW2 gcc2.1.5 | OpenMPI         | fftw2-mpi/2.1.5-gcc | -lfftw_mpi                          |
-| FFTW2 gcc2.1.5 | IntelMPI        | fftw2-mpi/2.1.5-gcc | -lfftw_mpi                          |
+---------------------------------------------------- /apps/modules/numlib -----------------------------------------------------
+   FFTW/3.3.7-gompi-2018a        FFTW/3.3.8-gompi-2020a    FFTW/3.3.8-gompic-2020b           FFTW/3.3.8
+   FFTW/3.3.8-gompi-2020a-amd    FFTW/3.3.8-gompi-2020b    FFTW/3.3.8-iccifort-2020.4.304    FFTW/3.3.9-gompi-2021a (D)
+```
+
+To load the latest version of Octave load the module:
 
 ```console
-$ ml fftw3 **or** ml FFTW
+$ ml FFTW
 ```
 
 The module sets up environment variables, required for linking and running FFTW enabled applications. Make sure that the choice of FFTW module is consistent with your choice of MPI library. Mixing MPI of different implementations may have unpredictable results.
@@ -63,14 +60,10 @@ The module sets up environment variables, required for linking and running FFTW 
 Load modules and compile:
 
 ```console
-$ ml intel
-$ ml fftw3-mpi
+$ ml intel/2020b 3.3.8-iccifort-2020.4.304
 $ mpicc testfftw3mpi.c -o testfftw3mpi.x -Wl,-rpath=$LIBRARY_PATH -lfftw3_mpi
 ```
 
-Run the example as [Intel MPI program][1].
-
 Read more on FFTW usage on the [FFTW website][a].
 
-[1]: ../mpi/running-mpich2.md
 [a]: http://www.fftw.org/fftw3_doc/

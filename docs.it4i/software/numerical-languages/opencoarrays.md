@@ -79,10 +79,10 @@ end program synchronization_test
 
 ## Compile and Run
 
-Currently, version 1.8.10 compiled with the OpenMPI 1.10.7 library is installed on the cluster. To load the `OpenCoarrays` module, type:
+Currently, version 2.9.2 compiled with the OpenMPI 4.0.5 library is installed on the cluster. To load the `OpenCoarrays` module, type:
 
 ```console
-$ ml OpenCoarrays/1.8.10-GCC-6.3.0-2.27
+$ ml OpenCoarrays/2.9.2-gompi-2020b
 ```
 
 ### Compile CAF Program
@@ -106,7 +106,7 @@ $ mpif90 hello_world.f90 -o hello_world.x -fcoarray=lib -lcaf_mpi
 
 ### Run CAF Program
 
-A CAF program can be run by invoking the `cafrun` wrapper or directly by the `mpiexec`:
+A CAF program can be run by invoking the `cafrun` wrapper or directly by the `mpirun`:
 
 ```console
 $ cafrun -np 4 ./hello_world.x
@@ -115,17 +115,13 @@ $ cafrun -np 4 ./hello_world.x
     Hello world from image            3 of           4
     Hello world from image            4 of           4
 
-$ mpiexec -np 4 ./synchronization_test.x
+$ mpirun -np 4 ./synchronization_test.x
     The random number is         242
     The random number is         242
     The random number is         242
     The random number is         242
 ```
 
-`-np 4` is the number of images to run. The parameters of `cafrun` and `mpiexec` are the same.
-
-For more information about running CAF program, follow [Running OpenMPI - Salomon][1].
-
-[1]: ../mpi/running_openmpi.md
+`-np 4` is the number of images to run. The parameters of `cafrun` and `mpirun` are the same.
 
 [a]: http://www.opencoarrays.org/

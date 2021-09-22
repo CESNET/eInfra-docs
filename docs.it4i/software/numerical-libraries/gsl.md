@@ -48,6 +48,9 @@ For the list of available gsl modules, use the command:
 
 ```console
 $ ml av gsl
+---------------- /apps/modules/numlib -------------------
+   GSL/2.5-intel-2017c    GSL/2.6-iccifort-2020.1.217    GSL/2.7-GCC-10.3.0 (D)
+   GSL/2.6-GCC-10.2.0     GSL/2.6-iccifort-2020.4.304
 ```
 
 ## Linking
@@ -57,17 +60,14 @@ Load an appropriate `gsl` module. Use the `-lgsl` switch to link your code again
 ### Compiling and Linking With Intel Compilers
 
 ```console
-$ ml intel
-$ ml gsl
+$ ml intel/2020b gsl/2.6-iccifort-2020.4.304
 $ icc myprog.c -o myprog.x -Wl,-rpath=$LIBRARY_PATH -mkl -lgsl
 ```
 
 ### Compiling and Linking With GNU Compilers
 
 ```console
-$ ml gcc
-$ ml imkl **or** ml mkl
-$ ml gsl/1.16-gcc
+$ ml ml GCC/10.2.0 imkl/2020.4.304-iimpi-2020b GSL/2.6-iccifort-2020.4.304
 $ gcc myprog.c -o myprog.x -Wl,-rpath=$LIBRARY_PATH -lmkl_intel_lp64 -lmkl_gnu_thread -lmkl_core -lgomp -lgsl
 ```
 
@@ -130,8 +130,7 @@ Following is an example of a discrete wavelet transform implemented by GSL:
 Load modules and compile:
 
 ```console
-$ ml intel
-$ ml gsl
+$ ml intel/2020b gsl/GSL/2.6-iccifort-2020.4.304
 $ icc dwt.c -o dwt.x -Wl,-rpath=$LIBRARY_PATH -mkl -lgsl
 ```
 

@@ -16,13 +16,12 @@ PETSc (Portable, Extensible Toolkit for Scientific Computation) is a suite of bu
 
 ## Modules
 
-You can start using PETSc by loading the `petsc` module. Module names follox the pattern `petsc/version-compiler-mpi-blas-variant` where `variant` is replaced by one of `{dbg, opt, threads-dbg, threads-opt}`, for example:
+For the current list of installed versions, use:
 
 ```console
-$ ml petsc/3.4.4-icc-impi-mkl-opt
-```
+$ ml av petsc
 
- The `opt` variant is compiled without debugging information (no `-g` option) and with aggressive compiler optimizations (`-O3 -xAVX`). This variant is suitable for performance measurements and production runs. In all other cases, use the debug (`dbg`) variant, because it contains debugging information, performs validations and self-checks, and provides a clear stack trace and message in case of an error. The other two variants `threads-dbg` and `threads-opt` are `dbg` and `opt`, respectively, built with [OpenMP and pthreads threading support][j].
+```
 
 ## External Libraries
 
