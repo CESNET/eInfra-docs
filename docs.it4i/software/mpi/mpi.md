@@ -87,7 +87,6 @@ When using Intel MPI, use the following MPI wrappers:
 
 For module `intel/2020b`
 
-
 ```console
 $  mpiicc -v
 mpiicc for the Intel(R) MPI Library 2019 Update 9 for Linux*
