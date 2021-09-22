@@ -2,10 +2,9 @@
 
 ## Introduction
 
-!!!notes
+!!! notes
     Since 2016, the MATLAB module is not updated anymore and purchase of new licenses is not planned.
     However, due to [e-infra integration][b], IT4Innovations may have access to recent MATLAB versions from cooperating organizations in the future.
-    More information will be available in May, 2021.
 
 MATLAB is available in versions R2015a and R2015b. There are always two variants of the release:
 

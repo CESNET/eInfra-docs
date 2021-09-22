@@ -182,7 +182,6 @@ nav:
       - Clp: salomon/software/numerical-libraries/Clp.md
       - R: software/numerical-languages/r.md
       - Matlab: software/numerical-languages/matlab.md
-      - Matlab 2013-2014: software/numerical-languages/matlab_1314.md
       - Octave: software/numerical-languages/octave.md
       - OpenCoarrays: software/numerical-languages/opencoarrays.md
     - Numerical Libraries:

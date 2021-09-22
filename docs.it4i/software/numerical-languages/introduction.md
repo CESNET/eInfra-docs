@@ -11,7 +11,10 @@ This section contains a collection of high-level interpreted languages, primaril
 MATLAB® is a high-level language and interactive environment for numerical computation, visualization, and programming.
 
 ```console
-$ ml MATLAB
+$ ml av MATLAB
+-------------- /apps/modules/math --------------
+   MATLAB/2021a
+$ ml MATLAB/2021a
 $ matlab
 ```
 
@@ -22,8 +25,11 @@ Read more at the [MATLAB page][1].
 GNU Octave is a high-level interpreted language, primarily intended for numerical computations. The Octave language is quite similar to MATLAB so that most programs are easily portable.
 
 ```console
-$ ml Octave
-$ octave
+$ ml av Octave
+-------------- /apps/modules/math --------------
+Octave/6.3.0-intel-2020b-without-X11
+$ ml Octave/6.3.0-intel-2020b-without-X11
+$ octave 
 ```
 
 Read more at the [Octave page][2].
@@ -33,6 +39,9 @@ Read more at the [Octave page][2].
 The R is an interpreted language and environment for statistical computing and graphics.
 
 ```console
+$ ml av R/
+-------------- /apps/modules/math --------------
+
 $ ml R
 $ R
 ```
