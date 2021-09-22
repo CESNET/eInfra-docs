@@ -6,18 +6,16 @@ To run ANSYS MAPDL in batch mode you can utilize/modify the default mapdl.pbs sc
 
 ```bash
 #!/bin/bash
-#PBS -l select=5:ncpus=24:mpiprocs=24
+#PBS -l select=5:ncpus=128:mpiprocs=128
 #PBS -q qprod
 #PBS -N ANSYS-test
 #PBS -A XX-YY-ZZ
 
-#! Mail to user when job terminate or abort
-#PBS -m ae
-
 #!change the working directory (default is home directory)
 #cd <working directory> (working directory must exists)
-WORK_DIR="/scratch/$USER/work"
-cd $WORK_DIR
+DIR=/scratch/project/PROJECT_ID/$PBS_JOBID
+mkdir -p "$DIR"
+cd "$DIR" || exit
 
 echo Running on host `hostname`
 echo Time is `date`
@@ -25,7 +23,7 @@ echo Directory is `pwd`
 echo This jobs runs on the following processors:
 echo `cat $PBS_NODEFILE`
 
-ml ANSYS/19.1-intel-2017c
+ml ANSYS/21.1-intel-2018a
 
 #### Set number of processors per host listing
 #### (set to 1 as $PBS_NODEFILE lists each node twice if :ppn=2)
@@ -45,7 +43,7 @@ echo Machines: $hl
 #-i input.dat includes the input of analysis in APDL format
 #-o file.out is output file from ansys where all text outputs will be redirected
 #-p the name of license feature (aa_r=ANSYS Academic Research, ane3fl=Multiphysics(commercial), aa_r_dy=Academic AUTODYN)
-ansys191 -b -dis -p aa_r -i input.dat -o file.out -machines $hl -dir $WORK_DIR
+ansys211 -b -dis -p aa_r -i input.dat -o file.out -machines $hl -dir $WORK_DIR
 ```
 
 The header of the PBS file (above) is common and the description can be found on [this site][1]. [SVS FEM][b] recommends utilizing sources by keywords: nodes, ppn. These keywords allow addressing directly the number of nodes (computers) and cores (ppn) utilized in the job. In, addition the rest of the code assumes such structure of allocated resources.

@@ -20,13 +20,7 @@ The default programming model for GPU accelerators is NVIDIA CUDA. To set up the
 $ ml CUDA
 ```
 
-If the user code is hybrid and uses both CUDA and MPI, the MPI environment has to be set up as well. One way to do this is to use the `PrgEnv-gnu` module, which sets up the correct combination of the GNU compiler and MPI library:
-
-```console
-$ ml PrgEnv-gnu
-```
-
-CUDA code can be compiled directly on login1 or login2 nodes. The user does not have to use compute nodes with GPU accelerators for compilation. To compile CUDA source code, use the NVCC compiler:
+CUDA code can be compiled directly on login nodes. The user does not have to use compute nodes with GPU accelerators for compilation. To compile CUDA source code, use the NVCC compiler:
 
 ```console
 $ nvcc --version
@@ -37,7 +31,7 @@ The CUDA Toolkit comes with a large number of examples, which can be a helpful r
 ```console
 $ cd ~
 $ mkdir cuda-samples
-$ cp -R /apps/nvidia/cuda/6.5.14/samples/* ~/cuda-samples/
+$ cp -R /apps/nvidia/cuda/VERSION_CUDA/samples/* ~/cuda-samples/
 ```
 
 To compile examples, change directory to the particular example (here the example used is deviceQuery) and run `make` to start the compilation;
@@ -51,7 +45,7 @@ To run the code, the user can use a PBS interactive session to get access to a n
 
 ```console
 $ qsub -I -q qnvidia -A OPEN-0-0
-$ ml cuda
+$ ml CUDA
 $ ~/cuda-samples/1_Utilities/deviceQuery/deviceQuery
 ```
 

@@ -6,18 +6,16 @@ To run ANSYS LS-DYNA in batch mode, you can utilize/modify the default ansysdyna
 
 ```bash
 #!/bin/bash
-#PBS -l select=5:ncpus=24:mpiprocs=24
+#PBS -l select=5:ncpus=128:mpiprocs=128
 #PBS -q qprod
 #PBS -N ANSYS-test
 #PBS -A XX-YY-ZZ
 
-#! Mail to user when job terminate or abort
-#PBS -m ae
-
 #!change the working directory (default is home directory)
 #cd <working directory>
-WORK_DIR="/scratch/$USER/work"
-cd $WORK_DIR
+DIR=/scratch/project/PROJECT_ID/$PBS_JOBID
+mkdir -p "$DIR"
+cd "$DIR" || exit
 
 echo Running on host `hostname`
 echo Time is `date`
@@ -30,7 +28,7 @@ NPROCS=`wc -l < $PBS_NODEFILE`
 
 echo This job has allocated $NPROCS nodes
 
-ml ANSYS/19.1-intel-2017c
+ml ANSYS/21.1-intel-2018a
 
 #### Set number of processors per host listing
 #### (set to 1 as $PBS_NODEFILE lists each node twice if :ppn=2)
@@ -47,7 +45,7 @@ done
 
 echo Machines: $hl
 
-ansys191 -dis -lsdynampp i=input.k -machines $hl
+ansys211 -dis -lsdynampp i=input.k -machines $hl
 ```
 
 The header of the PBS file (above) is common and the description can be found on [this site][1]. [SVS FEM][b] recommends to utilize sources by keywords: nodes, ppn. These keywords allows addressing directly the number of nodes (computers) and cores (ppn) utilized in the job. In addition, the rest of the code assumes such structure of allocated resources.

@@ -206,7 +206,6 @@ nav:
         - ANSYS Fluent: software/tools/ansys/ansys-fluent.md
         - ANSYS LS-DYNA: software/tools/ansys/ansys-ls-dyna.md
         - ANSYS MAPDL: software/tools/ansys/ansys-mechanical-apdl.md
-        - LS-DYNA: software/tools/ansys/ls-dyna.md
         - Workbench: software/tools/ansys/workbench.md
         - Setting License Preferences: software/tools/ansys/licensing.md
         - Licensing and Available Versions: software/tools/ansys/setting-license-preferences.md
