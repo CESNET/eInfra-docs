@@ -95,6 +95,6 @@ $DDTPATH/doc/userguide.pdf
 [1] Discipline, Magic, Inspiration and Science: Best Practice Debugging with Allinea DDT, Workshop conducted at LLNL by Allinea on May 10, 2013, [link][a]
 
 [1]: ../../general/accessing-the-clusters/graphical-user-interface/x-window-system.md
-[2]: ../../../modules/lmod/#loading-modules
+[2]: ../../modules/lmod/#loading-modules
 
 [a]: https://computing.llnl.gov/tutorials/allineaDDT/index.html
