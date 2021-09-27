@@ -9,18 +9,16 @@ To run ANSYS Fluent in a batch mode, you can utilize/modify the default fluent.p
 ```bash
 #!/bin/bash
 #PBS -S /bin/bash
-#PBS -l select=5:ncpus=24:mpiprocs=24
+#PBS -l select=5:ncpus=128:mpiprocs=128
 #PBS -q qprod
 #PBS -N ANSYS-test
 #PBS -A XX-YY-ZZ
 
-#! Mail to user when job terminate or abort
-#PBS -m ae
-
 #!change the working directory (default is home directory)
 #cd <working directory> (working directory must exists)
-WORK_DIR="/scratch/$USER/work"
-cd $WORK_DIR
+DIR=/scratch/project/PROJECT_ID/$PBS_JOBID
+mkdir -p "$DIR"
+cd "$DIR" || exit
 
 echo Running on host `hostname`
 echo Time is `date`
@@ -29,7 +27,7 @@ echo This jobs runs on the following processors:
 echo `cat $PBS_NODEFILE`
 
 #### Load ansys module so that we find the cfx5solve command
-ml ANSYS/19.1-intel-2017c
+ml ANSYS/21.1-intel-2018a
 
 # Use following line to specify MPI for message-passing instead
 NCORES=`wc -l $PBS_NODEFILE |awk '{print $1}'`
@@ -91,7 +89,7 @@ To run ANSYS Fluent in batch mode with the user's config file, you can utilize/m
 
 ```bash
 #!/bin/sh
-#PBS -l nodes=2:ppn=4
+#PBS -l nodes=2:mpiprocs=4:ncpus=128
 #PBS -1 qprod
 #PBS -N $USE-Fluent-Project
 #PBS -A XX-YY-ZZ
@@ -135,7 +133,7 @@ To run ANSYS Fluent in batch mode with the user's config file, you can utilize/m
  Fluent arguments: $fluent_args"
 
  #run the solver
- /ansys_inc/v145/fluent/bin/fluent $fluent_args  > $outfile
+ fluent $fluent_args  > $outfile
 ```
 
 It runs the jobs out of the directory from which they are submitted (PBS_O_WORKDIR).

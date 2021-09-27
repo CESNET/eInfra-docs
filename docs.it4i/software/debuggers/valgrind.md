@@ -48,13 +48,17 @@ int main(void)
 Now, compile it with the Intel compiler :
 
 ```console
-$ module add intel
+$ ml intel/2020b
 $ icc -g valgrind-example.c -o valgrind-example
 ```
 
 Now, let us run it with Valgrind:
 
 `valgrind [valgrind options] <your program binary> [your program options]`
+
+```console
+$ ml Valgrind/3.16.1-intel-2020b
+```
 
 If no Valgrind options are specified, Valgrind defaults to running the Memcheck tool. For the full description of command line options, refer to the Valgrind documentation.
 
@@ -155,10 +159,7 @@ The default version without MPI support will however report a large number of fa
     ==30166== by 0x4008BD: main (valgrind-example-mpi.c:18)
 ```
 
-So it is better to use the MPI-enabled Valgrind from the module. The MPI version requires the library:
-
-* Salomon: $EBROOTVALGRIND/lib/valgrind/libmpiwrap-amd64-linux.so
-
+So it is better to use the MPI-enabled Valgrind from the module. The MPI version requires the library `$EBROOTVALGRIND/lib/valgrind/libmpiwrap-amd64-linux.so`
 which must be included in the `LD_PRELOAD` environment variable.
 
 Let us look at this MPI example:
@@ -182,10 +183,9 @@ int main(int argc, char *argv[])
 There are two errors - use of uninitialized memory and invalid length of the buffer. Let us debug it with Valgrind:
 
 ```console
-$ module add intel impi
+$ ml intel/2020b Valgrind/3.16.1-intel-2020b
 $ mpicc -g valgrind-example-mpi.c -o valgrind-example-mpi
-$ module add valgrind/3.9.0-impi
-$ mpirun -np 2 -env LD_PRELOAD /apps/tools/valgrind/3.9.0/impi/lib/valgrind/libmpiwrap-amd64-linux.so valgrind ./valgrind-example-mpi
+$ mpirun -np 2 -env LD_PRELOAD $EBROOTVALGRIND/lib/valgrind/libmpiwrap-amd64-linux.so valgrind ./valgrind-example-mpi
 ```
 
 Prints this output (note that there is an output printed for every launched MPI process):

@@ -10,29 +10,18 @@ MPI4Py is available in standard Python modules on the clusters.
 
 ## Modules
 
-MPI4Py is built for OpenMPI. Before you start with MPI4Py, you need to load the Python and OpenMPI modules.
+MPI4Py is built for OpenMPI or Intel MPI. Before you start with MPI4Py, you need to load the mpi4py module.
 
 ```console
-$ ml av Python/
---------------------------------------- /apps/modules/lang -------------------------
-   Python/2.7.8-intel-2015b    Python/2.7.11-intel-2016a  Python/3.5.1-intel-2017.00
-   Python/2.7.11-intel-2017a   Python/2.7.9-foss-2015b    Python/2.7.9-intel-2015b
-   Python/2.7.11-foss-2016a    Python/3.5.2-foss-2016a    Python/3.5.1
-   Python/2.7.9-foss-2015g     Python/3.4.3-intel-2015b   Python/2.7.9
-   Python/2.7.11-intel-2015b   Python/3.5.2
-
-$ ml av OpenMPI/
---------------------------------------- /apps/modules/mpi --------------------------
-OpenMPI/1.8.6-GCC-4.4.7-system   OpenMPI/1.8.8-GNU-4.9.3-2.25  OpenMPI/1.10.1-GCC-4.9.3-2.25
-OpenMPI/1.8.6-GNU-5.1.0-2.25     OpenMPI/1.8.8-GNU-5.1.0-2.25  OpenMPI/1.10.1-GNU-4.9.3-2.25
-    OpenMPI/1.8.8-iccifort-2015.3.187-GNU-4.9.3-2.25   OpenMPI/2.0.2-GCC-6.3.0-2.27
+$ ml av mpi4py
+------------------------------------------------------- /apps/modules/mpi -------------------------------------------------------
+   mpi4py/3.1.1-gompi-2020b    mpi4py/3.1.1-intel-2020b (D)
 ```
 
 !!! warning "Flavours"
 
-    * modules Python/x.x.x-intel... - intel MPI
-    * modules Python/x.x.x-foss...  - OpenMPI
-    * modules Python/x.x.x - without MPI
+    * modules mpi4py/x.x.x-intel... - intel MPI
+    * modules mpi4py/x.x.x-gompi...  - OpenMPI
 
 ## Execution
 
@@ -45,128 +34,186 @@ from mpi4py import MPI
 The MPI4Py-enabled Python programs [execute as any other OpenMPI][1] code. The simpliest way is to run:
 
 ```console
-$ mpiexec python <script>.py
+$ mpirun python <script>.py
 ```
 
 For example:
 
 ```console
-$ mpiexec python hello_world.py
+$ mpirun python hello_world.py
 ```
 
 ## Examples
 
-### Hello World!
-
-```python
-from mpi4py import MPI
-
-comm = MPI.COMM_WORLD
-
-print "Hello! I'm rank %d from %d running in total..." % (comm.rank, comm.size)
-
-comm.Barrier()   # wait for everybody to synchronize
-```
-
-### Collective Communication With NumPy Arrays
-
-```python
-from mpi4py import MPI
-from __future__ import division
-import numpy as np
-
-comm = MPI.COMM_WORLD
-
-print("-"*78)
-print(" Running on %d cores" % comm.size)
-print("-"*78)
-
-comm.Barrier()
-
-# Prepare a vector of N=5 elements to be broadcasted...
-N = 5
-if comm.rank == 0:
-    A = np.arange(N, dtype=np.float64)    # rank 0 has proper data
-else:
-    A = np.empty(N, dtype=np.float64)     # all other just an empty array
-
-# Broadcast A from rank 0 to everybody
-comm.Bcast( [A, MPI.DOUBLE] )
-
-# Everybody should now have the same...
-print "[%02d] %s" % (comm.rank, A)
-```
-
 Execute the above code as:
 
 ```console
-$ qsub -q qexp -l select=4:ncpus=16:mpiprocs=16:ompthreads=1 -I # Salomon: ncpus=24:mpiprocs=24
-$ ml Python
-$ ml OpenMPI
-$ mpiexec -bycore -bind-to-core python hello_world.py
+$ qsub -q qprod -l select=4:ncpus=128:mpiprocs=128:ompthreads=1 -I -A PROJECT_ID
+$ ml mpi4py/3.1.1-intel-2020b # or mpi4py/3.1.1-gompi-2020b
 ```
 
-In this example, we run MPI4Py-enabled code on 4 nodes, 16 cores per node (total of 64 processes), each Python process is bound to a different core. More examples and documentation can be found on [MPI for Python webpage][a].
-
-### Adding Numbers
-
-Task: count sum of numbers from 1 to 1 000 000. (There is an easy formula to count the sum of arithmetic sequence, but we are showing the MPI solution with adding numbers one by one).
+### Hello World!
 
 ```python
-#!/usr/bin/python
+#!/usr/bin/env python
+"""
+Parallel Hello World
+"""
 
-import numpy
 from mpi4py import MPI
-import time
+import sys
 
-comm = MPI.COMM_WORLD
-rank = comm.Get_rank()
-size = comm.Get_size()
+size = MPI.COMM_WORLD.Get_size()
+rank = MPI.COMM_WORLD.Get_rank()
+name = MPI.Get_processor_name()
 
-a = 1
-b = 1000000
-
-perrank = b//size
-summ = numpy.zeros(1)
-
-comm.Barrier()
-start_time = time.time()
-
-temp = 0
-for i in range(a + rank*perrank, a + (rank+1)*perrank):
-    temp = temp + i
-
-summ[0] = temp
-
-if rank == 0:
-    total = numpy.zeros(1)
-else:
-    total = None
-
-comm.Barrier()
-#collect the partial results and add to the total sum
-comm.Reduce(summ, total, op=MPI.SUM, root=0)
-
-stop_time = time.time()
-
-if rank == 0:
-    #add the rest numbers to 1 000 000
-    for i in range(a + (size)*perrank, b+1):
-        total[0] = total[0] + i
-    print ("The sum of numbers from 1 to 1 000 000: ", int(total[0]))
-    print ("time spent with ", size, " threads in milliseconds")
-    print ("-----", int((time.time()-start_time)*1000), "-----")
+sys.stdout.write(
+    "Hello, World! I am process %d of %d on %s.\n"
+    % (rank, size, name))
 ```
-
-Execute the code above as:
 
 ```console
-$ qsub -I -q qexp -l select=4:ncpus=16,walltime=00:30:00
-
-$ ml Python/3.5.2-intel-2017.00
-
-$ mpirun -n 2 python myprogram.py
+mpirun python ./hello_world.py
+...
+Hello, World! I am process 81 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 91 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 15 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 105 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 112 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 11 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 83 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 58 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 103 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 4 of 512 on cn041.karolina.it4i.cz.
+Hello, World! I am process 28 of 512 on cn041.karolina.it4i.cz.
 ```
+
+### Mandelbrot
+
+```python
+from mpi4py import MPI
+import numpy as np
+
+tic = MPI.Wtime()
+
+x1 = -2.0
+x2 =  1.0
+y1 = -1.0
+y2 =  1.0
+
+w = 150
+h = 100
+maxit = 127
+
+def mandelbrot(x, y, maxit):
+    c = x + y*1j
+    z = 0 + 0j
+    it = 0
+    while abs(z) < 2 and it < maxit:
+        z = z**2 + c
+        it += 1
+    return it
+
+comm = MPI.COMM_WORLD
+size = comm.Get_size()
+rank = comm.Get_rank()
+
+rmsg = np.empty(4, dtype='f')
+imsg = np.empty(3, dtype='i')
+
+if rank == 0:
+    rmsg[:] = [x1, x2, y1, y2]
+    imsg[:] = [w, h, maxit]
+
+comm.Bcast([rmsg, MPI.FLOAT], root=0)
+comm.Bcast([imsg, MPI.INT], root=0)
+
+x1, x2, y1, y2 = [float(r) for r in rmsg]
+w, h, maxit    = [int(i) for i in imsg]
+dx = (x2 - x1) / w
+dy = (y2 - y1) / h
+
+# number of lines to compute here
+N = h // size + (h % size > rank)
+N = np.array(N, dtype='i')
+# indices of lines to compute here
+I = np.arange(rank, h, size, dtype='i')
+# compute local lines
+C = np.empty([N, w], dtype='i')
+for k in np.arange(N):
+    y = y1 + I[k] * dy
+    for j in np.arange(w):
+        x = x1 + j * dx
+        C[k, j] = mandelbrot(x, y, maxit)
+# gather results at root
+counts = 0
+indices = None
+cdata = None
+if rank == 0:
+    counts = np.empty(size, dtype='i')
+    indices = np.empty(h, dtype='i')
+    cdata = np.empty([h, w], dtype='i')
+comm.Gather(sendbuf=[N, MPI.INT],
+            recvbuf=[counts, MPI.INT],
+            root=0)
+comm.Gatherv(sendbuf=[I, MPI.INT],
+             recvbuf=[indices, (counts, None), MPI.INT],
+             root=0)
+comm.Gatherv(sendbuf=[C, MPI.INT],
+             recvbuf=[cdata, (counts*w, None), MPI.INT],
+             root=0)
+# reconstruct full result at root
+if rank == 0:
+    M = np.zeros([h,w], dtype='i')
+    M[indices, :] = cdata
+
+toc = MPI.Wtime()
+wct = comm.gather(toc-tic, root=0)
+if rank == 0:
+    for task, time in enumerate(wct):
+        print('wall clock time: %8.2f seconds (task %d)' % (time, task))
+    def mean(seq): return sum(seq)/len(seq)
+    print    ('all tasks, mean: %8.2f seconds' % mean(wct))
+    print    ('all tasks, min:  %8.2f seconds' % min(wct))
+    print    ('all tasks, max:  %8.2f seconds' % max(wct))
+    print    ('all tasks, sum:  %8.2f seconds' % sum(wct))
+
+# eye candy (requires matplotlib)
+if rank == 0:
+    try:
+        from matplotlib import pyplot as plt
+        plt.imshow(M, aspect='equal')
+        plt.spectral()
+        try:
+            import signal
+            def action(*args): raise SystemExit
+            signal.signal(signal.SIGALRM, action)
+            signal.alarm(2)
+        except:
+            pass
+        plt.show()
+    except:
+        pass
+MPI.COMM_WORLD.Barrier()
+```
+
+```console
+mpirun python mandelbrot.py
+...
+wall clock time:     0.26 seconds (task 505)
+wall clock time:     0.25 seconds (task 506)
+wall clock time:     0.24 seconds (task 507)
+wall clock time:     0.25 seconds (task 508)
+wall clock time:     0.25 seconds (task 509)
+wall clock time:     0.26 seconds (task 510)
+wall clock time:     0.25 seconds (task 511)
+all tasks, mean:     0.19 seconds
+all tasks, min:      0.00 seconds
+all tasks, max:      0.73 seconds
+all tasks, sum:     96.82 seconds
+```
+
+In this example, we run MPI4Py-enabled code on 4 nodes, 128 cores per node (total of 512 processes), each Python process is bound to a different core. More examples and documentation can be found on [MPI for Python webpage][a].
 
 You can increase `n` and watch the time lowering.
 

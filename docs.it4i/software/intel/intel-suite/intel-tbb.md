@@ -21,8 +21,7 @@ Link the TBB library using `-ltbb`.
 A number of examples demonstrating use of TBB and its built-in scheduler is available in the $TBB_EXAMPLES directory.
 
 ```console
-$ ml intel
-$ ml tbb
+$ ml intel/2020b tbb/2020.3-GCCcore-10.2.0
 $ cp -a $TBB_EXAMPLES/common $TBB_EXAMPLES/parallel_reduce /tmp/
 $ cd /tmp/parallel_reduce/primes
 $ icc -O2 -DNDEBUG -o primes.x main.cpp primes.cpp -ltbb

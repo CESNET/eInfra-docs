@@ -18,17 +18,16 @@ Now, save the project and close Workbench. We will use this script to launch the
 
 ```bash
     #!/bin/bash
-    #PBS -l select=2:ncpus=24
+    #PBS -l select=2:ncpus=128
     #PBS -q qprod
     #PBS -N test9_mpi_2
     #PBS -A OPEN-0-0
 
-    # Mail to user when job terminate or abort
-    #PBS -m a
 
     # change the working directory
-    WORK_DIR="$PBS_O_WORKDIR"
-    cd $WORK_DIR
+    DIR=/scratch/project/PROJECT_ID/$PBS_JOBID
+    mkdir -p "$DIR"
+    cd "$DIR" || exit
 
     echo Running on host `hostname`
     echo Time is `date`
@@ -36,7 +35,7 @@ Now, save the project and close Workbench. We will use this script to launch the
     echo This jobs runs on the following nodes:
     echo `cat $PBS_NODEFILE`
 
-    ml ANSYS
+    ml ANSYS/21.1-intel-2018a
 
     #### Set number of processors per host listing
     procs_per_host=24

@@ -26,17 +26,17 @@ You can test a serial computation with this simple input file. Create a file cal
     *
 ```
 
-Next, create a PBS submission file (interactive job can be used too):
+Next, create a PBS submission file for Karolina cluster (interactive job can be used too):
 
 ```bash
 #!/bin/bash
 #PBS -S /bin/bash
 #PBS -N ORCA_SERIAL
-#PBS -l select=1
+#PBS -l select=1:ncpus=128
 #PBS -q qexp
 #PBS -A OPEN-0-0
 
-ml ORCA/4.0.1.2
+ml ORCA/5.0.1-OpenMPI-4.1.1
 orca orca_serial.inp
 ```
 
@@ -44,11 +44,11 @@ Submit the job to the queue and wait before it ends. Then you can find an output
 
 ```console
 $ qsub submit_serial.pbs
-1417552.dm2
+1417552.infra-pbs
 
 $ ll ORCA_SERIAL.*
--rw------- 1 hra0031 hra0031     0 Aug 21 12:24 ORCA_SERIAL.e1417552
--rw------- 1 hra0031 hra0031 20715 Aug 21 12:25 ORCA_SERIAL.o1417552
+-rw------- 1 user user     0 Aug 21 12:24 ORCA_SERIAL.e1417552
+-rw------- 1 user user 20715 Aug 21 12:25 ORCA_SERIAL.o1417552
 
 $ cat ORCA_SERIAL.o1417552
 
@@ -71,7 +71,7 @@ $ cat ORCA_SERIAL.o1417552
                   #######################################################
 
 
-                         Program Version 4.0.1.2 - RELEASE -
+                         Program Version 5.0.1 - RELEASE -
 
 ...
 
@@ -81,7 +81,7 @@ TOTAL RUN TIME: 0 days 0 hours 0 minutes 1 seconds 47 msec
 
 ## Running ORCA in Parallel
 
-Your serial computation can be easily converted to parallel. Simply specify the number of parallel processes by the `%pal` directive. In this example, 4 nodes, 16 cores each are used.
+Your serial computation can be easily converted to parallel. Simply specify the number of parallel processes by the `%pal` directive. In this example, 4 nodes, 128 cores each are used.
 
 !!! warning
     Do not use the `! PAL` directive as only PAL2 to PAL8 is recognized.
@@ -91,7 +91,7 @@ Your serial computation can be easily converted to parallel. Simply specify the 
     # https://orcaforum.cec.mpg.de/OrcaManual.pdf
     ! HF SVP
     %pal
-      nprocs 64 # 4 nodes, 16 cores each
+      nprocs 512 # 4 nodes, 128 cores each
     end
     * xyz 0 1
       C 0 0 0
@@ -105,12 +105,12 @@ You also need to edit the previously used PBS submission file. You have to speci
 #!/bin/bash
 #PBS -S /bin/bash
 #PBS -N ORCA_PARALLEL
-#PBS -l select=4:ncpus=16:mpiprocs=16
+#PBS -l select=4:ncpus=128:mpiprocs=128
 #PBS -q qexp
 #PBS -A OPEN-0-0
 
-ml ORCA/4.0.1.2
-/apps/all/ORCA/4.0.1.2/orca orca_parallel.inp > output.out
+ml ORCA/5.0.1-OpenMPI-4.1.1
+orca orca_parallel.inp > output.out
 ```
 
 !!! note
@@ -120,11 +120,11 @@ Submit this job to the queue and see the output file.
 
 ```console
 $ qsub submit_parallel.pbs
-1417598.dm2
+1417598.infra-pbs
 
 $ ll ORCA_PARALLEL.*
--rw-------  1 hra0031 hra0031     0 Aug 21 13:12 ORCA_PARALLEL.e1417598
--rw-------  1 hra0031 hra0031 23561 Aug 21 13:13 ORCA_PARALLEL.o1417598
+-rw-------  1 user user     0 Aug 21 13:12 ORCA_PARALLEL.e1417598
+-rw-------  1 user user 23561 Aug 21 13:13 ORCA_PARALLEL.o1417598
 
 $ cat ORCA_PARALLEL.o1417598
 
@@ -147,7 +147,7 @@ $ cat ORCA_PARALLEL.o1417598
                   #######################################################
 
 
-                         Program Version 4.0.1.2 - RELEASE -
+                         Program Version 5.0.1 - RELEASE -
 ...
 
            ************************************************************
@@ -160,7 +160,7 @@ $ cat ORCA_PARALLEL.o1417598
 TOTAL RUN TIME: 0 days 0 hours 0 minutes 11 seconds 859 msec
 ```
 
-You can see, that the program was running with 64 parallel MPI-processes. In version 4.0.1.2, only the following modules are parallelized:
+You can see, that the program was running with 512 parallel MPI-processes. In version 5.0.1, only the following modules are parallelized:
 
 * ANOINT
 * CASSCF / NEVPT2
@@ -182,9 +182,9 @@ You can see, that the program was running with 64 parallel MPI-processes. In ver
 
 ## Running ORCA 5.0.0 and Higher in Parallel
 
-On Barbora cluster, version 5.0.1 is available. However, to run it in parallel you need to specify execution nodes via `inputfilename.nodes` file. Additionally, all calculations **must** be run on SCRATCH.
+On Barbora cluster and Karolina cluster, version 5.0.1 is available. However, to run it in parallel you need to specify execution nodes via `inputfilename.nodes` file. Additionally, all calculations **must** be run on SCRATCH.
 
-Example submission script would look like this:
+Example submission script (Karolina cluster) would look like this:
 
 ```
 #!/bin/bash
@@ -192,7 +192,7 @@ Example submission script would look like this:
 #PBS -A OPEN-00-00
 #PBS -N jobname
 #PBS -q qprod
-#PBS -l select=2
+#PBS -l select=2:ncpus=128:mpiprocs=128
 #PBS -l walltime=00:05:00
 
 ml purge
@@ -240,7 +240,8 @@ cp -r $PBS_O_WORKDIR/* .
 # copy output files to home, delete the rest
 cp * $PBS_O_WORKDIR/ && cd $PBS_O_WORKDIR
 rm -rf $SCRDIR
-exit
+
+exit 0
 ```
 
 ## Register as a User

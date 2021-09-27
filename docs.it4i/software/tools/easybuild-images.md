@@ -2,10 +2,6 @@
 
 EasyBuild has support for generating container recipes that will use EasyBuild to build and install a specified software stack. In addition, EasyBuild can (optionally) leverage the build tool provided by the container software of choice to create container images.
 
-!!! info
-    The features documented here have been available since **EasyBuild v3.6.0** but are still experimental, which implies they are subject to change in upcoming versions of EasyBuild.
-    To use the features, enable the `--experimental` configuration option.
-
 ## Generating Container Recipes
 
 To generate container recipes, use `eb --containerize`, or `eb -C` for short.

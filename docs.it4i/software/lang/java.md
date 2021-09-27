@@ -3,7 +3,7 @@
 Java is available on the cluster. Activate Java by loading the Java module:
 
 ```console
-$ ml Java
+$ ml Java/1.8.0_221
 ```
 
 Note that the Java module must be loaded on the compute nodes as well, in order to run Java on compute nodes.
@@ -51,8 +51,7 @@ class Hello {
 ```
 
 ```console
-$ ml Java/1.8.0_144
-$ ml OpenMPI/1.8.0_144
+$ ml Java/1.8.0_221 OpenMPI/4.1.1-GCC-10.2.0-Java-1.8.0_221
 $ mpijavac Hello.java
 $ mpirun java Hello
 Hello world from rank 23 of 28

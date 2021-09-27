@@ -6,7 +6,7 @@ C# is available on the cluster.
 $ ml av mono
 
 -------------------- /apps/modules/lang ---------------
-   Mono/5.0.0.100
+   Mono/6.12.0.122
 ```
 
 !!! note
@@ -15,7 +15,7 @@ $ ml av mono
 Activate C# by loading the Mono module:
 
 ```console
-$ ml Mono
+$ ml Mono/6.12.0.122
 ```
 
 ## Examples
@@ -81,6 +81,8 @@ csharp> from f in Directory.GetFiles ("mydirectory")
 { "mydirectory/mynewfile.cs", "mydirectory/script.sh" }
 ```
 
+<!--
+
 ## MPI.NET
 
 MPI is available for mono:
@@ -106,9 +108,9 @@ class MPIHello
 Compile and run the program:
 
 ```console
-$ qsub -I -A DD-13-5 -q qexp -l select=2:ncpus=24,walltime=00:30:00
+$ qsub -I -A PROJECT_ID -q qexp -l select=2:ncpus=128,walltime=00:30:00
 
-$ ml mpi.net
+$ ml n.net
 
 $ mcs -out:csc.exe -reference:/apps/tools/mpi.net/1.0.0-mono-3.12.1/lib/MPI.dll csc.cs
 
@@ -118,6 +120,8 @@ Greetings from node 0 of 4 running on cn204
 Greetings from node 3 of 4 running on cn199
 Greetings from node 1 of 4 running on cn199
 ```
+
+-->
 
 For more information, see the [Mono documentation page][a].
 

@@ -62,7 +62,7 @@ void foo()
 }
 ```
 
- and Fortran:
+and Fortran:
 
 ```fortran
 #include "scorep/SCOREP_User.inc"

@@ -66,8 +66,7 @@ A number of examples demonstrating use of the Intel MKL library and its linking 
 ### Working With Examples
 
 ```console
-$ ml intel
-$ ml imkl
+$ ml intel/2020b
 $ cp -a $MKL_EXAMPLES/cblas /tmp/
 $ cd /tmp/cblas
 $ make sointel64 function=cblas_dgemm
@@ -78,11 +77,9 @@ In this example, we compile, link, and run the cblas_dgemm example, demonstratin
 ### Example: MKL and Intel Compiler
 
 ```console
-$ ml intel
-$ ml imkl
+$ ml intel/2020b
 $ cp -a $MKL_EXAMPLES/cblas /tmp/
 $ cd /tmp/cblas
-$
 $ icc -w source/cblas_dgemmx.c source/common_func.c -mkl -o cblas_dgemmx.x
 $ ./cblas_dgemmx.x data/cblas_dgemmx.d
 ```
@@ -95,23 +92,6 @@ $ icc -w source/cblas_dgemmx.c source/common_func.c -o cblas_dgemmx.x -I$MKL_INC
 
 In this example, we compile and link the cblas_dgemm example, using LP64 interface to threaded MKL and Intel OMP threads implementation.
 
-### Example: Intel MKL and GNU Compiler
-
-```console
-$ ml GCC
-$ ml imkl
-$ cp -a $MKL_EXAMPLES/cblas /tmp/
-$ cd /tmp/cblas
-$ gcc -w source/cblas_dgemmx.c source/common_func.c -o cblas_dgemmx.x -lmkl_intel_lp64 -lmkl_gnu_thread -lmkl_core -lgomp -lm
-$ ./cblas_dgemmx.x data/cblas_dgemmx.d
-```
-
-In this example, we compile, link, and run the cblas_dgemm example, using the LP64 interface to threaded MKL and GNU OMP threads implementation.
-
-## MKL and MIC Accelerators
-
-The Intel MKL can automatically offload the computations to the MIC accelerator. For details, see the [Intel Xeon Phi][2] section.
-
 ## LAPACKE C Interface
 
 MKL includes LAPACKE C Interface to LAPACK. However, note that although Intel is the author of LAPACKE, the LAPACKE header files are not present in MKL. For this reason, we have prepared the LAPACKE module, which includes Intel's LAPACKE headers from official LAPACK, which you can use to compile code using the LAPACKE interface against MKL.
@@ -121,7 +101,6 @@ MKL includes LAPACKE C Interface to LAPACK. However, note that although Intel is
 Read more on [Intel website][c], in particular the [MKL user guide][d].
 
 [1]: #examples
-[2]: ../intel-xeon-phi-salomon.md
 
 [a]: http://software.intel.com/sites/products/documentation/doclib/mkl_sa/11/mklman/index.htm
 [b]: http://software.intel.com/en-us/articles/intel-mkl-link-line-advisor

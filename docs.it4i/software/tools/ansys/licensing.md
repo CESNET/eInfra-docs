@@ -22,15 +22,13 @@ lic-ansys.vsb.cz / 1055 (2325)
 
 ## Available Versions
 
-* 19.1
-* 19.3
+* 21.1
 
 ``` console
 $ ml av ANSYS
 ---------------- /apps/modules/tools -----------------------
-   ANSYS/19.1-intel-2017c (C6)    ANSYS/19.3-intel-2017c (D)
+   ANSYS/21.1-intel-2018a (D)
 
   Where:
-   C6:  Old CentOS6 module
    D:   Default Module
 ```

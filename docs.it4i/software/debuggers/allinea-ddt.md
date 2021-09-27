@@ -33,6 +33,9 @@ Load the Allinea DDT module:
 $ ml Forge
 ```
 
+!!! note
+    Loading default modules is [**not** recommended][2].
+
 Compile the code:
 
 ```console
@@ -54,15 +57,15 @@ Before debugging, you need to compile your code with these flags:
 Be sure to log in with an X window forwarding enabled. This could mean using the `-X` in the `ssh`:
 
 ```console
-$ ssh -X username@anselm.it4i.cz
+$ ssh -X username@login1.karolina.it4i.cz
 ```
 
-Another options is to access the login node using VNC. See the detailed information on how to [use graphic user interface on Anselm][1].
+Another options is to access the login node using VNC. See the detailed information on how to [use graphic user interface][1].
 
 From the login node, an interactive session **with X windows forwarding** (the `-X` option) can be started by the following command:
 
 ```console
-$ qsub -I -X -A NONE-0-0 -q qexp -lselect=1:ncpus=16:mpiprocs=16,walltime=01:00:00
+$ qsub -I -X -A NONE-0-0 -q qexp -l select=1:ncpus=128:mpiprocs=128,walltime=01:00:00
 ```
 
 Then launch the debugger with the `ddt` command followed by the name of the executable to debug:
@@ -92,5 +95,6 @@ $DDTPATH/doc/userguide.pdf
 [1] Discipline, Magic, Inspiration and Science: Best Practice Debugging with Allinea DDT, Workshop conducted at LLNL by Allinea on May 10, 2013, [link][a]
 
 [1]: ../../general/accessing-the-clusters/graphical-user-interface/x-window-system.md
+[2]: ../../../modules/lmod/#loading-modules
 
 [a]: https://computing.llnl.gov/tutorials/allineaDDT/index.html

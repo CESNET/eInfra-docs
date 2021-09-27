@@ -12,11 +12,6 @@ For the current list of installed versions, use:
 $ ml av ipp
 ```
 
-!!! Important
-    Check out IPP before implementing own math functions for data processing, as it is likely already there.
-    IPP version 9.0.1 compiled for AVX2 vector instructions is available via the `ipp` module:
-    The module sets up environment variables, required for linking and running IPP-enabled applications.
-
 ## IPP Example
 
 ```cpp
@@ -63,16 +58,14 @@ int main(int argc, char* argv[])
 Compile the example above, using any compiler and the `ipp` module:
 
 ```console
-$ ml intel
-$ ml ipp
+$ ml intel/2020b ipp/2020.3.304
 $ icc testipp.c -o testipp.x -lippi -lipps -lippcore
 ```
 
 You will need the `ipp` module loaded to run an IPP-enabled executable. This may be avoided, by compiling library search paths into the executable:
 
 ```console
-$ ml intel
-$ ml ipp
+$ ml intel/2020b ipp/2020.3.304
 $ icc testipp.c -o testipp.x -Wl,-rpath=$LIBRARY_PATH -lippi -lipps -lippcore
 ```
 

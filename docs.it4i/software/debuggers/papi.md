@@ -24,38 +24,87 @@ The bin directory of PAPI, which is automatically added to $PATH upon loading th
 
 Prints which preset events are available on the current CPU. The third column indicates whether the preset event is available on the current CPU.
 
+* Barbora cluster
+
 ```console
 $ papi_avail
-    Available events and hardware information.
-    --------------------------------------------------------------------------------
-    PAPI Version : 5.3.2.0
-    Vendor string and code : GenuineIntel (1)
-    Model string and code : Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz (45)
-    CPU Revision : 7.000000
-    CPUID Info : Family: 6 Model: 45 Stepping: 7
-    CPU Max Megahertz : 2601
-    CPU Min Megahertz : 1200
-    Hdw Threads per core : 1
-    Cores per Socket : 8
-    Sockets : 2
-    NUMA Nodes : 2
-    CPUs per Node : 8
-    Total CPUs : 16
-    Running in a VM : no
-    Number Hardware Counters : 11
-    Max Multiplex Counters : 32
-    --------------------------------------------------------------------------------
-    Name Code Avail Deriv Description (Note)
-    PAPI_L1_DCM 0x80000000 Yes No Level 1 data cache misses
-    PAPI_L1_ICM 0x80000001 Yes No Level 1 instruction cache misses
-    PAPI_L2_DCM 0x80000002 Yes Yes Level 2 data cache misses
-    PAPI_L2_ICM 0x80000003 Yes No Level 2 instruction cache misses
-    PAPI_L3_DCM 0x80000004 No No Level 3 data cache misses
-    PAPI_L3_ICM 0x80000005 No No Level 3 instruction cache misses
-    PAPI_L1_TCM 0x80000006 Yes Yes Level 1 cache misses
-    PAPI_L2_TCM 0x80000007 Yes No Level 2 cache misses
-    PAPI_L3_TCM 0x80000008 Yes No Level 3 cache misses
+Available PAPI preset and user defined events plus hardware information.
+--------------------------------------------------------------------------------
+PAPI version             : 6.0.0.0
+Operating system         : Linux 3.10.0-1160.6.1.el7.x86_64
+Vendor string and code   : GenuineIntel (1, 0x1)
+Model string and code    : Intel(R) Xeon(R) Gold 6240 CPU @ 2.60GHz (85, 0x55)
+CPU revision             : 7.000000
+CPUID                    : Family/Model/Stepping 6/85/7, 0x06/0x55/0x07
+CPU Max MHz              : 3900
+CPU Min MHz              : 1000
+Total cores              : 72
+SMT threads per core     : 2
+Cores per socket         : 18
+Sockets                  : 2
+Cores per NUMA region    : 36
+NUMA regions             : 2
+Running in a VM          : no
+Number Hardware Counters : 10
+Max Multiplex Counters   : 384
+Fast counter read (rdpmc): no
+--------------------------------------------------------------------------------
+
+================================================================================
+  PAPI Preset Events
+================================================================================
+    Name        Code    Avail Deriv Description (Note)
+PAPI_L1_DCM  0x80000000  Yes   No   Level 1 data cache misses
+PAPI_L1_ICM  0x80000001  Yes   No   Level 1 instruction cache misses
+PAPI_L2_DCM  0x80000002  Yes   Yes  Level 2 data cache misses
+PAPI_L2_ICM  0x80000003  Yes   No   Level 2 instruction cache misses
+PAPI_L3_DCM  0x80000004  No    No   Level 3 data cache misses
+PAPI_L3_ICM  0x80000005  No    No   Level 3 instruction cache misses
+PAPI_L1_TCM  0x80000006  Yes   Yes  Level 1 cache misses
+PAPI_L2_TCM  0x80000007  Yes   No   Level 2 cache misses
+PAPI_L3_TCM  0x80000008  Yes   No   Level 3 cache misses
     ....
+```
+
+* Karolina cluster
+
+```console
+Available PAPI preset and user defined events plus hardware information.
+--------------------------------------------------------------------------------
+PAPI version             : 6.0.0.0
+Operating system         : Linux 3.10.0-1160.21.1.el7.x86_64
+Vendor string and code   : AuthenticAMD (2, 0x2)
+Model string and code    : AMD EPYC 7H12 64-Core Processor (49, 0x31)
+CPU revision             : 0.000000
+CPUID                    : Family/Model/Stepping 23/49/0, 0x17/0x31/0x00
+CPU Max MHz              : 2594
+CPU Min MHz              : 2594
+Total cores              : 128
+SMT threads per core     : 1
+Cores per socket         : 64
+Sockets                  : 2
+Cores per NUMA region    : 16
+NUMA regions             : 8
+Running in a VM          : no
+Number Hardware Counters : 5
+Max Multiplex Counters   : 384
+Fast counter read (rdpmc): no
+--------------------------------------------------------------------------------
+
+================================================================================
+  PAPI Preset Events
+================================================================================
+    Name        Code    Avail Deriv Description (Note)
+PAPI_L1_DCM  0x80000000  No    No   Level 1 data cache misses
+PAPI_L1_ICM  0x80000001  No    No   Level 1 instruction cache misses
+PAPI_L2_DCM  0x80000002  No    No   Level 2 data cache misses
+PAPI_L2_ICM  0x80000003  No    No   Level 2 instruction cache misses
+PAPI_L3_DCM  0x80000004  No    No   Level 3 data cache misses
+PAPI_L3_ICM  0x80000005  No    No   Level 3 instruction cache misses
+PAPI_L1_TCM  0x80000006  No    No   Level 1 cache misses
+PAPI_L2_TCM  0x80000007  No    No   Level 2 cache misses
+PAPI_L3_TCM  0x80000008  No    No   Level 3 cache misses
+...
 ```
 
 ### Papi_native_avail
@@ -184,48 +233,6 @@ $ ./matrix
     Proc_time: 8.790000
     Total flpins: 18700983160
     MFLOPS: 2127.529297
-```
-
-### Intel Xeon Phi
-
-!!! note
-    PAPI currently supports only a subset of counters on the Intel Xeon Phi processor compared to Intel Xeon, for example the floating point operations counter is missing.
-
-To use PAPI in [Intel Xeon Phi][2] native applications, you need to load the module with the `-mic` suffix, for example `papi/5.3.2-mic`:
-
-```console
-$ ml papi/5.3.2-mic
-```
-
-Then, compile your application in the following way:
-
-```console
-$ ml intel
-$ icc -mmic -Wl,-rpath,/apps/intel/composer_xe_2013.5.192/compiler/lib/mic matrix-mic.c -o matrix-mic -lpapi -lpfm
-```
-
-To execute the application on MIC, you need to manually set `LD_LIBRARY_PATH`:
-
-```console
-$ qsub -q qmic -A NONE-0-0 -I
-$ ssh mic0
-$ export LD_LIBRARY_PATH="/apps/tools/papi/5.4.0-mic/lib/"
-$ ./matrix-mic
-```
-
-Alternatively, you can link PAPI statically (`-static` flag), then `LD_LIBRARY_PATH` does not need to be set.
-
-You can also execute the PAPI tools on MIC :
-
-```console
-$ /apps/tools/papi/5.4.0-mic/bin/papi_native_avail
-```
-
-To use PAPI in offload mode, you need to provide both the host and the MIC versions of PAPI:
-
-```console
-$ ml papi/5.4.0
-$ icc matrix-offload.c -o matrix-offload -offload-option,mic,compiler,"-L$PAPI_HOME-mic/lib -lpapi" -lpapi
 ```
 
 ## References

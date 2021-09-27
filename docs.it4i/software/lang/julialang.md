@@ -2,6 +2,19 @@
 
 A set of unofficial examples of Julia the high-level, high-performance dynamic programming language for technical computing.
 
+Julia is available on the clusters. Activate Julia by loading the Julia module:
+
+```console
+$ ml Julia/1.5.3-linux-x86_64
+```
+
+Check for Java version and path:
+
+```console
+$ julia -v
+julia version 1.5.3
+```
+
 Below are examples of common operations in Julia. They assume you already have Julia installed and working
 
 ## Hello World
