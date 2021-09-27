@@ -567,8 +567,6 @@ exit
 
 In this example, input and executable files are assumed to be preloaded manually in the /scratch/$USER/myjob directory. Note the `mpiprocs` and `ompthreads` qsub options controlling the behavior of the MPI execution. mympiprog.x is executed as one process per node, on all 100 allocated nodes. If mympiprog.x implements OpenMP threads, it will run 16 threads per node.
 
-More information can be found in the [Running OpenMPI][7] and [Running MPICH2][8] sections.
-
 ### Example Jobscript for Single Node Calculation
 
 !!! note
@@ -607,6 +605,4 @@ Further jobscript examples may be found in the software section and the [Capacit
 [3]: ../salomon/network.md
 [5]: ../salomon/7d-enhanced-hypercube.md
 [6]: ../salomon/storage.md
-[7]: ../software/mpi/running_openmpi.md
-[8]: ../software/mpi/running-mpich2.md
 [9]: capacity-computing.md
