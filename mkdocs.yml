@@ -159,17 +159,16 @@ nav:
       - Vampir: software/debuggers/vampir.md
     - GPU:
       - NVIDIA CUDA: software/nvidia-cuda.md
-    - Intel:
-      - Intel Suite:
-        - Introduction: software/intel/intel-suite/intel-parallel-studio-introduction.md
-        - Intel Advisor: software/intel/intel-suite/intel-advisor.md
-        - Intel Compilers: software/intel/intel-suite/intel-compilers.md
-        - Intel Debugger: software/intel/intel-suite/intel-debugger.md
-        - Intel IPP: software/intel/intel-suite/intel-integrated-performance-primitives.md
-        - Intel Inspector: software/intel/intel-suite/intel-inspector.md
-        - Intel MKL: software/intel/intel-suite/intel-mkl.md
-        - Intel TBB: software/intel/intel-suite/intel-tbb.md
-        - Intel Trace Analyzer and Collector: software/intel/intel-suite/intel-trace-analyzer-and-collector.md
+    - Intel Suite:
+      - Introduction: software/intel/intel-suite/intel-parallel-studio-introduction.md
+      - Intel Advisor: software/intel/intel-suite/intel-advisor.md
+      - Intel Compilers: software/intel/intel-suite/intel-compilers.md
+      - Intel Debugger: software/intel/intel-suite/intel-debugger.md
+      - Intel IPP: software/intel/intel-suite/intel-integrated-performance-primitives.md
+      - Intel Inspector: software/intel/intel-suite/intel-inspector.md
+      - Intel MKL: software/intel/intel-suite/intel-mkl.md
+      - Intel TBB: software/intel/intel-suite/intel-tbb.md
+      - Intel Trace Analyzer and Collector: software/intel/intel-suite/intel-trace-analyzer-and-collector.md
     - Machine Learning:
       - Introduction: software/machine-learning/introduction.md
       - TensorFlow: software/machine-learning/tensorflow.md
