@@ -168,11 +168,6 @@ In the previous two cases with one or two MPI processes per node, the operating 
 
 **128 MPI** processes per node, using 1 thread each bound to a processor core is most suitable for highly scalable applications with low communication demand.
 
-### Running OpenMPI
-
-The [OpenMPI 4.1.1][a] is based on OpenMPI. Read more on [how to run OpenMPI][2].
-
 [1]: ../../modules-matrix.md
-[2]: running_openmpi.md
 
 [a]: http://www.open-mpi.org/
