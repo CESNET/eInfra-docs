@@ -120,8 +120,6 @@ The directives are ignored if the program is compiled without Score-P. For detai
 [1]: scalasca.md
 [2]: ../../modules-matrix.md
 [3]: ../compilers.md
-[4]: ../mpi/running_openmpi.md
-[5]: ../mpi/running-mpich2.md
 
 [a]: http://www.vi-hps.org/projects/score-p/
 [b]: https://silc.zih.tu-dresden.de/scorep-current/pdf/scorep.pdf
