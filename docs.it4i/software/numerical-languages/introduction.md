@@ -29,7 +29,7 @@ $ ml av Octave
 -------------- /apps/modules/math --------------
 Octave/6.3.0-intel-2020b-without-X11
 $ ml Octave/6.3.0-intel-2020b-without-X11
-$ octave 
+$ octave
 ```
 
 Read more at the [Octave page][2].
