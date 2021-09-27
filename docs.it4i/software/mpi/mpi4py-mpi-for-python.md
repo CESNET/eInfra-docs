@@ -31,7 +31,7 @@ You need to import MPI to your Python program. Include the following line to the
 from mpi4py import MPI
 ```
 
-The MPI4Py-enabled Python programs [execute as any other OpenMPI][1] code. The simpliest way is to run:
+The MPI4Py-enabled Python programs execute as any other OpenMPI code. The simpliest way is to run:
 
 ```console
 $ mpirun python <script>.py
@@ -216,7 +216,5 @@ all tasks, sum:     96.82 seconds
 In this example, we run MPI4Py-enabled code on 4 nodes, 128 cores per node (total of 512 processes), each Python process is bound to a different core. More examples and documentation can be found on [MPI for Python webpage][a].
 
 You can increase `n` and watch the time lowering.
-
-[1]: running_openmpi.md
 
 [a]: https://pypi.python.org/pypi/mpi4py
