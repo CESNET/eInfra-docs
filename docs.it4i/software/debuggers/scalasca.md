@@ -72,8 +72,6 @@ Refer to the [CUBE documentation][6] on usage of the GUI viewer.
 
 [1]: ../../modules-matrix.md
 [2]: ../compilers.md
-[3]: ../mpi/running_openmpi.md
-[4]: ../mpi/running-mpich2.md
 [5]: score-p.md
 [6]: cube.md
 
