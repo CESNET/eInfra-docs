@@ -163,7 +163,6 @@ nav:
       - Introduction: software/intel/intel-suite/intel-parallel-studio-introduction.md
       - Intel Advisor: software/intel/intel-suite/intel-advisor.md
       - Intel Compilers: software/intel/intel-suite/intel-compilers.md
-      - Intel Debugger: software/intel/intel-suite/intel-debugger.md
       - Intel IPP: software/intel/intel-suite/intel-integrated-performance-primitives.md
       - Intel Inspector: software/intel/intel-suite/intel-inspector.md
       - Intel MKL: software/intel/intel-suite/intel-mkl.md
