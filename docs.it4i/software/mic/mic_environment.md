@@ -434,12 +434,11 @@ Configure step (for the `configure`,`make` and `make install` software).
 
 Modulefile and Lmod
 
-* Read [Lmod][5]
+* Read Lmod
 
 [1]: ../intel/intel-xeon-phi-salomon.md#offload-mode
 [2]: #native-mode
 [3]: ../intel/intel-xeon-phi-salomon.md
 [4]: #devel-environment
-[5]: ../modules/lmod.md
 
 [a]: https://en.wikipedia.org/wiki/Xeon_Phi
