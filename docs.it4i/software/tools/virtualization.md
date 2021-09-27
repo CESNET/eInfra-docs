@@ -4,7 +4,6 @@
 musime proverit
 -->
 
-
 Running virtual machines on compute nodes.
 
 ## Introduction
