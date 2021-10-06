@@ -42,10 +42,6 @@ fi
 
 ### Application Modules
 
-!!! note
-
-    Due to a different architecture, the Data Analytics compute node on Karolina has a different module tree. This issue is expected to be resolved by 15. October 2021.
-
 In order to configure your shell for running particular application on clusters, we use a Module package interface.
 
 Application modules on clusters are built using [EasyBuild][1]. The modules are divided into the following structure:
