@@ -34,11 +34,11 @@ Karolina includes two nodes for remote visualization with [VirtualGL 2][3] and T
 
 ![](img/qrtx6000.png)
 
-## Resource Allocation Policy ??
+## Resource Allocation Policy
 
-| queue | active project | project resources | nodes | min ncpus | priority | authorization | walltime |
-|-------|----------------|-------------------|-------|-----------|----------|---------------|----------|
-| qviz Visualization queue | yes | none required | - | - | 150 | no | 1h/8h |
+| queue | active project | project resources | nodes                             | min ncpus | priority | authorization | walltime |
+| ----- | -------------- | ----------------- | --------------------------------- | --------- | -------- | ------------- | -------- |
+| qviz  | yes            | none required     | 2 (with NVIDIA® Quadro RTX™ 6000) | -         | 150      | no            | 1h/8h    |
 
 ## References
 
