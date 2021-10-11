@@ -250,6 +250,7 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: snippets
   - pymdownx.tabbed:
+  - footnotes
   - pymdownx.superfences
 
 google_analytics:
