@@ -38,7 +38,7 @@ Karolina includes two nodes for remote visualization with [VirtualGL 2][3] and T
 
 | queue | active project | project resources | nodes                             | min ncpus | priority | authorization | walltime |
 | ----- | -------------- | ----------------- | --------------------------------- | --------- | -------- | ------------- | -------- |
-| qviz  | yes            | none required     | 2 (with NVIDIA® Quadro RTX™ 6000) | -         | 150      | no            | 1h/8h    |
+| qviz  | yes            | none required     | 2 (with NVIDIA® Quadro RTX™ 6000) | 8         | 150      | no            | 1h/8h    |
 
 ## References
 
