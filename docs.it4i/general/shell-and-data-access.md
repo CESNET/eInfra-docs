@@ -7,6 +7,9 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 !!! note
     The **cluster-name.it4i.cz** alias is currently not available through VPN connection. Use **loginX.cluster-name.it4i.cz** when connected to VPN.
 
+!!! note
+    Projects from the PRACE workgroup can only access the Barbora and Salomon clusters.<br>Projects from the EUROHPC workgroup can only access the Karolina cluster.
+
 ### Karolina Cluster
 
 !!! important
