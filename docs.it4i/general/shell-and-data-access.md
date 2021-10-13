@@ -56,14 +56,57 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 
 Authentication is available by [private key][1] only. Verify SSH fingerprints during the first logon:
 
-Karolina
+### Karolina
+
+**Fingerprints**
 
 ```console
-    ssh-rsa: AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
-    ssh-ed25519: AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
+# login1:22 SSH-2.0-OpenSSH_7.4
+256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI login1 (ED25519)
+2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo login1 (RSA)
+
+# login2:22 SSH-2.0-OpenSSH_7.4
+2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo login2 (RSA)
+256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI login2 (ED25519)
+
+# login3:22 SSH-2.0-OpenSSH_7.4
+2048 SHA256:+haUqn+pTyBMLlg6ZtNqXzcImGJU06sQCgqscM+0dUw login3 (RSA)
+256 SHA256:pSAe+9YWK4JvnLY755xGq2yY+G6e5X9d5AdPmaSrQlo login3 (ED25519)
+
+# login4:22 SSH-2.0-OpenSSH_7.4
+256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI login4 (ED25519)
+2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo login4 (RSA)
 ```
 
-Barbora:
+**Public Keys**
+
+```console
+# Roundrobin karolina.it4i.cz
+karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
+karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
+karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKO+iz31LuytKFBougpJThomPvRCNohp4IQ5R4Q9FhCACqBSdJM+XNPhjzHCu2Sq8KjhfBsyKmnviSW4MHh+iTArVJINixr/D459ms0yPe5J5nQNvgaN+ot4g3o7rDf3lqiYTqE1uVUIgZnzMeCkrlQi+Ju/YtStGGzwhBMkMJyzqMrjvL/3Z6wZpwqXlnE0oSM1+BXhz6PCWN33SYdaeNWopOr2bmmuAdxxcNIlkiTxXyhB5UjKMKWFC9XgAiSJV4AWq6W5gtwO5mYMapo4Me4CatLmr2Gklk3n3f1Sez0DdqfhJ706cA8fb3bEqi1eRaYG2FzLN9568MSpAsV3Yv
+karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDfRgbyPJ4g64XFqS70bpW8bc5CiwxrjwWiz2pcup/PQ
+karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
+karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
+
+# login1:22 SSH-2.0-OpenSSH_7.4
+login1.karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
+login1.karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
+
+# login2:22 SSH-2.0-OpenSSH_7.4
+login2.karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
+login2.karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
+
+# login3:22 SSH-2.0-OpenSSH_7.4
+login3.karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKO+iz31LuytKFBougpJThomPvRCNohp4IQ5R4Q9FhCACqBSdJM+XNPhjzHCu2Sq8KjhfBsyKmnviSW4MHh+iTArVJINixr/D459ms0yPe5J5nQNvgaN+ot4g3o7rDf3lqiYTqE1uVUIgZnzMeCkrlQi+Ju/YtStGGzwhBMkMJyzqMrjvL/3Z6wZpwqXlnE0oSM1+BXhz6PCWN33SYdaeNWopOr2bmmuAdxxcNIlkiTxXyhB5UjKMKWFC9XgAiSJV4AWq6W5gtwO5mYMapo4Me4CatLmr2Gklk3n3f1Sez0DdqfhJ706cA8fb3bEqi1eRaYG2FzLN9568MSpAsV3Yv
+login3.karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDfRgbyPJ4g64XFqS70bpW8bc5CiwxrjwWiz2pcup/PQ
+
+# login4:22 SSH-2.0-OpenSSH_7.4
+login4.karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
+login4.karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
+```
+
+### Barbora
 
 ```console
     md5:
@@ -77,7 +120,7 @@ Barbora:
     ZQzFTJVDdZa3I0ics9ME2qz4v5a3QzXugvyVioaH6tI (ED25519)
 ```
 
-Salomon:
+### Salomon
 
 ```console
     md5:
@@ -94,7 +137,7 @@ Salomon:
 ```
 
 !!! note
-    SSH fingerprints are identical on all login nodes.
+    Barbora and Salomon have identical SSH fingerprints on all login nodes.
 
 ### Private Key Authentication:
 
