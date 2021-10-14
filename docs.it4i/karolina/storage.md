@@ -83,7 +83,7 @@ Filesystem kbytes quota limit grace files quota limit grace
 | Capacity             | 1361 TB                            |
 | Throughput           | 730.9 GB/s write, 1198.3 GB/s read |
 | PROJECT quota        | 20 TB                             |
-| User inodes quota    | 10 M                               |
+| PROJECT inodes quota | 20 M                               |
 | Default stripe size  | 1 MB                               |
 | Default stripe count | 1                                  |
 | Protocol             | Lustre                             |
