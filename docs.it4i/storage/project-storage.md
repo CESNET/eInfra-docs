@@ -54,10 +54,10 @@ $ it4i-get-project-dir OPEN-XX-XX
 The PROJECT storage enforces quotas on projects' usage (used capacity and allocated inodes).
 Default quotas for capacity and amount of inodes per project are set by IT4Innovations.
 
-| Project default quota |        |
-| --------------------- | ------ |
-| Space quota           | 20TB   |
-| Inodes quota          | 5 mil. |
+| Project default quota |         |
+| --------------------- | ------- |
+| Space quota           | 20TB    |
+| Inodes quota          | 20 mil. |
 
 You can check the actual usage of the PROJECT storage (e.g. location of project directory, used capacity, allocated inodes, etc.) by executing the `it4ifsusage` command from the Login nodes' command line. The command lists all projects associated with the user.
 
@@ -159,7 +159,7 @@ The files should be copied to SCRATCH from Login nodes before submitting the job
 | Throughput           | 39GB/s              |
 | IO Performance       | 57kIOPS             |
 | Default project space quota  | 20TB        |
-| Default project inodes quota | 5 mil.      |
+| Default project inodes quota | 20 mil.     |
 
 [1]: ../storage/cesnet-storage.md
 
