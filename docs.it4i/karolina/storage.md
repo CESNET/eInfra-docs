@@ -55,7 +55,19 @@ The filesystem is backed up, so that it can be restored in case of a catastrophi
 
 The SCRATCH filesystem is realized as a parallel Lustre filesystem. It is accessible via the Infiniband network and is available from all login and computational nodes. Extended ACLs are provided on the Lustre filesystems for sharing data with other users using fine-grained control. For basic information about Lustre, see the [Understanding the Lustre Filesystem][7] subsection of the Barbora's storage documentation.*
 
-The SCRATCH filesystem is mounted in directory /scratch. Users may freely create subdirectories and files on the filesystem. Accessible capacity is 1000 TB, shared among all users. Individual users are restricted by filesystem usage quotas, set to 9.3 TB per user. The purpose of this quota is to prevent runaway programs from filling the entire filesystem and deny service to other users. Should 9.3 TB prove insufficient, contact [support][d], the quota may be increased upon request.
+The SCRATCH filesystem is mounted in directory /scratch. Users may freely create subdirectories and files on the filesystem. Accessible capacity is 1000 TB, shared among all users. Users are restricted by PROJECT quotas set to 20 TB. The purpose of this quota is to prevent runaway programs from filling the entire filesystem and deny service to other users. Should 20 TB prove insufficient, contact [support][d], the quota may be increased upon request.
+
+To find out current SCRATCH quotas, use:
+
+```code
+[usr0123@login1.karolina ~]$ getent group OPEN-XX-XX
+open-xx-xx:*:1234:user1,...,usern
+
+[usr0123@login1.karolina ~]$ lfs quota -p 1234 /scratch/
+Disk quotas for prj 1234 (pid 1234):
+Filesystem kbytes quota limit grace files quota limit grace
+/scratch/ 14356700796 0 19531250000 - 82841 0 20000000 -
+```
 
 !!! note
     The Scratch filesystem is intended for temporary scratch data generated during the calculation as well as for high-performance access to input and output files. All I/O intensive jobs must use the SCRATCH filesystem as their working directory.
@@ -70,7 +82,7 @@ The SCRATCH filesystem is mounted in directory /scratch. Users may freely create
 | Mountpoint           | /scratch                           |
 | Capacity             | 1361 TB                            |
 | Throughput           | 730.9 GB/s write, 1198.3 GB/s read |
-| User space quota     | 9.3 TB                             |
+| PROJECT quota        | 20 TB                             |
 | User inodes quota    | 10 M                               |
 | Default stripe size  | 1 MB                               |
 | Default stripe count | 1                                  |
