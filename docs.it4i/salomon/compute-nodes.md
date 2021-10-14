@@ -19,6 +19,9 @@ Compute nodes with MIC accelerator **contain two Intel Xeon Phi 7120P accelerato
 
 ### Compute Nodes With MIC Accelerator
 
+!!! note "Accelerated Nodes Decommissioned"
+    Starting 14. October 2021, Salomon's accelerated nodes are no longer available.
+
 * codename "perrin"
 * 432 nodes
 * 10 368 cores in total
