@@ -137,7 +137,7 @@ Each node is equipped with local /tmp directory of few GB capacity. The /tmp dir
 | Mountpoint | Usage                     | Protocol | Net Capacity   | Throughput | Limitations | Access                  | Services                    |        |
 | ---------- | ------------------------- | -------- | -------------- | ---------- | ----------- | ----------------------- | --------------------------- | ------ |
 | /home      | home directory            | NFS      | 31 TB        | 1.93 GB/s write, 3.1 GB/s read | Quota 25 GB | Compute and login nodes | backed up                   |        |
-| /scratch   | cluster shared jobs' data | Lustre   | 1361 TB        | 730.9 GB/s write, 1198.3 GB/s read  | Quota 9.3 TB| Compute and login nodes | files older 90 days removed |        |
+| /scratch   | cluster shared jobs' data | Lustre   | 1361 TB        | 730.9 GB/s write, 1198.3 GB/s read  | Quota 20 TB| Compute and login nodes | files older 90 days removed |        |
 | /tmp       | local temporary files     | local    | ------   | -------   | none        | Compute / login nodes   | auto                        | purged |
 
 [1]: #home-file-system
