@@ -108,12 +108,10 @@ login4.karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+
 ```console
     md5:
     39:55:e2:b9:2a:a2:c4:9e:b1:8e:f0:f7:b1:66:a8:73 (RSA)
-    63:29:4c:3d:17:8c:be:73:4a:99:ff:83:66:ba:dd:c3 (ECDSA)
     40:67:03:26:d3:6c:a0:7f:0a:df:0e:e7:a0:52:cc:4e (ED25519)
 
     sha256:
     TO5szOJf0bG7TWVLO3WABUpGKkP7nBm/RLyHmpoNpro (RSA)
-    lg+AaptpqFlEu5+lBecgaVdiSlYljo5+ADLItQRSYVA (ECDSA)
     ZQzFTJVDdZa3I0ics9ME2qz4v5a3QzXugvyVioaH6tI (ED25519)
 ```
 
