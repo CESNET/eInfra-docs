@@ -90,14 +90,23 @@ login4,login4.karolina.it4i.cz,login4.karolina,karolina.it4i.cz ssh-ed25519 AAAA
 
 ### Barbora
 
-```console
-    md5:
-    39:55:e2:b9:2a:a2:c4:9e:b1:8e:f0:f7:b1:66:a8:73 (RSA)
-    40:67:03:26:d3:6c:a0:7f:0a:df:0e:e7:a0:52:cc:4e (ED25519)
+**Fingerprints**
 
-    sha256:
-    TO5szOJf0bG7TWVLO3WABUpGKkP7nBm/RLyHmpoNpro (RSA)
-    ZQzFTJVDdZa3I0ics9ME2qz4v5a3QzXugvyVioaH6tI (ED25519)
+```console
+md5:
+39:55:e2:b9:2a:a2:c4:9e:b1:8e:f0:f7:b1:66:a8:73 (RSA)
+40:67:03:26:d3:6c:a0:7f:0a:df:0e:e7:a0:52:cc:4e (ED25519)
+
+sha256:
+TO5szOJf0bG7TWVLO3WABUpGKkP7nBm/RLyHmpoNpro (RSA)
+ZQzFTJVDdZa3I0ics9ME2qz4v5a3QzXugvyVioaH6tI (ED25519)
+```
+
+**Public Keys \ Known Hosts**
+
+```console
+barbora.it4i.cz, ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZb1HGGREAV2ybYJgzeWuhy5owHzc20cttH/TBAYeuec02UCJBLT3D92VmnxrvsiBf1c6hqtnddle1k3OPTTR5LFe1x58hi70LDg9OjnoArT2F6MNNv2GEhJmH8KYDnuWcvRUob1+MfCC/gHKmZKubj3K8nGyRi8Y05cUjgemDl31UQ3Y8unTfr4l1ie11FrOVU7aWOruXy7kEq84kYFLAvm2COF/onh85+DrLqI40aM2ALuQ/aitX2bTq/xhA+5p3Q6uquIaznbir6vQEgqa4H6qjXZRrO+2mtXQnR0sgskYGVKkOvWCYMxHLoB+/nHyttqHitT7/az2RnMbDXZqd
+barbora.it4i.cz, ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOmUm4btn7OC0QLIT3xekKTTdg5ziby8WdxccEczEeE1
 ```
 
 ### Salomon
