@@ -7,7 +7,7 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 !!! note "Workgroups Access Limitation"
     Projects from the **PRACE** workgroup can only access the **Barbora** and **Salomon** clusters.<br>Projects from the **EUROHPC** workgroup can only access the **Karolina** cluster.
 
-!!! important "Karolina and Barbora updated security requirements
+!!! important "Karolina and Barbora updated security requirements"
     Due to updated security requirements on Karolina and Barbora,
     only clients based on OpenSSH 7.4p1 and later can connect (including other SSH clients with compatible security algorithms).
     This means that starting with RHEL/Centos 7, Debian 9 or Ubuntu 18.04, you are good to go.
