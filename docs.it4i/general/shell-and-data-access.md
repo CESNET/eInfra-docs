@@ -7,13 +7,13 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 !!! note "Workgroups Access Limitation"
     Projects from the **PRACE** workgroup can only access the **Barbora** and **Salomon** clusters.<br>Projects from the **EUROHPC** workgroup can only access the **Karolina** cluster.
 
-### Karolina Cluster
-
-!!! important
-    Karolina has gone into production with updated security requirements.
-    Only clients based on OpenSSH 7.4p1 and later will be able to connect (including other SSH clients with compatible security algorithms).
+!!! important "Karolina and Barbora updated security requirements
+    Due to updated security requirements on Karolina and Barbora,
+    only clients based on OpenSSH 7.4p1 and later can connect (including other SSH clients with compatible security algorithms).
     This means that starting with RHEL/Centos 7, Debian 9 or Ubuntu 18.04, you are good to go.
     Some users who still have DSA keys will be also unable to connect and are urged to update their keypairs, preferably to Ed25519 format.
+
+### Karolina Cluster
 
 | Login address           | Port | Protocol | Login node                            |
 | ----------------------- | ---- | -------- | ------------------------------------- |
@@ -24,14 +24,6 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 | login4.karolina.it4i.cz | 22   | SSH      | login4                                |
 
 ### Barbora Cluster
-
-!!! important
-    Barbora will have its security requirements updated.
-    Only clients based on OpenSSH 7.4p1 and later will be able to connect (including other SSH clients with compatible security algorithms).
-    This means that starting with RHEL/Centos 7, Debian 9 or Ubuntu 18.04, you are good to go.
-    Some users who still have DSA keys will be also unable to connect and are urged to update their keypairs, preferably to Ed25519 format.
-
-    This change will be implemented in early October 2021.
 
 | Login address             | Port | Protocol | Login node                            |
 | ------------------------- | ---- | -------- | ------------------------------------- |
