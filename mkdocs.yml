@@ -59,6 +59,7 @@ nav:
       - Job Priority: general/job-priority.md
       - Job Submission and Execution: general/job-submission-and-execution.md
       - Capacity Computing: general/capacity-computing.md
+      - Migrating from SLURM: general/slurmtopbs.md
     - Connect to the Clusters:
       - OpenSSH Keys (UNIX): general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
       - PuTTY (Windows): general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
