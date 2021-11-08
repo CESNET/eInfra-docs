@@ -14,7 +14,7 @@ COMSOL also allows an interface support for equation-based modelling of partial 
 
 ## Execution
 
-On the clusters, COMSOL is available in the latest stable version. There are two variants of the release:
+The latest available COMSOL version on the clusters is 5.2. There are two variants of the release:
 
 * **Non commercial** or so called **EDU variant**, which can be used for research and educational purposes.
 
