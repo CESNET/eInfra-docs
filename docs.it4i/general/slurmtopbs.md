@@ -9,7 +9,7 @@ The PBS provides some useful variables that may be used in the jobscripts
 `PBS_O_WORKDIR` and `PBS_JOBID`. For example:
 
 The `PBS_O_WORKDIR` returns the directory, where the `qsub` command was submitted.
-The `PBS_JOBID` returns the numercal identifyer of the job.
+The `PBS_JOBID` returns the numerical identifier of the job.
 The `qsub` always starts execution in the `$HOME` directory.
 
 ## Migrating PyTorch From SLURM
