@@ -271,11 +271,11 @@ The user submits jobs into the server which schedules them onto a set of workers
 ![](../img/hq-architecture.png)
 
 [1]: #job-arrays
-[2]: https://it4innovations.github.io/hyperqueue/jobs/
+[2]: https://it4innovations.github.io/hyperqueue/stable/jobs/jobs/
 [3]: #hyperqueue
 [5]: #shared-jobscript
 [6]: ../pbspro.md
 [9]: capacity.zip
 
 [a]: https://github.com/It4innovations/hyperqueue
-[b]: https://it4innovations.github.io/hyperqueue/install/
+[b]: https://it4innovations.github.io/hyperqueue/stable/installation/
