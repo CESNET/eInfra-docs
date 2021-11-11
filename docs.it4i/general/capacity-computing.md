@@ -247,13 +247,7 @@ The workers should run on computing nodes, so you can start them using PBS.
 * Start a worker on a single PBS node:
 
     ```console
-    $ qsub <qsub-params> -- `which hq` worker start
-    ```
-
-* Start a worker on all allocated PBS nodes:
-
-    ```console
-    $ qsub <qsub-params> -- `which pbsdsh` `which hq` worker start
+    $ qsub <qsub-params> -- /bin/bash -l -c "$(which hq) worker start --idle-timeout 0sec"
     ```
 
 In an upcoming version, HyperQueue will be able to automatically submit PBS jobs with workers
