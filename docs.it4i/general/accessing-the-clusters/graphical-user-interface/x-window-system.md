@@ -23,7 +23,32 @@ On Windows, use the PuTTY client to enable X11 forwarding. In PuTTY menu, go to 
 
 ### WSL (Bash on Windows)
 
- To enable the X display forwarding, log in using the `-X` option in the SSH client:
+To run Linux GuI on WSL, download, for example, [VcXsrv][a].
+
+1. After installation, run XLaunch and during the initial setup, check the `Disable access control`.
+
+    !!! tip
+        Save the configuration and launch VcXsrv using the `config.xlaunch` file, so you won't have to check the option on every run.
+
+1. Allow VcXsrv in your firewall to communicate on private and public networks.
+
+1. Set the `DISPLAY` environment variable, using the following command:
+
+    ```console
+        export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+    ```
+
+    !!! tip
+        Include the command at the end of the `/etc/bash.bashrc`, so you don't have to run it every time you run WSL.
+
+1. Test the configuration by running `echo $DISPLAY`:
+
+    ```code
+     user@nb-user:/$ echo $DISPLAY
+     172.26.240.1:0
+    ```
+
+To enable the X display forwarding, log in using the `-X` option in the SSH client:
 
 ```console
  local $ ssh -X username@cluster-name.it4i.cz
@@ -152,6 +177,7 @@ Use System-Log Out to close the gnome-session.
 [2]: #putty-on-windows
 [3]: #wsl-bash-on-windows
 
+[a]: https://sourceforge.net/projects/vcxsrv/
 [d]: https://www.xquartz.org
 [e]: http://sourceforge.net/projects/xming/
 [f]: http://x.cygwin.com/
