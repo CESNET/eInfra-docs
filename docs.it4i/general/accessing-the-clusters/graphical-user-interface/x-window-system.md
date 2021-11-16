@@ -61,22 +61,6 @@ To enable the X display forwarding, log in using the `-X` option in the SSH clie
  local $ export DISPLAY=localhost:0.0
 ```
 
-## Verify the Forwarding
-
-To verify the forwarding, type:
-
-```console
-$ echo $DISPLAY
-```
-
-if you receive something like:
-
-```console
-localhost:10.0
-```
-
-then the X11 forwarding is enabled.
-
 ## X Server
 
 In order to display the GUI of various software tools, you need a running X server on your desktop computer. For Linux users, no action is required as the X server is the default GUI environment on most Linux distributions. Mac and Windows users need to install and run the X server on their workstations.
