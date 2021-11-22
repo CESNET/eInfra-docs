@@ -64,7 +64,7 @@ Cloud compute nodes support both the research and operation of the Infrastructur
 | Node type                    | Count | Range        | Memory  | Cores          | Queues (?)                 |
 | ---------------------------- | ----- | ------------ | ------- | -------------- | -------------------------- |
 | Nodes without an accelerator | 720   | Cn[001-720]  | 256 GB  | 128 @ 2.6 GHz  | qexp, qprod, qlong, qfree  |
-| Nodes with a GPU accelerator | 72    | Acn[01-72]   | 1024 GB | 64 @ 2.45 GHz  | qnvidia                    |
+| Nodes with a GPU accelerator | 72    | Acn[01-72]   | 1024 GB | 128 @ 2.45 GHz | qnvidia                    |
 | Data analytics nodes         | 1     | Sdf1         | 24 TB   | 768 @ 2.9 GHz  | qfat                       |
 | Cloud partiton               | 36    | CLn[01-36]   | 256 GB  | 128 @ 2.6 GHz  |                            |
 
