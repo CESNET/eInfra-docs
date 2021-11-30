@@ -217,11 +217,12 @@ nav:
         - Singularity on IT4Innovations: software/tools/singularity-it4i.md
       - Spack: software/tools/spack.md
       - Virtualization: software/tools/virtualization.md
-    - Visualisation:
+    - Visualization:
       - GPI-2: software/viz/gpi2.md
       - In situ: software/viz/insitu.md
       - NICE DCV: software/viz/NICEDCVsoftware.md
       - OpenFOAM: software/viz/openfoam.md
+      - OVITO: software/viz/ovito.md
       - ParaView: software/viz/paraview.md
       - QtiPlot: software/viz/qtiplot.md       
       - VirtualGL: software/viz/vgl.md
