@@ -2,6 +2,21 @@
 
 This section overviews machine learning frameworks and libraries available on the clusters.
 
+## Keras
+
+Keras is an API designed for human beings, not machines. Keras follows best practices for reducing cognitive load: it offers consistent & simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear & actionable error messages. It also has extensive documentation and developer guides. For more information, see the [official website][c].
+
+For the list of available versions, type:
+
+```console
+$ ml av Keras
+```
+
+## NetKet
+
+NetKet is an open-source project for the development of machine intelligence for many-body quantum systems.
+For more information, see the [official website][d] or [GitHub][e].
+
 ## TensorFlow
 
 TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications. For more information, see the [official website][a].
@@ -18,21 +33,13 @@ For the list of available versions, type:
 $ ml av Theano
 ```
 
-## Keras
-
-Keras is an API designed for human beings, not machines. Keras follows best practices for reducing cognitive load: it offers consistent & simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear & actionable error messages. It also has extensive documentation and developer guides. For more information, see the [official website][c].
-
-For the list of available versions, type:
-
-```console
-$ ml av Keras
-```
-
 [1]: tensorflow.md
 
 [a]: https://www.tensorflow.org/
 [b]: https://github.com/Theano/
 [c]: https://keras.io/
+[d]: http://www.netket.org
+[e]: https://github.com/netket
 
 <!---
 2021-04-08
