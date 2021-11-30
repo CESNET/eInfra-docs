@@ -1,6 +1,6 @@
 # OpenFOAM
 
-A free, open source CFD software package.
+OpenFOAM is a free, open source CFD software package.
 
 ## Introduction
 
