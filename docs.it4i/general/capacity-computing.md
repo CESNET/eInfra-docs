@@ -165,7 +165,9 @@ $ cat README
 
 HyperQueue lets you build a computation plan consisting of a large amount of tasks and then execute it transparently over a system like SLURM/PBS.
 It dynamically groups tasks into PBS jobs and distributes them to fully utilize allocated nodes.
-You thus do not have to manually aggregate your tasks into PBS jobs. See the [project repository][a].
+You thus do not have to manually aggregate your tasks into PBS jobs.
+
+Find more about HyperQueue in its [documentation][a].
 
 ![](../img/hq-idea-s.png)
 
@@ -173,19 +175,25 @@ You thus do not have to manually aggregate your tasks into PBS jobs. See the [pr
 
 * **Transparent task execution on top of a Slurm/PBS cluster**
 
-    Automatic task distribution amongst jobs, nodes, and cores
+  * Automatic task distribution amongst jobs, nodes, and cores
+  * Automatic submission of PBS/Slurm jobs
 
 * **Dynamic load balancing across jobs**
 
-    Work-stealing scheduler<br>NUMA-aware, core planning, task priorities, task arrays<br> Nodes and tasks may be added/removed on the fly
+  * Work-stealing scheduler
+  * NUMA-aware, core planning, task priorities, task arrays
+  * Nodes and tasks may be added/removed on the fly
 
 * **Scalable**
 
-    Low overhead per task (~100μs)<br>Handles hundreds of nodes and millions of tasks<br>Output streaming avoids creating many files on network filesystems
+  * Low overhead per task (~100μs)
+  * Handles hundreds of nodes and millions of tasks
+  * Output streaming avoids creating many files on network filesystems
 
 * **Easy deployment**
 
-    Single binary, no installation, depends only on *libc*<br>No elevated privileges required
+  * Single binary, no installation, depends only on *libc*
+  * No elevated privileges required
 
 ### Installation
 
@@ -242,20 +250,35 @@ $ hq jobs
 
 Before HyperQueue can execute your jobs, it needs to have access to some computational resources.
 You can provide these by starting HyperQueue *workers* which connect to the server and execute your jobs.
-The workers should run on computing nodes, so you can start them using PBS.
+The workers should run on computing nodes, therefore they should be started inside PBS jobs.
 
-* Start a worker on a single PBS node:
+There are two ways of providing computational resources.
+
+* **Allocate PBS jobs automatically**
+
+    HyperQueue can automatically submit PBS jobs with workers on your behalf. This system is called
+    [automatic allocation][c]. After the server is started, you can add a new automatic allocation
+    queue using the `hq alloc add` command:
 
     ```console
-    $ qsub <qsub-params> -- /bin/bash -l -c "$(which hq) worker start --idle-timeout 0sec"
+    $ hq alloc add pbs -- -qqprod -AAccount1
     ```
 
-In an upcoming version, HyperQueue will be able to automatically submit PBS jobs with workers
-on your behalf.
+    After you run this command, HQ will automatically start submitting PBS jobs on your behalf
+    once some HQ jobs are submitted.
+
+* **Manually start PBS jobs with HQ workers**
+
+    With the following command, you can submit a PBS job that will start a single HQ worker which
+    will connect to a running HQ server.
+
+    ```console
+    $ qsub <qsub-params> -- /bin/bash -l -c "$(which hq) worker start"
+    ```
 
 !!! tip
-    For debugging purposes, you can also start the worker, e.g. on a login node, simply by running
-    `$ hq worker start`. Do not use such worker for any long-running computations.
+    For debugging purposes, you can also start the worker e.g. on a login node, simply by running
+    `$ hq worker start`. Do not use such worker for any long-running computations though.
 
 ### Architecture
 
@@ -271,5 +294,6 @@ The user submits jobs into the server which schedules them onto a set of workers
 [6]: ../pbspro.md
 [9]: capacity.zip
 
-[a]: https://github.com/It4innovations/hyperqueue
+[a]: https://it4innovations.github.io/hyperqueue/stable/
 [b]: https://it4innovations.github.io/hyperqueue/stable/installation/
+[c]: https://it4innovations.github.io/hyperqueue/stable/deployment/allocation/
