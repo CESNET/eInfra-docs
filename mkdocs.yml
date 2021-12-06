@@ -64,6 +64,7 @@ nav:
       - OpenSSH Keys (UNIX): general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
       - PuTTY (Windows): general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
       - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
+      - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
       - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
       - VPN Access: general/accessing-the-clusters/vpn-access.md
     - Satisfaction and Feedback: general/feedback.md  

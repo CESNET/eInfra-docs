@@ -6,6 +6,14 @@ Special features installed/configured on the fly on allocated nodes, features ar
 $ qsub... -l feature=req
 ```
 
+## Xorg
+
+[Xorg][2] is a free and open source implementation of the X Window System imaging server maintained by the X.Org Foundation. Xorg is vailable only for Karolina accelerated nodes Acn[01-72].
+
+```console
+$ qsub ... -l xorg=True
+```
+
 ## VTune Support
 
 Load the VTune kernel modules.
@@ -212,3 +220,4 @@ $ source /lscratch/$PBS_JOBID/sbb.sh
     Available on Barbora nodes only.
 
 [1]: software/tools/virtualization.md#tap-interconnect
+[2]: general/accessing-the-clusters/graphical-user-interface/xorg.md
