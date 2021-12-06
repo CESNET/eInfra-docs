@@ -23,6 +23,29 @@ On Windows, use the PuTTY client to enable X11 forwarding. In PuTTY menu, go to 
 
 ### WSL (Bash on Windows)
 
+To enable the X display forwarding, log in using the `-X` option in the SSH client:
+
+```console
+ local $ ssh -X username@cluster-name.it4i.cz
+```
+
+!!! tip
+    If you are getting the "cannot open display" error message, try to export the DISPLAY variable, before attempting to log in:
+
+```console
+ local $ export DISPLAY=localhost:0.0
+```
+
+## X Server
+
+In order to display the GUI of various software tools, you need a running X server on your desktop computer. For Linux users, no action is required as the X server is the default GUI environment on most Linux distributions. Mac and Windows users need to install and run the X server on their workstations.
+
+### X Server on OS X
+
+Mac OS users need to install [XQuartz server][d].
+
+### WSL (Bash on Windows)
+
 To run Linux GuI on WSL, download, for example, [VcXsrv][a].
 
 1. After installation, run XLaunch and during the initial setup, check the `Disable access control`.
@@ -47,27 +70,6 @@ To run Linux GuI on WSL, download, for example, [VcXsrv][a].
      user@nb-user:/$ echo $DISPLAY
      172.26.240.1:0
     ```
-
-To enable the X display forwarding, log in using the `-X` option in the SSH client:
-
-```console
- local $ ssh -X username@cluster-name.it4i.cz
-```
-
-!!! tip
-    If you are getting the "cannot open display" error message, try to export the DISPLAY variable, before attempting to log in:
-
-```console
- local $ export DISPLAY=localhost:0.0
-```
-
-## X Server
-
-In order to display the GUI of various software tools, you need a running X server on your desktop computer. For Linux users, no action is required as the X server is the default GUI environment on most Linux distributions. Mac and Windows users need to install and run the X server on their workstations.
-
-### X Server on OS X
-
-Mac OS users need to install [XQuartz server][d].
 
 ### X Server on Windows
 
