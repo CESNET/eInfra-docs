@@ -5,7 +5,7 @@ VirtualGL is an open source program that redirects the 3D rendering commands fro
 See the documentation [here][a].
 
 !!! info
-    VirtualGL is available on Barbora and Salomon.
+    VirtualGL is available on Barbora and Karolina.
 
 ## How to Use
 
