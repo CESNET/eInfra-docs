@@ -64,7 +64,8 @@ Some applications (e.g. Paraview, Ensight, Blender, Ovito) require not only visu
     [acnX.karolina]$ DISPLAY=:XX vglrun paraview
     ```
 
-Note: It is not necessary to run Xorg from the command line on the visualization servers viz[1-2]. Xorg runs without interruption and is started when the visualization server boots.
+!!! note
+    It is not necessary to run Xorg from the command line on the visualization servers viz[1-2]. Xorg runs without interruption and is started when the visualization server boots.<br> Another option is to use [vglclient][2] for visualization server.
 
 ## Running Blender (Eevee) on the Background Without GUI and Without Interactive Job on Karolina
 
@@ -86,7 +87,8 @@ Note: It is not necessary to run Xorg from the command line on the visualization
     [loginX.karolina]$ qsub -q qnvidia -l select=1 -A OPEN-XX-XX -l xorg=True ./run_eevee.sh
     ```
 
-[1]: https://docs.it4i.cz/general/accessing-the-clusters/graphical-user-interface/vnc/
+[1]: ./vnc.md
+[2]: ../../../software/viz/vgl.md
 
 [a]: https://www.x.org/wiki/
 [b]: https://virtualgl.org/
