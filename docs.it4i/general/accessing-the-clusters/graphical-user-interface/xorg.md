@@ -17,9 +17,7 @@ Some applications (e.g. Paraview, Ensight, Blender, Ovito) require not only visu
 
 ## Running Paraview With GUI and Interactive Job on Karolina
 
-1. Run VNC environment:
-
-    [https://docs.it4i.cz/general/accessing-the-clusters/graphical-user-interface/vnc/][1]
+1. Run [VNC environment][1]
 
 1. Run terminal in VNC session:
 
