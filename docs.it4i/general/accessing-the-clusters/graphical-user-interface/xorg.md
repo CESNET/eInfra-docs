@@ -3,7 +3,7 @@
 ## Introduction
 
 !!! note
-    Available only for Karolina accelerated nodes Acn[01-72]
+    Available only for Karolina accelerated nodes acn[01-72] and vizualization servers viz[1-2]
 
 Some applications (e.g. Paraview, Ensight, Blender, Ovito) require not only visualization but also computational resources such as multiple cores or multiple graphics accelerators. For the processing of demanding tasks, more operating memory and more memory on the graphics card are also required. These requirements are met by all ACN nodes on the Karolina cluster, which are equipped with eight graphics cards with 40GB GPU memory and 1TB CPU memory. To run properly, it is required to have the Xorg server running and the VirtualGL environment installed.
 
@@ -13,7 +13,7 @@ Some applications (e.g. Paraview, Ensight, Blender, Ovito) require not only visu
 
 ## VirtualGL
 
-[VirtualGL][b] is an open source software package that redirects 3D rendering commands from Linux OpenGL applications to 3D accelerator hardware in a dedicated server and sends the rendered output to a client located elsewhere on the network. On the server side, VirtualGL consists of a library that handles the redirection and a wrapper that instructs applications to use the library. Clients can either connect to the server using a remote X11 connection, such as a VNC server. In the case of an X11 connection, some VirtualGL software is also required on the client side to receive the rendered graphical output separately from the X11 stream. In the case of VNC connections, no specific client-side software is needed other than the VNC client itself. VirtualGL works seamlessly with headless NVidia GPUs (Amper, Tesla).
+[VirtualGL][b] is an open source software package that redirects 3D rendering commands from Linux OpenGL applications to 3D accelerator hardware in a dedicated server and sends the rendered output to a client located elsewhere on the network. On the server side, VirtualGL consists of a library that handles the redirection and a wrapper that instructs applications to use the library. Clients can either connect to the server using a remote X11 connection, such as a VNC server. In the case of an X11 connection, some VirtualGL software is also required on the client side to receive the rendered graphical output separately from the X11 stream. In the case of VNC connections, no specific client-side software is needed other than the VNC client itself. VirtualGL works seamlessly with headless NVIDIA GPUs (Ampere, Tesla).
 
 ## Running Paraview With GUI and Interactive Job on Karolina
 
@@ -63,6 +63,8 @@ Some applications (e.g. Paraview, Ensight, Blender, Ovito) require not only visu
     ```console
     [acnX.karolina]$ DISPLAY=:XX vglrun paraview
     ```
+
+Note: It is not necessary to run Xorg from the command line on the visualization servers viz[1-2]. Xorg runs without interruption and is started when the visualization server boots.
 
 ## Running Blender (Eevee) on the Background Without GUI and Without Interactive Job on Karolina
 
