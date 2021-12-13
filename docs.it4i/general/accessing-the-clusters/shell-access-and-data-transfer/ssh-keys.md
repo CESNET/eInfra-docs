@@ -100,7 +100,7 @@ You can insert an additional public key into the authorized_keys file for authen
 Example:
 
 ```console
-$ cat additional_key.pub > ~/.ssh/authorized_keys
+$ cat additional_key.pub >> ~/.ssh/authorized_keys
 ```
 
 In this example, we add an additional public key stored in the additional_key.pub file into the authorized_keys file. Next time we log in, we will be able to use the private addtional_key key to log in.
