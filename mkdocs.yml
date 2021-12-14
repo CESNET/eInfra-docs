@@ -61,6 +61,7 @@ nav:
       - Capacity Computing: general/capacity-computing.md
       - Migrating from SLURM: general/slurmtopbs.md
     - Connect to the Clusters:
+      - SSH Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md
       - OpenSSH Keys (UNIX): general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
       - PuTTY (Windows): general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
       - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md

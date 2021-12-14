@@ -5,8 +5,6 @@
 We recommend you to download "**A Windows installer for everything except PuTTYtel**" with **Pageant** (SSH authentication agent) and **PuTTYgen** (PuTTY key generator) which is available [here][a].
 
 !!! note
-    After installation, you can proceed directly to private keys authentication using ["Putty"][1].
-
     "Change Password for Existing Private Key" is optional.
 
     "Generate a New Public/Private key pair" is intended for users without Public/Private key in the initial email containing login credentials.
@@ -101,10 +99,14 @@ You can generate an additional public/private key pair and insert public key int
 
 ![](../../../img/PuttyKeygenerator_006V.png)
 
-* Now you can insert an additional public key into the authorized_keys file for authentication with your own private key.
-      You must log in using the SSH key received after registration. Then proceed to [How to add your own key][2].
+## Managing Your SSH Key
+
+To manage your SSH key for authentication to clusters, see the [SSH Key Management][3] section.
+
+[1]: ./ssh-key-management.md
 
 [1]: #putty
 [2]: ssh-keys.md#how-to-add-your-own-key
+[3]: ./ssh-key-management.md
 
 [a]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html

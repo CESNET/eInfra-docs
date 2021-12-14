@@ -1,39 +1,15 @@
 # OpenSSH Keys (UNIX)
 
-## Key Management
+## Creating Your Own Key
 
-After logging in, you can see the .ssh/ directory with SSH keys and the authorized_keys file:
-
-```console
-$ cd /home/username/
-$ ls -la .ssh/
-    total 24
-    drwx------ 2 username username 4096 May 13 15:12 .
-    drwxr-x---22 username username 4096 May 13 07:22 ..
-    -rw-r--r-- 1 username username 392 May 21 2014 authorized_keys
-    -rw------- 1 username username 1675 May 21 2014 id_rsa
-    -rw------- 1 username username 1460 May 21 2014 id_rsa.ppk
-    -rw-r--r-- 1 username username 392 May 21 2014 id_rsa.pub
-```
-
-!!! hint
-    Private keys in the .ssh directory are without a passphrase and allow you to connect within the cluster.
-
-## Access Privileges on .ssh Folder
-
-* .ssh directory: `700 (drwx------)`
-* Authorized_keys, known_hosts and public key (.pub file): `644 (-rw-r--r--)`
-* Private key (id_rsa/id_rsa.ppk): `600 (-rw-------)`
+To generate a new keypair of your public and private key, use the `ssh-keygen` tool:
 
 ```console
-$ cd /home/username/
-$ chmod 700 .ssh/
-$ chmod 644 .ssh/authorized_keys
-$ chmod 644 .ssh/id_rsa.pub
-$ chmod 644 .ssh/known_hosts
-$ chmod 600 .ssh/id_rsa
-$ chmod 600 .ssh/id_rsa.ppk
+local $ ssh-keygen -C 'username@organization.example.com' -f additional_key
 ```
+
+!!! note
+    Enter a **strong** **passphrase** for securing your private key.
 
 ## Private Key
 
@@ -84,27 +60,8 @@ An example of public key format:
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpujuOiTKCcGkbbBhrk0Hjmezr5QpM0swscXQE7fOZG0oQSURoapd9tjC9eVy5FvZ339jl1WkJkdXSRtjc2G1U5wQh77VE5qJT0ESxQCEw0S+CItWBKqXhC9E7gFY+UyP5YBZcOneh6gGHyCVfK6H215vzKr3x+/WvWl5gZGtbf+zhX6o4RJDRdjZPutYJhEsg/qtMxcCtMjfm/dZTnXeafuebV8nug3RCBUflvRb1XUrJuiX28gsd4xfG/P6L/mNMR8s4kmJEZhlhxpj8Th0iIc+XciVtXuGWQrbddcVRLxAmvkYAPGnVVOQeNj69pqAR/GXaFAhvjYkseEowQao1 username@organization.example.com
 ```
 
-## How to Add Your Own Key
+## Managing Your SSH Key
 
-First, generate a new keypair of your public and private key:
+To manage your SSH key for authentication to clusters, see the [SSH Key Management][1] section.
 
-```console
-local $ ssh-keygen -C 'username@organization.example.com' -f additional_key
-```
-
-!!! note
-    Enter a **strong** **passphrase** for securing your private key.
-
-You can insert an additional public key into the authorized_keys file for authentication with your own private key. Additional records in the authorized_keys file must be delimited by a new line. Users are not advised to remove the default public key from the authorized_keys file.
-
-Example:
-
-```console
-$ cat additional_key.pub >> ~/.ssh/authorized_keys
-```
-
-In this example, we add an additional public key stored in the additional_key.pub file into the authorized_keys file. Next time we log in, we will be able to use the private addtional_key key to log in.
-
-## How to Remove Your Own Key
-
-Removing your key from authorized_keys can be done simply by deleting the corresponding public key which can be identified by a comment at the end of line (e.g. _username@organization.example.com_).
+[1]: ./ssh-key-management.md
