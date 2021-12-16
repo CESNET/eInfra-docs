@@ -92,6 +92,32 @@ $ icc -w source/cblas_dgemmx.c source/common_func.c -o cblas_dgemmx.x -I$MKL_INC
 
 In this example, we compile and link the cblas_dgemm example, using LP64 interface to threaded MKL and Intel OMP threads implementation.
 
+#### Karolina AMD Threading
+
+Threading on Karolina AMD processors requires [TBB][2].
+
+**MKL threads**
+
+Example 1
+
+```code
+icpc -O2 -qopenmp -DMKL_ILP64 -I"${MKLROOT}/include" source.cpp -o program.x -L${MKLROOT}/lib/intel64 -lmkl_intel_ilp64 -lmkl_tbb_thread -lmkl_core -ltbb -lstdc++ -lp
+thread -lm -ldl
+```
+
+Example 2
+
+```code
+icpc -qopenmp mkltest.cpp -o mkltest.x -lmkl_tbb_thread -ltbb -mkl
+```
+
+**Intel/GNU compilator**
+
+```code
+[Monday 10:23 AM] Krupcik Lukas
+g++ -fopenmp mkl_test.cpp -o test -lmkl_tbb_thread -lmkl_core -lmkl_intel_ilp64 -ltbb
+```
+
 ## LAPACKE C Interface
 
 MKL includes LAPACKE C Interface to LAPACK. However, note that although Intel is the author of LAPACKE, the LAPACKE header files are not present in MKL. For this reason, we have prepared the LAPACKE module, which includes Intel's LAPACKE headers from official LAPACK, which you can use to compile code using the LAPACKE interface against MKL.
@@ -101,6 +127,7 @@ MKL includes LAPACKE C Interface to LAPACK. However, note that although Intel is
 Read more on [Intel website][c], in particular the [MKL user guide][d].
 
 [1]: #examples
+[2]: ../intel-tbb/
 
 [a]: http://software.intel.com/sites/products/documentation/doclib/mkl_sa/11/mklman/index.htm
 [b]: http://software.intel.com/en-us/articles/intel-mkl-link-line-advisor
