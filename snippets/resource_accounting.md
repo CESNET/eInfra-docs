@@ -1,5 +1,22 @@
 ## Resource Accounting Policy
 
+Starting with the 24<sup>th</sup> open access grant competition, the accounting policy has been changed from [normalized core hours (NCH)][2a] to **node hours**. This means that it is now required to apply for node hours of the specific cluster and node type:
+
+1. [Barbora CPU][3a]
+1. [Barbora GPU][4a] 
+1. [Barbora FAT][5a]
+1. [DGX-2][6a]
+1. [Karolina CPU][7a]
+1. [Karolina GPU][8a]
+1. [Karolina FAT][9a]
+
+The accounting runs whenever the nodes are allocated via the PBS Pro workload manager (the qsub command), regardless of whether
+the nodes are actually used for any calculation.
+
+## Original Resource Accounting Policy
+
+The original policy, as stated below, is still applied to projects from previous grant competitions.
+
 ### Wall-Clock Core-Hours WCH
 
 The wall-clock core-hours (WCH) are the basic metric of computer utilization time.
@@ -18,31 +35,19 @@ All jobs are accounted in normalized core-hours, using factor F valid at the tim
 
 | System        | F    | Validity                  |
 | --------------| ---: | --------                  |
-| Karolina      | 1.00 |  2021-08-02 to 2021-09-06 |
-| Barbora CPU   | 1.40 |  2020-02-01 to 2021-09-06 |
-| Barbora GPU   | 4.50 |  2020-04-01 to 2021-09-06 |
-| DGX-2         | 5.50 |  2020-04-01 to 2021-09-06 |
-| Salomon       | 1.00 |  2017-09-11 to 2021-09-06 |
-
-
-The accounting runs whenever the computational cores are allocated via the PBS Pro workload manager (the qsub command), regardless of whether
-the cores are actually used for any calculation.
-
-!!! note
-    **The allocations are requested/granted in normalized core-hours NCH.**
-
-!!! warning
-    Whenever the term core-hour is used in this documentation, we mean the normalized core-hour, NCH.
+| Karolina      | 1.00 |  2021-08-02 to 2022-09-06 |
+| Barbora CPU   | 1.40 |  2020-02-01 to 2022-09-06 |
+| Barbora GPU   | 4.50 |  2020-04-01 to 2022-09-06 |
+| DGX-2         | 5.50 |  2020-04-01 to 2022-09-06 |
 
 The normalized core-hours were introduced to treat systems of different age on equal footing.
-Normalized core-hour is an accounting tool to discount the legacy systems. The past (before 2017-09-11) F factors are all 1.0.
-In future, the factors F will be updated, as new systems are installed. Factors F are expected to only decrease in time.
+Normalized core-hour is an accounting tool to discount the legacy systems.
 
-See examples in the [Job submission and execution][1] section.
+See examples in the [Job submission and execution][1a] section.
 
 ### Consumed Resources
 
-Check how many core-hours have been consumed. The command it4ifree is available on cluster login nodes.
+Check how many core-hours have been consumed. The command `it4ifree` is available on cluster login nodes.
 
 ```console
 $ it4ifree
@@ -69,6 +74,14 @@ NCH   =    Normalized Core Hour
 
 The `it4ifree` command is a part of the `it4i.portal.clients` package, located [here][pypi].
 
-[1]: job-submission-and-execution.md
+[1a]: job-submission-and-execution.md
+[2a]: #normalized-core-hours-nch
+[3a]: ../../barbora/compute-nodes/#compute-nodes-without-accelerators
+[4a]: ../../barbora/compute-nodes/#compute-nodes-with-a-gpu-accelerator
+[5a]: ../../barbora/compute-nodes/#fat-compute-node
+[6a]: ../../dgx2/introduction/
+[7a]: ../../karolina/compute-nodes/#compute-nodes-without-accelerators
+[8a]: ../../karolina/compute-nodes/#compute-nodes-with-a-gpu-accelerator
+[9a]: ../../karolina/compute-nodes/#data-analytics-compute-node
 
 [pypi]: https://pypi.python.org/pypi/it4i.portal.clients
