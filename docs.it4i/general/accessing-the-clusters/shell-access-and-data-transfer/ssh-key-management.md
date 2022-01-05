@@ -54,7 +54,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpujuOiTKCcGkbbBhrk0Hjmezr5QpM0swscXQE7fOZ
 
 ## SSH Key Management
 
-When you first create an account with IT4Innovations, you receive an SSH key with your credentials. However, you can manage your own SSH key for authentication to clusters.
+You can manage your own SSH key for authentication to clusters.
 
 ## Managing Your Own Key
 
