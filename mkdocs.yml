@@ -56,7 +56,6 @@ nav:
       - Get Project / Project Membership: index.md
       - Applying for Resources: general/applying-for-resources.md
     - Manage Profile:
-      - Introduction: index.md
       - e-INFRA CZ Profile:
         - Change Password: index.md
         - Manage SSH Keys: index.md
