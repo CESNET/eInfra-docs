@@ -51,17 +51,17 @@ nav:
     - Introduction: index.md
     - Get Access:
       - Get Account:
-        - e-INFRA CZ Account: index.md
+        - e-INFRA CZ Account: todo.md
         - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
-      - Get Project / Project Membership: index.md
+      - Get Project / Project Membership: todo.md
       - Applying for Resources: general/applying-for-resources.md
     - Manage Profile:
       - e-INFRA CZ Profile:
-        - Change Password: index.md
-        - Manage SSH Keys: index.md
+        - Change Password: todo.md
+        - Manage SSH Keys: todo.md
       - IT4I Profile:
-        - Change Password: index.md
-        - Manage SSH Keys: index.md
+        - Change Password: todo.md
+        - Manage SSH Keys: todo.md
     - Access Services:
       - Access the Clusters:
         - SSH: general/shell-and-data-access.md
@@ -87,7 +87,7 @@ nav:
       - API Documentation: apiv1.md
     - Satisfaction and Feedback: general/feedback.md
     - PRACE: prace.md
-    - Support: index.md
+    - Support: todo.md
     - News:
       - Withdrawal from service: anselm-salomon-shutdown.md
       - PROJECT Storage Availability: project-storage-availability.md
