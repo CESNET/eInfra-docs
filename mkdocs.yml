@@ -56,11 +56,19 @@ nav:
         - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
       - Get Project / Project Membership: index.md
       - Applying for Resources: general/applying-for-resources.md
+    - Manage Profile:
+      - Introduction: index.md
+      - e-INFRA CZ Profile:
+        - Change Password: index.md
+        - Manage SSH Keys: index.md
+      - IT4I Profile:
+        - Change Password: index.md
+        - Manage SSH Keys: index.md
     - Obtaining Login Credentials: general/obtaining-login-credentials/obtaining-login-credentials.md
     - Accessing the Clusters: general/shell-and-data-access.md
     - Applying for Resources: general/applying-for-resources.md
     - Certificates FAQ: general/obtaining-login-credentials/certificates-faq.md
-    - Resource Allocation and Job Execution: 
+    - Resource Allocation and Job Execution:
       - Introduction: general/resource_allocation_and_job_execution.md
       - Resources Allocation Policy: general/resources-allocation-policy.md
       - Job Priority: general/job-priority.md
