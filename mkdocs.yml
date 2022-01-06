@@ -50,12 +50,14 @@ nav:
   - General:
     - Introduction: index.md
     - Get Access:
+      - Introduction: index.md
       - Get Account:
         - e-INFRA CZ Account: index.md
         - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
       - Get Project / Project Membership: index.md
       - Applying for Resources: general/applying-for-resources.md
     - Manage Profile:
+      - Introduction: index.md
       - e-INFRA CZ Profile:
         - Change Password: index.md
         - Manage SSH Keys: index.md
@@ -72,7 +74,7 @@ nav:
           - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
       - Access the IS and Web Services:
       - VPN Access: general/accessing-the-clusters/vpn-access.md
-    - Resource Allocation and Job Execution: 
+    - Resource Allocation and Job Execution:
       - Introduction: general/resource_allocation_and_job_execution.md
       - Resources Allocation Policy: general/resources-allocation-policy.md
       - Job Priority: general/job-priority.md
@@ -80,12 +82,13 @@ nav:
       - Capacity Computing: general/capacity-computing.md
       - Migrating from SLURM: general/slurmtopbs.md
     - Technical Information:
+      - Introduction: index.md
       - SSH Keys:
         - OpenSSH Keys (UNIX): general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
         - PuTTY (Windows): general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
       - Certificates FAQ: general/obtaining-login-credentials/certificates-faq.md
       - API Documentation: apiv1.md
-    - Satisfaction and Feedback: general/feedback.md  
+    - Satisfaction and Feedback: general/feedback.md
     - PRACE: prace.md
     - Support: index.md
     - News:
@@ -98,14 +101,14 @@ nav:
       - Standard File ACL: storage/standard-file-acl.md
       - NFSv4 File ACL: storage/nfs4-file-acl.md
   - Clusters:
-    - Karolina:          
+    - Karolina:
       - Introduction: karolina/introduction.md
       - Hardware Overview: karolina/hardware-overview.md
       - Compute Nodes: karolina/compute-nodes.md
       - Storage: karolina/storage.md
       - Network: karolina/network.md
       - Visualization Servers: karolina/visualization.md
-    - Barbora:          
+    - Barbora:
       - Introduction: barbora/introduction.md
       - Hardware Overview: barbora/hardware-overview.md
       - Compute Nodes: barbora/compute-nodes.md
