@@ -64,9 +64,16 @@ nav:
       - IT4I Profile:
         - Change Password: index.md
         - Manage SSH Keys: index.md
-    - Obtaining Login Credentials: general/obtaining-login-credentials/obtaining-login-credentials.md
-    - Accessing the Clusters: general/shell-and-data-access.md
-    - Applying for Resources: general/applying-for-resources.md
+    - Access Services:
+      - Access the Clusters:
+        - SSH: general/shell-and-data-access.md
+        - SSH Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md  
+      - GUI:
+        - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
+        - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
+        - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
+      - Access the IS and Web Services:
+        - VPN Access: general/accessing-the-clusters/vpn-access.md
     - Certificates FAQ: general/obtaining-login-credentials/certificates-faq.md
     - Resource Allocation and Job Execution:
       - Introduction: general/resource_allocation_and_job_execution.md
