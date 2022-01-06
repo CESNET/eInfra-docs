@@ -48,11 +48,30 @@ theme:
 
 nav:
   - General:
-    - Home: index.md
-    - Obtaining Login Credentials: general/obtaining-login-credentials/obtaining-login-credentials.md
-    - Accessing the Clusters: general/shell-and-data-access.md
-    - Applying for Resources: general/applying-for-resources.md
-    - Certificates FAQ: general/obtaining-login-credentials/certificates-faq.md
+    - Introduction: index.md
+    - Get Access:
+      - Get Account:
+        - e-INFRA CZ Account: index.md
+        - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
+      - Get Project / Project Membership: index.md
+      - Applying for Resources: general/applying-for-resources.md
+    - Manage Profile:
+      - e-INFRA CZ Profile:
+        - Change Password: index.md
+        - Manage SSH Keys: index.md
+      - IT4I Profile:
+        - Change Password: index.md
+        - Manage SSH Keys: index.md
+    - Access Services:
+      - Access the Clusters:
+        - SSH: general/shell-and-data-access.md
+        - SSH Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md  
+        - GUI:
+          - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
+          - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
+          - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
+      - Access the IS and Web Services:
+      - VPN Access: general/accessing-the-clusters/vpn-access.md
     - Resource Allocation and Job Execution: 
       - Introduction: general/resource_allocation_and_job_execution.md
       - Resources Allocation Policy: general/resources-allocation-policy.md
@@ -60,21 +79,18 @@ nav:
       - Job Submission and Execution: general/job-submission-and-execution.md
       - Capacity Computing: general/capacity-computing.md
       - Migrating from SLURM: general/slurmtopbs.md
-    - Connect to the Clusters:
-      - SSH: 
-        - SSH Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md
+    - Technical Information:
+      - SSH Keys:
         - OpenSSH Keys (UNIX): general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
         - PuTTY (Windows): general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
-      - GUI:
-        - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
-        - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
-        - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
-      - VPN Access: general/accessing-the-clusters/vpn-access.md
+      - Certificates FAQ: general/obtaining-login-credentials/certificates-faq.md
+      - API Documentation: apiv1.md
     - Satisfaction and Feedback: general/feedback.md  
-    - PRACE User Support: prace.md
-    - API Documentation: apiv1.md
-    - Withdrawal from service: anselm-salomon-shutdown.md
-    - PROJECT Storage Availability: project-storage-availability.md
+    - PRACE: prace.md
+    - Support: index.md
+    - News:
+      - Withdrawal from service: anselm-salomon-shutdown.md
+      - PROJECT Storage Availability: project-storage-availability.md
   - Storage:
     - PROJECT: storage/project-storage.md
     - CESNET: storage/cesnet-storage.md
