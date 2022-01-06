@@ -80,7 +80,6 @@ nav:
       - Capacity Computing: general/capacity-computing.md
       - Migrating from SLURM: general/slurmtopbs.md
     - Technical Information:
-      - Introduction: index.md
       - SSH Keys:
         - OpenSSH Keys (UNIX): general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
         - PuTTY (Windows): general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
