@@ -48,7 +48,14 @@ theme:
 
 nav:
   - General:
-    - Home: index.md
+    - Introduction: index.md
+    - Get Access:
+      - Introduction: index.md
+      - Get Account:
+        - e-INFRA CZ Account: index.md
+        - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
+      - Get Project / Project Membership: index.md
+      - Applying for Resources: general/applying-for-resources.md
     - Obtaining Login Credentials: general/obtaining-login-credentials/obtaining-login-credentials.md
     - Accessing the Clusters: general/shell-and-data-access.md
     - Applying for Resources: general/applying-for-resources.md
