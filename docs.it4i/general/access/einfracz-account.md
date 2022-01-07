@@ -22,7 +22,7 @@ Once your e-INFRA CZ account is created, it is propagated into IT4I systems and 
 | -------- | ------- |
 | Clusters | SSH key |
 | IS, RT, web, VPN | e-INFRA CZ credentials |
-| Profile<br>Change&nsp;password<br>Change&nsp;SSH&nsp;key | Academic institution's credentials |
+| Profile<br>Change&nbsp;password<br>Change&nbsp;SSH&nbsp;key | Academic institution's credentials |
 
 Once your account is created, you should proceed with creating a project or become a project member.
 
