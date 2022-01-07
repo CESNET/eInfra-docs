@@ -1,4 +1,4 @@
-# Obtaining Login Credentials
+# IT4I Account
 
 ## Obtaining Authorization
 
