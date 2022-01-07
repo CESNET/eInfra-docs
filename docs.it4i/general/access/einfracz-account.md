@@ -12,6 +12,18 @@ which provides capacities and resources for the transmission, storage and proces
 1. Select a member academic institution you are affiliated with.
 1. Fill out the e-INFRA CZ Account information (username, password and ssh key(s)).
 
+Your account should be created ??? mins/hours after submitting the request.
+
+## Logging into IT4I Services
+
+Once your e-INFRA CZ account is created, it is propagated into IT4I systems and can be used to access its services.
+
+| Services | Access  |
+| -------- | ------- |
+| Clusters | SSH key |
+| IS, RT, web, VPN | e-INFRA CZ credentials |
+| Profile<br>Change&nsp;password<br>Change&nsp;SSH&nsp;key | Academic institution's credentials |
+
 Once your account is created, you should proceed with creating a project or become a project member.
 
 [1]: https://www.e-infra.cz/en
