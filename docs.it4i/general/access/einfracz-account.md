@@ -1,4 +1,4 @@
-# E-INFRA CZ Account
+# e-INFRA CZ Account
 
 [e-INFRA CZ][1] is a unique research and development e-infrastructure in the Czech Republic,
 which provides capacities and resources for the transmission, storage and processing of scientific and research data.
@@ -6,7 +6,7 @@ which provides capacities and resources for the transmission, storage and proces
 !!! important
     Only persons affiliated with an academic institution from the Czech Republic are eligible for an e-INFRA CZ account.
 
-## Request E-INFRA CZ Account
+## Request e-INFRA CZ Account
 
 1. Go to [https://signup.e-infra.cz/fed/registrar/?vo=IT4Innovations][2]
 1. Select a member academic institution you are affiliated with.
