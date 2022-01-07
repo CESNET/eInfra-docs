@@ -14,7 +14,7 @@ which provides capacities and resources for the transmission, storage and proces
 
 Your account should be created ??? mins/hours after submitting the request.
 
-## Logging into IT4I Services
+## Logging Into IT4I Services
 
 Once your e-INFRA CZ account is created, it is propagated into IT4I systems and can be used to access its services.
 
