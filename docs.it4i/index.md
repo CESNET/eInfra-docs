@@ -8,13 +8,6 @@ Welcome to the IT4Innovations documentation. The IT4Innovations National Superco
 1. Scan for all the notes and reminders on the page.
 1. If more information is needed, read the details and **look for examples** illustrating the concepts.
 
-## Getting Help and Support
-
-!!! note
-    Contact [support\[at\]it4i.cz][a] for help and support regarding the cluster technology at IT4Innovations. For communication, use the **Czech**, **Slovak**, or **English** language. Follow the status of your request to IT4Innovations [here][b]. The IT4Innovations support team will use best efforts to resolve requests within thirty days.
-
-Use your IT4Innovations username and password to log in to the [support][b] portal.
-
 ## Required Proficiency
 
 !!! note
