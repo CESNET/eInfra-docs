@@ -58,7 +58,7 @@ nav:
     - Manage Profile:
       - e-INFRA CZ Profile:
         - Change Password: general/management/einfra-pswd.md
-        - Manage SSH Keys: general/todo.md
+        - Manage SSH Keys: general/management/einfra-ssh.md
       - IT4I Profile:
         - Change Password: general/todo.md
         - Manage SSH Keys: general/todo.md
