@@ -45,4 +45,4 @@ Read more on [Capacity Computing][6] page.
 [5]: job-submission-and-execution.md
 [6]: capacity-computing.md
 
-[a]: https://extranet.it4i.cz/rsweb/salomon/queues
+[a]: https://extranet.it4i.cz/rsweb/
