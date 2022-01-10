@@ -87,7 +87,7 @@ nav:
       - API Documentation: apiv1.md
     - Satisfaction and Feedback: general/feedback.md
     - PRACE: prace.md
-    - Support: general/todo.md
+    - Support: general/support.md
     - News:
       - Withdrawal from service: anselm-salomon-shutdown.md
       - PROJECT Storage Availability: project-storage-availability.md
