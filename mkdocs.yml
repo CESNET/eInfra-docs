@@ -60,8 +60,8 @@ nav:
         - Change Password: general/management/einfra-pswd.md
         - Manage SSH Keys: general/management/einfra-ssh.md
       - IT4I Profile:
-        - Change Password: general/todo.md
-        - Manage SSH Keys: general/todo.md
+        - Change Password: general/management/it4i-pswd.md
+        - Manage SSH Keys: general/management/it4i-ssh.md
     - Access Services:
       - Access the Clusters:
         - SSH: general/shell-and-data-access.md
