@@ -57,7 +57,7 @@ nav:
       - Applying for Resources: general/applying-for-resources.md
     - Manage Profile:
       - e-INFRA CZ Profile:
-        - Change Password: general/todo.md
+        - Change Password: general/management/einfra-pswd.md
         - Manage SSH Keys: general/todo.md
       - IT4I Profile:
         - Change Password: general/todo.md
