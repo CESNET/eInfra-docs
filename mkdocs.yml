@@ -53,7 +53,7 @@ nav:
       - Get Account:
         - e-INFRA CZ Account: general/access/einfracz-account.md
         - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
-      - Get Project / Project Membership: general/todo.md
+      - Get Project / Project Membership: general/access/project-access.md
       - Applying for Resources: general/applying-for-resources.md
     - Manage Profile:
       - e-INFRA CZ Profile:
