@@ -55,13 +55,9 @@ nav:
         - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
       - Get Project / Project Membership: general/access/project-access.md
       - Applying for Resources: general/applying-for-resources.md
-    - Manage Profile:
-      - e-INFRA CZ Profile:
-        - Change Password: general/management/einfra-pswd.md
-        - Manage SSH Keys: general/management/einfra-ssh.md
-      - IT4I Profile:
-        - Change Password: general/management/it4i-pswd.md
-        - Manage SSH Keys: general/management/it4i-ssh.md
+    - Manage Your Profile:
+      - e-INFRA CZ Profile: general/management/einfra-profile.md
+      - IT4I Profile: general/management/it4i-profile.md
     - Access Services:
       - Access the Clusters:
         - SSH: general/shell-and-data-access.md
@@ -71,7 +67,7 @@ nav:
         - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
         - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
       - Access the IS and Web Services:
-        - VPN Access: general/accessing-the-clusters/vpn-access.md
+      - VPN Access: general/accessing-the-clusters/vpn-access.md
     - Resource Allocation and Job Execution:
       - Introduction: general/resource_allocation_and_job_execution.md
       - Resources Allocation Policy: general/resources-allocation-policy.md
@@ -88,9 +84,8 @@ nav:
     - Satisfaction and Feedback: general/feedback.md
     - PRACE: prace.md
     - Support: general/support.md
-    - News:
-      - Withdrawal from service: anselm-salomon-shutdown.md
-      - PROJECT Storage Availability: project-storage-availability.md
+    - Withdrawal from service: anselm-salomon-shutdown.md
+    - PROJECT Storage Availability: project-storage-availability.md
   - Storage:
     - PROJECT: storage/project-storage.md
     - CESNET: storage/cesnet-storage.md
