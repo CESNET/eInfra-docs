@@ -270,15 +270,6 @@ $ ssh -R 6000:localhost:1080 cluster-name.it4i.cz
 
 Now, configure the applications proxy settings to `localhost:6000`. Use port forwarding to access the [proxy server from compute nodes][5], as well.
 
-## Graphical User Interface
-
-* The [X Window system][6] is the principal way to get a GUI access to the clusters.
-* [Virtual Network Computing][7] is a graphical desktop-sharing system that uses a Remote Frame Buffer protocol to remotely control another computer.
-
-## VPN Access
-
-* Access IT4Innovations internal resources via [VPN][8].
-
 [1]: ../general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
 [2]: ../general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
 [3]: ../anselm/storage.md#shared-filesystems
