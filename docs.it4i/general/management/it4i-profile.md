@@ -10,6 +10,6 @@ To change your IT4I account password, go to [https://extranet.it4i.cz/ssp/][2].
 
 To change SSH key(s) associated with your IT4I account, go to [https://extranet.it4i.cz/ssp/?action=changesshkey][3].
 
-[1]: extranet.it4i.cz
+[1]: https://scs.it4i.cz/
 [2]: https://extranet.it4i.cz/ssp/
 [3]: https://extranet.it4i.cz/ssp/?action=changesshkey
