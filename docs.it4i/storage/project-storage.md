@@ -40,7 +40,6 @@ The PROJECT storage can be accessed via the following nodes:
 | ------------- | ----------------------------- |
 | Karolina      | Login, Compute, Visualization |
 | Barbora       | Login, Compute, Visualization |
-| Salomon       | Login                         |
 
 To show the path to your project's directory on the PROJECT storage, use the `it4i-get-project-dir` command:
 
@@ -67,12 +66,8 @@ Quota Type     Cluster / PID    File System    Space used    Space limit    Entr
 -------------  ---------------  -------------  ------------  -------------  --------------  ---------------  -------------------
 User           barbora          /home          11.1 MB       25.0 GB        122             500,000          2021-08-24 07:50:09
 User           karolina         /home          354.6 MB      25.0 GB        3,194           500,000          2021-08-24 08:20:08
-User           salomon          /home          407.0 MB      250.0 GB       5,522           500,000          2021-08-24 08:20:08
 User           barbora          /scratch       256.5 GB      10.0 TB        169             10,000,000       2021-08-24 07:50:19
 User           karolina         /scratch       52.5 GB       100.0 TB       967             20,000,000       2021-08-24 08:20:18
-User           salomon          /scratch       3.7 TB        100.0 TB       212,252         10,000,000       2021-08-24 08:20:41
-User           salomon          /scratch/temp  3.1 TB        N/A            50.328                           2021-08-24 08:20:54
-User           salomon          /scratch/work  2.8 TB        N/A            207,594                          2021-08-24 08:20:47
 Project        open-XX-XX       proj1          3.9 TB        20.0 TB        212,377         5,000,000        2021-08-24 08:20:02
 Project        open-YY-YY       proj3          9.5 MB        20.0 TB        182             5,000,000        2021-08-24 08:20:02
 Project        open-ZZ-ZZ       proj2          844.4 GB      20.0 TB        797             5,000,000        2021-08-24 08:20:02
@@ -114,7 +109,7 @@ Snapshots are read-only.
 Snapshots' names have the `YYYY-MM-DD-hhmmss` format.
 
 ```console
-[vop999@login1.salomon ~]# ls -al /mnt/proj3/open-XX-XX/.snapshots
+[vop999@login1.karolina ~]# ls -al /mnt/proj3/open-XX-XX/.snapshots
 total 4
 dr-xr-xr-x.  2 root  root       4096 led 14 12:14 .
 drwxrws---. 16 vop999 open-XX-XX 4096 led 20 16:36 ..
