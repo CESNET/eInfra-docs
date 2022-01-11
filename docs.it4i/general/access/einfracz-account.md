@@ -16,7 +16,7 @@ IT4Innovations has become a member of e-INFRA CZ on January 2022.
 Your account should be created in a few minutes after submitting the request.
 
 Once your e-INFRA CZ account is created, it is propagated into IT4I systems
-and can be used to access [SCS portal][3] and [Request Tracker][4].<br>Continue with requesting a project or project membership. 
+and can be used to access [SCS portal][3] and [Request Tracker][4].<br>Continue with requesting a project or project membership.
 
 ## Logging Into IT4I Services
 
