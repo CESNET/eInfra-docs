@@ -1,4 +1,4 @@
-## Getting Help and Support
+# Getting Help and Support
 
 Contact [support\[at\]it4i.cz][a] for help and support regarding the cluster technology at IT4Innovations.
 For communication, use the **Czech**, **Slovak**, or **English** language.
