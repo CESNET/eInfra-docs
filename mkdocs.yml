@@ -66,7 +66,7 @@ nav:
         - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
         - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
         - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
-      - Access the IS and Web Services:
+      - Access the IS and Web Services: general/todo.md
       - VPN Access: general/accessing-the-clusters/vpn-access.md
     - Resource Allocation and Job Execution:
       - Introduction: general/resource_allocation_and_job_execution.md
