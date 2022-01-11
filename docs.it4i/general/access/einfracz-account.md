@@ -28,7 +28,7 @@ The table below shows how different IT4I services are accessed:
 | IS, RT, web, VPN | e-INFRA CZ credentials |
 | Profile<br>Change&nbsp;password<br>Change&nbsp;SSH&nbsp;key | Academic institution's credentials |
 
-You can [change you profile settings][5] at any time.
+You can change you profile settings at any time.
 
 [1]: https://www.e-infra.cz/en
 [2]: https://signup.e-infra.cz/fed/registrar/?vo=IT4Innovations
