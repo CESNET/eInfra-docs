@@ -3,7 +3,7 @@
 !!! important
     CESNET, CERIT-SC, and IT4I infrastructures will operate a joint e-INFRA CZ infrastructure. If you have a CESNET (e.g. MetaCentrum, DÚ) or CERIT-SC account, make sure to choose the same login name for your IT4I account to have uniform access to all services in the future.
 
-Once authorized by a PI, every person (PI or collaborator) wishing to access the clusters should contact the [IT4I support][a] (email: [support\[at\]it4i.cz][b]) providing the following information:
+Once [authorized by a PI][10], every person (PI or collaborator) wishing to access the clusters should contact the [IT4I support][a] (email: [support\[at\]it4i.cz][b]) providing the following information:
 
 1. Project ID
 1. Full name and affiliation
@@ -81,6 +81,7 @@ A FAQ about certificates can be found here: [Certificates FAQ][7].
 [5]: ../accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
 [6]: ../accessing-the-clusters/shell-access-and-data-transfer/putty.md#putty-key-generator
 [7]: ../obtaining-login-credentials/certificates-faq.md
+[10]: ../access/project-access.md
 
 [a]: https://support.it4i.cz/rt/
 [b]: mailto:support@it4i.cz
