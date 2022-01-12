@@ -57,6 +57,7 @@ id70-->id80
 [b]: mailto:support@it4i.cz
 [c]: https://www.it4i.cz/cs/file/f4afe72710863f0e8d119a31389e7bfb/5422/acceptable-use-policy.pdf
 [d]: http://support.it4i.cz/
+[e]: https://scs.it4i.cz/
 [f]: http://www.igtf.net/
 [g]: https://www.eugridpma.org
 [h]: https://tcs.cesnet.cz
