@@ -51,6 +51,7 @@ nav:
     - Introduction: index.md
     - Get Access:
       - Get Account:
+        - Introduction: general/access/account-introduction.md
         - e-INFRA CZ Account: general/access/einfracz-account.md
         - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
       - Get Project Membership: general/access/project-access.md
