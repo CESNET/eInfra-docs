@@ -25,8 +25,8 @@ The table below shows how different IT4I services are accessed:
 | Services | Access  |
 | -------- | ------- |
 | Clusters | SSH key |
-| IS, RT, web, VPN | e-INFRA CZ credentials |
-| Profile<br>Change&nbsp;password<br>Change&nbsp;SSH&nbsp;key | Academic institution's credentials |
+| IS, RT, web, VPN | e-INFRA CZ login |
+| Profile<br>Change&nbsp;password<br>Change&nbsp;SSH&nbsp;key | Academic institution's credentials<br>e-INFRA CZ / eduID |
 
 You can change you profile settings at any time.
 
