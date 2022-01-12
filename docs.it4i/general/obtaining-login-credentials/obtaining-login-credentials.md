@@ -5,11 +5,11 @@
 
 If you are not eligible for an e-INFRA CZ account, contact the [IT4I support][a] (email: [support\[at\]it4i.cz][b]) and provide the following information:
 
-1. Project ID (if available)
 1. Full name and affiliation
 1. Statement that you have read and accepted the [Acceptable use policy document][c] (AUP).
 1. Attach the AUP file.
 1. Your preferred username (3 to 12 characters). The preferred username must associate with your first and last name or be otherwise derived from it. Only alphanumeric sequences and dash signs are allowed.
+1. Public part of your SSH key
 1. In case you choose an [Alternative way to personal certificate][3], a **scan of photo ID** (personal ID or passport or driver license) is required.
 
 !!! warning
