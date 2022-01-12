@@ -5,7 +5,7 @@ which provides capacities and resources for the transmission, storage and proces
 IT4Innovations has become a member of e-INFRA CZ on January 2022.
 
 !!! important
-    Only persons affiliated with an academic institution from the Czech Republic are eligible for an e-INFRA CZ account.
+    Only persons affiliated with an academic institution from the Czech Republic ([eduID.cz][6]) are eligible for an e-INFRA CZ account.
 
 ## Request e-INFRA CZ Account
 
@@ -35,3 +35,4 @@ You can change you profile settings at any time.
 [3]: https://scs.it4i.cz/
 [4]: https://support.it4i.cz/
 [5]: ../../management/einfracz-profile.md
+[6]: https://www.eduid.cz/
