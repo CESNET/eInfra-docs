@@ -65,38 +65,6 @@ PI
 
 This chart describes the process of obtaining login credentials on the clusters. You may skip the tasks that you have already done. Some of the tasks, marked with asterisk (\*), are clickable and will take you to a more detailed description.
 
-* I am a collaborator on a project and want to obtain login credentials
-
-<div class="mermaid">
-graph TB
-id10(I am a collaborator on a project and want to obtain login credentials)
-id20[Obtain a certificate for digital signature]
-id10-->id20
-id30[EduID organizations from CESNET*]
-click id30 "#certificates-for-digital-signatures"
-id40[Personal certificate from PostSignum or I.CA]
-id50[Free certificate from Sectigo / Comodo*]
-click id50 "#alternative-way-to-personal-certificate"
-id55[Other trusted certificate]
-subgraph ""
-id20-->id30
-id20-->id40
-id20-->id50
-id20-->id55
-end
-id60[Export and save the certificate to a file]
-id30-->id60
-id40-->id60
-id50-->id60
-id55-->id60
-id70[Import the certificate into your email client*]
-click id70 "#installation-of-the-certificate-into-your-mail-client"
-id60-->id70
-id80[Send an email with request for access to IT4I Support*]
-click id80 "#login-credentials"
-id70-->id80
-</div>
-
 * I am a Primary Investigator and I want to allow my collaborators to access my project
 
 <div class="mermaid">
