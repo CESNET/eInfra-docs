@@ -53,8 +53,8 @@ nav:
       - Get Account:
         - e-INFRA CZ Account: general/access/einfracz-account.md
         - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
-      - Get Project / Project Membership: general/access/project-access.md
-      - Applying for Resources: general/applying-for-resources.md
+      - Get Project: general/applying-for-resources.md
+      - Get Project Membership: general/access/project-access.md
     - Manage Your Profile:
       - e-INFRA CZ Profile: general/management/einfracz-profile.md
       - IT4I Profile: general/management/it4i-profile.md
@@ -68,7 +68,7 @@ nav:
         - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
       - Access the IS and Web Services: general/todo.md
       - VPN Access: general/accessing-the-clusters/vpn-access.md
-    - Resource Allocation and Job Execution:
+    - Run Jobs:
       - Introduction: general/resource_allocation_and_job_execution.md
       - Resources Allocation Policy: general/resources-allocation-policy.md
       - Job Priority: general/job-priority.md
