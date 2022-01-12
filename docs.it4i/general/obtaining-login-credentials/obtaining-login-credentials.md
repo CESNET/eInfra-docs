@@ -1,7 +1,7 @@
 # IT4I Account
 
 !!! important
-    If you are affiliated with an academic institution from the Czech Republic. Create an [e-INFRA CZ account][8], instead.
+    If you are affiliated with an academic institution from the Czech Republic ([eduID.cz][u]), create an [e-INFRA CZ account][8], instead.
 
 Once [authorized by a PI][10], every person (PI or collaborator) wishing to access the clusters should contact the [IT4I support][a] (email: [support\[at\]it4i.cz][b]) providing the following information:
 
@@ -99,3 +99,4 @@ A FAQ about certificates can be found here: [Certificates FAQ][7].
 [r]: https://www.it4i.cz/computing-resources-allocation/?lang=en
 [s]: https://www.actalis.it/en/certificates-for-secure-electronic-mail.aspx
 [t]: https://www.actalis.it/en/certificates-for-secure-electronic-mail.aspx
+[u]: https://www.eduid.cz/
