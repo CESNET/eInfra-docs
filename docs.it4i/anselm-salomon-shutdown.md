@@ -7,9 +7,9 @@
 
 ### Salomon Access and Job Scheduling
 
-- The long jobs (`qlong` queue) will be no longer scheduled after Monday 6.12.2021 9:00
-- All jobs will be scheduled to finish on **Monday 13.12.2021, 9:00**.
-- Access to Salomon login nodes and data will be preserved to **03.01.2022, 9:00**.
+- Scheduling of long jobs (`qlong` queue) ended on 6.12.2021 9:00.
+- All jobs were scheduled to finish on **Monday 13.12.2021, 9:00**.
+- Access to Salomon login nodes and data ended on **03.01.2022, 9:00**.
 
 ### Salomon Data
 
@@ -18,8 +18,8 @@
 
 - Users should synchronize any remaining data on `/home` and `/scratch` to the PROJECT storage themselves.
 - The data on the Salomon `/home` and `/scratch` storage were set to read-only on **Monday 13.12.2021, 9:00**.
-- The data on the Salomon `/home` and `/scratch` storage will become permanently inaccessible starting **03.01.2022, 9:00**.
-- No backup or data transfer is scheduled for `/home` or other storages by IT4I, data will be **permanently lost on 03.01.2022, 9:00**.
+- The data on the Salomon `/home` and `/scratch` storage became permanently inaccessible on **03.01.2022, 9:00**.
+- After 03.01.2022, 9:00, all data from Salomon `/home` and `/scratch` storage will be **permanently lost**.
 - Make sure that **you [save all the relevant data][2]** to external resources or to PROJECT storage before  **03.01.2022, 9:00**.
 
 ### Salomon Future
