@@ -2,7 +2,7 @@
 
 The computational resources of IT4I are allocated by the Allocation Committee via several [allocation mechanisms][a] to a project investigated by a Primary Investigator. By allocating the computational resources, the Allocation Committee is authorizing the PI to access and use the clusters. The PI may decide to authorize a number of their collaborators to access and use the clusters to consume the resources allocated to their Project. These collaborators will be associated to the Project. The Figure below is depicting the authorization chain:
 
-![](../../img/Authorization_chain.png)
+![](../img/Authorization_chain.png)
 
 **Allocation Mechanisms:**
 
