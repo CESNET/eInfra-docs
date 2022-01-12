@@ -21,7 +21,7 @@ and are authorized to use the clusters and any allocated resources.
 
 ## Authorize Collaborators for Your Project
 
-As a PI, you can approve or deny users' requests to join your project.
+As a PI, you can approve or deny users' requests to join your project. There are two methods of authorizing collaborators:
 
 ### Authorization by Web
 
