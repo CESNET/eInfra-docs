@@ -3,7 +3,7 @@
 !!! important
     If you are affiliated with an academic institution from the Czech Republic ([eduID.cz][u]), create an [e-INFRA CZ account][8], instead.
 
-Once [authorized by a PI][10], every person (PI or collaborator) wishing to access the clusters should contact the [IT4I support][a] (email: [support\[at\]it4i.cz][b]) providing the following information:
+If you are not eligible for an e-INFRA CZ account, contact the [IT4I support][a] (email: [support\[at\]it4i.cz][b]) and provide the following information:
 
 1. Project ID
 1. Full name and affiliation
