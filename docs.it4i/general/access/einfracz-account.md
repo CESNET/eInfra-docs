@@ -17,6 +17,7 @@ Your account should be created in a few minutes after submitting the request.
 
 Once your e-INFRA CZ account is created, it is propagated into IT4I systems
 and can be used to access [SCS portal][3] and [Request Tracker][4].
+
 Continue with requesting a project or project membership.
 
 ## Logging Into IT4I Services
