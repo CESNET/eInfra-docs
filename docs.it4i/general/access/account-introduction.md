@@ -8,15 +8,14 @@ However, with this account, you can apply for computational resources and manage
 or request a project membership (project collaborator).
 
 !!! important
-    Be sure to request project or project membership once your account is created.
-    Accounts that are not assigned to a project will be deactivated.
+    Be sure to request a project or project membership once your account is created so you can obtain access to clusters.
 
 ## Account Types
 
 There are two types of accounts on IT4I:
 
 * [**e-INFRA CZ Account**][1]
-    Intended for all persons affiliated with an academic institution from the Czech Republic (eduID.cz[a]).
+    Intended for all persons affiliated with an academic institution from the Czech Republic ([eduID.cz][a]).
 
 * **IT4I Account**
     Intended for all persons who are not eligible for e-INFRA CZ account.
