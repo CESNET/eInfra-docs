@@ -17,7 +17,7 @@ After the migration process is completed, you will receive a confirmation email 
 Successfully migrated accounts tied to e-INFRA CZ can be managed [here][4].
 With this account, you will have access to all IT4I services as well as to [e-INFRA CZ services][5].
 
-!!! Recommendation
+!!! tip "Recommendation"
     After migration, we recommend [verifying your SSH keys][6] for cluster access.
 
 If you have any question regarding the migration or need help, contact the [support][2].
