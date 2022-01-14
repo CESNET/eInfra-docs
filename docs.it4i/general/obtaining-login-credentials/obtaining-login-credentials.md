@@ -1,5 +1,8 @@
 # Obtaining Login Credentials
 
+!!! warning "Account Creation Suspension"
+    During the migration of IT4I accounts into a joint e-INFRA CZ user base, creating new IT4I accounts will be **temporarily suspended from January 19 to January 21**.
+
 ## Obtaining Authorization
 
 The computational resources of IT4I are [allocated][r] by the Allocation Committee to a Project investigated by a Primary Investigator. By [allocating the computational resources][r], the Allocation Committee is authorizing the PI to access and use the clusters. The PI may decide to authorize a number of their collaborators to access and use the clusters to consume the resources allocated to their Project. These collaborators will be associated to the Project. The Figure below is depicting the authorization chain:
