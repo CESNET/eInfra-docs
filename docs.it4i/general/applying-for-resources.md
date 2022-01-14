@@ -17,7 +17,7 @@ In all cases, IT4Innovations’ access mechanisms are aimed at distributing comp
 Once you create an account, log in to the [IT4I Information System][e] and apply for a project.
 You will be informed by IT4I about the Allocation Committee decision.
 Once approved by the Allocation Committee, you become the Primary Investigator (PI) for the project
-and are authorized to use the clusters and any allocated resources.
+and are authorized to use the clusters and any allocated resources as well as authorize collaborators for your project.
 
 ## Authorize Collaborators for Your Project
 
@@ -27,7 +27,8 @@ As a PI, you can approve or deny users' requests to join your project. There are
 
 This is a preferred method if you have an IT4I or e-INFRA CZ account.
 
-Log in to the [IT4I SCS portal][e] using IT4I credentials and go to the **Authorization Requests** section. Here you can authorize collaborators for your project.
+Log in to the [IT4I SCS portal][e] using your credentials and go to the **Authorization Requests** section.
+Here you can authorize collaborators for your project.
 
 ### Authorization by Email (An Alternative Approach)
 
@@ -60,62 +61,6 @@ PI
 
 !!! note
     Web-based email interfaces cannot be used for secure communication; external application, such as Thunderbird or Outlook must be used. This way, your new credentials will be visible only in applications that have access to your certificate.
-
-### Process Flow Chart
-
-This chart describes the process of obtaining login credentials on the clusters. You may skip the tasks that you have already done. Some of the tasks, marked with asterisk (\*), are clickable and will take you to a more detailed description.
-
-* I am a Primary Investigator and I want to allow my collaborators to access my project
-
-<div class="mermaid">
-graph TB
-id110(I am a Primary Investigator and I want to allow my collaborators to access my project)
-id120[Obtain a certificate for digital signature]
-id110-->id120
-id130[EduID organizations from CESNET*]
-click id130 "#certificates-for-digital-signatures"
-id140[Personal certificate from PostSignum or I.CA]
-id150[Free certificate from Sectigo / Comodo*]
-click id150 "#alternative-way-to-personal-certificate"
-id155[Other trusted certificate]
-subgraph ""
-id120-->id130
-id120-->id140
-id120-->id150
-id120-->id155
-end
-id160[Export and save the certificate to a file]
-id130-->id160
-id140-->id160
-id150-->id160
-id155-->id160
-id170[Import the certificate into your email client*]
-click id170 "#installation-of-the-certificate-into-your-mail-client"
-id160-->id170
-id180[Send an email with request for authorization to IT4I Support*]
-click id180 "#authorization-by-e-mail-an-alternative-approach"
-id170-->id180
-</div>
-
-* I am an existing user/Primary Investigator and I want to manage my projects/users
-
-<div class="mermaid">
-graph TB
-id210(I am an existing user/Primary Investigator and I want to manage my projects/users)
-id220[Log into scs.it4i.cz]
-id230[Go to the Authorization Requests section]
-id210-->id220
-id220-->id230
-id240[Submit a request to become a project member]
-id245[Wait for an approval from the Primary Investigator]
-id230-->|User|id240
-id240-->id245
-id250[Wait for a user to submit the request to become a project member]
-id255[Approve or deny user requests for becoming project members]
-id230-->|Primary Investigator|id250
-id250-->id255
-id240-.->id255
-</div>
 
 [1]: obtaining-login-credentials/obtaining-login-credentials.md
 [2]: https://docs.it4i.cz/general/obtaining-login-credentials/obtaining-login-credentials/#certificates-for-digital-signatures
