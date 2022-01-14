@@ -2,7 +2,7 @@
 
 This section provides basic information on accounts required for access to IT4I services.
 
-## Account types
+## Account Types
 
 There are two types of accounts on IT4Innovations:
 
