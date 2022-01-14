@@ -35,7 +35,7 @@ CESNET may contact individual users via email when an additional action is requi
 
 After the migration process is completed, you will receive a confirmation email from IT4I.
 
-## Aftermath
+## Steps after migration
 
 Successfully migrated accounts tied to e-INFRA CZ can be self-managed at [e-INFRA CZ User profile][4].  
 With this account, you will have access to all IT4I services as well as to [e-INFRA CZ services][5].
