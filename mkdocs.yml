@@ -71,7 +71,7 @@ nav:
     - Satisfaction and Feedback: general/feedback.md  
     - PRACE User Support: prace.md
     - API Documentation: apiv1.md
-    - e-INFRA CZ Migration: einfracz-migration.md
+    - Migration to e-INFRA CZ: einfracz-migration.md
     - Withdrawal from service: anselm-salomon-shutdown.md
     - PROJECT Storage Availability: project-storage-availability.md
   - Storage:
