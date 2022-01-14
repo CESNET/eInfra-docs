@@ -1,4 +1,4 @@
-# Migration of IT4I Accounts to e-INFRA CZ
+# Migration to e-INFRA CZ
 
 ## Introduction
 
