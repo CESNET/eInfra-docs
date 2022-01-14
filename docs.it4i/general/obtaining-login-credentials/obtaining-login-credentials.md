@@ -1,7 +1,7 @@
 # Obtaining Login Credentials
 
 !!! warning "Account Creation Suspension"
-    During the migration of IT4I accounts into a joint e-INFRA CZ user base, creating new IT4I accounts will be **temporarily suspended from January 19 to January 21**.
+    During the migration of IT4I accounts into a joint e-INFRA CZ user base, creating new IT4I accounts will be **temporarily suspended from January 19 to January 21**. For more information, see [Migration of IT4I Accounts to e-INFRA CZ][]
 
 ## Obtaining Authorization
 
@@ -250,6 +250,7 @@ These emails will inform about the projected removal date and will prompt the us
 [5]: ../accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
 [6]: ../accessing-the-clusters/shell-access-and-data-transfer/putty.md#putty-key-generator
 [7]: ../obtaining-login-credentials/certificates-faq.md
+[8]: ../../einfracz-migration.md
 
 [a]: https://support.it4i.cz/rt/
 [b]: mailto:support@it4i.cz
