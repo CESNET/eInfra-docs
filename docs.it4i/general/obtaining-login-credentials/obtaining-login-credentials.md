@@ -15,9 +15,6 @@ If you are not eligible for an e-INFRA CZ account, contact the [IT4I support][a]
 !!! warning
     Should the above information be provided by email, the email **must be** digitally signed. Read more on [digital signatures][4] below.
 
-!!! hint
-    VSB associates will be given a VSB login username.
-
 Example (except the subject line, which must be in English, you may use Czech or Slovak language for communication with us):
 
 ```console
@@ -36,7 +33,7 @@ John Smith
 (Digitally signed)
 ```
 
-You will receive your personal login credentials by protected email. The login credentials include:
+You will receive your personal login credentials by encrypted email. The login credentials include:
 
 1. username
 1. SSH private key and private key passphrase
