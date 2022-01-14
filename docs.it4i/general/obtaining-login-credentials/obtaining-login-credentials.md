@@ -1,7 +1,7 @@
 # Obtaining Login Credentials
 
 !!! warning "Account Creation Suspension"
-    During the migration of IT4I accounts into a joint e-INFRA CZ user base, creating new IT4I accounts will be **temporarily suspended from January 19 to January 21**. For more information, see [Migration of IT4I Accounts to e-INFRA CZ][]
+    During the migration of IT4I accounts into a joint e-INFRA CZ user base, creating new IT4I accounts will be **temporarily suspended from January 19 to January 21**. For more information, see [Migration of IT4I Accounts to e-INFRA CZ][8].
 
 ## Obtaining Authorization
 
