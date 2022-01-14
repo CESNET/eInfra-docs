@@ -23,6 +23,6 @@ For more information, see the section:
 * **Get Project**
     if you want to be a project owner.
 
-[1]: ../einfracz-account.md
+[1]: ./einfracz-account.md
 
 [a]: https://www.eduid.cz/
