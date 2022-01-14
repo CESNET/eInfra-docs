@@ -61,5 +61,5 @@ You can manage your own SSH key for authentication to clusters:
 
 [1]: ./ssh-keys.md
 [2]: ./putty.md
-[3]: ../management/einfracz-profile.md
-[4]: ../management/it4i-profile.md
+[3]: ../../management/einfracz-profile.md
+[4]: ../../management/it4i-profile.md
