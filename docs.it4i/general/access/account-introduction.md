@@ -1,6 +1,6 @@
 # Introduction
 
-This section provides basic information on accounts required for access to IT4I services.
+This section provides basic information on how to gain access to IT4Innovations Information systems and project membership.
 
 ## Account Types
 
