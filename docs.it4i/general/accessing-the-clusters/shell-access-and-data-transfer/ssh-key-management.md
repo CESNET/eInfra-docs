@@ -54,19 +54,12 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpujuOiTKCcGkbbBhrk0Hjmezr5QpM0swscXQE7fOZ
 
 ## SSH Key Management
 
-You can manage your own SSH key for authentication to clusters.
+You can manage your own SSH key for authentication to clusters:
 
-## Managing Your Own Key
-
-1. Generate your SSH key (see the [OpenSSH Keys (UNIX)][1] or [PuTTY (Windows)][2] section).
-
-1. Go to [https://extranet.it4i.cz/ssp/index.php?action=changesshkey][a]
-
-1. Enter your username, password and public SSH key.
-
-1. Changes will take effect immediately.
+* [e-INFRA CZ account][3]
+* [IT4I account][4]
 
 [1]: ./ssh-keys.md
 [2]: ./putty.md
-
-[a]: https://extranet.it4i.cz/ssp/index.php?action=changesshkey
+[3]: ../management/einfracz-profile.md
+[4]: ../management/it4i-profile.md
