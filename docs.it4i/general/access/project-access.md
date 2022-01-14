@@ -1,49 +1,17 @@
 # Get Project Membership
 
 !!! note
-    You need to be named as a collaborator by a PI in order to access and use the clusters.
+    You need to be named as a collaborator by a Primary Investigator (PI) in order to access and use the clusters.
 
 ## Authorization by Web
 
 This is a preferred method if you have an IT4I or e-INFRA CZ account.
 
-Log in to the [IT4I SCS portal][e] using IT4I credentials and go to the **Authorization Requests** section. Here you can submit your requests for becoming a project member.
+Log in to the [IT4I SCS portal][e] and go to the **Authorization Requests** section. Here you can submit your requests for becoming a project member. You will have to wait until the project PI authorizes your request.
 
-### Process Flow Chart
+## Authorization by Email
 
-This chart describes the process of obtaining login credentials on the clusters. You may skip the tasks that you have already done. Some of the tasks, marked with asterisk (\*), are clickable and will take you to a more detailed description.
-
-* I am a collaborator on a project and want to obtain login credentials
-
-<div class="mermaid">
-graph TB
-id10(I am a collaborator on a project and want to obtain login credentials)
-id20[Obtain a certificate for digital signature]
-id10-->id20
-id30[EduID organizations from CESNET*]
-click id30 "#certificates-for-digital-signatures"
-id40[Personal certificate from PostSignum or I.CA]
-id50[Free certificate from Sectigo / Comodo*]
-click id50 "#alternative-way-to-personal-certificate"
-id55[Other trusted certificate]
-subgraph ""
-id20-->id30
-id20-->id40
-id20-->id50
-id20-->id55
-end
-id60[Export and save the certificate to a file]
-id30-->id60
-id40-->id60
-id50-->id60
-id55-->id60
-id70[Import the certificate into your email client*]
-click id70 "#installation-of-the-certificate-into-your-mail-client"
-id60-->id70
-id80[Send an email with request for access to IT4I Support*]
-click id80 "#login-credentials"
-id70-->id80
-</div>
+An alternative way to become a project member is on request sent via [email by the project PI][8].
 
 [1]: https://docs.it4i.cz/general/obtaining-login-credentials/obtaining-login-credentials/#certificates-for-digital-signatures
 [2]: #authorization-by-web
@@ -52,6 +20,7 @@ id70-->id80
 [5]: ../accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
 [6]: ../accessing-the-clusters/shell-access-and-data-transfer/putty.md#putty-key-generator
 [7]: ../obtaining-login-credentials/certificates-faq.md
+[8]: ../../obtaining-login-credentials/#authorization-by-email-an-alternative-approach
 
 [a]: https://support.it4i.cz/rt/
 [b]: mailto:support@it4i.cz
