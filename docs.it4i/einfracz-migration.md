@@ -17,7 +17,8 @@ Comercial users, training accounts, suppliers, and service accounts will **not**
 
 ## When 
 
-The migration will take place on **January 19, 2022**. 
+The migration will take place on **January 19, 2022** and may last up to **January 21, 2022**
+During the migration, some user management services may be temporarily unavailable.
 
 ## The process
 You will receive an email (or emails) from [CESNET][3] that will guide you through additional steps on your side.  
