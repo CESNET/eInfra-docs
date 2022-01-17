@@ -18,10 +18,10 @@ If you want to access IT4I clusters, your account must also be **assigned to a p
 For more information, see the section:
 
 * [**Get Project Membership**][3]
-    if you want to be a collaborator on a project, or
+    if you want to become a collaborator on a project, or
 
 * [**Get Project**][4]
-    if you want to be a project owner.
+    if you want to become a project owner.
 
 [1]: ./einfracz-account.md
 [2]: ../obtaining-login-credentials/obtaining-login-credentials.md
