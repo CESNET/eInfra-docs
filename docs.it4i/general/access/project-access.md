@@ -20,7 +20,7 @@ An alternative way to become a project member is on request sent via [email by t
 [5]: ../accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
 [6]: ../accessing-the-clusters/shell-access-and-data-transfer/putty.md#putty-key-generator
 [7]: ../obtaining-login-credentials/certificates-faq.md
-[8]: ../../obtaining-login-credentials/#authorization-by-email-an-alternative-approach
+[8]: ../../applying-for-resources/#authorization-by-email-an-alternative-approach
 
 [a]: https://support.it4i.cz/rt/
 [b]: mailto:support@it4i.cz
