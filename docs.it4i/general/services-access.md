@@ -13,7 +13,7 @@ You can also submit a feedback on suppport services, etc. SCS IS is available on
 If you have a question or need help, you can contact our support on [https://support.it4i.cz/][2].
 Please note that first response to a new ticket may take up to 24 hours.
 
-## Cluster Usage Overview (Account Needed?)
+## Cluster Usage Overview
 
 For information about the current clusters usage, go to [https://extranet.it4i.cz/rsweb][3].
 You can switch between the clusters by clicking on its name in the upper right corner.
