@@ -1,6 +1,6 @@
 # Documentation
 
-Welcome to the IT4Innovations documentation. The IT4Innovations National Supercomputing Center operates the [Karolina][2], [Barbora][3], and [Salomon][1] supercomputers. The supercomputers are [available][4] to the academic community within the Czech Republic and Europe, and the industrial community worldwide. The purpose of these pages is to provide comprehensive documentation of the hardware, software, and usage of the computers.
+Welcome to the IT4Innovations documentation. The IT4Innovations National Supercomputing Center operates the [Karolina][2] and [Barbora][3] supercomputers. The supercomputers are [available][4] to the academic community within the Czech Republic and Europe, and the industrial community worldwide. The purpose of these pages is to provide comprehensive documentation of the hardware, software, and usage of the computers.
 
 ## How to Read the Documentation
 

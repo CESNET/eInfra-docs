@@ -85,7 +85,7 @@ nav:
     - Satisfaction and Feedback: general/feedback.md
     - PRACE: prace.md
     - Support: general/support.md
-    - e-INFRA CZ Migration: einfracz-migration.md
+    - Migration to e-INFRA CZ: einfracz-migration.md
     - Withdrawal from service: anselm-salomon-shutdown.md
     - PROJECT Storage Availability: project-storage-availability.md
   - Storage:
@@ -114,16 +114,6 @@ nav:
       - Accessing the DGX-2: dgx2/accessing.md
       - Resource Allocation and Job Execution: dgx2/job_execution.md
       - Software deployment: dgx2/software.md
-    - Salomon: 
-      - Introduction: salomon/introduction.md
-      - Hardware Overview: salomon/hardware-overview.md
-      - Compute Nodes: salomon/compute-nodes.md
-      - Network:
-        - InfiniBand Network: salomon/network.md
-        - IB Single-Plane Topology: salomon/ib-single-plane-topology.md
-        - 7D Enhanced Hypercube: salomon/7d-enhanced-hypercube.md
-      - Storage: salomon/storage.md
-      - Visualization Servers: salomon/visualization.md
     - Archive:
         - Introduction: archive/archive-intro.md
         - Anselm:
@@ -132,6 +122,16 @@ nav:
           - Compute Nodes: anselm/compute-nodes.md
           - Storage: anselm/storage.md
           - Network: anselm/network.md
+        - Salomon: 
+          - Introduction: salomon/introduction.md
+          - Hardware Overview: salomon/hardware-overview.md
+          - Compute Nodes: salomon/compute-nodes.md
+          - Network:
+            - InfiniBand Network: salomon/network.md
+            - IB Single-Plane Topology: salomon/ib-single-plane-topology.md
+            - 7D Enhanced Hypercube: salomon/7d-enhanced-hypercube.md
+          - Storage: salomon/storage.md
+          - Visualization Servers: salomon/visualization.md
   - Software:
     - Environment and Modules: environment-and-modules.md
     - Modules:

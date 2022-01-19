@@ -36,7 +36,6 @@ John Smith
 You will receive your personal login credentials by encrypted email. The login credentials include:
 
 1. username
-1. SSH private key and private key passphrase
 1. system password
 
 The clusters are accessed by the [private key][5] and username. Username and password are used for login to the [information systems][d].

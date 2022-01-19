@@ -5,7 +5,7 @@
 All IT4Innovations clusters are accessed by the SSH protocol via login nodes at the address **cluster-name.it4i.cz**. The login nodes may be addressed specifically, by prepending the loginX node name to the address.
 
 !!! note "Workgroups Access Limitation"
-    Projects from the **PRACE** workgroup can only access the **Barbora** and **Salomon** clusters.<br>Projects from the **EUROHPC** workgroup can only access the **Karolina** cluster.
+    Projects from the **PRACE** workgroup can only access the **Barbora** cluster.<br>Projects from the **EUROHPC** workgroup can only access the **Karolina** cluster.
 
 !!! important "Karolina and Barbora updated security requirements"
     Due to updated security requirements on Karolina and Barbora,
@@ -30,16 +30,6 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 | barbora.it4i.cz           | 22   | SSH      | round-robin DNS record for login[1-2] |
 | login1.barbora.it4i.cz    | 22   | SSH      | login1                                |
 | login2.barbora.it4i.cz    | 22   | SSH      | login2                                |
-
-### Salomon Cluster
-
-| Login address          | Port | Protocol | Login node                            |
-| ---------------------- | ---- | -------- | ------------------------------------- |
-| salomon.it4i.cz        | 22   | SSH      | round-robin DNS record for login[1-4] |
-| login1.salomon.it4i.cz | 22   | SSH      | login1                                |
-| login2.salomon.it4i.cz | 22   | SSH      | login2                                |
-| login3.salomon.it4i.cz | 22   | SSH      | login3                                |
-| login4.salomon.it4i.cz | 22   | SSH      | login4                                |
 
 ## Authentication
 
@@ -101,24 +91,8 @@ barbora.it4i.cz, ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZb1HGGREAV2ybYJgzeWuhy5o
 barbora.it4i.cz, ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOmUm4btn7OC0QLIT3xekKTTdg5ziby8WdxccEczEeE1
 ```
 
-### Salomon
-
-```console
-    md5:
-    f6:28:98:e4:f9:b2:a6:8f:f2:f4:2d:0a:09:67:69:80 (DSA)
-    70:01:c9:9a:5d:88:91:c7:1b:c0:84:d1:fa:4e:83:5c (RSA)
-    66:32:0a:ef:50:01:77:a7:52:3f:d9:f8:23:7c:2c:3a (ECDSA)
-    ab:3d:5e:ff:82:68:c7:72:da:4a:2d:e3:ca:85:0d:df (ED25519)
-
-    sha256:
-    epkqEU2eFzXnMeMMkpX02CykyWjGyLwFj528Vumpzn4 (DSA)
-    WNIrR7oeQDYpBYy4N2d5A6cJ2p0837S7gzzTpaDBZrc (RSA)
-    cYO4UdtUBYlS46GEFUB75BkgxkI6YFQvjVuFxOlRG3g (ECDSA)
-    bFm3stNM8ETmj8Xd7iPXNtu5X5dC2apLNXGiH3VSTuw (ED25519)
-```
-
 !!! note
-    Barbora and Salomon have identical SSH fingerprints on all login nodes.
+    Barbora has identical SSH fingerprints on all login nodes.
 
 ### Private Key Authentication:
 
@@ -139,7 +113,7 @@ On **Windows**, use the [PuTTY SSH client][2].
 After logging in, you will see the command prompt with the name of the cluster and the message of the day.
 
 !!! note
-    The environment is **not** shared between login nodes, except for [shared filesystems][3].
+    The environment is **not** shared between login nodes, except for shared filesystems.
 
 ## Data Transfer
 
@@ -149,7 +123,6 @@ Data in and out of the system may be transferred by SCP and SFTP protocols.
 | -------- | ---- | --------- |
 | Karolina | 22   | SCP, SFTP |
 | Barbora  | 22   | SCP       |
-| Salomon  | 22   | SCP, SFTP |
 
 Authentication is by [private key][1] only.
 
@@ -186,8 +159,6 @@ $ man sshfs
 ```
 
 On Windows, use the [WinSCP client][c] to transfer data. The [win-sshfs client][d] provides a way to mount the cluster filesystems directly as an external disc.
-
-More information about the shared file systems is available [here][4].
 
 ## Connection Restrictions
 
@@ -272,8 +243,6 @@ Now, configure the applications proxy settings to `localhost:6000`. Use port for
 
 [1]: ../general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
 [2]: ../general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
-[3]: ../anselm/storage.md#shared-filesystems
-[4]: ../anselm/storage.md
 [5]: #port-forwarding-from-login-nodes
 [6]: ../general/accessing-the-clusters/graphical-user-interface/x-window-system.md
 [7]: ../general/accessing-the-clusters/graphical-user-interface/vnc.md
