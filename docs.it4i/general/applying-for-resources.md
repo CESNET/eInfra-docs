@@ -19,18 +19,18 @@ You will be informed by IT4I about the Allocation Committee decision.
 Once approved by the Allocation Committee, you become the Primary Investigator (PI) for the project
 and are authorized to use the clusters and any allocated resources as well as authorize collaborators for your project.
 
-## Authorize Collaborators for Your Project
+### Authorize Collaborators for Your Project
 
 As a PI, you can approve or deny users' requests to join your project. There are two methods of authorizing collaborators:
 
-### Authorization by Web
+#### Authorization by Web
 
 This is a preferred method if you have an IT4I or e-INFRA CZ account.
 
 Log in to the [IT4I SCS portal][e] using your credentials and go to the **Authorization Requests** section.
 Here you can authorize collaborators for your project.
 
-### Authorization by Email (An Alternative Approach)
+#### Authorization by Email (An Alternative Approach)
 
 In order to authorize a Collaborator to utilize the allocated resources, the PI should contact the [IT4I support][f] (email: [support\[at\]it4i.cz][g]) and provide the following information:
 
