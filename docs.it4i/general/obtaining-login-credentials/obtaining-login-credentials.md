@@ -64,8 +64,7 @@ A FAQ about certificates can be found here: [Certificates FAQ][7].
 * Go to the [Actalis Free Email Certificate][l] request form.
 * Follow the instructions: fill out the form, accept the terms and conditions, and submit the request.
 * You will receive an email with the certificate.
-* Import the certificate to one of the supported email clients. (See Actalis' [Email applications currently supported][s] section.)
-* For instructions on how to import the certificate, see Actalis' [Guides to installing and using your certificate][t] section.
+* Import the certificate to one of the supported email clients.
 
 !!! note
     Web-based email interfaces cannot be used for secure communication; external application, such as Thunderbird or Outlook must be used. This way, your new credentials will be visible only in applications that have access to your certificate.
@@ -93,6 +92,4 @@ A FAQ about certificates can be found here: [Certificates FAQ][7].
 [k]: http://idoc.vsb.cz/xwiki/wiki/infra/view/uzivatel/moz-cert-gen
 [l]: https://extrassl.actalis.it/portal/uapub/freemail?lang=en
 [r]: https://www.it4i.cz/computing-resources-allocation/?lang=en
-[s]: https://www.actalis.it/en/certificates-for-secure-electronic-mail.aspx
-[t]: https://www.actalis.it/en/certificates-for-secure-electronic-mail.aspx
 [u]: https://www.eduid.cz/
