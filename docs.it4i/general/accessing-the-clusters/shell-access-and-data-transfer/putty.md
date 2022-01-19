@@ -5,11 +5,9 @@
 We recommend you to download "**A Windows installer for everything except PuTTYtel**" with **Pageant** (SSH authentication agent) and **PuTTYgen** (PuTTY key generator) which is available [here][a].
 
 !!! note
-    "Change Password for Existing Private Key" is optional.
-
-    "Generate a New Public/Private key pair" is intended for users without Public/Private key in the initial email containing login credentials.
-
     "Pageant" is optional.
+    
+    "Change Password for Existing Private Key" is optional.
 
 ## PuTTY - How to Connect to the IT4Innovations Cluster
 
