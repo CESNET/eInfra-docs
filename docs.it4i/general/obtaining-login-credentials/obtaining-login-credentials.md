@@ -69,7 +69,7 @@ A FAQ about certificates can be found here: [Certificates FAQ][7].
 !!! note
     Web-based email interfaces cannot be used for secure communication; external application, such as Thunderbird or Outlook must be used. This way, your new credentials will be visible only in applications that have access to your certificate.
 
-[1]: https://docs.it4i.cz/general/obtaining-login-credentials/obtaining-login-credentials/#certificates-for-digital-signatures
+[1]: ./obtaining-login-credentials.md#certificates-for-digital-signatures
 [2]: #authorization-by-web
 [3]: #alternative-way-to-personal-certificate
 [4]: #certificates-for-digital-signatures
