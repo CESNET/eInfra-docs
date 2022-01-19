@@ -6,7 +6,7 @@ We recommend you to download "**A Windows installer for everything except PuTTYt
 
 !!! note
     "Pageant" is optional.
-    
+
     "Change Password for Existing Private Key" is optional.
 
 ## PuTTY - How to Connect to the IT4Innovations Cluster
