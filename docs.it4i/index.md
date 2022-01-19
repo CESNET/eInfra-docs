@@ -1,6 +1,6 @@
 # Documentation
 
-Welcome to the IT4Innovations documentation. The IT4Innovations National Supercomputing Center operates the [Karolina][2] and [Barbora][3] supercomputers. The supercomputers are [available][4] to the academic community within the Czech Republic and Europe, and the industrial community worldwide. The purpose of these pages is to provide comprehensive documentation of the hardware, software, and usage of the computers.
+Welcome to the IT4Innovations documentation. The IT4Innovations National Supercomputing Center operates the [Karolina][2] and [Barbora][3] supercomputers. The supercomputers are available to the academic community within the Czech Republic and Europe, and the industrial community worldwide. The purpose of these pages is to provide comprehensive documentation of the hardware, software, and usage of the computers.
 
 ## How to Read the Documentation
 
@@ -24,7 +24,7 @@ In many cases, you will run your own code on the cluster. In order to fully expl
 
 * **node:** a computer, interconnected via a network to other computers - Computational nodes are powerful computers, designed for, and dedicated to executing demanding scientific computations.
 * **core:** a processor core, a unit of processor, executing computations
-* **core-hour:** also normalized core-hour (NCH). A metric of computer utilization, [see definition][5].
+* **node-hour:** a metric of computer utilization, [see definition][5].
 * **job:** a calculation running on the supercomputer - the job allocates and utilizes the resources of the supercomputer for certain time.
 * **HPC:** High Performance Computing
 * **HPC (computational) resources:** corehours, storage capacity, software licenses
@@ -56,11 +56,9 @@ Although we have taken every care to ensure the accuracy of the content, mistake
 If you find an inconsistency or error, report it by visiting [support][b], creating a new ticket, and entering the details.
 By doing so, you can save other readers from frustration and help us improve.
 
-[1]: salomon/introduction.md
 [2]: karolina/introduction.md
 [3]: barbora/introduction.md
-[4]: general/applying-for-resources.md
-[5]: general/resources-allocation-policy.md#normalized-core-hours-nch
+[5]: general/resources-allocation-policy.md#resource-accounting-policy
 
 [a]: mailto:support@it4i.cz
 [b]: http://support.it4i.cz/rt
