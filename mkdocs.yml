@@ -86,8 +86,6 @@ nav:
     - PRACE: prace.md
     - Support: general/support.md
     - Migration to e-INFRA CZ: einfracz-migration.md
-    - Withdrawal from service: anselm-salomon-shutdown.md
-    - PROJECT Storage Availability: project-storage-availability.md
   - Storage:
     - PROJECT: storage/project-storage.md
     - CESNET: storage/cesnet-storage.md
