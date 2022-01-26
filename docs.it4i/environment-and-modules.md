@@ -8,7 +8,6 @@ The table shows which shells are supported on the IT4Innovations clusters.
 | --------------- | ---- | ---- | --- | --- | ---- |
 | Karolina        | yes  | yes  | yes | yes | yes  |
 | Barbora         | yes  | yes  | yes | yes | no   |
-| Salomon         | yes  | yes  | yes | yes | no   |
 | DGX-2           | yes  | no   | no  | no  | no   |
 
 !!! info
