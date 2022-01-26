@@ -6,32 +6,22 @@ IT4Innovations is a part of [e-INFRA CZ][1] - strategic research infrastructure 
 
 As a part of the process, a joint e-INFRA CZ user base has been established. This included a migration of eligible IT4I accounts.
 
-## Who Is Affected
+## Who Has Been Affected
 
-The migration affects all accounts of users affiliated with an academic organizations in the Czech Republic. Affected users have received an email with information about changes in personal data processing.
+The migration affects all accounts of users affiliated with an academic organizations in the Czech Republic who also have an OPEN-XX-XX project. Affected users have received an email with information about changes in personal data processing.
 
-## Who Is Not Affected
+## Who Has Not Been Affected
 
 Commercial users, training accounts, suppliers, and service accounts were **not** affected by the migration.
 
-## When
-
-The migration took place on **January 19, 2022** and finished on **January 21, 2022**.
-
 ## Process
 
-During the process, users have received one or more emails from [CESNET][3] guiding them through additional steps required for successful migration.
+During the process, additional steps have been required for successful migration.
 
 This may have included:
 
 1. e-INFRA CZ registration, if one does not already exist.
 2. e-INFRA CZ password reset, if one does not already exist.
-3. Account identity linking, if conflict in username is identified.
-
-Emails originated from `cesnet.cz` domain and directed users to `e-infra.cz` pages/web applications.
-The pages are protected by https encryption and valid certificates.
-
-CESNET may have contacted individual users via email when an additional action was required for successful migration of their account.
 
 ## Steps After Migration
 
