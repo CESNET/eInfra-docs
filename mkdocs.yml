@@ -140,9 +140,6 @@ nav:
       - Job Features: job-features.md
       - Available Karolina Modules: modules-karolina.md
       - Available Barbora Modules: modules-barbora.md
-      - Available Salomon Modules: modules-salomon.md
-      - Available Salomon Modules on UV: modules-salomon-uv.md
-      - Available Salomon Modules on PHI Cards: modules-salomon-phi.md
       - Available DGX-2 Modules: modules-dgx.md  
     - ISV Licenses: software/isv_licenses.md
     - CAE:
