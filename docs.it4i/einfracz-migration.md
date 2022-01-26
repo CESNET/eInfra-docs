@@ -53,4 +53,4 @@ If you have questions or a problem with IT4I account (i.e. account not eligible 
 [4]: https://profile.e-infra.cz/
 [5]: https://www.e-infra.cz/en/services
 [6]: https://profile.e-infra.cz/profile/settings/sshKeys
-[7]: support@cesnet.cz
+[7]: mailto:support@cesnet.cz
