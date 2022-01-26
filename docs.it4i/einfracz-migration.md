@@ -45,6 +45,7 @@ Successfully migrated accounts tied to e-INFRA CZ can be self-managed at [e-INFR
 ## Troubleshooting
 
 If you have a problem with your account migrated to e-INFRA CZ user base, contact the [CESNET support][7].
+
 If you have questions or a problem with IT4I account (i.e. account not eligible for migration), contact the [IT4I support][2].
 
 [1]: https://www.e-infra.cz/en
