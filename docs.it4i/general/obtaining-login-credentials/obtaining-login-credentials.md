@@ -5,11 +5,11 @@
 
 If you are not eligible for an e-INFRA CZ account, contact the [IT4I support][a] (email: [support\[at\]it4i.cz][b]) and provide the following information:
 
-1. Full name and affiliation
-1. Statement that you have read and accepted the [Acceptable use policy document][c] (AUP).
-1. Attach the AUP file.
-1. Your preferred username (3 to 12 characters). The preferred username must associate with your first and last name or be otherwise derived from it. Only alphanumeric sequences and dash signs are allowed.
-1. Public part of your SSH key
+1. Full name and affiliation;
+1. Statement that you have read and accepted the [Acceptable use policy document][c] (AUP);
+1. Attach the AUP file;
+1. Your preferred username (4 to 7 characters);<br>The preferred username must associate with your first and last name or be otherwise derived from it. Only alphanumeric sequences and dash signs are allowed. Note that the system will automatically add the `it4i-` prefix to your username.
+1. Public part of your SSH key;<br>If you don't provide it in the ticket, you must [add it manually][s] after your account is created.
 1. In case you choose an [Alternative way to personal certificate][3], a **scan of photo ID** (personal ID or passport or driver license) is required.
 
 !!! warning
@@ -92,4 +92,5 @@ A FAQ about certificates can be found here: [Certificates FAQ][7].
 [k]: http://idoc.vsb.cz/xwiki/wiki/infra/view/uzivatel/moz-cert-gen
 [l]: https://extrassl.actalis.it/portal/uapub/freemail?lang=en
 [r]: https://www.it4i.cz/computing-resources-allocation/?lang=en
+[s]: https://extranet.it4i.cz/ssp/?action=changesshkey
 [u]: https://www.eduid.cz/
