@@ -135,7 +135,6 @@ nav:
     - Modules:
       - New Software Installation Request: software/modules/new-software.md      
       - Lmod Environment: software/modules/lmod.md
-      - Intel Xeon Phi Environment: software/mic/mic_environment.md
       - Modules Matrix: modules-matrix.md
       - Job Features: job-features.md
       - Available Karolina Modules: modules-karolina.md
