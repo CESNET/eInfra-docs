@@ -6,7 +6,7 @@ It is possible to run Workbench scripts in a batch mode. You need to configure s
 
 ![](../../../img/AMsetPar1.png)
 
-Enable the *Distribute Solution* checkbox and enter the number of cores (e.g. 48 to run on two Salomon nodes). If you want the job to run on more than 1 node, you must also provide a so called MPI appfile. In the *Additional Command Line Arguments* input field, enter:
+Enable the *Distribute Solution* checkbox and enter the number of cores (e.g. 72 to run on two Barbora nodes). If you want the job to run on more than 1 node, you must also provide a so called MPI appfile. In the *Additional Command Line Arguments* input field, enter:
 
 ```console
     -mpifile /path/to/my/job/mpifile.txt
