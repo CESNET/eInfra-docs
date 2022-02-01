@@ -27,20 +27,20 @@ uid=1000(user) gid=1000(user) groups=1000(user),1234(open-0-0),7310(gaussian)
 
 ## Installed Version
 
-Gaussian is available on Karolina, Salomon, Barbora, and DGX-2 systems in the latest version Gaussian 16 rev. c0 and versions 09-a02, a09-d01.
+Gaussian is available on Karolina, Barbora, and DGX-2 systems in the latest version Gaussian 16 rev. c0 and versions 09-a02, a09-d01.
 
-| Module                                | CPU support | GPU support  | Parallelization | Note               | Barbora | Salomon | DGX-2 | Karolina |
-|--------------------------------------|-------------|--------------|-----------------|---------------------|---------|---------|-------| -------- |
-| Gaussian/09-a02                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | Yes      |
-| Gaussian/09-d01                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | Yes      |
-| Gaussian/16_rev_c0-binary            | AVX2        | Yes          | SMP             | Binary distribution | Yes     | No      | Yes   | No       |
-| Gaussian/16_rev_c0-binary-Linda      | AVX2        | Yes          | SMP + Linda     | Binary distribution | Yes     | Yes     | No    | No       |
-| Gaussian/16_rev_c0-CascadeLake       | AVX-512     | No           | SMP             | IT4I compiled       | Yes     | No      | No    | No       |
-| Gaussian/16_rev_c0-CascadeLake-Linda | AVX-512     | No           | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | No       |
-| Gaussian/16_rev_c0-GPU-Linda         | AVX2        | Yes          | SMP + Linda     | IT4I compiled       | Yes     | No      | No    | No       |
-| Gaussian/16_rev_c0-GPU               | AVX2        | Yes          | SMP             | IT4I compiled       | No      | No      | Yes   | No       |
-| Gaussian/16_rev_c0-Linda             | AVX2        | No           | SMP + Linda     | IT4I compiled       | No      | No      | No    | Yes      |
-| Gaussian/16_rev_c0                   | AVX2        | No           | SMP + Linda     | IT4I compiled       | No      | No      | No    | Yes      |
+| Module                                | CPU support | GPU support  | Parallelization | Note               | Barbora | DGX-2 | Karolina |
+|--------------------------------------|-------------|--------------|-----------------|---------------------|---------|-------| -------- |
+| Gaussian/09-a02                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No    | Yes      |
+| Gaussian/09-d01                      | AVX2        | No           | SMP + Linda     | IT4I compiled       | Yes     | No    | Yes      |
+| Gaussian/16_rev_c0-binary            | AVX2        | Yes          | SMP             | Binary distribution | Yes     | Yes   | No       |
+| Gaussian/16_rev_c0-binary-Linda      | AVX2        | Yes          | SMP + Linda     | Binary distribution | Yes     | No    | No       |
+| Gaussian/16_rev_c0-CascadeLake       | AVX-512     | No           | SMP             | IT4I compiled       | Yes     | No    | No       |
+| Gaussian/16_rev_c0-CascadeLake-Linda | AVX-512     | No           | SMP + Linda     | IT4I compiled       | Yes     | No    | No       |
+| Gaussian/16_rev_c0-GPU-Linda         | AVX2        | Yes          | SMP + Linda     | IT4I compiled       | Yes     | No    | No       |
+| Gaussian/16_rev_c0-GPU               | AVX2        | Yes          | SMP             | IT4I compiled       | No      | Yes   | No       |
+| Gaussian/16_rev_c0-Linda             | AVX2        | No           | SMP + Linda     | IT4I compiled       | No      | No    | Yes      |
+| Gaussian/16_rev_c0                   | AVX2        | No           | SMP + Linda     | IT4I compiled       | No      | No    | Yes      |
 
 Speedup may be observed on Barbora and DGX-2 systems when using the `CascadeLake` and `GPU` modules compared to the `binary` module.
 
@@ -60,7 +60,7 @@ Load module
 $ ml Gaussian/16_rev_c0-binary
 ```
 
-In the input file Link0 header section, set the CPU cores (24 for Salomon, 36 for Barbora, 48 for DGX-2) and memory amount.
+In the input file Link0 header section, set the CPU cores (e.g. 36 for Barbora, 48 for DGX-2) and memory amount.
 
 ```bash
 %CPU=0-35
@@ -76,7 +76,7 @@ $ ml Gaussian/16_rev_c0-binary-Linda
 ```
 
 The network parallelization environment is **Linda**.
-In the input file Link0 header section, set the CPU cores (24 for Salomon, 36 for Barbora, 48 for DGX-2) and memory amount.
+In the input file Link0 header section, set the CPU cores (e.g. 36 for Barbora, 48 for DGX-2) and memory amount.
 Include the `%UseSSH` keyword, as well. This enables Linda to spawn parallel workers.
 
 ```bash
@@ -181,7 +181,6 @@ A 109.471221
 Set a scratch directory:
 
 ```bash
-$ GAUSS_SCRDIR=/scratch/work/project/open-0-0/GaussianJob # on Salomon
 $ GAUSS_SCRDIR=/scratch/project/open-0-0/GaussianJob # on Barbora
 ```
 
@@ -203,7 +202,7 @@ For more details, see the [Gaussian documentation][c].
 
 ### Example Jobscript
 
-This jobscript will run parallel Gaussian job on Salomon supercomputer, using 4 nodes (4*24 = 96 cores) via Linda. The Linda workers are set
+This jobscript will run parallel Gaussian job on Barbora supercomputer, using 4 nodes (4*36 = 144 cores) via Linda. The Linda workers are set
 up automatically by the module load.
 
 ```bash
@@ -229,7 +228,7 @@ cp $PBS_O_WORKDIR/* .
 
 # run Gaussian from stdin
 g16 << EOF > output.out
-%CPU=0-23
+%CPU=0-35
 %Mem=8GB
 %UseSSH
 #p rb3lyp/6-31G* test opt freq
