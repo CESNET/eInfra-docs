@@ -73,26 +73,13 @@ The Global RAM disk allows for high performance sharing of data among compute no
 | ------------------ | --------------------------------------------------------------------------|
 | Mountpoint         | /mnt/global_ramdisk                                                       |
 | Accesspoint        | /mnt/global_ramdisk                                                       |
-| Capacity           | Salomon (Nx110)GB<br>Barbora (Nx180)GB                                    |
+| Capacity           | Barbora (Nx180)GB                                    |
 | User quota         | none                                                                      |
 
 N = number of compute nodes in the job.
 
 !!! Warning
-    Available on Salomon and Barbora nodes only.
-
-## Virtualization Network
-
-Configure network for virtualization, create interconnect for fast communication between node (host) and virtual machine (guest).
-
-```console
-$ qsub ... -l virt_network=true
-```
-
-!!! Warning
-    Available on Salomon nodes only.
-
-[See Tap Interconnect][1]
+    Available on Barbora nodes only.
 
 ## MSR-SAFE Support
 
@@ -108,34 +95,7 @@ $ qsub ... -l msr=version_string
     Hazardous, it causes CPU frequency disruption.
 
 !!! Warning
-    Available on Salomon and Barbora nodes only.
-
-## x86 Adapt Support
-
-Load a kernel module that allows changing/toggling system parameters stored in MSR and PCI registers of x86 processors.
-
-```console
-$ qsub ... -l x86_adapt=true
-```
-
-!!! Danger
-    Hazardous, it causes CPU frequency disruption.
-
-!!! Warning
-    Available on Salomon nodes only.
-
-## Disabling Intel Turbo Boost on CPU
-
-Intel Turbo Boost on CPU is enabled on all compute nodes.
-
-To disable Intel Turbo Boost on CPU:
-
-```console
-$ qsub ... -l cpu_turbo_boost=false
-```
-
-!!! Warning
-    Available on Salomon nodes only.
+    Available on Barbora nodes only.
 
 ## Offlining CPU Cores
 
