@@ -1,6 +1,6 @@
 # Intel Parallel Studio
 
-The Salomon cluster provides following elements of the Intel Parallel Studio XE
+All clusters provide following elements of the Intel Parallel Studio XE
 
 Intel Parallel Studio XE
 
