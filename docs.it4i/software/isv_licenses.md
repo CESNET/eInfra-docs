@@ -47,7 +47,7 @@ For other applications' licenses, change the port number in the command accordin
 
 ## License Aware Job Scheduling
 
-Salomon and Barbora clusters provide license aware job scheduling.
+Barbora provides license aware job scheduling.
 
 Selected licenses are accounted and checked by the scheduler of PBS Pro. If you ask for certain licenses, the scheduler won't start the job until the asked licenses are free (available). This prevents batch jobs crashes due to unavailability of the needed licenses.
 
