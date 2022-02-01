@@ -13,13 +13,13 @@ Read the documentation on [VNC server][3].
 
 **Run VNC**
 
-* Login to Salomon
+* Login to Barbora
 
 ```console
-[username@yourPC]$ ssh -i path/to/your_id_rsa user@login1.salomon.it4i.cz
+[username@yourPC]$ ssh -i path/to/your_id_rsa user@login1.Barbora.it4i.cz
 ```
 
-* Run a Job on Salomon
+* Run a Job on Barbora
 
 ```console
 [user@login1]$ qsub -I -q qviz -A OPEN-XX-XX -l select=1:ncpus=4:host=vizserv1,walltime=04:00:00 -N Vizserver1
@@ -96,7 +96,7 @@ You are going to connect your local machine to remote VNC server.
 * Create the SSH tunnel (on your local machine) for port 59xx and for the range of ports 7300-7305.
 
 ```console
-[username@yourPC]$ ssh -i path/to/your_id_rsa -TN -f user@vizserv2.salomon.it4i.cz -L 5911:localhost:5911 -L 7300:localhost:7300 -L 7301:localhost:7301 -L 7302:localhost:7302 -L 7303:localhost:7303 -L 7304:localhost:7304 -L 7305:localhost:7305
+[username@yourPC]$ ssh -i path/to/your_id_rsa -TN -f user@vizserv2.barbora.it4i.cz -L 5911:localhost:5911 -L 7300:localhost:7300 -L 7301:localhost:7301 -L 7302:localhost:7302 -L 7303:localhost:7303 -L 7304:localhost:7304 -L 7305:localhost:7305
 ```
 
 To create an SSH tunnel on Windows, download the [PuTTY installer][d] and follow the instructions in the [VNC server][3] section.
