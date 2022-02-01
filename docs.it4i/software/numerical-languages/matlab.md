@@ -54,7 +54,6 @@ Delete previously used file mpiLibConf.m, we have observed crashes when using In
 
 To use Distributed Computing, you first need to setup a parallel profile. We have provided the profile for you, you can either import it in the MATLAB command line:
 
-* Salomon cluster - SalomonPBSPro.settings
 * Karolina cluster - KarolinaPBSPro.settings
 * Barbora cluster - BarboraPBSPro.settings
 
