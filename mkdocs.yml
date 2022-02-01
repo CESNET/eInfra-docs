@@ -223,9 +223,6 @@ nav:
       - EasyBuild:
         - Introduction: software/tools/easybuild.md
         - Generating Container Recipes and Images: software/tools/easybuild-images.md
-      - Singularity Container:
-        - Singularity: software/tools/singularity.md
-        - Singularity on IT4Innovations: software/tools/singularity-it4i.md
       - Spack: software/tools/spack.md
       - Virtualization: software/tools/virtualization.md
     - Visualization:
