@@ -48,15 +48,15 @@ Note that in this case, the server is listening on the compute node r37u29n1006,
 
 ### Client Connection
 
-Because a direct connection is not allowed to compute nodes on Salomon, you must establish an SSH tunnel to connect to the server. Choose a port number on your PC to be forwarded to ParaView server, for example 12345. If your PC is running Linux, use this command to establish an SSH tunnel:
+Because a direct connection is not allowed to compute nodes on clusters, you must establish an SSH tunnel to connect to the server. Choose a port number on your PC to be forwarded to ParaView server, for example 12345. If your PC is running Linux, use this command to establish an SSH tunnel:
 
 ```console
-Salomon: $ ssh -TN -L 12345:r37u29n1006:11111 username@salomon.it4i.cz
+Barbora: $ ssh -TN -L 12345:r37u29n1006:11111 username@barbora.it4i.cz
 ```
 
 Replace username with your login and r37u29n1006 with the name of the compute node on which your ParaView server is running (see the previous step).
 
-If you use PuTTY on Windows, load Salomon connection configuration, then go to *Connection* -> *SSH* -> *Tunnels* to set up the port forwarding.
+If you use PuTTY on Windows, load Barbora connection configuration, then go to *Connection* -> *SSH* -> *Tunnels* to set up the port forwarding.
 
 Fill the Source port and Destination fields. **Do not forget to click the Add button.**
 
