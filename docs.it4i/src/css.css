@@ -1,12 +1,86 @@
-.md-nav__icon.md-icon svg {
-  height: 0.6rem;
+:root {
+  --md-details-icon: url("data:image/svg+xml; utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' /></svg>")
 }
 
+.md-typeset details {
+  display:block;
+  padding-top:0;
+  overflow:visible
+}
+
+.md-typeset details[open]>summary::after {
+  transform:rotate(90deg)
+}
+
+.md-typeset details:not([open]) {
+  padding-bottom:0
+}
+
+.md-typeset details:not([open])>summary {
+  border-bottom-right-radius:.1rem
+}
+
+.md-typeset details::after {
+  display:table;
+  content:""
+}
+
+.md-typeset summary {
+  display:block;
+  min-height:1rem;
+  padding:.4rem 1.8rem .4rem 2rem;
+  border-top-right-radius:.1rem;
+  cursor:pointer
+}
+
+[dir=rtl] .md-typeset summary {
+  padding:.4rem 2rem .4rem 1.8rem
+}
+
+.md-typeset summary::-webkit-details-marker {
+  display:none
+}
+
+.md-typeset summary::after {
+  position:absolute;
+  top:.4rem;
+  right:.4rem;
+  width:1rem;
+  height:1rem;
+  background-color:currentColor;
+  -webkit-mask-image:var(--md-details-icon);
+  mask-image:var(--md-details-icon);
+  transform:rotate(0deg);
+  transition:transform 250ms;
+  content:""
+}
+
+[dir=rtl] .md-typeset summary::after {
+  right:initial;
+  left:.4rem;
+  transform:rotate(180deg)
+}
+
+html .md-nav__link[for=__toc] {
+  display:none
+}
+
+html .md-nav__link[for=__toc]~.md-nav {
+  display: none;
+}
+
+
+.md-nav__icon.md-icon svg {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    vertical-align: -0.1rem;}
+/*
 .md-nav__icon.md-icon {
   float: left;
   padding-right: .2rem;
 }
-
+*/
 .md-nav__it4i_link {
     display: block;
     transition: color 0.125s;
@@ -30,7 +104,7 @@ a[href*="//"]:not( [href*='127.0.0.1'] ):not( [href*='docs.it4i.cz'] ):not( [hre
     padding: 1px 16px 1px 0px;
 }
 
-/* */
+
 .md-nav__it4i_link:after {
     font-family: Material Icons;
     font-style: normal;
@@ -44,12 +118,13 @@ a[href*="//"]:not( [href*='127.0.0.1'] ):not( [href*='docs.it4i.cz'] ):not( [hre
     direction: ltr
 }
 
+/*
 .md-nav__item--nested>.md-nav__it4i_link:after {
     content: "keyboard_arrow_down"
-}
+}*/
 
 html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_link:after,html .md-nav__it4i_link[for=toc]~.md-nav {
-    display: none
+    display: none;
 }
 
 /*
@@ -85,13 +160,14 @@ html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_
         display: -ms-flexbox;
         display: flex
     }
+    /*
     .md-nav--primary .md-nav__item--nested>.md-nav__it4i_link {
         padding-right: 4.8rem
     }
 
     .md-nav--primary .md-nav__item--nested>.md-nav__it4i_link:after {
-        content: "keyboard_arrow_right"
-    }
+        display: none;
+    }*/
 
     .md-nav--primary .md-nav__it4i_link {
         position: relative;
