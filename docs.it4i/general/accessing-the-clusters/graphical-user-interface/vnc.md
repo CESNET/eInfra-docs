@@ -121,7 +121,7 @@ kill 2022
 ```
 
 !!! note
-    You can watch the instruction video on how to make a VNC connection between a local Ubuntu desktop and the IT4I Salomon cluster [here][e].
+    You can watch the instruction video on how to make a VNC connection between a local Ubuntu desktop and the IT4I cluster [here][e].
 
 ## Windows Example of Creating a Tunnel
 
