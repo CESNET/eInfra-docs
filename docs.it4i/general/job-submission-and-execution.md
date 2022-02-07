@@ -92,44 +92,6 @@ Below is the list of arguments that can be used with `-W depend=dependency:jobid
 | beforenotok | This job must finish unsuccessfully before `jobid` begins.      |
 | beforeany   | This job must finish in any state before `jobid` begins.        |
 
-### Salomon - Intel Xeon Phi Co-Processors
-
-To allocate a node with Xeon Phi co-processor, the user needs to specify that in the select statement. Currently only allocation of whole nodes with both Phi cards as the smallest chunk is supported. A standard PBSPro approach through the `accelerator`, `naccelerators`, and `accelerator_model` attributes is used. The `accelerator_model` can be omitted since on Salomon, only one type of accelerator type/model is available.
-The absence of specialized queue for accessing the nodes with cards means, that the Phi cards can be utilized in any queue, including qexp for testing/experiments, qlong for longer jobs, qfree after the project resources have been spent, etc. The Phi cards are thus also available to PRACE users. There is no need to ask for permission to utilize the Phi cards in project proposals.
-
-```console
-$ qsub  -A OPEN-0-0 -I -q qprod -l select=1:ncpus=24:accelerator=True:naccelerators=2:accelerator_model=phi7120 ./myjob
-```
-
-In this example, we allocate 1 node with 24 cores, with 2 Xeon Phi 7120p cards, running batch job ./myjob. The default time for qprod is used, e.g. 24 hours.
-
-```console
-$ qsub  -A OPEN-0-0 -I -q qlong -l select=4:ncpus=24:accelerator=True:naccelerators=2 -l walltime=56:00:00 -I
-```
-
-In this example, we allocate 4 nodes with 24 cores per node (totaling 96 cores), with 2 Xeon Phi 7120p cards per node (totaling 8 Phi cards), running interactive job for 56 hours. The accelerator model name was omitted.
-
-#### Salomon - Intel Xeon Phi - Queue QMIC
-
-Examples executions:
-
-```console
--l select=1
-exec_vnode = (r21u05n581-mic0:naccelerators=1:ncpus=0)
--l select=4
-(r21u05n581-mic0:naccelerators=1:ncpus=0)+(r21u05n581-mic1:naccelerators=1:ncpus=0)+(r21u06n582-mic0:naccelerators=1:ncpus=0)+(r21u06n582-mic1:naccelerators=1:ncpus=0)
--l select=4:naccelerators=1
-(r21u05n581-mic0:naccelerators=1:ncpus=0)+(r21u05n581-mic1:naccelerators=1:ncpus=0)+(r21u06n582-mic0:naccelerators=1:ncpus=0)+(r21u06n582-mic1:naccelerators=1:ncpus=0)
--l select=1:naccelerators=2
-(r21u05n581-mic0:naccelerators=1+r21u05n581-mic1:naccelerators=1)
--l select=2:naccelerators=2
-(r21u05n581-mic0:naccelerators=1+r21u05n581-mic1:naccelerators=1)+(r21u06n582-mic0:naccelerators=1+r21u06n582-mic1:naccelerators=1)
--l select=1:ncpus=24:naccelerators=2
-(r22u32n610:ncpus=24+r22u32n610-mic0:naccelerators=1+r22u32n610-mic1:naccelerators=1)
--l select=1:ncpus=24:naccelerators=0+4
-(r33u17n878:ncpus=24:naccelerators=0)+(r33u13n874-mic0:naccelerators=1:ncpus=0)+(r33u13n874-mic1:naccelerators=1:ncpus=0)+(r33u16n877-mic0:naccelerators=1:ncpus=0)+(r33u16n877-mic1:naccelerators=1:ncpus=0)
-```
-
 ### Salomon - UV2000 SMP
 
 !!! note
