@@ -92,39 +92,6 @@ Below is the list of arguments that can be used with `-W depend=dependency:jobid
 | beforenotok | This job must finish unsuccessfully before `jobid` begins.      |
 | beforeany   | This job must finish in any state before `jobid` begins.        |
 
-### Salomon - UV2000 SMP
-
-!!! note
-    13 NUMA nodes available on UV2000
-    Per NUMA node allocation.
-    Jobs are isolated by cpusets.
-
-The UV2000 (node uv1) offers 3TB of RAM and 104 cores, distributed in 13 NUMA nodes. A NUMA node packs 8 cores and approx. 247GB RAM (with exception, node 11 has only 123GB RAM). In the PBS the UV2000 provides 13 chunks, a chunk per NUMA node (see [Resource allocation policy][2]). The jobs on UV2000 are isolated from each other by cpusets, so that a job by one user may not utilize CPU or memory allocated to a job by other user. Always, full chunks are allocated, a job may only use resources of the NUMA nodes allocated to itself.
-
-```console
- $ qsub -A OPEN-0-0 -q qfat -l select=13 ./myjob
-```
-
-In this example, we allocate all 13 NUMA nodes (corresponds to 13 chunks), 104 cores of the SGI UV2000 node for 24 hours. The myjob jobscript will be executed on the uv1 node.
-
-```console
-$ qsub -A OPEN-0-0 -q qfat -l select=1:mem=2000GB ./myjob
-```
-
-In this example, we allocate 2000GB of memory on the UV2000 for 24 hours. By requesting 2000GB of memory, memory from 10 chunks and 8 cores is allocated. The myjob jobscript will be executed on the uv1 node.
-
-```console
-$ qsub -A OPEN-0-0 -q qfat -l select=1:mem=3099GB,walltime=48:00:00 ./myjob
-```
-
-In this example, we allocate 3099GB of memory on the UV2000 for 48 hours. By requesting 3099GB of memory, memory from all 13 chunks and 8 cores is allocated. The myjob jobscript will be executed on the uv1 node.
-
-```console
-$ qsub -A OPEN-0-0 -q qfat -l select=2:mem=1000GB,walltime=48:00:00 ./myjob
-```
-
-In this example, we allocate 2000GB of memory and 16 cores on the UV2000 for 48 hours. By requesting 1000GB of memory per chunk, 2000GB of memory and 16 cores are allocated. The myjob jobscript will be executed on the uv1 node.
-
 ### Useful Tricks
 
 All qsub options may be [saved directly into the jobscript][1]. In such a case, no options to qsub are needed.
