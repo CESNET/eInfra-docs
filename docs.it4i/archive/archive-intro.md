@@ -1,12 +1,12 @@
 # Introduction
 
-This section contains documentation of decomissioned IT4Innovations' supercomputers.
+This section contains documentation of decommissioned IT4Innovations' supercomputers.
 
 ## Salomon
 
 The second supercomputer, built by SGI (now Hewlett Packard Enterprise), was launched in 2015. With a performance of 2 PFlop/s, it was immediately included in the TOP500 list, which ranks the world's most powerful supercomputers. It stayed there until November 2020, falling from the 40th place to 460th.
 
-Salomon was decomissioned after six years - at the end of 2021.
+Salomon was decommissioned after six years - at the end of 2021.
 
 ### Interesting Facts
 
