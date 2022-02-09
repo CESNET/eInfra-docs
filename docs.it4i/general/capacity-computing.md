@@ -77,7 +77,6 @@ If running a huge number of parallel multicore (in means of multinode multithrea
 
 To submit the job array, use the `qsub -J` command. The 900 jobs of the [example above][5] may be submitted like this:
 
-
 ```console
 $ qsub -N JOBNAME -J 1-900 jobscript
 506493[].isrv5
