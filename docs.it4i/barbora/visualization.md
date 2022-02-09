@@ -3,7 +3,7 @@
 Remote visualization with [VirtualGL][3] is available on two nodes.
 
 * 2 nodes
-* 64 cores in total
+* 32 cores in total
 * 2x Intel Skylake Gold 6130 – 16core@2,1GHz processors per node
 * 192 GB DDR4 2667MT/s of physical memory per node (12x 16 GB)
 * BullSequana X450-E5 blade servers
