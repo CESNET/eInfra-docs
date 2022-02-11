@@ -11,7 +11,7 @@ The table shows which shells are supported on the IT4Innovations clusters.
 | DGX-2           | yes  | no   | no  | no  | no   |
 
 !!! info
-    BASH is the default shell. Should you need a different shell, contact support@it4i.cz.
+    BASH is the default shell. Should you need a different shell, contact [support\[at\]it4i.cz][3].
 
 ## Environment Customization
 
@@ -78,3 +78,4 @@ The modules may be loaded, unloaded, and switched according to momentary needs. 
 
 [1]: software/tools/easybuild.md
 [2]: software/modules/lmod.md
+[3]: mailto:support@it4i.cz
