@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Intel Threading Building Blocks (Intel TBB) is a library that supports scalable parallel programming using standard ISO C++ code. It does not require special languages or compilers.  To use the library, you specify tasks, not threads, and let the library map tasks onto threads in an efficient manner. The tasks are executed by a runtime scheduler and may be offloaded to [MIC accelerator][1].
+Intel Threading Building Blocks (Intel TBB) is a library that supports scalable parallel programming using standard ISO C++ code. It does not require special languages or compilers.  To use the library, you specify tasks, not threads, and let the library map tasks onto threads in an efficient manner.
 
 ## Installed Versions
 
@@ -40,6 +40,4 @@ $ icc -O2 -o primes.x main.cpp primes.cpp -Wl,-rpath=$LIBRARY_PATH -ltbb
 
 Read more on Intel [website][a].
 
-[1]: ../intel-xeon-phi-salomon.md
-
-[a]: http://software.intel.com/sites/products/documentation/doclib/tbb_sa/help/index.htm
+[a]: https://www.intel.com/content/www/us/en/developer/articles/guide/get-started-with-tbb.html?wapkw=tbb
