@@ -242,7 +242,6 @@ $ ./matrix
 1. [API Documentation](http://icl.cs.utk.edu/papi/docs/)
 
 [1]: ../../environment-and-modules.md
-[2]: ../intel/intel-xeon-phi-salomon.md
 
 [a]: http://icl.cs.utk.edu/projects/papi/wiki/PAPIC:High_Level
 [b]: http://icl.cs.utk.edu/projects/papi/wiki/PAPIC:Low_Level
