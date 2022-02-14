@@ -153,7 +153,7 @@ Users home directories /home/username reside on HOME file system. Accessible cap
 
 The HOME should not be used to archive data of past Projects or other unrelated data.
 
-The files on HOME will not be deleted until end of the [user's lifecycle][10].
+The files on HOME will not be deleted until end of the user's lifecycle.
 
 The workspace is backed up, such that it can be restored in case of catastrophic failure resulting in significant data loss. This backup however is not intended to restore old versions of user data or to restore (accidentally) deleted files.
 
@@ -335,7 +335,6 @@ N = number of compute nodes in the job.
 [7]: #home-filesystem
 [8]: #scratch-filesystem
 [9]: #shared-workspaces
-[10]: ../general/obtaining-login-credentials/obtaining-login-credentials.md
 [11]: ../storage/standard-file-acl.md
 [12]: ../job-features.md#global-ram-disk
 
