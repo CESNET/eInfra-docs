@@ -39,7 +39,7 @@ In order to authorize a Collaborator to utilize the allocated resources, the PI 
 1. Include "Authorization to IT4Innovations" into the subject line.
 
 !!! warning
-    Should the above information be provided by email, the email **must be** digitally signed. Read more on [digital signatures][2] below.
+    Should the above information be provided by email, the email **must be** digitally signed. Read more on [digital signatures][2].
 
 Example (except the subject line which must be in English, you may use Czech or Slovak language for communication with us):
 
