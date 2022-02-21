@@ -14,7 +14,7 @@ In all cases, IT4Innovations’ access mechanisms are aimed at distributing comp
 
 ## Becoming Primary Investigator
 
-Once you create an account, log in to the [IT4I Information System][e] and apply for a project.
+Once you create an account, log in to the [IT4I SCS portal][e] and apply for a project.
 You will be informed by IT4I about the Allocation Committee decision.
 Once approved by the Allocation Committee, you become the Primary Investigator (PI) for the project
 and are authorized to use the clusters and any allocated resources as well as authorize collaborators for your project.
