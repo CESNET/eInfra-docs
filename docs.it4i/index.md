@@ -33,16 +33,16 @@ Proficiency in MPI, OpenMP, CUDA, UPC, or GPI2 programming may be gained via [tr
 
 ## Terminology Frequently Used on These Pages
 
-* **node:** a computer, interconnected via a network to other computers - Computational nodes are powerful computers, designed for, and dedicated to executing demanding scientific computations.
+* **node:** a computer, interconnected via a network to other computers – Computational nodes are powerful computers, designed for, and dedicated to executing demanding scientific computations.
 * **core:** a processor core, a unit of processor, executing computations
 * **node-hour:** a metric of computer utilization, [see definition][3].
-* **job:** a calculation running on the supercomputer - the job allocates and utilizes the resources of the supercomputer for certain time.
+* **job:** a calculation running on the supercomputer – the job allocates and utilizes the resources of the supercomputer for certain time.
 * **HPC:** High Performance Computing
 * **HPC (computational) resources:** nodehours, storage capacity, software licenses
 * **code:** a program
 * **primary investigator (PI):** a person responsible for execution of computational project and utilization of computational resources allocated to that project
 * **collaborator:** a person participating in the execution of a computational project and utilization of computational resources allocated to that project
-* **project:** a computational project under investigation by the PI - the project is identified by the project ID. Computational resources are allocated and charged per project.
+* **project:** a computational project under investigation by the PI – the project is identified by the project ID. Computational resources are allocated and charged per project.
 * **jobscript:** a script to be executed by the PBS Professional workload manager
 
 ## Conventions
@@ -74,5 +74,5 @@ By doing so, you can save other readers from frustration and help us improve.
 
 [a]: http://www.tldp.org/LDP/intro-linux/html/
 [b]: http://www.centos.org/
-[c]: http://prace.it4i.cz
+[c]: https://www.it4i.cz/en/education/training-activities
 [d]: http://support.it4i.cz/rt
