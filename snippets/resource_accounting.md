@@ -1,6 +1,6 @@
 ## Resource Accounting Policy
 
-Starting with the 24<sup>th</sup> open access grant competition, the accounting policy has been changed from [normalized core hours (NCH)][2a] to **node hours**. This means that it is now required to apply for node hours of the specific cluster and node type:
+Starting with the 24<sup>th</sup> open access grant competition, the accounting policy has been changed from [normalized core hours (NCH)][2a] to **node-hours**. This means that it is now required to apply for node hours of the specific cluster and node type:
 
 1. [Barbora CPU][3a]
 1. [Barbora GPU][4a] 
@@ -12,6 +12,18 @@ Starting with the 24<sup>th</sup> open access grant competition, the accounting 
 
 The accounting runs whenever the nodes are allocated via the PBS Pro workload manager (the qsub command), regardless of whether
 the nodes are actually used for any calculation.
+
+### Conversion Table
+
+| Resources | Conversion for 1 node-hour |
+| ------------ | ----------------------- | 
+| Barbora CPU  | 36 core-hours           |
+| Barbora GPU  | 4 GPU core-hours        |
+| Barbora FAT  | 128 core-hours          |
+| DGX-2        | 16 GPU core-hours       |
+| Karolina CPU | 128 core-hours          |
+| Karolina GPU | 8 GPU core-hours        |
+| Karolina FAT | 768 core-hours          |
 
 ## Original Resource Accounting Policy
 
