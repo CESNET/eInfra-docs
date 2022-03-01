@@ -61,7 +61,7 @@ nav:
       - IT4I Profile: general/management/it4i-profile.md
     - Access Services:
       - Access the Clusters:
-        - SSH: general/shell-and-data-access.md
+        - SSH Access: general/shell-and-data-access.md
         - SSH Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md  
       - GUI:
         - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
