@@ -33,7 +33,7 @@ John Smith
 (Digitally signed)
 ```
 
-You will receive your personal login credentials by encrypted email. The login credentials include:
+You will receive your personal login credentials in an encrypted email. The login credentials include:
 
 1. username
 1. system password
