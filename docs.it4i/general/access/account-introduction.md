@@ -4,13 +4,13 @@ This section provides basic information on how to gain access to IT4Innovations 
 
 ## Account Types
 
-There are two types of accounts on IT4Innovations:
+There are two types of accounts at IT4Innovations:
 
 * [**e-INFRA CZ Account**][1]
     intended for all persons affiliated with an academic institution from the Czech Republic ([eduID.cz][a]).
 
 * [**IT4I Account**][2]
-    intended for all persons who are not eligible for e-INFRA CZ account.
+    intended for all persons who are not eligible for an e-INFRA CZ account.
 
 Once you create an account, you can use it only for communication with IT4I support and accessing the SCS information system.
 If you want to access IT4I clusters, your account must also be **assigned to a project**.
