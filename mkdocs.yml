@@ -62,7 +62,7 @@ nav:
     - Access Services:
       - Access the Clusters:
         - SSH Access: general/shell-and-data-access.md
-        - SSH Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md  
+        - SSH & Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md  
       - GUI:
         - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
         - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
