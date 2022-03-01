@@ -11,7 +11,7 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
     Due to updated security requirements on Karolina and Barbora,
     only clients based on OpenSSH 7.4p1 and later can connect (including other SSH clients with compatible security algorithms).
     This means that starting with RHEL/Centos 7, Debian 9 or Ubuntu 18.04, you are good to go.
-    Some users who still have DSA keys will be also unable to connect and are urged to update their keypairs, preferably to Ed25519 format.
+    Some users who still have DSA keys will be also unable to connect and are urged to update their keypairs, preferably to the Ed25519 format.
 
 ### Karolina Cluster
 
@@ -241,7 +241,7 @@ $ ssh -R 6000:localhost:1080 cluster-name.it4i.cz
 
 Now, configure the applications proxy settings to `localhost:6000`. Use port forwarding to access the [proxy server from compute nodes][5], as well.
 
-[1]: ../general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
+[1]: ../general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md
 [2]: ../general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
 [5]: #port-forwarding-from-login-nodes
 [6]: ../general/accessing-the-clusters/graphical-user-interface/x-window-system.md
