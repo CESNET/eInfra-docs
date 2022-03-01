@@ -19,7 +19,7 @@ We recommend you to download "**A Windows installer for everything except PuTTYt
 * Category - Connection -  SSH - Auth:
       Select Attempt authentication using Pageant.
       Select Allow agent forwarding.
-      Browse and select your [private key][2] file.
+      Browse and select your private key file.
 
 ![](../../../img/PuTTY_keyV.png)
 
@@ -32,13 +32,13 @@ We recommend you to download "**A Windows installer for everything except PuTTYt
 ![](../../../img/PuTTY_open_Salomon.png)
 
 * Enter your username if the _Host Name_ input is not in the format "username@salomon.it4i.cz".
-* Enter passphrase for selected [private key][2] file if Pageant **SSH authentication agent is not used.**
+* Enter passphrase for selected private key file if Pageant **SSH authentication agent is not used.**
 
 ## Another PuTTY Settings
 
 * Category - Windows - Translation - Remote character set and select **UTF-8**.
 * Category - Terminal - Features and select **Disable application keypad mode** (enable numpad)
-* Save your configuration on Session page in to Default Settings with _Save_ button.
+* Save your configuration in the Session - Basic options for your PuTTY section with the _Save_ button.
 
 ## Pageant SSH Agent
 
@@ -59,7 +59,7 @@ PuTTYgen is the PuTTY key generator. You can load in an existing private key and
 
 You can change the password of your SSH key with "PuTTY Key Generator". Make sure to back up the key.
 
-* Load your [private key][2] file with _Load_ button.
+* Load your private key file with _Load_ button.
 * Enter your current passphrase.
 * Change key passphrase.
 * Confirm key passphrase.
