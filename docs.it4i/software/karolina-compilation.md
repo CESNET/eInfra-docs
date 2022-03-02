@@ -12,11 +12,11 @@ Depending on the compiler, you should use these flags:
 !!! important
     `-Ofast` optimization may result in unpredictable behavior (e.g. a floating point overflow).
 
-| Compiler | Flags                             |
-| -------- | --------------------------------- |
-| AOCC     | clang -O3 -mavx2 -march=znver2    |
-| INTEL    | icc -O3 -xCORE-AVX2               |
-| GCC      | gcc -O3 -mavx2                    |
+| Compiler |  Command | Flags                   |
+| -------- | ---------|-------------------------|
+| AOCC     | clang    |-O3 -mavx2 -march=znver2 |
+| INTEL    | icc      |-O3 -xCORE-AVX2          |
+| GCC      | gcc      |-O3 -mavx2               |
 
 The compiler flags and the resulting compiler performance may be verified with our benchmark,
 see: [https://code.it4i.cz/jansik/lorenz/-/blob/main/README.md][a].
