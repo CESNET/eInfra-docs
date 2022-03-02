@@ -153,7 +153,9 @@ nav:
       - Orca: software/chemistry/orca.md
       - Phono3py: software/chemistry/phono3py.md
       - Phonopy: software/chemistry/phonopy.md
-    - Compilers: software/compilers.md
+    - Compilers:
+      - Overview: software/compilers.md
+      - Karolina Compilation: software/karolina-compilation.md  
     - Data Science:
         - Dask: software/data-science/dask.md
     - Debuggers:
