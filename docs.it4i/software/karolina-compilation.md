@@ -14,12 +14,12 @@ Depending on the compiler, you should use these flags:
 
 | Compiler | Module   | Command | Flags                   |
 | -------- |----------| --------|-------------------------|
-| AOCC     |          | clang   |-O3 -mavx2 -march=znver2 |
-| INTEL    |          | icc     |-O3 -xCORE-AVX2          |
-| GCC      |          | gcc     |-O3 -mavx2               |
+| AOCC     | ml AOCC  | clang   |-O3 -mavx2 -march=znver2 |
+| INTEL    | ml intel | icc     |-O3 -xCORE-AVX2          |
+| GCC      | ml GCC   | gcc     |-O3 -mavx2               |
 
 The compiler flags and the resulting compiler performance may be verified with our benchmark,
-see: [https://code.it4i.cz/jansik/lorenz/-/blob/main/README.md][a].
+see: [Lorenz Compiler performance benchmark][a].
 
 ## 2. Use BLAS Library
 
@@ -44,6 +44,6 @@ However, to get full performance, you have to execute two jobs on the two Karoli
 Other BLAS libraries may be used, however none performs as well as the MKL.
 
 The choice of BLAS library and its performance may be verified with our benchmark,
-see [https://code.it4i.cz/jansik/lorenz/-/blob/main/README.md][a].
+see [Lorenz BLAS performance benchmark][a].
 
 [a]: https://code.it4i.cz/jansik/lorenz/-/blob/main/README.md
