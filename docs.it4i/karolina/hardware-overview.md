@@ -32,7 +32,7 @@ The parameters are summarized in the following tables:
 | Node                     | Processor                                | Memory  | Accelerator                  |
 | ------------------------ | ---------------------------------------  | ------  | ---------------------------- |
 | Universal compute node   | 2 x AMD Zen 2 EPYC™ 7H12, 2.6 GHz        | 256 GB  | -                            |
-| Accelerated compute node | 2 x AMD Zen 2 EPYC™ 7763, 2.45 GHz       | 1024 GB | 8 x NVIDIA A100 (40 GB HBM2) |
+| Accelerated compute node | 2 x AMD Zen 3 EPYC™ 7763, 2.45 GHz       | 1024 GB | 8 x NVIDIA A100 (40 GB HBM2) |
 | Data analytics node      | 32 x Intel Xeon-SC 8268, 2.9 GHz         | 24 TB   | -                            |
 | Cloud compute node       | 2 x AMD Zen 2 EPYC™ 7H12, 2.6 GHz        | 256 GB  | -                            |
 
