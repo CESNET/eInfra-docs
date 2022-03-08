@@ -99,13 +99,13 @@ barbora.it4i.cz, ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOmUm4btn7OC0QLIT3xekKTTdg5
 On **Linux** or **Mac**, use:
 
 ```console
-$ ssh -i /path/to/id_rsa username@cluster-name.it4i.cz
+local $ ssh -i /path/to/id_rsa username@cluster-name.it4i.cz
 ```
 
 If you see a warning message **UNPROTECTED PRIVATE KEY FILE!**, use this command to set lower permissions to the private key file:
 
 ```console
-$ chmod 600 /path/to/id_rsa
+local $ chmod 600 /path/to/id_rsa
 ```
 
 On **Windows**, use the [PuTTY SSH client][2].
@@ -129,23 +129,23 @@ Authentication is by [private key][1] only.
 On Linux or Mac, use an SCP or SFTP client to transfer data to the cluster:
 
 ```console
-$ scp -i /path/to/id_rsa my-local-file username@cluster-name.it4i.cz:directory/file
+local $ scp -i /path/to/id_rsa my-local-file username@cluster-name.it4i.cz:directory/file
 ```
 
 ```console
-$ scp -i /path/to/id_rsa -r my-local-dir username@cluster-name.it4i.cz:directory
+local $ scp -i /path/to/id_rsa -r my-local-dir username@cluster-name.it4i.cz:directory
 ```
 
 or
 
 ```console
-$ sftp -o IdentityFile=/path/to/id_rsa username@cluster-name.it4i.cz
+local $ sftp -o IdentityFile=/path/to/id_rsa username@cluster-name.it4i.cz
 ```
 
 A very convenient way to transfer files in and out of the cluster is via the fuse filesystem [SSHFS][b].
 
 ```console
-$ sshfs -o IdentityFile=/path/to/id_rsa username@cluster-name.it4i.cz:. mountpoint
+local $ sshfs -o IdentityFile=/path/to/id_rsa username@cluster-name.it4i.cz:. mountpoint
 ```
 
 Using SSHFS, the user's home directory will be mounted on your local computer, just like an external disk.
@@ -153,9 +153,9 @@ Using SSHFS, the user's home directory will be mounted on your local computer, j
 Learn more about SSH, SCP, and SSHFS by reading the manpages:
 
 ```console
-$ man ssh
-$ man scp
-$ man sshfs
+local $ man ssh
+local $ man scp
+local $ man sshfs
 ```
 
 On Windows, use the [WinSCP client][c] to transfer data. The [win-sshfs client][d] provides a way to mount the cluster filesystems directly as an external disc.
@@ -225,10 +225,10 @@ Port forwarding is static; each single port is mapped to a particular port on a 
 !!! note
     Applications with inbuilt proxy support experience unlimited access to remote hosts via a single proxy server.
 
-To establish a local proxy server on your workstation, install and run the SOCKS proxy server software. On Linux, SSHD demon provides the functionality. To establish the  SOCKS proxy server listening on port 1080 run:
+To establish a local proxy server on your workstation, install and run the SOCKS proxy server software. On Linux, SSHD demon provides the functionality. To establish the SOCKS proxy server listening on port 1080 run:
 
 ```console
-$ ssh -D 1080 localhost
+local $ ssh -D 1080 localhost
 ```
 
 On Windows, install and run the free, open source Sock Puppet server.
@@ -236,10 +236,10 @@ On Windows, install and run the free, open source Sock Puppet server.
 Once the proxy server is running, establish the SSH port forwarding from cluster to the proxy server, port 1080, exactly as [described above][5]:
 
 ```console
-$ ssh -R 6000:localhost:1080 cluster-name.it4i.cz
+local $ ssh -R 6000:localhost:1080 cluster-name.it4i.cz
 ```
 
-Now, configure the applications proxy settings to `localhost:6000`. Use port forwarding to access the [proxy server from compute nodes][5], as well.
+Now, configure the applications proxy settings to `localhost:6000`. Use port forwarding to access the [proxy server from compute nodes][9], as well.
 
 [1]: ../general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md
 [2]: ../general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
@@ -247,6 +247,7 @@ Now, configure the applications proxy settings to `localhost:6000`. Use port for
 [6]: ../general/accessing-the-clusters/graphical-user-interface/x-window-system.md
 [7]: ../general/accessing-the-clusters/graphical-user-interface/vnc.md
 [8]: ../general/accessing-the-clusters/vpn-access.md
+[9]: #port-forwarding-from-compute-nodes
 
 [b]: http://linux.die.net/man/1/sshfs
 [c]: http://winscp.net/eng/download.php
