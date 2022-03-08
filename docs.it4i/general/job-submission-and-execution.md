@@ -74,7 +74,7 @@ $ qsub -A OPEN-0-0 -q qprod -l select=64:ncpus=36,walltime=02:00:00 ./firstjob
 Then submit the second job using the `depend` function:
 
 ```console
-qsub -W depend=afterok:123456 ./secondjob
+$ qsub -W depend=afterok:123456 ./secondjob
 ```
 
 Both jobs will be queued, but the second job won't start until the first job has finished successfully.
@@ -401,7 +401,7 @@ The allocated nodes are accessible via SSH from login nodes. The nodes may acces
 Calculations on allocated nodes may be executed remotely via the MPI, SSH, pdsh, or clush. You may find out which nodes belong to the allocation by reading the $PBS_NODEFILE file
 
 ```console
-qsub -q qexp -l select=4:ncpus=16 -I
+$ qsub -q qexp -l select=4:ncpus=16 -I
 qsub: waiting for job 15210.srv11 to start
 qsub: job 15210.srv11 ready
 
