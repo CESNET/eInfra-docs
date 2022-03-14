@@ -19,7 +19,7 @@ Depending on the compiler, you should use these flags:
 | GCC      | ml GCC   | gcc     |-O3 -mavx2               |
 
 The compiler flags and the resulting compiler performance may be verified with our benchmark,
-see: [Lorenz Compiler performance benchmark][a].
+see [Lorenz Compiler performance benchmark][a].
 
 ## 2. Use BLAS Library
 
