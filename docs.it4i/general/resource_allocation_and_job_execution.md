@@ -1,6 +1,6 @@
 # Resource Allocation and Job Execution
 
-To run a [job][1], computational resources for this particular job must be allocated. This is done via the PBS Pro job workload manager software, which distributes workloads across the supercomputer. Extensive information about PBS Pro can be found in the [PBS Pro User's Guide][2].
+To run a [job][1], computational resources for this particular job must be allocated. This is done via the [PBS Pro][b] job workload manager software, which distributes workloads across the supercomputer. Extensive information about PBS Pro can be found in the [PBS Pro User's Guide][2].
 
 ## Resources Allocation Policy
 
@@ -46,3 +46,4 @@ Read more on [Capacity Computing][6] page.
 [6]: capacity-computing.md
 
 [a]: https://extranet.it4i.cz/rsweb/
+[b]: https://www.altair.com/pbs-works/
