@@ -32,7 +32,7 @@ The original policy, as stated below, is still applied to projects from previous
 ### Wall-Clock Core-Hours WCH
 
 The wall-clock core-hours (WCH) are the basic metric of computer utilization time.
-1 wall-clock core-hour is defined as 1 processor core allocated for 1 hour of wall-clock time. For example, allocating a full node (i.e. 24 cores) on Salomon for 1 hour amounts to 24 wall-clock core-hours.
+1 wall-clock core-hour is defined as 1 processor core allocated for 1 hour of wall-clock time. For example, allocating a full node (i.e. 36 cores) on Barbora for 1 hour amounts to 36 wall-clock core-hours.
 
 ### Normalized Core-Hours NCH
 
