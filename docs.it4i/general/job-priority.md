@@ -34,7 +34,7 @@ usage<sub>Project</sub> is the usage accumulated by all members of a selected pr
 
 usage<sub>Total</sub> is the total usage by all users, across all projects.
 
-Usage counts allocated core-hours (`ncpus x walltime`). Usage decays, halving at intervals of 168 hours (one week).
+Usage counts allocated node-hours (`ncpus x walltime`). Usage decays, halving at intervals of 168 hours (one week).
 Jobs queued in the queue qexp are not used to calculate the project's usage.
 
 !!! note
