@@ -8,4 +8,4 @@ $ qmgr --version
 
 For more information, see the [PBS Professional Documentation][1].
 
-[1]: https://www.altair.com/pbs-works-documentation/
+[1]: https://2021.help.altair.com/2021.1.2/PBS%20Professional/PBSAdminGuide2021.1.2.pdf
