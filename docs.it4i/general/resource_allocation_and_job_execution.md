@@ -23,7 +23,7 @@ Read more on the [Resources Allocation Policy][4] page.
 !!! note
     Use the **qsub** command to submit your jobs.
 
-The `qsub` command creates a request to the PBS Job manager for allocation of specified resources. The **smallest allocation unit is an entire node - 16 cores**, with the exception of the `qexp` queue. The resources will be allocated when available, subject to allocation policies and constraints. **After the resources are allocated, the jobscript or interactive shell is executed on first of the allocated nodes.**
+The `qsub` command creates a request to the PBS Job manager for allocation of specified resources. The **smallest allocation unit is an entire node**, with the exception of the `qexp` queue. The resources will be allocated when available, subject to allocation policies and constraints. **After the resources are allocated, the jobscript or interactive shell is executed on first of the allocated nodes.**
 
 Read more on the [Job Submission and Execution][5] page.
 
