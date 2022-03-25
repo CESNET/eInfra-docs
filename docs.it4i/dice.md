@@ -81,7 +81,6 @@ Click the `Log in with B2ACCESS` authorization and continue authentication flow.
 you have to see this output `Successfully authenticated user. The browser tab can be safely closed.` in browser
 current problem is: - after validating authorization token, it becomes passed and any new command, such as ils creates new authorization at keycloak.
 
-[a]: 
 [b]: http://www.diceproject.eu/
 [c]: https://irods.org/
 [d]: https://b2access.eudat.eu/
