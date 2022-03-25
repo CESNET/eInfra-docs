@@ -23,7 +23,6 @@ iRods client is what you - user - need to install to your system
 - we tested client installation on Centos 7
 - it runs in terminal, basic knowledge is essential
 
-
 ### Installation of Client to Your Local or VM
 
 ```console
