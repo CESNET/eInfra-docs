@@ -1,4 +1,5 @@
 ## What is DICE Project?
+
 DICE (Developing Innovation and Creativity in Education) is an international project co-funded by the Erasmus+ Programme of the European Union.
 
 Its main goals are related to fostering innovation and creativity in education.
@@ -22,8 +23,9 @@ iRods client is what you - user - need to install to your system
 - it runs in terminal, basic knowledge is essential
 
 
-### Installation of client to your local or vm.
-```
+### Installation of Client to Your Local or VM
+
+```console
 wget https://packages.irods.org/irods-signing-key.asc
 wget -qO - https://packages.irods.org/renci-irods.yum.repo | sudo tee /etc/yum.repos.d/renci-irods.yum.repo
 yum install epel-release -y
@@ -34,7 +36,8 @@ yum install irods-auth-plugin-openid-2.2.1-1.x86_64.rpm
 ```
 
 Copy&paste + edit irods_user_name
-```
+
+```console
 [root@icommands ~]# cat .irods/irods_environment.json 
 {
     "irods_host": "irods.it4i.cz",
@@ -46,7 +49,8 @@ Copy&paste + edit irods_user_name
     "irods_ssl_verify_server": "cert"
 }
 ```
-```
+
+```console
 [root@icommand .irods]# pwd
 /root/.irods
 [root@icommand .irods]# ls -la
@@ -59,7 +63,8 @@ dr-xr-x---. 6 root root 206 Sep 29 08:53 ..
 How to start:
 
 step 1:
-```
+
+```console
 [root@icommand .irods]# iinit
 ```
 
@@ -69,9 +74,11 @@ copy the link (second one) which you got from terminal to the browser or just ct
 
 example:
 
-https://keycloak-dev.it4i.cz:8443/auth/realms/IT4i_AAI/protocol/openid-connect/auth?nonce=1cc259e35a0043fb871abb79185d6d838d2b99060baa5bf635515181df9c942b&state=701842d9867655918ca165f6d7635a155723afb4d37afff0cf550e77114bc519&redirect_uri=https://irods-api.it4i.cz:8443/authcallback&client_id=IT4I_IRODS_AUTH&&scope=openid&response_type=code&access_type=offline&prompt=login%20consent
+[https://keycloak-dev.it4i.cz][a]
 
-click to B2ACCESS atorization and continue autentication flow
+Click the `Log in with B2ACCESS` authorization and continue authentication flow.
 
 you have to see this output `Successfully authenticated user. The browser tab can be safely closed.` in browser
 current problem is: - after validating authorization token, it becomes passed and any new command, such as ils creates new authorization at keycloak.
+
+[a]: https://keycloak-dev.it4i.cz:8443/auth/realms/IT4i_AAI/protocol/openid-connect/auth?nonce=1cc259e35a0043fb871abb79185d6d838d2b99060baa5bf635515181df9c942b&state=701842d9867655918ca165f6d7635a155723afb4d37afff0cf550e77114bc519&redirect_uri=https://irods-api.it4i.cz:8443/authcallback&client_id=IT4I_IRODS_AUTH&&scope=openid&response_type=code&access_type=offline&prompt=login%20consent
