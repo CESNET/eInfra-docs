@@ -84,6 +84,7 @@ nav:
       - API Documentation: apiv1.md
     - Satisfaction and Feedback: general/feedback.md
     - PRACE: prace.md
+    - DICE: dice.md
     - Support: general/support.md
     - Migration to e-INFRA CZ: einfracz-migration.md
   - Storage:
