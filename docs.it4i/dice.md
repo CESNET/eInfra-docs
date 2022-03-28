@@ -58,7 +58,7 @@ dr-xr-x---. 6 root root 206 Sep 29 08:53 ..
 -rw-r--r--. 1 root root 253 Sep 29 08:14 irods_environment.json
 ```
 
-### How to start:
+### How to Start:
 
 **step 1:**
 
@@ -79,7 +79,6 @@ https://authserver...:8443/auth/realms/IT4i_AAI/protocol/openid-connect/auth?non
 Click the `Log in with B2ACCESS` authorization and continue authentication flow.
 
 You have to see this output `Successfully authenticated user. The browser tab can be safely closed.` in the browser.
-
 
 Current problem: after validating the authorization token, it becomes passed and any new command, such as `ils` creates new authorization at keycloak.
 
