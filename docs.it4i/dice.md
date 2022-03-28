@@ -58,17 +58,17 @@ dr-xr-x---. 6 root root 206 Sep 29 08:53 ..
 -rw-r--r--. 1 root root 253 Sep 29 08:14 irods_environment.json
 ```
 
-How to start:
+### How to start:
 
-step 1:
+**step 1:**
 
 ```console
 [root@icommand .irods]# iinit
 ```
 
-step 2:
+**step 2:**
 
-copy the link (second one) which you got from terminal to the browser or just ctrl+left_mousebutton
+Copy the link (second one) which you got from terminal to the browser or just ctrl+left_mousebutton
 
 example:
 
@@ -78,8 +78,10 @@ https://keycloak-dev.it4i.cz:8443/auth/realms/IT4i_AAI/protocol/openid-connect/a
 
 Click the `Log in with B2ACCESS` authorization and continue authentication flow.
 
-you have to see this output `Successfully authenticated user. The browser tab can be safely closed.` in browser
-current problem is: - after validating authorization token, it becomes passed and any new command, such as ils creates new authorization at keycloak.
+You have to see this output `Successfully authenticated user. The browser tab can be safely closed.` in the browser.
+
+
+Current problem: after validating the authorization token, it becomes passed and any new command, such as `ils` creates new authorization at keycloak.
 
 [b]: http://www.diceproject.eu/
 [c]: https://irods.org/
