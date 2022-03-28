@@ -73,7 +73,7 @@ Copy the link (second one) which you got from terminal to the browser or just ct
 example:
 
 ```
-https://keycloak-dev.it4i.cz:8443/auth/realms/IT4i_AAI/protocol/openid-connect/auth?nonce=1cc259e35a0043fb871abb79185d6d838d2b99060baa5bf635515181df9c942b&state=701842d9867655918ca165f6d7635a155723afb4d37afff0cf550e77114bc519&redirect_uri=https://irods-api.it4i.cz:8443/authcallback&client_id=IT4I_IRODS_AUTH&&scope=openid&response_type=code&access_type=offline&prompt=login%20consent
+https://authserver...:8443/auth/realms/IT4i_AAI/protocol/openid-connect/auth?nonce=1cc259e35a0043fb871abb79185d6d838d2b99060baa5bf635515181df9c942b&state=701842d9867655918ca165f6d7635a155723afb4d37afff0cf550e77114bc519&redirect_uri=https://irods-api.it4i.cz:8443/authcallback&client_id=IT4I_IRODS_AUTH&&scope=openid&response_type=code&access_type=offline&prompt=login%20consent
 ```
 
 Click the `Log in with B2ACCESS` authorization and continue authentication flow.
