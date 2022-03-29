@@ -35,7 +35,7 @@ def get_data(filename):
 def get_datalist():
     """ get_datalist """
     datalist = []
-    for name in ['karolina', 'salomon', 'uv2000', 'phi', 'dgx', 'barbora']:
+    for name in ['karolina', 'dgx', 'barbora']:
         path = os.path.join('scripts', "{}.csv".format(name))
         datalist += get_data(path)
     return datalist
@@ -50,7 +50,7 @@ def get_counts(datalist):
 def get_matrix():
     """ get_matrix """
     #     1    2    4    8    16   32
-    chars = ['K', 'S', 'U', 'P', 'D', 'B']
+    chars = ['K', 'B', 'D']
     arr = []
     mask = ''.join(reversed(chars))
     for bits in itertools.product([0, 1], repeat=len(chars)):
@@ -107,14 +107,11 @@ def print_hint():
     """ print_hint """
     print('!!! Hint "Cluster Acronyms"')
     print('    ```')
-    print('    B D P U S K')
-    print('    | | | | | |')
-    print('    | | | | | +----> Karolina')
-    print('    | | | | +------> Salomon')
-    print('    | | | +--------> UV2000')
-    print('    | | +----------> Phi')
-    print('    | +------------> DGX-2')
-    print('    +--------------> Barbora')
+    print('    D B K')
+    print('    | | |')
+    print('    | | +----> Karolina')
+    print('    | +------> Barbora')
+    print('    +--------> DGX')
     print('    ```')
     print()
     print("{} {} {}".format('| Module </br><form><input id="searchInput" placeholder="🔍 Filter"',
