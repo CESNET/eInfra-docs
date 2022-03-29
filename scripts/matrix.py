@@ -6,7 +6,7 @@ from __future__ import print_function
 
 import itertools
 
-CHARS = ['K', 'S', 'U', 'P', 'D', 'B']
+CHARS = ['K', 'B', 'D']
 MASK = ''.join(reversed(CHARS))
 for bits in itertools.product([0, 1], repeat=len(CHARS)):
     SBIT = "".join(str(bit) for bit in bits)
