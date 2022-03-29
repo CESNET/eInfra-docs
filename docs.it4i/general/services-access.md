@@ -5,8 +5,8 @@ Once you have created an e-INFRA CZ or an IT4I account, you can access the follo
 ## IT4Innovations Information System (SCS IS)
 
 SCS IS is a system where users can apply for a project membership and primary investigators can apply for a project
-or manage ther projects (e.g. accept/deny users' requests to become project members).
-You can also submit a feedback on suppport services, etc. SCS IS is available on [https://scs.it4i.cz/][1].
+or manage their projects (e.g. accept/deny users' requests to become project members).
+You can also submit a feedback on support services, etc. SCS IS is available on [https://scs.it4i.cz/][1].
 
 ## Request Tracker (RT)
 
