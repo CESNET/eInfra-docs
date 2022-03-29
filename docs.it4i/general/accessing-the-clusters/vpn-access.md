@@ -6,7 +6,7 @@ To access IT4Innovations' resources and licenses, it is necessary to connect to 
 
 ## Windows/Mac VPN Client Installation
 
-To install the VPN client from the web interface, log in to [reconnect.it4i.cz][b] with your [IT4I credentials][1].
+To install the VPN client from the web interface, log in to [reconnect.it4i.cz][b] with your username and either [IT4I][1] or [e-INFRA CZ][2] password.
 
 ![](../../img/fc_vpn_web_login.png)
 
@@ -42,7 +42,7 @@ Save the settings, enter your login credentials and click Connect.
 
 ## Linux Client
 
-You may use any open version of FortiClient VPN, although OpenFortiGUI seems to work the best. Connection will work with following settings:
+You may use any open version of FortiClient VPN, although [OpenFortiGUI][c] seems to work the best. Connection will work with following settings:
 
 Name         | Value
 :------------|:----------------------
@@ -55,6 +55,8 @@ DNS Servers  | 10.5.8.11, 10.5.8.22
 Linux VPN clients need to run under root. OpenFortiGUI uses sudo by default, be sure, that your user is allowed to use sudo.
 
 [1]: ../../general/obtaining-login-credentials/obtaining-login-credentials.md#login-credentials
+[2]: ../../general/access/einfracz-account.md
 
 [a]: http://docs.fortinet.com/document/forticlient/latest/administration-guide/646779/installation-requirements
 [b]: https://reconnect.it4i.cz
+[c]: https://github.com/theinvisible/openfortigui
