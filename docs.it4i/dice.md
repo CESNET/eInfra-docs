@@ -5,15 +5,16 @@ DICE (Developing Innovation and Creativity in Education) is an international pro
 Its main goals are related to fostering innovation and creativity in education.
 
 This project attempts to be a leading initiative that supports educational community to make progress in the field of innovation and creativity through effective, authentic, practical, sustainable actions.
-This project has been funded with support from the European Commission. This website reflects the views only of the partnership as authors, and the Commission cannot be held responsible for any use which may be made of the information contained therein, see [http://www.diceproject.eu/][b].
+This project has been funded with support from the European Commission.
+For more information, see [http://www.diceproject.eu/][b].
 
-**It4Innovations participating in DICE. DICE using iRods software**
+**IT4Innovations participates in DICE. DICE uses the iRods software**
 
-The integrated Rule-Oriented Data System (iRODS) is open source data management software used by research organizations and government agencies worldwide. iRODS is released as a production-level distribution aimed at deployment in mission critical environments. It virtualizes data storage resources, so users can take control of their data, regardless of where and on what device the data is stored. As data volumes grow and data services become more complex, iRODS is serving an increasingly important role in data management, see [https://irods.org/][c].
+The integrated Rule-Oriented Data System (iRODS) is an open source data management software used by research organizations and government agencies worldwide. iRODS is released as a production-level distribution aimed at deployment in mission critical environments. It virtualizes data storage resources, so users can take control of their data, regardless of where and on what device the data is stored. As data volumes grow and data services become more complex, iRODS is serving an increasingly important role in data management, see [https://irods.org/][c].
 
 ## iRods Client
 
-iRods client is what you - user - need to install to your system
+The iRods client is what you - the user - need to install on your system.
 
 **Prerequisities:**
 
@@ -68,7 +69,7 @@ dr-xr-x---. 6 root root 206 Sep 29 08:53 ..
 
 **step 2:**
 
-Copy the link (second one) which you got from terminal to the browser or just ctrl+left_mousebutton
+Copy the link (second one) which you got from the terminal to the browser or just ctrl+left_mousebutton
 
 example:
 
