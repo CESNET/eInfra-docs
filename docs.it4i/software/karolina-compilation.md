@@ -40,8 +40,11 @@ OMP_NUM_THREADS = 64
 GOMP_CPU_AFFINITY=0:63:1
 ```
 
-However, to get full performance, you have to execute two jobs on the two Karolina sockets at the time.
+However, to get full performance, you have to execute two jobs on two Karolina sockets at the time.
 Other BLAS libraries may be used, however none performs as well as the MKL.
+
+!!! note
+    Most MPI libraries do the binding automatically. The binding of MPI ranks can be inspected for any MPI by running `$ mpirun -n num_of_ranks numactl --show`. However, If the ranks spawn threads, binding of these threads should be done via the environment variables described above.
 
 The choice of BLAS library and its performance may be verified with our benchmark,
 see [Lorenz BLAS performance benchmark][a].
