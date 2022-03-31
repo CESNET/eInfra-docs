@@ -1,5 +1,7 @@
 # User documentation
 
+test
+
 This project contains IT4Innovations user documentation source.
 
 ## Development
