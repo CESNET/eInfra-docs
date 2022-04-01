@@ -10,11 +10,13 @@ Resources are allocated to the job in a fair-share fashion, subject to constrain
 * **qprod** - Production queue
 * **qlong** - Long queue
 * **qmpp** - Massively parallel queue
-* **qnvidia**, **qmic**, **qfat** - Dedicated queues
+* **qnvidia**, **qfat** - Dedicated queues
+* **qcpu_biz**, **qgpu_biz** - Queues for commercial users
+* **qcpu_eurohpc**, **qgpu_eurohpc** - Queues for EuroHPC users
 * **qfree** - Free resource utilization queue
 
 !!! note
-    Check the queue status [here][a].
+    See the queue status for [Karolina][a] or [Barbora][c].
 
 Read more on the [Resources Allocation Policy][4] page.
 
@@ -45,5 +47,6 @@ Read more on [Capacity Computing][6] page.
 [5]: job-submission-and-execution.md
 [6]: capacity-computing.md
 
-[a]: https://extranet.it4i.cz/rsweb/
+[a]: https://extranet.it4i.cz/rsweb/karolina/queues
 [b]: https://www.altair.com/pbs-works/
+[c]: https://extranet.it4i.cz/rsweb/barbora/queues
