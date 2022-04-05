@@ -45,10 +45,10 @@ For information on how to use modules, look [here][1].
 
 ## Getting Started
 
-To create OpenFOAM environment on Anselm, use the commands:
+To create OpenFOAM environment, use the commands:
 
 ```console
-$ ml openfoam/2.2.1-icc-openmpi1.6.5-DP
+$ ml openfoam
 $ source $FOAM_BASHRC
 ```
 
@@ -102,10 +102,10 @@ runApplication blockMesh
 runApplication icoFoam
 ```
 
-Job submission (example for Anselm):
+Job submission (example for Karolina):
 
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=1:ncpus=16,walltime=03:00:00 test.sh
+$ qsub -A OPEN-0-0 -q qprod -l select=1:ncpus=128,walltime=03:00:00 test.sh
 ```
 
 For information about job submission, look [here][2].
