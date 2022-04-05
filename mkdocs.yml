@@ -86,7 +86,6 @@ nav:
     - PRACE: prace.md
     - DICE: dice.md
     - Support: general/support.md
-    - Migration to e-INFRA CZ: einfracz-migration.md
   - Storage:
     - PROJECT: storage/project-storage.md
     - CESNET: storage/cesnet-storage.md
