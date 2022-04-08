@@ -180,19 +180,17 @@ You can see, that the program was running with 512 parallel MPI-processes. In ve
 * SOC
 * Numerical Gradients and Frequencies
 
-## Running ORCA 5.0.0 and Higher in Parallel
+## Example Submission Script
 
-On Barbora cluster and Karolina cluster, version 5.0.1 is available. However, to run it in parallel you need to specify execution nodes via `inputfilename.nodes` file. Additionally, all calculations **must** be run on SCRATCH.
+The following script contains all of the necessary instructions to run an ORCA job, including copying of the files to and from /scratch to utilize the InfiniBand network:
 
-Example submission script (Karolina cluster) would look like this:
-
-```
+```bash
 #!/bin/bash
 #PBS -S /bin/bash
 #PBS -A OPEN-00-00
-#PBS -N jobname
-#PBS -q qprod
-#PBS -l select=2:ncpus=128:mpiprocs=128
+#PBS -N example-CO
+#PBS -q qexp
+#PBS -l select=2:ncpus=128:mpiprocs=128:ompthreads=1
 #PBS -l walltime=00:05:00
 
 ml purge
@@ -207,10 +205,6 @@ SCRDIR=/scratch/project/OPEN-00-00/$USER/${b}_${PBS_JOBID}/
 echo $SCRDIR
 mkdir -p $SCRDIR
 cd $SCRDIR || exit
-
-### specify nodes used for the parallel run
-cat $(echo $PBS_NODEFILE) > ${PBS_JOBNAME}.nodes
-###
 
 # get number of cores used for our job
 ncpus=$(qstat -f $PBS_JOBID | grep resources_used.ncpus | awk '{print $3}')
@@ -240,8 +234,7 @@ cp -r $PBS_O_WORKDIR/* .
 # copy output files to home, delete the rest
 cp * $PBS_O_WORKDIR/ && cd $PBS_O_WORKDIR
 rm -rf $SCRDIR
-
-exit 0
+exit
 ```
 
 ## Register as a User
