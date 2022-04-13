@@ -264,7 +264,7 @@ Although this example is somewhat artificial, it demonstrates the flexibility of
 $ qstat -a
 $ qstat -a -u username
 $ qstat -an -u username
-$ qstat -f 1133218.infra-pbs
+$ qstat -f 12345.srv11
 ```
 
 Example:
@@ -272,16 +272,16 @@ Example:
 ```console
 $ qstat -a
 
-infra-pbs:
+srv11:
                                                             Req'd Req'd   Elap
 Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time S Time
 --------------- -------- --  |---|---| ------ --- --- ------ ----- - -----
-16287.infra-pbs user1    qlong    job1         6183   4 512   --  144:0 R 38:25
-16468.infra-pbs user1    qlong    job2         8060   4 512   --  144:0 R 17:44
-16547.infra-pbs user2    qprod    job3x       13516   2 256   --  48:00 R 00:58
+16287.srv11 user1    qlong    job1         6183   4 64   --  144:0 R 38:25
+16468.srv11 user1    qlong    job2         8060   4 64   --  144:0 R 17:44
+16547.srv11 user2    qprod    job3x       13516   2 32   --  48:00 R 00:58
 ```
 
-In this example user1 and user2 are running jobs named `job1`, `job2`, and `job3x`. `job1` and `job2` are using 4 nodes, 128 cores per node each. `job1` has already run for 38 hours and 25 minutes, and `job2` for 17 hours 44 minutes. So `job1`, for example, has already consumed `512 x 38.41 = 19,665.92` core-hours. `job3x` has already consumed `256 x 0.96 = 245.76` core-hours. These consumed core-hours will be [converted to node-hours][10] and accounted for on the respective project accounts, regardless of whether the allocated cores were actually used for computations.
+In this example user1 and user2 are running jobs named `job1`, `job2`, and `job3x`. `job1` and `job2` are using 4 nodes, 128 cores per node each. `job1` has already run for 38 hours and 25 minutes, and `job2` for 17 hours 44 minutes. So `job1`, for example, has already consumed `64 x 38.41 = 2,458.6` core-hours. `job3x` has already consumed `32 x 0.96 = 30.93` core-hours. These consumed core-hours will be [converted to node-hours][10] and accounted for on the respective project accounts, regardless of whether the allocated cores were actually used for computations.
 
 The following commands allow you to check the status of your jobs using the check-pbs-jobs command, check for the presence of user's PBS jobs' processes on execution hosts, display load and processes, display job standard and error output, and continuously display (tail -f) job standard or error output.
 
@@ -381,9 +381,9 @@ Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time S Time
    cn17/0*16+cn108/0*16+cn109/0*16+cn110/0*16
 ```
 
-In this example, the nodes cn17, cn108, cn109, and cn110 were allocated for 1 hour via the qexp queue. The myjob jobscript will be executed on the node cn17, while the nodes cn108, cn109, and cn110 are available for use as well.
+In this example, the nodes `cn17`, `cn108`, `cn109`, and `cn110` were allocated for 1 hour via the qexp queue. The `myjob` jobscript will be executed on the node `cn17`, while the nodes `cn108`, `cn109`, and `cn110` are available for use as well.
 
-The jobscript or interactive shell is by default executed in the home directory:
+The jobscript or interactive shell is by default executed in the `home` directory:
 
 ```console
 $ qsub -q qexp -l select=4:ncpus=16 -I
@@ -394,14 +394,14 @@ $ pwd
 /home/username
 ```
 
-In this example, 4 nodes were allocated interactively for 1 hour via the qexp queue. The interactive shell is executed in the home directory.
+In this example, 4 nodes were allocated interactively for 1 hour via the `qexp` queue. The interactive shell is executed in the `/home` directory.
 
 !!! note
     All nodes within the allocation may be accessed via SSH. Unallocated nodes are not accessible to the user.
 
 The allocated nodes are accessible via SSH from login nodes. The nodes may access each other via SSH as well.
 
-Calculations on allocated nodes may be executed remotely via the MPI, SSH, pdsh, or clush. You may find out which nodes belong to the allocation by reading the $PBS_NODEFILE file
+Calculations on allocated nodes may be executed remotely via the MPI, SSH, pdsh, or clush. You may find out which nodes belong to the allocation by reading the `$PBS_NODEFILE` file
 
 ```console
 $ qsub -q qexp -l select=4:ncpus=16 -I
@@ -424,14 +424,14 @@ cn109: cn109
 cn110: cn110
 ```
 
-In this example, the hostname program is executed via pdsh from the interactive shell. The execution runs on all four allocated nodes. The same result would be achieved if the pdsh were called from any of the allocated nodes or from the login nodes.
+In this example, the hostname program is executed via `pdsh` from the interactive shell. The execution runs on all four allocated nodes. The same result would be achieved if the `pdsh` were called from any of the allocated nodes or from the login nodes.
 
 ### Example Jobscript for MPI Calculation
 
 !!! note
     Production jobs must use the /scratch directory for I/O
 
-The recommended way to run production jobs is to change to the /scratch directory early in the jobscript, copy all inputs to /scratch, execute the calculations, and copy outputs to the home directory.
+The recommended way to run production jobs is to change to the `/scratch` directory early in the jobscript, copy all inputs to `/scratch`, execute the calculations, and copy outputs to the `/home` directory.
 
 ```bash
 #!/bin/bash
@@ -460,19 +460,19 @@ cp output $PBS_O_WORKDIR/.
 exit
 ```
 
-In this example, a directory in /home holds the input file input and the mympiprog.x executable. We create the myjob directory on the /scratch filesystem, copy input and executable files from the /home directory where the qsub was invoked ($PBS_O_WORKDIR) to /scratch, execute the MPI program mympiprog.x and copy the output file back to the /home directory. mympiprog.x is executed as one process per node, on all allocated nodes.
+In this example, a directory in `/home` holds the input file input and the `mympiprog.x` executable. We create the `myjob` directory on the `/scratch` filesystem, copy input and executable files from the `/home` directory where the `qsub` was invoked (`$PBS_O_WORKDIR`) to `/scratch`, execute the MPI program `mympiprog.x` and copy the output file back to the `/home` directory. `mympiprog.x` is executed as one process per node, on all allocated nodes.
 
 !!! note
     Consider preloading inputs and executables onto [shared scratch][6] memory before the calculation starts.
 
-In some cases, it may be impractical to copy the inputs to the scratch memory and the outputs to the home directory. This is especially true when very large input and output files are expected, or when the files should be reused by a subsequent calculation. In such cases, it is the users' responsibility to preload the input files on shared /scratch memory before the job submission, and retrieve the outputs manually after all calculations are finished.
+In some cases, it may be impractical to copy the inputs to the `/scratch` memory and the outputs to the `/home` directory. This is especially true when very large input and output files are expected, or when the files should be reused by a subsequent calculation. In such cases, it is the users' responsibility to preload the input files on the shared `/scratch` memory before the job submission, and retrieve the outputs manually after all calculations are finished.
 
 !!! note
-    Store the qsub options within the jobscript. Use the `mpiprocs` and `ompthreads` qsub options to control the MPI job execution.
+    Store the `qsub` options within the jobscript. Use the `mpiprocs` and `ompthreads` qsub options to control the MPI job execution.
 
 ### Example Jobscript for MPI Calculation With Preloaded Inputs
 
-Example jobscript for an MPI job with preloaded inputs and executables, options for qsub are stored within the script:
+Example jobscript for an MPI job with preloaded inputs and executables, options for `qsub` are stored within the script:
 
 ```bash
 #!/bin/bash
@@ -497,7 +497,7 @@ mpirun ./mympiprog.x
 exit
 ```
 
-In this example, input and executable files are assumed to be preloaded manually in the /scratch/$USER/myjob directory. Note the `mpiprocs` and `ompthreads` qsub options controlling the behavior of the MPI execution. mympiprog.x is executed as one process per node, on all 100 allocated nodes. If mympiprog.x implements OpenMP threads, it will run 16 threads per node.
+In this example, input and executable files are assumed to be preloaded manually in the `/scratch/$USER/myjob` directory. Note the `mpiprocs` and `ompthreads` qsub options controlling the behavior of the MPI execution. `mympiprog.x` is executed as one process per node, on all 100 allocated nodes. If `mympiprog.x` implements OpenMP threads, it will run 16 threads per node.
 
 ### Example Jobscript for Single Node Calculation
 
@@ -526,7 +526,7 @@ cp output $PBS_O_WORKDIR/.
 exit
 ```
 
-In this example, a directory in /home holds the input file input and executable myprog.x . We copy input and executable files from the home directory where the qsub was invoked ($PBS_O_WORKDIR) to local scratch memory /lscratch/$PBS_JOBID, execute myprog.x and copy the output file back to the /home directory. myprog.x runs on one node only and may use threads.
+In this example, a directory in `/home` holds the input file input and the executable `myprog.x`. We copy input and executable files from the `/home` directory where the `qsub` was invoked (`$PBS_O_WORKDIR`) to the local `/scratch` memory `/lscratch/$PBS_JOBID`, execute `myprog.x` and copy the output file back to the `/home directory`. `myprog.x` runs on one node only and may use threads.
 
 ### Other Jobscript Examples
 
