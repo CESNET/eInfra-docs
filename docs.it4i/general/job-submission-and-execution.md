@@ -94,7 +94,7 @@ Below is the list of arguments that can be used with `-W depend=dependency:jobid
 
 ### Useful Tricks
 
-All qsub options may be [saved directly into the jobscript][1]. In such a case, no options to qsub are needed.
+All `qsub` options may be [saved directly into the jobscript][1]. In such a case, no options to `qsub` are needed.
 
 ```console
 $ qsub ./myjob
@@ -281,7 +281,7 @@ Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time S Time
 16547.infra-pbs user2    qprod    job3x       13516   2 256   --  48:00 R 00:58
 ```
 
-In this example user1 and user2 are running jobs named job1, job2, and job3x. The jobs job1 and job2 are using 4 nodes, 128 cores per node each. job1 has already run for 38 hours and 25 minutes, and job2 for 17 hours 44 minutes. So `job1`, for example, has already consumed `512 x 38.41 = 19,665.92` core-hours. job3x has already consumed `256 x 0.96 = 245.76` core-hours. These consumed core hours will be [converted to node-hours][10] and accounted for on the respective project accounts, regardless of whether the allocated cores were actually used for computations.
+In this example user1 and user2 are running jobs named `job1`, `job2`, and `job3x`. `job1` and `job2` are using 4 nodes, 128 cores per node each. `job1` has already run for 38 hours and 25 minutes, and `job2` for 17 hours 44 minutes. So `job1`, for example, has already consumed `512 x 38.41 = 19,665.92` core-hours. `job3x` has already consumed `256 x 0.96 = 245.76` core-hours. These consumed core-hours will be [converted to node-hours][10] and accounted for on the respective project accounts, regardless of whether the allocated cores were actually used for computations.
 
 The following commands allow you to check the status of your jobs using the check-pbs-jobs command, check for the presence of user's PBS jobs' processes on execution hosts, display load and processes, display job standard and error output, and continuously display (tail -f) job standard or error output.
 
