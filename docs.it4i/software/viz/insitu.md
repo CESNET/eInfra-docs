@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In situ visualization allows you to visualize your data while your computation is progressing on multiple nodes of a cluster. It is a visualization pipeline that can be used on the [Salomon][1] supercomputer. The pipeline is based on the [ParaView Catalyst][a] library.
+In situ visualization allows you to visualize your data while your computation is progressing on multiple nodes of a cluster. It is a visualization pipeline based on the [ParaView Catalyst][a] library.
 
 To leverage the possibilities of the in situ visualization by Catalyst library, you have to write an adaptor code that will use the actual data from your simulation and process them in the way they can be passed to ParaView for visualization. We provide a simple example of such simulator/adaptor code that binds together to provide the in situ visualization.
 
@@ -74,7 +74,7 @@ As mentioned before, further in the simulation loop, the adaptor's `CoProcess` f
 
 ### Launching the Simulator/Adaptor With ParaView
 
-To launch ParaView, you have two standard options on Salomon. You can run ParaView from your local machine in client-server mode by following the information [here][2] or you can connect to the cluster using VNC and the graphical environment by following the information on [VNC][3]. In both cases, we will use ParaView version 5.6.0 and its respective module.
+There are two standard options to launch ParaView,. You can run ParaView from your local machine in client-server mode by following the information [here][2] or you can connect to the cluster using VNC and the graphical environment by following the information on [VNC][3]. In both cases, we will use ParaView version 5.6.0 and its respective module.
 
 Whether you use the client-server mode or VNC for ParaView, you have to allocate some computing resources. This is done by the console commands below (supply valid Project ID).
 
