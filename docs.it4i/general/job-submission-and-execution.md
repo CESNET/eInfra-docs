@@ -232,7 +232,7 @@ r1i0n11
 
 Intel Turbo Boost Technology is on by default. We strongly recommend keeping the default.
 
-If necessary (such as in the case of benchmarking), you can disable the Turbo for all nodes of the job by using the PBS resource attribute cpu_turbo_boost:
+If necessary (such as in the case of benchmarking), you can disable Turbo for all nodes of the job by using the PBS resource attribute `cpu_turbo_boost`:
 
 ```console
 $ qsub -A OPEN-0-0 -q qprod -l select=4:ncpus=36 -l cpu_turbo_boost=0 -I
@@ -246,7 +246,7 @@ In the following example, we select an allocation for benchmarking a very specia
 
 ```console
 $ qsub -A OPEN-0-0 -q qprod
-    -l select=18:ncpus=36:ibswitch=isw10:mpiprocs=1:ompthreads=16+18:ncpus=36:ibswitch=isw20:mpiprocs=16:ompthreads=1
+    -l select=18:ncpus=16:ibswitch=isw10:mpiprocs=1:ompthreads=16+18:ncpus=16:ibswitch=isw20:mpiprocs=16:ompthreads=1
     -l cpu_turbo_boost=0,walltime=00:30:00
     -N Benchmark ./mybenchmark
 ```
@@ -283,7 +283,7 @@ Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time S Time
 
 In this example user1 and user2 are running jobs named `job1`, `job2`, and `job3x`. `job1` and `job2` are using 4 nodes, 128 cores per node each. `job1` has already run for 38 hours and 25 minutes, and `job2` for 17 hours 44 minutes. So `job1`, for example, has already consumed `64 x 38.41 = 2,458.6` core-hours. `job3x` has already consumed `32 x 0.96 = 30.93` core-hours. These consumed core-hours will be [converted to node-hours][10] and accounted for on the respective project accounts, regardless of whether the allocated cores were actually used for computations.
 
-The following commands allow you to check the status of your jobs using the check-pbs-jobs command, check for the presence of user's PBS jobs' processes on execution hosts, display load and processes, display job standard and error output, and continuously display (tail -f) job standard or error output.
+The following commands allow you to check the status of your jobs using the `check-pbs-jobs` command, check for the presence of user's PBS jobs' processes on execution hosts, display load and processes, display job standard and error output, and continuously display (`tail -f`) job standard or error output.
 
 ```console
 $ check-pbs-jobs --check-all
@@ -304,7 +304,7 @@ cn164: OK
 cn165: No process
 ```
 
-In this example we see that job 35141.dm2 is not currently running any processes on the allocated node cn165, which may indicate an execution error:
+In this example we see that job `35141.dm2` is not currently running any processes on the allocated node cn165, which may indicate an execution error:
 
 ```console
 $ check-pbs-jobs --print-load --print-processes
@@ -320,7 +320,7 @@ cn164: 99.7 run-task
 ...
 ```
 
-In this example, we see that job 35141.dm2 is currently running a process run-task on node cn164, using one thread only, while node cn165 is empty, which may indicate an execution error.
+In this example, we see that job `35141.dm2` is currently running a process run-task on node `cn164`, using one thread only, while node `cn165` is empty, which may indicate an execution error.
 
 ```console
 $ check-pbs-jobs --jobid 35141.dm2 --print-job-out
@@ -334,7 +334,7 @@ Run loop 2
 Run loop 3
 ```
 
-In this example, we see the actual output (some iteration loops) of the job 35141.dm2.
+In this example, we see the actual output (some iteration loops) of the job `35141.dm2`.
 
 !!! note
     Manage your queued or running jobs, using the `qhold`, `qrls`, `qdel`, `qsig`, or `qalter` commands
@@ -383,7 +383,7 @@ Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time S Time
 
 In this example, the nodes `cn17`, `cn108`, `cn109`, and `cn110` were allocated for 1 hour via the qexp queue. The `myjob` jobscript will be executed on the node `cn17`, while the nodes `cn108`, `cn109`, and `cn110` are available for use as well.
 
-The jobscript or interactive shell is by default executed in the `home` directory:
+The jobscript or interactive shell is by default executed in the `/home` directory:
 
 ```console
 $ qsub -q qexp -l select=4:ncpus=16 -I
