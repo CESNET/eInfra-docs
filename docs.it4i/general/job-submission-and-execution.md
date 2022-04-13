@@ -264,7 +264,7 @@ Although this example is somewhat artificial, it demonstrates the flexibility of
 $ qstat -a
 $ qstat -a -u username
 $ qstat -an -u username
-$ qstat -f 12345.srv11
+$ qstat -f 1133218.infra-pbs
 ```
 
 Example:
@@ -272,16 +272,16 @@ Example:
 ```console
 $ qstat -a
 
-srv11:
+infra-pbs:
                                                             Req'd Req'd   Elap
 Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time S Time
 --------------- -------- --  |---|---| ------ --- --- ------ ----- - -----
-16287.srv11     user1    qlong    job1         6183   4 64    --  144:0 R 38:25
-16468.srv11     user1    qlong    job2         8060   4 64    --  144:0 R 17:44
-16547.srv11     user2    qprod    job3x       13516   2 32    --  48:00 R 00:58
+16287.infra-pbs user1    qlong    job1         6183   4 512   --  144:0 R 38:25
+16468.infra-pbs user1    qlong    job2         8060   4 512   --  144:0 R 17:44
+16547.infra-pbs user2    qprod    job3x       13516   2 256   --  48:00 R 00:58
 ```
 
-In this example user1 and user2 are running jobs named job1, job2, and job3x. The jobs job1 and job2 are using 4 nodes, 16 cores per node each. job1 has already run for 38 hours and 25 minutes, and job2 for 17 hours 44 minutes. job1 has already consumed `64 x 38.41 = 2458.6` core hours. job3x has already consumed `0.96 x 32 = 30.93` core hours. These consumed core hours will be accounted for on the respective project accounts, regardless of whether the allocated cores were actually used for computations.
+In this example user1 and user2 are running jobs named job1, job2, and job3x. The jobs job1 and job2 are using 4 nodes, 128 cores per node each. job1 has already run for 38 hours and 25 minutes, and job2 for 17 hours 44 minutes. So `job1`, for example, has already consumed `512 x 38.41 = 19,665.92` core-hours. job3x has already consumed `256 x 0.96 = 245.76` core-hours. These consumed core hours will be [converted to node-hours][10] and accounted for on the respective project accounts, regardless of whether the allocated cores were actually used for computations.
 
 The following commands allow you to check the status of your jobs using the check-pbs-jobs command, check for the presence of user's PBS jobs' processes on execution hosts, display load and processes, display job standard and error output, and continuously display (tail -f) job standard or error output.
 
@@ -538,3 +538,4 @@ Further jobscript examples may be found in the software section and the [Capacit
 [5]: ../salomon/7d-enhanced-hypercube.md
 [6]: ../salomon/storage.md
 [9]: capacity-computing.md
+[10]: resources-allocation-policy.md#resource-accounting-policy
