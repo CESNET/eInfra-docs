@@ -227,12 +227,15 @@ r1i0n11
 
 ### Selecting Turbo Boost Off
 
+!!! note
+    For Barbora only.
+
 Intel Turbo Boost Technology is on by default. We strongly recommend keeping the default.
 
 If necessary (such as in the case of benchmarking), you can disable the Turbo for all nodes of the job by using the PBS resource attribute cpu_turbo_boost:
 
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=4:ncpus=16 -l cpu_turbo_boost=0 -I
+$ qsub -A OPEN-0-0 -q qprod -l select=4:ncpus=36 -l cpu_turbo_boost=0 -I
 ```
 
 More information about the Intel Turbo Boost can be found in the TurboBoost section
@@ -243,7 +246,7 @@ In the following example, we select an allocation for benchmarking a very specia
 
 ```console
 $ qsub -A OPEN-0-0 -q qprod
-    -l select=18:ncpus=16:ibswitch=isw10:mpiprocs=1:ompthreads=16+18:ncpus=16:ibswitch=isw20:mpiprocs=16:ompthreads=1
+    -l select=18:ncpus=36:ibswitch=isw10:mpiprocs=1:ompthreads=16+18:ncpus=36:ibswitch=isw20:mpiprocs=16:ompthreads=1
     -l cpu_turbo_boost=0,walltime=00:30:00
     -N Benchmark ./mybenchmark
 ```
