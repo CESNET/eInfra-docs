@@ -10,7 +10,11 @@ Detailed description of the Catalyst API can be found [here][b]. We restrict our
 
 ## Installed Version
 
-The Catalyst library is a part of the ParaView module. More about ParaView can be found [here][c]. We use version **5.6.0**. It has been compiled with `intel/2017a` and installed on the Salomon cluster.
+For the current list of installed versions, use:
+
+```console
+$ ml av CUDA
+```
 
 ## Usage
 
