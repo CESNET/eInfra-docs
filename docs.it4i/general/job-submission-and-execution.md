@@ -17,7 +17,7 @@ Submit the job using the `qsub` command:
 $ qsub -A Project_ID -q queue -l select=x:ncpus=y,walltime=[[hh:]mm:]ss[.ms] jobscript
 ```
 
-The qsub command submits the job to the queue, i.e. the qsub command creates a request to the PBS Job manager for allocation of specified resources. The resources will be allocated when available, subject to the above described policies and constraints. **After the resources are allocated, the jobscript or interactive shell is executed on the first of the allocated nodes.**
+The `qsub` command submits the job to the queue, i.e. it creates a request to the PBS Job manager for allocation of specified resources. The resources will be allocated when available, subject to the above described policies and constraints. **After the resources are allocated, the jobscript or interactive shell is executed on the first of the allocated nodes.**
 
 ### Job Submission Examples
 
@@ -28,27 +28,27 @@ The qsub command submits the job to the queue, i.e. the qsub command creates a r
 $ qsub -A OPEN-0-0 -q qprod -l select=64:ncpus=24,walltime=03:00:00 ./myjob
 ```
 
-In this example, we allocate 64 nodes, 24 cores per node, for 3 hours. We allocate these resources via the qprod queue, consumed resources will be accounted to the Project identified by Project ID OPEN-0-0. The jobscript 'myjob' will be executed on the first node in the allocation.
+In this example, we allocate 64 nodes, 24 cores per node, for 3 hours. We allocate these resources via the `qprod` queue, consumed resources will be accounted to the project identified by Project ID `OPEN-0-0`. The jobscript `myjob` will be executed on the first node in the allocation.
 
 ```console
 $ qsub -q qexp -l select=4:ncpus=24 -I
 ```
 
-In this example, we allocate 4 nodes, 24 cores per node, for 1 hour. We allocate these resources via the qexp queue. The resources will be available interactively.
+In this example, we allocate 4 nodes, 24 cores per node, for 1 hour. We allocate these resources via the `qexp` queue. The resources will be available interactively.
 
 ```console
 $ qsub -A OPEN-0-0 -q qnvidia -l select=10:ncpus=24 ./myjob
 ```
 
-In this example, we allocate 10 NVIDIA accelerated nodes, 24 cores per node, for 24 hours. We allocate these resources via the qnvidia queue. The jobscript 'myjob' will be executed on the first node in the allocation.
+In this example, we allocate 10 NVIDIA accelerated nodes, 24 cores per node, for 24 hours. We allocate these resources via the `qnvidia` queue. The jobscript `myjob` will be executed on the first node in the allocation.
 
 ```console
 $ qsub -A OPEN-0-0 -q qfree -l select=10:ncpus=24 ./myjob
 ```
 
-In this example, we allocate 10 nodes, 24 cores per node, for 12 hours. We allocate these resources via the qfree queue. It is not required that the project OPEN-0-0 has any available resources left. Consumed resources are still accounted for. The jobscript myjob will be executed on the first node in the allocation.
+In this example, we allocate 10 nodes, 24 cores per node, for 12 hours. We allocate these resources via the `qfree` queue. It is not required that the project `OPEN-0-0` has any available resources left. Consumed resources are still accounted for. The jobscript `myjob` will be executed on the first node in the allocation.
 
-All qsub options may be [saved directly into the jobscript][1]. In such cases, it is not necessary to specify any options for qsub.
+All `qsub` options may be [saved directly into the jobscript][1]. In such cases, it is not necessary to specify any options for `qsub`.
 
 ```console
 $ qsub ./myjob
@@ -116,7 +116,7 @@ Specific nodes may be allocated via PBS:
 $ qsub -A OPEN-0-0 -q qprod -l select=1:ncpus=24:host=r24u35n680+1:ncpus=24:host=r24u36n681 -I
 ```
 
-In this example, we allocate on Salomon nodes r24u35n680 and r24u36n681, all 24 cores per node, for 24 hours. Consumed resources will be accounted to the Project identified by Project ID OPEN-0-0. The resources will be available interactively.
+In this example, we allocate on Salomon nodes r24u35n680 and r24u36n681, all 24 cores per node, for 24 hours. Consumed resources will be accounted to the Project identified by Project ID `OPEN-0-0`. The resources will be available interactively.
 
 ### Salomon - Placement by Network Location
 
