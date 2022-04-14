@@ -10,7 +10,7 @@ The PROJECT storage consists of three equal file storages (blocks) called PROJ1,
 Each file storage implements GPFS file system exported via NFS protocol using three NFS servers.
 File storages provide high-availability and redundancy.
 
-![](img/project-storage-overview2.png)
+![](img/project-storage-overview3.png)
 
 | Specification     | Total              | Per Block           |
 | ----------------- | -------------------|-------------------- |
