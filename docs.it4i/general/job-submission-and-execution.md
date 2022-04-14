@@ -5,8 +5,8 @@
 When allocating computational resources for the job, specify:
 
 1. a suitable queue for your job (the default is qprod)
-1. the number of computational nodes required
-1. the number of cores per node required
+1. the number of computational nodes (required)
+1. the number of cores per node (not required)
 1. the maximum wall time allocated to your calculation, note that jobs exceeding the maximum wall time will be killed
 1. your Project ID
 1. a Jobscript or interactive switch
@@ -19,31 +19,31 @@ $ qsub -A Project_ID -q queue -l select=x:ncpus=y,walltime=[[hh:]mm:]ss[.ms] job
 
 The `qsub` command submits the job to the queue, i.e. it creates a request to the PBS Job manager for allocation of specified resources. The resources will be allocated when available, subject to the above described policies and constraints. **After the resources are allocated, the jobscript or interactive shell is executed on the first of the allocated nodes.**
 
+!!! note
+    `ncpus=y` is usually not required, because the smallest allocation unit is an entire node. The exception are corner cases for `qviz` and `qfat` on Karolina.
+
 ### Job Submission Examples
 
-!!! note
-    Barbora: ncpus=36, or ncpus=24 for accelerate node
-
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=64:ncpus=24,walltime=03:00:00 ./myjob
+$ qsub -A OPEN-0-0 -q qprod -l select=64,walltime=03:00:00 ./myjob
 ```
 
-In this example, we allocate 64 nodes, 24 cores per node, for 3 hours. We allocate these resources via the `qprod` queue, consumed resources will be accounted to the project identified by Project ID `OPEN-0-0`. The jobscript `myjob` will be executed on the first node in the allocation.
+In this example, we allocate 64 nodes, 36 cores per node, for 3 hours. We allocate these resources via the `qprod` queue, consumed resources will be accounted to the project identified by Project ID `OPEN-0-0`. The jobscript `myjob` will be executed on the first node in the allocation.
 
 ```console
-$ qsub -q qexp -l select=4:ncpus=24 -I
+$ qsub -q qexp -l select=4 -I
 ```
 
-In this example, we allocate 4 nodes, 24 cores per node, for 1 hour. We allocate these resources via the `qexp` queue. The resources will be available interactively.
+In this example, we allocate 4 nodes, 36 cores per node, for 1 hour. We allocate these resources via the `qexp` queue. The resources will be available interactively.
 
 ```console
-$ qsub -A OPEN-0-0 -q qnvidia -l select=10:ncpus=24 ./myjob
+$ qsub -A OPEN-0-0 -q qnvidia -l select=10 ./myjob
 ```
 
 In this example, we allocate 10 NVIDIA accelerated nodes, 24 cores per node, for 24 hours. We allocate these resources via the `qnvidia` queue. The jobscript `myjob` will be executed on the first node in the allocation.
 
 ```console
-$ qsub -A OPEN-0-0 -q qfree -l select=10:ncpus=24 ./myjob
+$ qsub -A OPEN-0-0 -q qfree -l select=10 ./myjob
 ```
 
 In this example, we allocate 10 nodes, 24 cores per node, for 12 hours. We allocate these resources via the `qfree` queue. It is not required that the project `OPEN-0-0` has any available resources left. Consumed resources are still accounted for. The jobscript `myjob` will be executed on the first node in the allocation.
@@ -67,7 +67,7 @@ To submit dependent jobs in sequence, use the `depend` function of `qsub`.
 First submit the first job in a standard manner:
 
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=64:ncpus=36,walltime=02:00:00 ./firstjob
+$ qsub -A OPEN-0-0 -q qprod -l select=64,walltime=02:00:00 ./firstjob
 123456[].isrv1
 ```
 
@@ -113,10 +113,10 @@ $ qsub -m n
 Specific nodes may be allocated via PBS:
 
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=1:ncpus=24:host=r24u35n680+1:ncpus=24:host=r24u36n681 -I
+$ qsub -A OPEN-0-0 -q qprod -l select=1:host=cn120+1:host=cn121 -I
 ```
 
-In this example, we allocate on Salomon nodes r24u35n680 and r24u36n681, all 24 cores per node, for 24 hours. Consumed resources will be accounted to the Project identified by Project ID `OPEN-0-0`. The resources will be available interactively.
+In this example, we allocate the nodes cn120 and cn121, (number of cores depends on the cluster), for 24 hours. Consumed resources will be accounted to the Project identified by Project ID `OPEN-0-0`. The resources will be available interactively.
 
 ### Salomon - Placement by Network Location
 
@@ -136,7 +136,7 @@ Nodes directly connected to the one InfiniBand switch can be allocated using nod
 In this example, we request all 9 nodes directly connected to the same switch using node grouping placement.
 
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=9:ncpus=24 -l place=group=switch ./myjob
+$ qsub -A OPEN-0-0 -q qprod -l select=9 -l place=group=switch ./myjob
 ```
 
 ### Salomon - Placement by Specific InfiniBand Switch
@@ -149,7 +149,7 @@ Nodes directly connected to the specific InfiniBand switch can be selected using
 In this example, we request all 9 nodes directly connected to the r4i1s0sw1 switch.
 
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=9:ncpus=24:switch=r4i1s0sw1 ./myjob
+$ qsub -A OPEN-0-0 -q qprod -l select=9:switch=r4i1s0sw1 ./myjob
 ```
 
 List of all InfiniBand switches:
@@ -196,7 +196,7 @@ Nodes located in the same dimension group may be allocated using node grouping o
 In this example, we allocate 16 nodes in the same [hypercube dimension][5] 1 group.
 
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=16:ncpus=24 -l place=group=ehc_1d -I
+$ qsub -A OPEN-0-0 -q qprod -l select=16 -l place=group=ehc_1d -I
 ```
 
 For better understanding:
@@ -235,7 +235,7 @@ Intel Turbo Boost Technology is on by default. We strongly recommend keeping the
 If necessary (such as in the case of benchmarking), you can disable Turbo for all nodes of the job by using the PBS resource attribute `cpu_turbo_boost`:
 
 ```console
-$ qsub -A OPEN-0-0 -q qprod -l select=4:ncpus=36 -l cpu_turbo_boost=0 -I
+$ qsub -A OPEN-0-0 -q qprod -l select=4 -l cpu_turbo_boost=0 -I
 ```
 
 More information about the Intel Turbo Boost can be found in the TurboBoost section
@@ -246,7 +246,7 @@ In the following example, we select an allocation for benchmarking a very specia
 
 ```console
 $ qsub -A OPEN-0-0 -q qprod
-    -l select=18:ncpus=16:ibswitch=isw10:mpiprocs=1:ompthreads=16+18:ncpus=16:ibswitch=isw20:mpiprocs=16:ompthreads=1
+    -l select=18:ibswitch=isw10:mpiprocs=1:ompthreads=16+18:ibswitch=isw20:mpiprocs=16:ompthreads=1
     -l cpu_turbo_boost=0,walltime=00:30:00
     -N Benchmark ./mybenchmark
 ```
@@ -370,15 +370,15 @@ The Jobscript is a user made script controlling a sequence of commands for execu
     The jobscript or interactive shell is executed on first of the allocated nodes.
 
 ```console
-$ qsub -q qexp -l select=4:ncpus=16 -N Name0 ./myjob
+$ qsub -q qexp -l select=4 -N Name0 ./myjob
 $ qstat -n -u username
 
 srv11:
                                                             Req'd Req'd   Elap
 Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time S Time
 --------------- -------- --  |---|---| ------ --- --- ------ ----- - -----
-15209.srv11     username qexp     Name0        5530   4 64    --  01:00 R 00:00
-   cn17/0*16+cn108/0*16+cn109/0*16+cn110/0*16
+15209.srv11     username qexp     Name0        5530   4 128    --  01:00 R 00:00
+   cn17/0*32+cn108/0*32+cn109/0*32+cn110/0*32
 ```
 
 In this example, the nodes `cn17`, `cn108`, `cn109`, and `cn110` were allocated for 1 hour via the qexp queue. The `myjob` jobscript will be executed on the node `cn17`, while the nodes `cn108`, `cn109`, and `cn110` are available for use as well.
@@ -386,7 +386,7 @@ In this example, the nodes `cn17`, `cn108`, `cn109`, and `cn110` were allocated 
 The jobscript or interactive shell is by default executed in the `/home` directory:
 
 ```console
-$ qsub -q qexp -l select=4:ncpus=16 -I
+$ qsub -q qexp -l select=4 -I
 qsub: waiting for job 15210.srv11 to start
 qsub: job 15210.srv11 ready
 
@@ -404,7 +404,7 @@ The allocated nodes are accessible via SSH from login nodes. The nodes may acces
 Calculations on allocated nodes may be executed remotely via the MPI, SSH, pdsh, or clush. You may find out which nodes belong to the allocation by reading the `$PBS_NODEFILE` file
 
 ```console
-$ qsub -q qexp -l select=4:ncpus=16 -I
+$ qsub -q qexp -l select=4 -I
 qsub: waiting for job 15210.srv11 to start
 qsub: job 15210.srv11 ready
 
@@ -478,7 +478,7 @@ Example jobscript for an MPI job with preloaded inputs and executables, options 
 #!/bin/bash
 #PBS -q qprod
 #PBS -N MYJOB
-#PBS -l select=100:ncpus=16:mpiprocs=1:ompthreads=16
+#PBS -l select=100:mpiprocs=1:ompthreads=16
 #PBS -A OPEN-0-0
 
 # change to scratch directory, exit on failure
