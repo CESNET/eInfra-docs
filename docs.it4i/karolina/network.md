@@ -1,6 +1,6 @@
 # Network
 
-All of the compute and login nodes of Karolina are interconnected through a [Mellanox][c] [InfiniBand][a] HDR 200 Gbps network and a Gigabit Ethernet network.
+All of the compute and login nodes of Karolina are interconnected through an [InfiniBand][a] HDR 200 Gbps network and a Gigabit Ethernet network.
 
 The Compute network is configured as a non-blocking Fat Tree which consists of 60 x 40-ports Mellanox Quantum™ HDR switches (40 Leaf HDR switches and 20 Spine HDR switches).
 
@@ -43,4 +43,3 @@ QM8790 has the highest fabric performance available in the market with up to 16T
 * VL mapping (VL2VL)
 
 [a]: http://en.wikipedia.org/wiki/InfiniBand
-[c]: http://www.mellanox.com/
