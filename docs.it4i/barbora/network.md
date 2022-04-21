@@ -1,6 +1,6 @@
 # Network
 
-All of the compute and login nodes of Barbora are interconnected through a [Mellanox][c] [InfiniBand][a] HDR 200 Gbps network and a Gigabit [Ethernet][b] network.
+All of the compute and login nodes of Barbora are interconnected through a [InfiniBand][a] HDR 200 Gbps network and a Gigabit Ethernet network.
 
 Compute nodes and the service infrastructure is connected by the HDR100 technology that allows one 200Gbps HDR port (aggregation 4x 50Gbps) to be divided into two HDR100 ports with 100Gbps (2x 50Gbps) bandwidth.
 
@@ -48,5 +48,3 @@ The cabling between the L1 and L2 layer is realized by HDR cabling, connecting t
 ![](img/XH2000.png)
 
 [a]: http://en.wikipedia.org/wiki/InfiniBand
-[b]: http://en.wikipedia.org/wiki/Ethernet
-[c]: http://www.mellanox.com/
