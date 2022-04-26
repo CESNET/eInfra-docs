@@ -64,9 +64,9 @@ nav:
         - SSH Access: general/shell-and-data-access.md
         - SSH & Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md  
       - GUI:
+        - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
         - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
         - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
-        - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
       - Access the IS and Web Services: general/services-access.md
       - VPN Access: general/accessing-the-clusters/vpn-access.md
     - Run Jobs:
