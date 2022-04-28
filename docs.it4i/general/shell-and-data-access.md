@@ -39,9 +39,10 @@ Fingerprints are identical for all login nodes.
 
 ```console
 # loginX:22 SSH-2.0-OpenSSH_7.4
+2048 MD5:41:3a:40:32:da:08:77:51:79:04:af:53:e4:57:d0:7c (RSA)
+2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo (RSA)
 256 MD5:e9:b6:8e:7d:f8:c6:8f:42:34:10:71:02:14:a6:7c:22 (ED25519)
 256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI (ED25519)
-2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo (RSA)
 ```
 
 **Public Keys \ Known Hosts**
