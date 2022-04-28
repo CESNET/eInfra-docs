@@ -15,21 +15,17 @@ All IT4Innovations clusters are accessed by the SSH protocol via login nodes at 
 
 ### Karolina Cluster
 
-| Login address           | Port | Protocol | Login node                            |
-| ----------------------- | ---- | -------- | ------------------------------------- |
-| karolina.it4i.cz        | 22   | SSH      | round-robin DNS record for login[1-4] |
-| login1.karolina.it4i.cz | 22   | SSH      | login1                                |
-| login2.karolina.it4i.cz | 22   | SSH      | login2                                |
-| login3.karolina.it4i.cz | 22   | SSH      | login3                                |
-| login4.karolina.it4i.cz | 22   | SSH      | login4                                |
+| Login address                   | Port | Protocol | Login node                                |
+| ------------------------------- | ---- | -------- | ----------------------------------------- |
+| karolina.it4i.cz                | 22   | SSH      | round-robin DNS record for login{1,2,3,4} |
+| login{1,2,3,4}.karolina.it4i.cz | 22   | SSH      | login{1,2,3,4}                            |
 
 ### Barbora Cluster
 
-| Login address             | Port | Protocol | Login node                            |
-| ------------------------- | ---- | -------- | ------------------------------------- |
-| barbora.it4i.cz           | 22   | SSH      | round-robin DNS record for login[1-2] |
-| login1.barbora.it4i.cz    | 22   | SSH      | login1                                |
-| login2.barbora.it4i.cz    | 22   | SSH      | login2                                |
+| Login address                 | Port | Protocol | Login node                            |
+| ----------------------------- | ---- | -------- | ------------------------------------- |
+| barbora.it4i.cz               | 22   | SSH      | round-robin DNS record for login{1,2} |
+| login{1,2}.barbora.it4i.cz    | 22   | SSH      | login{1,2}                            |
 
 ## Authentication
 
