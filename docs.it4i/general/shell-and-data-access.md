@@ -38,7 +38,7 @@ Authentication is available by [private key][1] only. Verify SSH fingerprints du
 Fingerprints are identical for all login nodes.
 
 ```console
-# loginX:22 SSH-2.0-OpenSSH_7.4
+# login{1,2,3,4}:22 SSH-2.0-OpenSSH_7.4
 2048 MD5:41:3a:40:32:da:08:77:51:79:04:af:53:e4:57:d0:7c (RSA)
 2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo (RSA)
 256 MD5:e9:b6:8e:7d:f8:c6:8f:42:34:10:71:02:14:a6:7c:22 (ED25519)
