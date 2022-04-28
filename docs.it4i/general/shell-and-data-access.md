@@ -39,35 +39,22 @@ Authentication is available by [private key][1] only. Verify SSH fingerprints du
 
 **Fingerprints**
 
+Fingerprints are identical for all login nodes.
+
 ```console
-# login1:22 SSH-2.0-OpenSSH_7.4
-256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI login1 (ED25519)
-2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo login1 (RSA)
-
-# login2:22 SSH-2.0-OpenSSH_7.4
-2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo login2 (RSA)
-256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI login2 (ED25519)
-
-# login3:22 SSH-2.0-OpenSSH_7.4
-2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo login3.karolina.it4i.cz (RSA)
-256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI login3.karolina.it4i.cz (ED25519)
-
-# login4:22 SSH-2.0-OpenSSH_7.4
-256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI login4 (ED25519)
-2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo login4 (RSA)
+# loginX:22 SSH-2.0-OpenSSH_7.4
+256 MD5:e9:b6:8e:7d:f8:c6:8f:42:34:10:71:02:14:a6:7c:22 (ED25519)
+256 SHA256:zKEtQMi2KRsxzzgo/sHcog+NFZqQ9tIyvJ7BVxOfzgI (ED25519)
+2048 SHA256:Ip37d/bE6XwtWf3KnWA+sqA+zRGSFlf5vXai0v3MBmo (RSA)
 ```
 
 **Public Keys \ Known Hosts**
 
+Public Keys \ Known Hosts are identical for all login nodes.
+
 ```console
-login1,login1.karolina.it4i.cz,login1.karolina,karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
-login1,login1.karolina.it4i.cz,login1.karolina,karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
-login2,login2.karolina.it4i.cz,login2.karolina,karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
-login2,login2.karolina.it4i.cz,login2.karolina,karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
-login3,login3.karolina.it4i.cz,login3.karolina,karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
-login3,login3.karolina.it4i.cz,login3.karolina,karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
-login4,login4.karolina.it4i.cz,login4.karolina,karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
-login4,login4.karolina.it4i.cz,login4.karolina,karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
+loginX,loginX.karolina.it4i.cz,loginX.karolina,karolina.it4i.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9Cp8/a3F7eOPQvH4+HjC778XvYgRXWmCEOQnE3clPcKw15iIat3bvKc8ckYLudAzomipWy4VYdDI2OnEXay5ba8HqdREJO31qNBtW1AXgydCfPnkeuUZS4WVlAWM+HDlK6caB8KlvHoarCnNj2jvuYsMbARgGEq3vrk3xW4uiGpS6Y/uGVBBwMFWFaINbmXUrU1ysv/ZD1VpH4eHykkD9+8xivhhZtcz5Z2T7ZnIib4/m9zZZvjKs4ejOo58cKXGYVl27kLkfyOzU3cirYNQOrGqllN/52fATfrXKMcQor9onsbTkNNjMgPFZkddufxTrUaS7EM6xYsj8xrPJ2RaN
+loginX,loginX.karolina.it4i.cz,loginX.karolina,karolina.it4i.cz ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkIdDODkUYRgMy1h6g/UtH34RnDCQkwwiJZFB0eEu1c
 ```
 
 ### Barbora
