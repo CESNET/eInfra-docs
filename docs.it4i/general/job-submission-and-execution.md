@@ -105,18 +105,9 @@ By default, the PBS batch system sends an email only when the job is aborted. Di
 ```console
 $ qsub -m n
 ```
+<!--- NOT IMPLEMENTED ON KAROLINA YET
 
 ## Advanced Job Placement
-
-### Placement by Name
-
-Specific nodes may be allocated via PBS:
-
-```console
-$ qsub -A OPEN-0-0 -q qprod -l select=1:host=cn120+1:host=cn121 -I
-```
-
-In this example, we allocate the nodes cn120 and cn121, (number of cores depends on the cluster), for 24 hours. Consumed resources will be accounted to the Project identified by Project ID `OPEN-0-0`. The resources will be available interactively.
 
 ### Salomon - Placement by Network Location
 
@@ -138,90 +129,7 @@ In this example, we request all 9 nodes directly connected to the same switch us
 ```console
 $ qsub -A OPEN-0-0 -q qprod -l select=9 -l place=group=switch ./myjob
 ```
-
-### Salomon - Placement by Specific InfiniBand Switch
-
-!!! note
-    Not useful for ordinary computing, suitable for testing and management tasks.
-
-Nodes directly connected to the specific InfiniBand switch can be selected using the PBS resource attribute `switch`.
-
-In this example, we request all 9 nodes directly connected to the r4i1s0sw1 switch.
-
-```console
-$ qsub -A OPEN-0-0 -q qprod -l select=9:switch=r4i1s0sw1 ./myjob
-```
-
-List of all InfiniBand switches:
-
-```console
-$ qmgr -c 'print node @a' | grep switch | awk '{print $6}' | sort -u
-r1i0s0sw0
-r1i0s0sw1
-r1i1s0sw0
-r1i1s0sw1
-r1i2s0sw0
-...
-```
-
-List of all nodes directly connected to the specific InfiniBand switch:
-
-```console
-$ qmgr -c 'p n @d' | grep 'switch = r36sw3' | awk '{print $3}' | sort
-r36u31n964
-r36u32n965
-r36u33n966
-r36u34n967
-r36u35n968
-r36u36n969
-r37u32n970
-r37u33n971
-r37u34n972
-```
-
-### Salomon - Placement by Hypercube Dimension
-
-Nodes located in the same dimension group may be allocated using node grouping on the PBS resource attribute `ehc\_[1-7]d`.
-
-| Hypercube dimension | node_group_key | #nodes per group |
-| ------------------- | -------------- | ---------------- |
-| 1D                  | ehc_1d         | 18               |
-| 2D                  | ehc_2d         | 36               |
-| 3D                  | ehc_3d         | 72               |
-| 4D                  | ehc_4d         | 144              |
-| 5D                  | ehc_5d         | 144, 288         |
-| 6D                  | ehc_6d         | 432, 576         |
-| 7D                  | ehc_7d         | all              |
-
-In this example, we allocate 16 nodes in the same [hypercube dimension][5] 1 group.
-
-```console
-$ qsub -A OPEN-0-0 -q qprod -l select=16 -l place=group=ehc_1d -I
-```
-
-For better understanding:
-
-List of all groups in dimension 1:
-
-```console
-$ qmgr -c 'p n @d' | grep ehc_1d | awk '{print $6}' | sort |uniq -c
-     18 r1i0
-     18 r1i1
-     18 r1i2
-     18 r1i3
-...
-```
-
-List of all nodes in specific dimension 1 group:
-
-```console
-$ qmgr -c 'p n @d' | grep 'ehc_1d = r1i0' | awk '{print $3}' | sort
-r1i0n0
-r1i0n1
-r1i0n10
-r1i0n11
-...
-```
+-->
 
 ## Advanced Job Handling
 
