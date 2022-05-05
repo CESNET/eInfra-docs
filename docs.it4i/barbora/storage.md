@@ -217,7 +217,7 @@ For more information, see the [Job Features][8] section.
 [6]: ../storage/project-storage.md
 [7]: ../storage/standard-file-acl.md
 [8]: ../job-features.md#global-ram-disk
-[9]: [6]: ../storage/project-storage.md#project-quotas
+[9]: ../storage/project-storage.md#project-quotas
 
 [a]: http://www.nas.nasa.gov
 [b]: http://www.nas.nasa.gov/hecc/support/kb/Lustre_Basics_224.html#striping
