@@ -154,39 +154,9 @@ For more information, see the [PROJECT storage][6] section.
 
 ### Disk Usage and Quota Commands
 
-Disk usage and user quotas can be checked and reviewed using the following command:
+Disk usage and user quotas can be checked and reviewed using the `it4ifsusage` command. You can see an example output [here][9].
 
-```console
-$ it4i-disk-usage
-```
-
-Example:
-
-```console
-$ it4i-disk-usage -H
-# Using human-readable format
-# Using power of 1000 for space
-# Using power of 1000 for entries
-
-Filesystem:    /home
-Space used:    11GB
-Space limit:   25GB
-Entries:       15K
-Entries limit: 500K
-# based on filesystem quota
-
-Filesystem:    /scratch
-Space used:    5TB
-Space limit:   10TB
-Entries:       22K
-Entries limit: 10M
-# based on Lustre quota
-```
-
-In this example, we view current size limits and space occupied on the /home and /scratch filesystem, for a particular user executing the command.
-Note that limits are imposed also on number of objects (files, directories, links, etc.) that are allowed to create.
-
-To have a better understanding of where the space is exactly used, you can use following command to find out.
+To have a better understanding of where the space is exactly used, you can use following command:
 
 ```console
 $ du -hs dir
@@ -247,6 +217,7 @@ For more information, see the [Job Features][8] section.
 [6]: ../storage/project-storage.md
 [7]: ../storage/standard-file-acl.md
 [8]: ../job-features.md#global-ram-disk
+[9]: [6]: ../storage/project-storage.md#project-quotas
 
 [a]: http://www.nas.nasa.gov
 [b]: http://www.nas.nasa.gov/hecc/support/kb/Lustre_Basics_224.html#striping
