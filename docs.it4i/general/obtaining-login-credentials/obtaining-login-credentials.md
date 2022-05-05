@@ -5,7 +5,7 @@
 
 If you are not eligible for an e-INFRA CZ account, contact the [IT4I support][a] (email: [support\[at\]it4i.cz][b]) and provide the following information:
 
-1. Full name and affiliation
+1. Full name, country/countries of citizenship, academic affiliation, and country of affiliation
 1. Statement that you have read and accepted the [Acceptable use policy document][c] (AUP)
 1. Attach the AUP file
 1. Your preferred username (4 to 7 characters)<br>The preferred username must associate with your first and last name or be otherwise derived from it. Only alphanumeric sequences and dash signs are allowed. Note that the system will automatically add the `it4i-` prefix to your username.
@@ -23,7 +23,7 @@ Subject: Access to IT4Innovations
 Dear support,
 
 Please open the user account for me and attach the account to OPEN-0-0
-Name and affiliation: John Smith, john.smith@myemail.com, Department of Chemistry, MIT, US
+Personal information: John Smith, USA, Department of Chemistry, MIT, MA, US
 I have read and accept the Acceptable use policy document (attached)
 
 Preferred username: johnsm
