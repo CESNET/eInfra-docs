@@ -105,6 +105,7 @@ By default, the PBS batch system sends an email only when the job is aborted. Di
 ```console
 $ qsub -m n
 ```
+
 <!--- NOT IMPLEMENTED ON KAROLINA YET
 
 ## Advanced Job Placement
@@ -129,6 +130,7 @@ In this example, we request all 9 nodes directly connected to the same switch us
 ```console
 $ qsub -A OPEN-0-0 -q qprod -l select=9 -l place=group=switch ./myjob
 ```
+
 -->
 
 ## Advanced Job Handling
