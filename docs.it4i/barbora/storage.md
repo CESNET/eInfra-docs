@@ -176,8 +176,6 @@ $ du -hs * .[a-zA-z0-9]* | grep -E "[0-9]*G|[0-9]*M" | sort -hr
 
 This will list all directories with MegaBytes or GigaBytes of consumed space in your actual (in this example HOME) directory. List is sorted in descending order from largest to smallest files/directories.
 
-To have a better understanding of previous commands, you can read man pages:
-
 ### Extended ACLs
 
 Extended ACLs provide another security mechanism beside the standard POSIX ACLs, which are defined by three entries (for owner/group/others). Extended ACLs have more than the three basic entries. In addition, they also contain a mask entry and may contain any number of named user and named group entries.
