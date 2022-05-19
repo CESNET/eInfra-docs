@@ -1,6 +1,6 @@
-site_name: IT4Innovations Documentation
+site_name: e-INFRA.CZ Documentation
 docs_dir: docs.it4i
-site_url: https://docs.it4i.cz/
+site_url: https://docs.e-infra.cz/
 extra_css:
    - src/css.css?id=2018100501
    - https://unpkg.com/mermaid@7.0.5/dist/mermaid.css
@@ -13,7 +13,7 @@ repo_name: sccs/docs.it4i.cz
 repo_url: https://code.it4i.cz/sccs/docs.it4i.cz
 
 # Copyright
-copyright: Copyright (c) 2013-__YEAR__ IT4Innovations__VERSION__
+copyright: Copyright (c) 2013-__YEAR__ e-infra.cz - e-infrastructure for research __VERSION__
 
 theme:
   name: material
@@ -28,10 +28,9 @@ theme:
     - navigation.tabs
     #- tabs
     #- instant
-
-  icon:
-    logo: fontawesome/solid/book-open
-    repo: fontawesome/brands/gitlab
+#  icon:
+#    logo: fontawesome/solid/book-open
+#    repo: fontawesome/brands/gitlab
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -240,13 +239,13 @@ nav:
       - VESTA: software/viz/vesta.md
     - PBS Pro Documentation: pbspro.md
 
-extra:
-  disqus: 'test-3whnesz3gq'
-  social:
-    - icon: 'fontawesome/brands/gitlab'
-      link: 'https://code.it4i.cz/sccs/docs.it4i.cz'
-    - icon: fontawesome/solid/globe-europe
-      link: https://www.it4i.cz
+#extra:
+#  disqus: 'test-3whnesz3gq'
+#  social:
+#    - icon: 'fontawesome/brands/gitlab'
+#      link: 'https://code.it4i.cz/sccs/docs.it4i.cz'
+#    - icon: fontawesome/solid/globe-europe
+#      link: https://www.it4i.cz
 
 plugins:
   - search:
@@ -267,6 +266,6 @@ markdown_extensions:
   - footnotes
   - pymdownx.superfences
 
-google_analytics:
-  - 'UA-90498826-1'
-  - 'auto'
+#google_analytics:
+#  - 'UA-90498826-1'
+#  - 'auto'

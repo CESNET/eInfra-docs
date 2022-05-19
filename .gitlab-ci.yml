@@ -53,10 +53,9 @@ ext_links:
   stage: after_test
   image: it4innovations/docker-mkdocscheck:latest
   before_script:
-  - echo "192.168.101.10 docs.it4i.cz" >> /etc/hosts
   - wget -V
-  - echo https://docs.it4i.cz/devel/$CI_BUILD_REF_NAME/
-  - wget --spider -e robots=off -o wget.log -r -p https://docs.it4i.cz/devel/$CI_BUILD_REF_NAME/ || true
+  - echo https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/
+  - wget --spider -e robots=off -o wget.log -r -p https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/ || true
   script:
   - cat wget.log | awk '/^Found [0-9]+ broken link[s]?.$/,/FINISHED/ { rc=-1; print $0 }; END { exit rc }'
 
@@ -94,47 +93,48 @@ mkdocs:
     - site
     expire_in: 1 week
 
-deploy to stage:
-  environment: stage
+.prepare_deploy: &prepare_deploy
   stage: deploy
-  image: it4innovations/docker-mkdocscheck:latest
-  before_script:
-  # install ssh-agent
-  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-  - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
-  # run ssh-agent
-  - eval $(ssh-agent -s)
-  # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
-  - ssh-add <(echo "$SSH_PRIVATE_KEY")
-  # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
-  # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
-  - mkdir -p ~/.ssh
-  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-  script:
-  - chown nginx:nginx site -R
-  - rsync -a --delete site/ root@"$SSH_HOST_STAGE":/srv/docs.it4i.cz/devel/$CI_BUILD_REF_NAME/
-  only:
-  - branches@sccs/docs.it4i.cz
+  before_script: 
+      - apk update && apk add rsync
+      - eval $(ssh-agent -s)
+      - echo "$SSH_HOSTING_KEY" | tr -d '\r' | ssh-add -
+      - mkdir -p ~/.ssh
+      - chmod 700 ~/.ssh
+      - echo "$SSH_KNOWN_HOSTS__HOSTING" >> ~/.ssh/known_hosts
+      - chmod 644 ~/.ssh/known_hosts
 
-deploy to production:
-  environment: production
-  stage: deploy
-  image: it4innovations/docker-mkdocscheck:latest
-  before_script:
-  # install ssh-agent
-  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-  - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
-  # run ssh-agent
-  - eval $(ssh-agent -s)
-  # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
-  - ssh-add <(echo "$SSH_PRIVATE_KEY")
-  # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
-  # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
-  - mkdir -p ~/.ssh
-  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+deploy production:
+  needs: ["build_docs"]
+  environment:
+      name: production
+      url: https://${HOSTING_HOST}
   script:
-  - chown nginx:nginx site -R
-  - rsync -a --delete site/ root@"$SSH_HOST_STAGE":/srv/docs.it4i.cz/site/
+    - rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete --exclude=/review site/ ${HOSTING_USERNAME}@${HOSTING_HOST}:~/public_html
   only:
-  - master@sccs/docs.it4i.cz
-  when: manual
+    - master
+  <<: *prepare_deploy
+
+deploy dev:
+  needs: ["build_docs"]
+  environment:
+      name: review/$CI_COMMIT_REF_SLUG
+      url: https://${HOSTING_HOST}/review/$CI_COMMIT_REF_SLUG
+  <<: *prepare_deploy
+  script:
+    - rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete --exclude=/review site/ ${HOSTING_USERNAME}@${HOSTING_HOST}:~/public_html/review/$CI_COMMIT_REF_SLUG
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never
+    - if: $CI_COMMIT_BRANCH
+
+stop_review:
+  <<: *prepare_deploy
+  script:
+    - ssh -o StrictHostKeyChecking=no ${HOSTING_USERNAME}@${HOSTING_HOST} rm -rf ~/public_html/review/$CI_COMMIT_REF_SLUG
+  environment:
+    name: review/$CI_COMMIT_REF_SLUG
+    action: stop
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+      when: manual
