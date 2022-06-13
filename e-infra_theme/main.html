@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if "breadcrumbs" not in page.meta.hide %}
+{% block breadcrumbs %}
+<nav class="md-breadcrumbs" data-md-component="breadcrumbs">
+    <div class="md-breadcrumbs__inner md-typeset md-grid">
+        {% include "partials/breadcrumbs.html" %}
+    </div> 
+</nav>
+{% endblock %}
+{% endif %}
+{% include "partials/content.html" %}
+{% endblock %}
+
+{% block htmltitle %}
+{% if page and page.meta and page.meta.title %}
+  <title>{{ page.meta.title }} - {{ config.extra.site_title }}</title>
+{% elif page and page.title and not page.is_homepage %}
+  <title>{{ page.title | striptags }} - {{ config.extra.site_title }}</title>
+{% else %}
+  <title>{{ config.extra.site_title }}</title>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,8 @@
+{% if page %}
+    {% for parent in page.ancestors|reverse %}
+    <span class="md-header-nav__parent">
+        {{parent.title}} /
+    </span>
+    {% endfor %}
+{% endif %}
+{{ page.title | default(config.site_name, true) }}

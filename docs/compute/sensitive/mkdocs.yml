@@ -1,0 +1,9 @@
+site_name: "Sensitive"
+
+nav:
+  - Overview: index.md
+  - Getting started:
+    - Creating project:
+      -  Sign to perun
+      -  Access projman
+      -  Send request

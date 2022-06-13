@@ -1,0 +1,8 @@
+site_name: Cloud Concepts
+
+nav:
+  - Overview: index.md
+  - Use-cases:
+    - use-cases/muni-kypo.md
+    - use-cases/mmci-muni-bbmri.md
+  - Available Hardware: hw.md

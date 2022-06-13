@@ -1,243 +1,61 @@
-site_name: e-INFRA.CZ Documentation
-docs_dir: docs.it4i
+site_name: Documentation
+docs_dir: docs
 site_url: https://docs.e-infra.cz/
 extra_css:
-   - src/css.css?id=2018100501
+   - assets/css/extra.css?id=2018100501
    - https://unpkg.com/mermaid@7.0.5/dist/mermaid.css
 
 extra_javascript:
    - https://unpkg.com/mermaid@7.0.5/dist/mermaid.min.js
 
 # Repository
-repo_name: sccs/docs.it4i.cz
-repo_url: https://code.it4i.cz/sccs/docs.it4i.cz
+# repo_name: sccs/docs.it4i.cz
+# repo_url: https://code.it4i.cz/sccs/docs.it4i.cz
 
 # Copyright
-copyright: Copyright (c) 2013-__YEAR__ e-infra.cz - e-infrastructure for research __VERSION__
+copyright: Copyright (c) 2021-2022 e-infra.cz - documentation portal 
+
+extra:
+  generator: false
+  version: !ENV [SITE_VERSION, 'undef_build_number']
+  site_title: e-INFRA CZ Documentation
 
 theme:
   name: material
-  custom_dir: material
+  favicon: //www.e-infra.cz/file/8a46e25120eb50e33af28a8ff9df2850/282/favicon/logo-e-infra.svg
+  logo: assets/e-infra.png
+  custom_dir: e-infra_theme
   language: 'en'
 
   # 404 page
   static_templates:
     - 404.html
-
   features:
     - navigation.tabs
     #- tabs
     #- instant
-#  icon:
-#    logo: fontawesome/solid/book-open
-#    repo: fontawesome/brands/gitlab
-
+  icon:
+    logo: fontawesome/solid/book-open
+    repo: fontawesome/brands/gitlab
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
-
   font:
     text: 'Ubuntu'
-    code: 'Ubuntu Mono'
-  palette:
-    primary: 'indigo'
-    accent: 'indigo'
-
-  favicon: img/favicon.ico
+    code: 'Source Code Pro'
 
 nav:
-  - General:
-    - Introduction: index.md
-    - Get Access:
-      - Introduction: general/access/account-introduction.md
-      - Get Account:
-        - e-INFRA CZ Account: general/access/einfracz-account.md
-        - IT4I Account: general/obtaining-login-credentials/obtaining-login-credentials.md
-      - Get Project Membership: general/access/project-access.md
-    - Get Project: general/applying-for-resources.md
-    - Manage Your Profile:
-      - e-INFRA CZ Profile: general/management/einfracz-profile.md
-      - IT4I Profile: general/management/it4i-profile.md
-    - Access Services:
-      - Access the Clusters:
-        - SSH Access: general/shell-and-data-access.md
-        - SSH & Key Management: general/accessing-the-clusters/shell-access-and-data-transfer/ssh-key-management.md  
-      - GUI:
-        - VNC: general/accessing-the-clusters/graphical-user-interface/vnc.md
-        - X Window System: general/accessing-the-clusters/graphical-user-interface/x-window-system.md
-        - Xorg: general/accessing-the-clusters/graphical-user-interface/xorg.md
-      - Access the IS and Web Services: general/services-access.md
-      - VPN Access: general/accessing-the-clusters/vpn-access.md
-    - Run Jobs:
-      - Introduction: general/resource_allocation_and_job_execution.md
-      - Resources Allocation Policy: general/resources-allocation-policy.md
-      - Job Priority: general/job-priority.md
-      - Job Submission and Execution: general/job-submission-and-execution.md
-      - Capacity Computing: general/capacity-computing.md
-      - Migrating from SLURM: general/slurmtopbs.md
-    - Technical Information:
-      - SSH Keys:
-        - OpenSSH Keys (UNIX): general/accessing-the-clusters/shell-access-and-data-transfer/ssh-keys.md
-        - PuTTY (Windows): general/accessing-the-clusters/shell-access-and-data-transfer/putty.md
-      - Certificates FAQ: general/obtaining-login-credentials/certificates-faq.md
-      - API Documentation: apiv1.md
-    - Satisfaction and Feedback: general/feedback.md
-    - PRACE: prace.md
-    - DICE: dice.md
-    - Support: general/support.md
-  - Storage:
-    - PROJECT: storage/project-storage.md
-    - CESNET: storage/cesnet-storage.md
-    - Access Control List:
-      - Standard File ACL: storage/standard-file-acl.md
-      - NFSv4 File ACL: storage/nfs4-file-acl.md
-  - Clusters:
-    - Karolina:
-      - Introduction: karolina/introduction.md
-      - Hardware Overview: karolina/hardware-overview.md
-      - Compute Nodes: karolina/compute-nodes.md
-      - Storage: karolina/storage.md
-      - Network: karolina/network.md
-      - Visualization Servers: karolina/visualization.md
-    - Barbora:
-      - Introduction: barbora/introduction.md
-      - Hardware Overview: barbora/hardware-overview.md
-      - Compute Nodes: barbora/compute-nodes.md
-      - Storage: barbora/storage.md
-      - Network: barbora/network.md
-      - Visualization Servers: barbora/visualization.md
-    - NVIDIA DGX-2:
-      - Introduction: dgx2/introduction.md
-      - Accessing the DGX-2: dgx2/accessing.md
-      - Resource Allocation and Job Execution: dgx2/job_execution.md
-      - Software deployment: dgx2/software.md
-    - Archive:
-        - Introduction: archive/archive-intro.md
-        - Anselm:
-          - Introduction: anselm/introduction.md
-          - Hardware Overview: anselm/hardware-overview.md
-          - Compute Nodes: anselm/compute-nodes.md
-          - Storage: anselm/storage.md
-          - Network: anselm/network.md
-        - Salomon: 
-          - Introduction: salomon/introduction.md
-          - Hardware Overview: salomon/hardware-overview.md
-          - Compute Nodes: salomon/compute-nodes.md
-          - Network:
-            - InfiniBand Network: salomon/network.md
-            - IB Single-Plane Topology: salomon/ib-single-plane-topology.md
-            - 7D Enhanced Hypercube: salomon/7d-enhanced-hypercube.md
-          - Storage: salomon/storage.md
-          - Visualization Servers: salomon/visualization.md
-  - Software:
-    - Environment and Modules: environment-and-modules.md
-    - Modules:
-      - New Software Installation Request: software/modules/new-software.md      
-      - Lmod Environment: software/modules/lmod.md
-      - Modules Matrix: modules-matrix.md
-      - Job Features: job-features.md
-      - Available Karolina Modules: modules-karolina.md
-      - Available Barbora Modules: modules-barbora.md
-      - Available DGX-2 Modules: modules-dgx.md  
-    - ISV Licenses: software/isv_licenses.md
-    - CAE:
-      - COMSOL:
-        - COMSOL: software/cae/comsol/comsol-multiphysics.md
-        - Licensing and Available Versions: software/cae/comsol/licensing-and-available-versions.md
-    - Chemistry:
-      - VASP: software/chemistry/vasp.md
-      - Gaussian: software/chemistry/gaussian.md
-      - Molpro: software/chemistry/molpro.md
-      - NWChem: software/chemistry/nwchem.md
-      - Orca: software/chemistry/orca.md
-      - Phono3py: software/chemistry/phono3py.md
-      - Phonopy: software/chemistry/phonopy.md
-    - Compilers:
-      - Overview: software/compilers.md
-      - Karolina Compilation: software/karolina-compilation.md  
-    - Data Science:
-        - Dask: software/data-science/dask.md
-    - Debuggers:
-      - Introduction: software/debuggers/introduction.md
-      - Allinea Forge (DDT,MAP): software/debuggers/allinea-ddt.md
-      - Allinea Performance Reports: software/debuggers/allinea-performance-reports.md
-      - CUBE: software/debuggers/cube.md
-      - Intel VTune Amplifier XE: software/debuggers/intel-vtune-amplifier.md
-      - Intel VTune Profiler: software/debuggers/intel-vtune-profiler.md  
-      - PAPI: software/debuggers/papi.md
-      - Scalasca: software/debuggers/scalasca.md
-      - Score-P: software/debuggers/score-p.md
-      - Total View: software/debuggers/total-view.md
-      - Valgrind: software/debuggers/valgrind.md
-      - Vampir: software/debuggers/vampir.md
-    - GPU:
-      - NVIDIA CUDA: software/nvidia-cuda.md
-    - Intel Suite:
-      - Introduction: software/intel/intel-suite/intel-parallel-studio-introduction.md
-      - Intel Advisor: software/intel/intel-suite/intel-advisor.md
-      - Intel Compilers: software/intel/intel-suite/intel-compilers.md
-      - Intel IPP: software/intel/intel-suite/intel-integrated-performance-primitives.md
-      - Intel Inspector: software/intel/intel-suite/intel-inspector.md
-      - Intel MKL: software/intel/intel-suite/intel-mkl.md
-      - Intel TBB: software/intel/intel-suite/intel-tbb.md
-      - Intel Trace Analyzer and Collector: software/intel/intel-suite/intel-trace-analyzer-and-collector.md
-    - Machine Learning:
-      - Introduction: software/machine-learning/introduction.md
-      - NetKet: software/machine-learning/netket.md
-      - TensorFlow: software/machine-learning/tensorflow.md
-    - MPI:
-      - Introduction: software/mpi/mpi.md
-      - OpenMPI Examples: software/mpi/ompi-examples.md
-      - MPI4Py (MPI for Python): software/mpi/mpi4py-mpi-for-python.md
-    - Numerical Languages:
-      - Introduction: software/numerical-languages/introduction.md
-      - Clp: salomon/software/numerical-libraries/Clp.md
-      - R: software/numerical-languages/r.md
-      - Matlab: software/numerical-languages/matlab.md
-      - Octave: software/numerical-languages/octave.md
-      - OpenCoarrays: software/numerical-languages/opencoarrays.md
-    - Numerical Libraries:
-      - FFTW: software/numerical-libraries/fftw.md
-      - GSL: software/numerical-libraries/gsl.md
-      - HDF5: software/numerical-libraries/hdf5.md
-      - Intel Numerical Libraries: software/numerical-libraries/intel-numerical-libraries.md
-      - PETSc: software/numerical-libraries/petsc.md
-    - Languages:
-      - Java: software/lang/java.md
-      - C#: software/lang/csc.md
-      - Python: software/lang/python.md
-      - Python-Conda: software/lang/conda.md
-      - JuliaLang: software/lang/julialang.md
-    - Phys:
-      - LMGC90: salomon/software/phys/LMGC90.md
-      - PragTic: salomon/software/phys/PragTic.md
-    - Tools:
-      - ANSYS:
-        - Introduction: software/tools/ansys/ansys.md
-        - ANSYS CFX: software/tools/ansys/ansys-cfx.md
-        - ANSYS Fluent: software/tools/ansys/ansys-fluent.md
-        - ANSYS LS-DYNA: software/tools/ansys/ansys-ls-dyna.md
-        - ANSYS MAPDL: software/tools/ansys/ansys-mechanical-apdl.md
-        - Workbench: software/tools/ansys/workbench.md
-        - Setting License Preferences: software/tools/ansys/licensing.md
-        - Licensing and Available Versions: software/tools/ansys/setting-license-preferences.md
-      - EasyBuild:
-        - Introduction: software/tools/easybuild.md
-        - Generating Container Recipes and Images: software/tools/easybuild-images.md
-      - Singularity: software/tools/singularity-it4i.md
-      - Spack: software/tools/spack.md
-      - Virtualization: software/tools/virtualization.md
-    - Visualization:
-      - GPI-2: software/viz/gpi2.md
-      - In situ: software/viz/insitu.md
-      - NICE DCV: software/viz/NICEDCVsoftware.md
-      - OpenFOAM: software/viz/openfoam.md
-      - OVITO: software/viz/ovito.md
-      - ParaView: software/viz/paraview.md
-      - QtiPlot: software/viz/qtiplot.md       
-      - VirtualGL: software/viz/vgl.md
-      - VESTA: software/viz/vesta.md
-    - PBS Pro Documentation: pbspro.md
+  - 'Overview': index.md
+  - Accounts: '!include ./docs/accounts/mkdocs.yml'
+  - Compute:
+    - ./compute/index.md
+    - Concepts: '!include ./docs/compute/concepts/mkdocs.yml'
+    - Supercomputer: '!include ./docs/compute/supercomputing/mkdocs.yml'
+    - Kubernetes: '!include ./docs/compute/kubernetes/mkdocs.yml'
+    - OpenStack: '!include ./docs/compute/openstack/mkdocs.yml'
+    - Sensitive: '!include ./docs/compute/sensitive/mkdocs.yml'
+  - Storage: '!include ./docs/storage/mkdocs.yml'
+  - Managed services: '!include ./docs/managed/mkdocs.yml'
 
 #extra:
 #  disqus: 'test-3whnesz3gq'
@@ -248,6 +66,7 @@ nav:
 #      link: https://www.it4i.cz
 
 plugins:
+  - monorepo
   - search:
       separator: '[\s\.]+'
       lang:
@@ -265,6 +84,12 @@ markdown_extensions:
   - pymdownx.tabbed:
   - footnotes
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - meta
 
 #google_analytics:
 #  - 'UA-90498826-1'

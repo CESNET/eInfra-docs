@@ -1,0 +1,31 @@
+---
+
+title: Obtaining API key
+search:
+  exclude: false
+---
+
+# Obtaining API key
+
+__1.__ In **Identity &gt; Application Credentials**, click on **Create Application Credential**.
+__2.__ Choose name, description and expiration date & time.
+
+!!! example
+
+    ![](/assets/openstack/app_creds_1.png)
+
+!!! tip
+
+    If you decide to select specific roles, you should always include at least the **member** role.
+    If you are planning to use the orchestration API, add the **heat_stack_owner** role as well and
+    check **Unrestricted**.
+
+__3.__ Download provided configuration files for the OpenStack CLI client.
+
+!!! example
+
+    ![](/assets/openstack/app_creds_2.png)
+
+__4.__ [Install](https://pypi.org/project/python-openstackclient/) and
+   [configure](https://docs.openstack.org/python-openstackclient/train/configuration/index.html)
+   OpenStack CLI client or use [cloud tools](/OpenStack/additional-information/using-cloud-tools/).

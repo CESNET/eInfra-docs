@@ -1,0 +1,16 @@
+---
+
+title: Security Groups
+search:
+  exclude: false
+---
+
+# Security Groups
+
+Security groups are a collection of security rules that are applied on specific VM.
+
+Security rules in OpenStack serve as a Firewall. They are applied directly on VM ports and therefore proper configuration is necessary. Ingress as well as egress rules can be configured using Horizon and CLI. If you can't connect via ssh or ping your instance, chances are it is because of security rules.
+
+If you delete default egress rules, your virtual machine will not be able to send outgoing communication. To fix this, add a new egress rule with *any* IP protocol and port range, set Remote IP prefix to *0.0.0.0/0* (IPv4) or *::/0* (IPv6).
+
+Example configuration is available on page [Managing security groups](/OpenStack/how-to-guides/managing-security-groups/). For full CLI reference please refer to [OpenStack docs](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/security-group.html).

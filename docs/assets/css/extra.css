@@ -1,0 +1,382 @@
+:root {
+  --md-details-icon: url("data:image/svg+xml; utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' /></svg>");
+  --md-primary-fg-color:        #2f2557;
+  --md-primary-fg-color--light: #8634fc;
+  --md-primary-fg-color--dark:  #f2f6f8;
+  --md-text-font-family: "canada-type-gibson";
+}
+
+.md-typeset details {
+  display:block;
+  padding-top:0;
+  overflow:visible
+}
+
+.md-typeset details[open]>summary::after {
+  transform:rotate(90deg)
+}
+
+.md-typeset details:not([open]) {
+  padding-bottom:0
+}
+
+.md-typeset details:not([open])>summary {
+  border-bottom-right-radius:.1rem
+}
+
+.md-typeset details::after {
+  display:table;
+  content:""
+}
+
+.md-typeset summary {
+  display:block;
+  min-height:1rem;
+  padding:.4rem 1.8rem .4rem 2rem;
+  border-top-right-radius:.1rem;
+  cursor:pointer
+}
+
+[dir=rtl] .md-typeset summary {
+  padding:.4rem 2rem .4rem 1.8rem
+}
+
+.md-typeset summary::-webkit-details-marker {
+  display:none
+}
+
+.md-typeset summary::after {
+  position:absolute;
+  top:.4rem;
+  right:.4rem;
+  width:1rem;
+  height:1rem;
+  background-color:currentColor;
+  -webkit-mask-image:var(--md-details-icon);
+  mask-image:var(--md-details-icon);
+  transform:rotate(0deg);
+  transition:transform 250ms;
+  content:""
+}
+
+[dir=rtl] .md-typeset summary::after {
+  right:initial;
+  left:.4rem;
+  transform:rotate(180deg)
+}
+
+html .md-nav__link[for=__toc] {
+  display:none
+}
+
+html .md-nav__link[for=__toc]~.md-nav {
+  display: none;
+}
+
+
+.md-nav__icon.md-icon svg {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    vertical-align: -0.1rem;}
+/*
+.md-nav__icon.md-icon {
+  float: left;
+  padding-right: .2rem;
+}
+*/
+.md-nav__it4i_link {
+    display: block;
+    transition: color 0.125s;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    overflow: hidden
+}
+
+a:not([href*="//"]) {
+    /* CSS for internal links */
+}
+
+a.md-footer-social__link.fa.fa-globe {
+    !background: none;
+}
+
+a[href*="//"]:not( [href*='127.0.0.1'] ):not( [href*='docs.it4i.cz'] ):not( [href*='gitlab.it4i.cz'] ):not( [href*='code.it4i.cz'] ):not( [href*='https://www.it4i.cz'] ):not( [href*='https://support.it4i.cz'] )  {
+    /*CSS for external links */
+    background: transparent url("/img/external.png") no-repeat right 0px top 1px;
+    background-size: 12px;
+    padding: 1px 16px 1px 0px;
+}
+
+
+.md-nav__it4i_link:after {
+    font-family: Material Icons;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    speak: none;
+    word-wrap: normal;
+    direction: ltr
+}
+
+/*
+.md-nav__item--nested>.md-nav__it4i_link:after {
+    content: "keyboard_arrow_down"
+}*/
+
+html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_link:after,html .md-nav__it4i_link[for=toc]~.md-nav {
+    display: none;
+}
+
+/*
+.md-nav__it4i_link[data-md-state=blur] {
+    color: rgba(0,0,0,.54)
+}
+*/
+
+.md-nav__it4i_link--active,.md-nav__it4i_link:active {
+    color: #3f51b5
+}
+
+.md-nav__it4i_link:focus,.md-nav__it4i_link:hover {
+    color: #536dfe
+}
+@media only screen and (max-width: 59.9375em) {
+    html .md-nav__it4i_link[for=toc] {
+        display: block;
+        padding-right: 4.8rem
+    }
+
+    html .md-nav__it4i_link[for=toc]:after {
+        color: inherit;
+        content: "toc"
+    }
+
+    html .md-nav__it4i_link[for=toc]+.md-nav__it4i_link {
+        display: none
+    }
+
+    html .md-nav__it4i_link[for=toc]~.md-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+    /*
+    .md-nav--primary .md-nav__item--nested>.md-nav__it4i_link {
+        padding-right: 4.8rem
+    }
+
+    .md-nav--primary .md-nav__item--nested>.md-nav__it4i_link:after {
+        display: none;
+    }*/
+
+    .md-nav--primary .md-nav__it4i_link {
+        position: relative;
+        padding: 1.6rem
+    }
+
+    .md-nav--primary .md-nav__it4i_link:after {
+        position: absolute;
+        top: 50%;
+        right: 1.2rem;
+        margin-top: -1.2rem;
+        color: rgba(0,0,0,.54);
+        font-size: 2.4rem
+    }
+
+    .md-nav--primary .md-nav__it4i_link:focus:after,.md-nav--primary .md-nav__it4i_link:hover:after {
+        color: inherit
+    }
+
+    .md-nav--primary .md-nav--secondary .md-nav .md-nav__it4i_link {
+        padding-left: 2.8rem
+    }
+
+    .md-nav--primary .md-nav--secondary .md-nav .md-nav .md-nav__it4i_link {
+        padding-left: 4rem
+    }
+
+    .md-nav--primary .md-nav--secondary .md-nav .md-nav .md-nav .md-nav__it4i_link {
+        padding-left: 5.2rem
+    }
+
+    .md-nav--primary .md-nav--secondary .md-nav .md-nav .md-nav .md-nav .md-nav__it4i_link {
+        padding-left: 6.4rem
+    }
+}
+@media only screen and (min-width: 76.25em) {
+    .md-nav__item--nested>.md-nav__it4i_link:after {
+        display: inline-block;
+        -webkit-transform-origin: .45em .45em;
+        transform-origin: .45em .45em;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        vertical-align: -.125em
+    }
+
+    .js .md-nav__item--nested>.md-nav__it4i_link:after {
+        -webkit-transition: -webkit-transform .4s;
+        transition: -webkit-transform .4s;
+        transition: transform .4s;
+        transition: transform .4s,-webkit-transform .4s
+    }
+
+    .md-nav__item--nested .md-nav__toggle:checked~.md-nav__it4i_link:after {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg)
+    }
+}
+
+.md-header__button.md-logo {
+    margin: .2rem .2rem;
+    padding: .4rem .4rem;
+  }
+  
+  .md-logo > img {
+    height: 1.5rem !important;
+    width: auto !important;
+  }
+  
+  .md-footer__grid {
+    display: flex
+  }
+  
+  .md-footer__grid {
+    padding: 20px 0;
+    font-size: 0.7rem;
+  }
+  
+  .md-footer__heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .md-footer__organizations > img,
+  .md-footer__terms > a {
+    display: block;
+  }
+  
+  /* .md-nav--lifted > ul > .md-nav__item--nested > label {
+    font-size: 1rem
+  } */
+  
+  .md-breadcrumbs__inner {
+    font-size: 0.55rem;
+  }
+
+.md-tabs {
+    background: var(--md-default-bg-color);
+    color: var(--md-primary-fg-color);
+}
+
+.md-tabs__link {
+    padding: 0.5rem;
+    margin-top: 0.6rem;
+    font-weight: 700;
+}
+
+/* Support for MD-TYPESET */
+
+.md-typeset .grid {
+  grid-gap: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  margin: 1em 0;
+}
+.md-typeset .grid.cards > :-webkit-any(ul, ol) {
+  display: contents;
+}
+.md-typeset .grid.cards > :-moz-any(ul, ol) {
+  display: contents;
+}
+.md-typeset .grid.cards > :is(ul, ol) {
+  display: contents;
+}
+.md-typeset .grid.cards > :-webkit-any(ul, ol) > li,
+.md-typeset .grid > .card {
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.1rem;
+  display: block;
+  margin: 0;
+  padding: 0.8rem;
+  -webkit-transition: border 0.25s, box-shadow 0.25s;
+  transition: border 0.25s, box-shadow 0.25s;
+}
+.md-typeset .grid.cards > :-moz-any(ul, ol) > li,
+.md-typeset .grid > .card {
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.1rem;
+  display: block;
+  margin: 0;
+  padding: 0.8rem;
+  -moz-transition: border 0.25s, box-shadow 0.25s;
+  transition: border 0.25s, box-shadow 0.25s;
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li,
+.md-typeset .grid > .card {
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.1rem;
+  display: block;
+  margin: 0;
+  padding: 0.8rem;
+  transition: border 0.25s, box-shadow 0.25s;
+}
+.md-typeset .grid.cards > :-webkit-any(ul, ol) > li:-webkit-any(:focus-within, :hover),
+.md-typeset .grid > .card:-webkit-any(:focus-within, :hover) {
+  border-color: transparent;
+  box-shadow: var(--md-shadow-z2);
+}
+.md-typeset .grid.cards > :-moz-any(ul, ol) > li:-moz-any(:focus-within, :hover),
+.md-typeset .grid > .card:-moz-any(:focus-within, :hover) {
+  border-color: transparent;
+  box-shadow: var(--md-shadow-z2);
+}
+.md-typeset .grid.cards > :is(ul, ol) > li:is(:focus-within, :hover),
+.md-typeset .grid > .card:is(:focus-within, :hover) {
+  border-color: transparent;
+  box-shadow: var(--md-shadow-z2);
+}
+.md-typeset .grid.cards > :-webkit-any(ul, ol) > li > hr,
+.md-typeset .grid > .card > hr {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.md-typeset .grid.cards > :-moz-any(ul, ol) > li > hr,
+.md-typeset .grid > .card > hr {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.md-typeset .grid.cards > :is(ul, ol) > li > hr,
+.md-typeset .grid > .card > hr {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.md-typeset .grid.cards > :-webkit-any(ul, ol) > li > :first-child,
+.md-typeset .grid > .card > :first-child {
+  margin-top: 0;
+  font-size: 1rem;
+}
+.md-typeset .grid.cards > :-moz-any(ul, ol) > li > :first-child,
+.md-typeset .grid > .card > :first-child {
+  margin-top: 0;
+}
+.md-typeset .grid.cards > :is(ul, ol) > li > :first-child,
+.md-typeset .grid > .card > :first-child {
+  margin-top: 0;
+}
+.md-typeset .grid.cards > :-webkit-any(ul, ol) > li > :last-child,
+.md-typeset .grid > .card > :last-child {
+  margin-bottom: 0;
+}
+.md-typeset .grid.cards > :-moz-any(ul, ol) > li > :last-child,
+.md-typeset .grid > .card > :last-child {
+  margin-bottom: 0;
+}
+.md-typeset .grid.cards > :is(ul, ol) > li > :last-child,
+.md-typeset .grid > .card > :last-child {
+  margin-bottom: 0;
+}

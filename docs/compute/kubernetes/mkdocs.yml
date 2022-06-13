@@ -1,0 +1,42 @@
+site_name: "Kubernetes"
+
+nav:
+  - 'Overview': index.md
+  - Rancher:
+    - Overview: rancher/index.md
+    - 'Projects, Namespaces, and Quotas': rancher/quotas.md
+    - 'Requesting a Project, Access Control': rancher/projects/index.md
+    - Applications:
+      - Overview: apps/index.md
+      -  Ansys: apps/ansys/index.md
+      -  Bioconductor: apps/bioconductor/index.md
+      -  Matlab: apps/matlab/index.md
+      -  ownCloud: apps/owncloud/index.md
+      -  RStudio Server : apps/rstudio/index.md
+      -  ShinySOM: apps/ssom/index.md
+      -  VMD: vmd.md
+      -  Desktop Server: desktop.md
+  - Docker:
+    - docker/dockerfile.md
+    - docker/limitations.md
+  - Kubernetes:
+    - Overview: index.md
+    - Kubectl: kubernetes/kubectl/index.md
+    - Certificate: kubernetes/certificates/index.md
+    - Exposing applications: kubernetes/expose.md
+    - Storage: kubernetes/pvc.md
+    - GPU and other Resources: kubernetes/resources.md
+    - Security and Network Policy: kubernetes/security.md
+  - Get started:
+    - Overview: get-started/index.md
+    - 'Deploy Hello World!': get-started/hello-world/index.md
+    - MPI Jobs: mpi.md
+  - GitOps:
+    - GitLab Agent: gitops/git_agent/agentk.md
+    - GitLab Containers: gitops/container_build/building_containers.md
+    - Securely Storing Secrets in Git: gitops/git_secrets/gitsecrets.md
+  - Case Studies:
+    - Nextflow: nextflow.md
+
+markdown_extensions:
+  - pymdownx.snippets

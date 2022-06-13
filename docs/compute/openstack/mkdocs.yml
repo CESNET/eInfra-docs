@@ -1,0 +1,56 @@
+site_name: "OpenStack"
+
+nav:
+  - index.md
+  - Getting started:
+    # - getting-started/creating-project.md
+    - getting-started/creating-first-infrastructure.md
+  - How-to guides:
+    - how-to-guides/accessing-instances.md
+    - how-to-guides/allocating-floating-ips.md
+    - how-to-guides/attaching-interface.md
+    # - how-to-guides/attaching-remote-storage.md
+    - how-to-guides/changing-vm-resources.md
+    - how-to-guides/create-networking.md
+    - how-to-guides/deploying-loadbalancers.md
+    # - how-to-guides/high-availability-deployment.md
+    # - how-to-guides/maintaining-cloud-resources.md
+    - how-to-guides/manage-volumes.md
+    - how-to-guides/managing-security-groups.md
+    - how-to-guides/obtaining-api-key.md
+    # - how-to-guides/using-custom-linux-images.md
+    # - how-to-guides/using-object-storage.md
+  - Technical reference:
+    - technical-reference/cloud-resources.md
+    - technical-reference/data-storage.md
+    - technical-reference/flavors.md
+    - technical-reference/get-support.md
+    - technical-reference/image-rotation.md
+    # - technical-reference/openstack-management.md
+    - technical-reference/openstack-modules.md
+    # - technical-reference/openstack-status.md
+    - technical-reference/quota-limits.md
+    - technical-reference/remote-access.md
+    # - technical-reference/service-level-indicators.md
+    # - technical-reference/volume-usage.md
+  - Additional information:
+    - additional-information/about.md
+    # - additional-information/computing-on-hpc.md
+    # - additional-information/concepts-of-cloud-computing.md
+    - additional-information/contribute.md
+    - additional-information/custom-images.md
+    # - additional-information/gpu-computing.md
+    - additional-information/ip-allocation-policy.md
+    - additional-information/ipv6-troubleshooting.md
+    - additional-information/load-balancers.md
+    - additional-information/object-storage.md
+    - additional-information/orchestration.md
+    - additional-information/project-expiration.md
+    - additional-information/python-libraries.md
+    - additional-information/security-groups.md
+    # - additional-information/storage-capabilities.md
+    - additional-information/terms-of-service.md
+    - additional-information/use-cases.md
+    - additional-information/using-cloud-tools.md
+    - additional-information/virtual-networking.md
+    - additional-information/windows.md

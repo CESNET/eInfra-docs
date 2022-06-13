@@ -7,6 +7,9 @@ stages:
 variables:
     PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
 
+before_script:
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+
 docs:
   stage: test
   image: it4innovations/docker-mdcheck:latest
@@ -59,38 +62,51 @@ ext_links:
   script:
   - cat wget.log | awk '/^Found [0-9]+ broken link[s]?.$/,/FINISHED/ { rc=-1; print $0 }; END { exit rc }'
 
+# mkdocs:
+#   stage: build
+#   image: it4innovations/docker-mkdocscheck:latest
+#   before_script:
+#   - source /opt/.venv3/bin/activate
+#   - python -V # debug
+#   - pip freeze # debug
+#   - mkdocs -V # debug
+#   script:
+#     # add version to footer
+#   - bash scripts/add_version.sh
+#     # get modules list from clusters
+#   - bash scripts/get_modules.sh
+#     # generate site_url
+#   - (if [ "${CI_BUILD_REF_NAME}" != 'master' ]; then sed -i "s/\(site_url.*$\)/\1devel\/$CI_BUILD_REF_NAME\//" mkdocs.yml;fi);
+#     # generate ULT for code link
+#   - sed -i "s/master/$CI_BUILD_REF_NAME/g" material/partials/toc.html
+#     # regenerate modules matrix
+#   - python scripts/modules_matrix.py > docs.it4i/modules-matrix.md
+#   - python scripts/modules_matrix.py --json > docs.it4i/modules-matrix.json
+#   - curl -f0 https://code.it4i.cz/sccs/scs-api-public/raw/master/scs_api.server_public.md -o docs.it4i/apiv1.md
+#     # build pages
+#   - mkdocs build
+#     # replace broken links in 404.html
+#   - sed -i 's,href="" title=",href="/" title=",g' site/404.html
+#   - cp site/404.html site/403.html
+#   - sed -i 's/404 - Not found/403 - Forbidden/g' site/403.html
+#     # compress sitemap
+#   - gzip < site/sitemap.xml > site/sitemap.xml.gz
+#   artifacts:
+#     paths:
+#     - site
+#     expire_in: 1 week
+
 mkdocs:
+  image: 
+      name: registry.gitlab.ics.muni.cz:443/einfra-docs/main
+      entrypoint: ["/bin/sh", "-c"]
   stage: build
-  image: it4innovations/docker-mkdocscheck:latest
-  before_script:
-  - source /opt/.venv3/bin/activate
-  - python -V # debug
-  - pip freeze # debug
-  - mkdocs -V # debug
   script:
-    # add version to footer
-  - bash scripts/add_version.sh
-    # get modules list from clusters
-  - bash scripts/get_modules.sh
-    # generate site_url
-  - (if [ "${CI_BUILD_REF_NAME}" != 'master' ]; then sed -i "s/\(site_url.*$\)/\1devel\/$CI_BUILD_REF_NAME\//" mkdocs.yml;fi);
-    # generate ULT for code link
-  - sed -i "s/master/$CI_BUILD_REF_NAME/g" material/partials/toc.html
-    # regenerate modules matrix
-  - python scripts/modules_matrix.py > docs.it4i/modules-matrix.md
-  - python scripts/modules_matrix.py --json > docs.it4i/modules-matrix.json
-  - curl -f0 https://code.it4i.cz/sccs/scs-api-public/raw/master/scs_api.server_public.md -o docs.it4i/apiv1.md
-    # build pages
-  - mkdocs build
-    # replace broken links in 404.html
-  - sed -i 's,href="" title=",href="/" title=",g' site/404.html
-  - cp site/404.html site/403.html
-  - sed -i 's/404 - Not found/403 - Forbidden/g' site/403.html
-    # compress sitemap
-  - gzip < site/sitemap.xml > site/sitemap.xml.gz
+    - export SITE_VERSION="rev. $CI_COMMIT_SHORT_SHA / "$(env TZ=Europe/Prague date -I)
+    - mkdocs build
   artifacts:
     paths:
-    - site
+      - site
     expire_in: 1 week
 
 .prepare_deploy: &prepare_deploy

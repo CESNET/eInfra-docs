@@ -1,0 +1,25 @@
+FROM debian:buster
+
+RUN apt-get update && \
+    apt-get -y --no-install-recommends install openmpi-bin openssh-server openssh-client bind9-host && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /var/run/sshd
+
+RUN useradd -m -u 1000 user
+
+RUN sed -i 's/[ #]\(.*StrictHostKeyChecking \).*/ \1no/g' /etc/ssh/ssh_config && \
+    echo "    UserKnownHostsFile /dev/null" >> /etc/ssh/ssh_config && \
+    echo "StrictModes no" > /etc/ssh/sshd_config && \
+    echo "PidFile /tmp/sshd.pid" >> /etc/ssh/sshd_config && \
+    echo "HostKey ~/.ssh/id_rsa" >> /etc/ssh/sshd_config && \
+    echo "Port 2222" >> /etc/ssh/sshd_config && \
+    echo "ListenAddress 0.0.0.0" >> /etc/ssh/sshd_config && \
+    sed -i 's/.*Port 22.*/   Port 2222/g' /etc/ssh/ssh_config
+
+WORKDIR /data
+
+RUN chown 1000:1000 /etc/ssh/ssh_config
+
+CMD /usr/sbin/sshd -De
+

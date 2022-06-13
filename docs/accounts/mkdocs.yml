@@ -1,0 +1,6 @@
+site_name: Accounts
+
+nav:
+  - Overview: index.md
+  - Membership Registration: registration.md
+  - Membership Renewal: renewal.md

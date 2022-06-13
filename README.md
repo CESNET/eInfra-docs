@@ -1,8 +1,6 @@
 # User documentation
 
-test
-
-This project contains IT4Innovations user documentation source.
+This project contains e-INFRA CZ documentation portal source.
 
 ## Development
 
@@ -14,6 +12,13 @@ $ virtualenv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
+
+or using docker 
+
+```console
+$ ./start.sh -b
+```
+the `-b` parameter builds the container with required dependencies.
 
 ### Package upgrade with pip
 
