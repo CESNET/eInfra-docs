@@ -14,6 +14,7 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
     Please note, that the documentation portal is in the early stages of development. Do not use any information from the portal to run mission critical solutions, yet. :-)
 
 # e-INFRA Services
+
 <div class="grid cards" markdown>
 
 -   :fontawesome-solid-fingerprint:{ .lg .middle } __e-INFRA CZ Account__
@@ -86,13 +87,20 @@ Security and certificates
     Basic proficiency in Linux environments is required.
 
 In order to use the system for your calculations, you need basic proficiency in Linux environments.
-To gain this proficiency, we recommend you read the [introduction to Linux][a] operating system environments,
+To gain this proficiency, we recommend you read the [introduction to Linux][e] operating system environments,
 and install a Linux distribution on your personal computer.
-For example, the [CentOS][b] distribution is similar to systems on the clusters at IT4Innovations and it is easy to install and use,
+For example, the [CentOS][f] distribution is similar to systems on the clusters at IT4Innovations and it is easy to install and use,
 but any Linux distribution would do.
 
-## Errors
+## Feedback
 
-Although we have taken every care to ensure the accuracy of the content, mistakes do happen.
-If you find an inconsistency or error, please report it by visiting [support][d], creating a new ticket, and entering the details.
-By doing so, you can save other readers from frustration and help us improve.
+If you find any inconsistency or error, please contact [support][g] with details or create a merge request by clicking on **Edit This Page**.
+Thank you for helping us improve and provide better content for the readers.
+
+
+[a]: https://www.cesnet.cz/?lang=en
+[b]: https://www.cerit-sc.cz/
+[c]: https://www.it4i.cz/en
+[e]: http://www.tldp.org/LDP/intro-linux/html/
+[f]: http://www.centos.org/
+[g]: emailto:support
