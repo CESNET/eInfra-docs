@@ -13,11 +13,12 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-or using docker 
+or using docker
 
 ```console
 $ ./start.sh -b
 ```
+
 the `-b` parameter builds the container with required dependencies.
 
 ### Package upgrade with pip
