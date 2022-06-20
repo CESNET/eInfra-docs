@@ -24,5 +24,3 @@ This section contains mainly operational information about the MetaCentrum Opens
 **Additional information**
 
 This section desribes further information and problems that users can approach when using MetaCentrum Openstack Cloud.
-
-**[MetaCentrum Openstack Cloud news](news.md)**

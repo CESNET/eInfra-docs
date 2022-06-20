@@ -13,14 +13,14 @@ __1.__ Go to **Project &gt;  Network &gt; Security Groups**. Click on **Manage R
 
 !!! example
 
-    ![](/assets/openstack/instance/sec_group1.png)
+    ![](/compute/openstack/docs/images/instance/sec_group1.png)
 
 __2.__ Click on **Add rule**, choose **SSH**, and leave the remaining fields unchanged.
    This will allow you to access your instance via IPv4.
 
 !!! example
 
-    ![](/assets/openstack/instance/sec_group2.png)
+    ![](/compute/openstack/docs/images/instance/sec_group2.png)
 
 !!! caution
 

@@ -37,7 +37,7 @@ nav:
     - additional-information/about.md
     # - additional-information/computing-on-hpc.md
     # - additional-information/concepts-of-cloud-computing.md
-    - additional-information/contribute.md
+    # - additional-information/contribute.md
     - additional-information/custom-images.md
     # - additional-information/gpu-computing.md
     - additional-information/ip-allocation-policy.md

@@ -21,25 +21,25 @@ Floating IPs are used to assign public IP address to VMs.
 
     !!! example
 
-        ![](/assets/openstack/networks/fip1.png)
+        ![](/compute/openstack/docs/images/networks/fip1.png)
 
     **2.** Select **Pool** with the same value as the network you chose in the previous step and confirm it by clicking **Allocate IP**.
 
     !!! example
 
-        ![](/assets/openstack/networks/fip2.png)
+        ![](/compute/openstack/docs/images/networks/fip2.png)
 
     **3.** Now click on the **Associate** button next to the Floating IP you just created.
 
     !!! example
 
-        ![](/assets/openstack/networks/fip3.png)
+        ![](/compute/openstack/docs/images/networks/fip3.png)
 
     **4.** Select **Port to be associated** with the desired instance. Confirm with the **Associate** button.
 
     !!! example
 
-        ![](/assets/openstack/networks/fip4.png)
+        ![](/compute/openstack/docs/images/networks/fip4.png)
 
 === "CLI"
 
@@ -68,7 +68,7 @@ Floating IPs are used to assign public IP address to VMs.
 
     !!! example
 
-        ![](/assets/openstack/networks/fip5.png)
+        ![](/compute/openstack/docs/images/networks/fip5.png)
 
 
 === "CLI"

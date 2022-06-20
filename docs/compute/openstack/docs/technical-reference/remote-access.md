@@ -66,7 +66,7 @@ We recommend downloading [Windows Installer](https://www.chiark.greenend.org.uk/
 * Enter passphrase for selected private key file if [Pageant SSH authentication agent](#pageant-ssh-agent) is not used
     *  We recommend using Pageant SSH Agent to store the private key in memory without the need to retype a passphrase on every login
 
-![](/assets/openstack/putty/putty-connect2instance.png)
+![](/compute/openstack/docs/images/putty/putty-connect2instance.png)
 
 
 ### Pageant SSH Agent
@@ -79,7 +79,7 @@ We recommend downloading [Windows Installer](https://www.chiark.greenend.org.uk/
 * Enter the passphrase and confirm **OK** button
 * Your private key is now located in the memory without the need to retype a passphrase on every login
 
-![](/assets/openstack/putty/pageant-add-key.png)
+![](/compute/openstack/docs/images/putty/pageant-add-key.png)
 
 
 ### Key Generator
@@ -91,7 +91,7 @@ PuTTYgen is the PuTTY key generator. You can load in an existing private key and
 * Run PuTTYgen, in the menu Conversion -> Import key browse and load your OpenSSH format id_rsa private key using your passphrase
 * Save PuTTY ppk private key using button **Save private key**, browse destination for PuTTY format id_rsa.ppk, and save file
 
-![](/assets/openstack/putty/puttygen-openssh2ppk.png)
+![](/compute/openstack/docs/images/putty/puttygen-openssh2ppk.png)
 
 
 ### Convert PuTTY ppk private key to OpenSSH format
@@ -99,7 +99,7 @@ PuTTYgen is the PuTTY key generator. You can load in an existing private key and
 * Run PuTTYgen, in the menu File -> Load private key browse and open your private key in format PuTTY ppk using your passphrase
 * In the menu Conversion -> Export OpenSSH key browse destination for OpenSSH format id_rsa and save file
 
-![](/assets/openstack/putty/puttygen-ppk2openssh.png)
+![](/compute/openstack/docs/images/putty/puttygen-ppk2openssh.png)
 
 
 ### Change Password for Existing Private Key Pair
@@ -108,7 +108,7 @@ PuTTYgen is the PuTTY key generator. You can load in an existing private key and
 * Enter a new passphrase in the field *Key passphrase* and confirm again in the field *Confirm passphrase*
 * Save changes using button **Save private key**
 
-![](/assets/openstack/putty/puttygen-passphrase.png)
+![](/compute/openstack/docs/images/putty/puttygen-passphrase.png)
 
 
 ### Generate a New Key Pair
@@ -121,4 +121,4 @@ PuTTYgen is the PuTTY key generator. You can load in an existing private key and
 * Save your new private key in the `id_rsa.ppk` format using the **Save private key** button
 * Save the public key with the **Save public key** button
 
-![](/assets/openstack/putty/puttygen_new_key.png)
+![](/compute/openstack/docs/images/putty/puttygen_new_key.png)
