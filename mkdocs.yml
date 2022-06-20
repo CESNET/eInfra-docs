@@ -13,7 +13,7 @@ extra_javascript:
 # repo_url: https://code.it4i.cz/sccs/docs.it4i.cz
 
 # Copyright
-copyright: Copyright (c) 2021-2022 e-infra.cz - documentation portal 
+copyright: Copyright (c) 2021-2022 e-infra.cz - documentation portal
 
 extra:
   generator: false
@@ -73,15 +73,23 @@ plugins:
         - en
 
 markdown_extensions:
+  - abbr
+  - admonition
   - codehilite
-  - markdown.extensions.admonition:
+  - pymdownx.snippets
   - pymdownx.arithmatex:
+  - pymdownx.betterem:
+      smart_enable: all
   - markdown.extensions.toc:
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
   - pymdownx.snippets:
       base_path: snippets
   - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
   - footnotes
   - pymdownx.superfences
   - pymdownx.emoji:
@@ -90,6 +98,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - meta
+  - tables
 
 #google_analytics:
 #  - 'UA-90498826-1'

@@ -49,7 +49,7 @@ You can view these images via **CLI** or in **dashboard**.
 
 In **dashboard** visit section *Images* and then you can search via listed image and/or set searching criteria in search bar. There is a parameter *Visibility* where you can specify visibility of image you are searching for. These visibility parameters are explained below.
 
-![](/assets/openstack/image_visibility.png)
+![](/compute/openstack/docs/images/image_visibility.png)
 
 
 ### Public images

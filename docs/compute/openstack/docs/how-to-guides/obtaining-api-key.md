@@ -12,7 +12,7 @@ __2.__ Choose name, description and expiration date & time.
 
 !!! example
 
-    ![](/assets/openstack/app_creds_1.png)
+    ![](/compute/openstack/docs/images/app_creds_1.png)
 
 !!! tip
 
@@ -24,7 +24,7 @@ __3.__ Download provided configuration files for the OpenStack CLI client.
 
 !!! example
 
-    ![](/assets/openstack/app_creds_2.png)
+    ![](/compute/openstack/docs/images/app_creds_2.png)
 
 __4.__ [Install](https://pypi.org/project/python-openstackclient/) and
    [configure](https://docs.openstack.org/python-openstackclient/train/configuration/index.html)
