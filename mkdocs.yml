@@ -56,6 +56,7 @@ nav:
     - Sensitive: '!include ./docs/compute/sensitive/mkdocs.yml'
   - Storage: '!include ./docs/storage/mkdocs.yml'
   - Managed services: '!include ./docs/managed/mkdocs.yml'
+  - About Us: about-us.md
 
 #extra:
 #  disqus: 'test-3whnesz3gq'
