@@ -1,9 +1,8 @@
-site_name: "Sensitive"
+site_name: "sensitivecloud"
 
 nav:
   - Overview: index.md
   - Getting started:
-    - Creating project:
-      -  Sign to perun
-      -  Access projman
-      -  Send request
+    - getting-started/new-project.md
+    - getting-started/connecting-to-sensitive-cloud.md
+  - Technical documentation: https://docs.cerit.io
