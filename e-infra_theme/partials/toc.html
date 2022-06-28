@@ -7,11 +7,11 @@
   {% if page.url == '' %}
     {% set it4i_link = config.repo_url + '/edit/master/docs.it4i/index.md' %}
     {% set it4i_page = '/index.md' %}
-    {% set it4i_url = 'https://docs.it4i.cz' %}
+    {% set it4i_url = 'https://docs.e-infra.cz' %}
   {% else %}
-    {% set it4i_link = config.repo_url + '/edit/master/docs.it4i/' + page.url.rstrip('/') + '.md' %}
+    {% set it4i_link = config.repo_url + '/edit/master/docs/' + page.url.rstrip('/') + '.md' %}
     {% set it4i_page = page.abs_url.rstrip('index.html').rstrip('/') + '.md' %}
-    {% set it4i_url = 'https://docs.it4i.cz' +  page.abs_url %}
+    {% set it4i_url = 'https://docs.e-infra.cz' +  page.abs_url %}
   {% endif %}
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -24,26 +24,21 @@
         {% include "partials/toc-item.html" %}
       {% endfor %}
     </ul>
+    <br />
     <label class="md-nav__title">Actions</label>
     <ul class="md-nav__list" data-md-scrollfix>
     <li class="md-nav__item">
-      <a href="{{ it4i_link }}" title="Edit This Page" class="md-nav__it4i_link" target="_blank">
-        <span class="md-nav__icon md-icon">
-        </span>
+      <a href="{{ it4i_link }}" title="Edit This Page" class="md-nav__link" target="_blank">
 	Edit This Page
       </a>
     </li>
     <li class="md-nav__item">
-      <a href="https://code.it4i.cz/sccs/docs.it4i.cz/issues/new?issue%5Bdescription%5D=Requested change in page [{{ it4i_page }}]({{ it4i_url }}) /cc @siw019 @kru0052" title="Request Change" class="md-nav__it4i_link" target="_blank">
-        <span class="md-nav__icon md-icon">
-        </span>
+      <a href="{{ config.repo_url }}/issues/new?issue%5Bdescription%5D=Requested change in page [{{ it4i_page }}]({{ it4i_url }}) /cc @siw019 @kru0052" title="Request Change" class="md-nav__link" target="_blank">
 	Request Change
       </a>
     </li>
     <li class="md-nav__item">
-      <a href="https://support.it4i.cz/rt" title="Get Support" class="md-nav__it4i_link" target="_blank">
-        <span class="md-nav__icon md-icon">
-        </span>
+      <a href="https://support.it4i.cz/rt" title="Get Support" class="md-nav__link" target="_blank">
 	Get Support
       </a>
     </li>

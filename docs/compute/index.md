@@ -16,10 +16,10 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
     It is possible to choose level of service from virtualization to managed container engine.
 
-    [:octicons-arrow-right-24: Virtualization (OpenStack Cloud)](#)   
-    [:octicons-arrow-right-24: Container Engine (Kubernetes)](#)   
-    [:octicons-arrow-right-24: Sensitive Proccessing](#)   
-    [:octicons-arrow-right-24: More](#)
+    [:octicons-arrow-right-24: Virtualization (OpenStack Cloud)](./openstack/)   
+    [:octicons-arrow-right-24: Container Engine (Kubernetes)](./kubernetes/)   
+    [:octicons-arrow-right-24: Sensitive Proccessing](./sensitive/)   
+    [:octicons-arrow-right-24: More](./concepts/)
 
 -   :fontawesome-solid-microchip:{ .md .middle } __Batch computing__
 
@@ -27,9 +27,9 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
     Traditional distributed computing with software and queues.
 
-    [:octicons-arrow-right-24: How to start](#)   
-    [:octicons-arrow-right-24: Running first job](#)   
-    [:octicons-arrow-right-24: More](#)   
+    [:octicons-arrow-right-24: How to start](./grid/)   
+    [:octicons-arrow-right-24: Running first job](./grid/)   
+    [:octicons-arrow-right-24: More](./grid/)   
 
 -   :fontawesome-solid-floppy-disk:{ .md .middle } __Supercomputing__
 
@@ -37,21 +37,20 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
     Supercomputing centre services.
 
-    [:octicons-arrow-right-24: Karolina](#)   
-    [:octicons-arrow-right-24: LUMI](#)   
-    [:octicons-arrow-right-24: More](#)   
+    [:octicons-arrow-right-24: Overview](./supercomputing/)   
+    [:octicons-arrow-right-24: Get Project](./supercomputing/general/applying-for-resources/)   
+    [:octicons-arrow-right-24: LUMI](https://docs.lumi-supercomputer.eu/)   
 
 
 </div>
 
 ## How to choose between computing services?
 
-- Read computing service overview
-- Check comparision between computing services
-- ...
+- [Read computing service overview](./concepts/)
+- Check comparision between computing services _(TODO)_
 
 ## See how different scientific use-cases are implemented.
 
-- Cybersecurity platform
-- Sensitive data obtaining to processing on cloud infrastructure
-- Computing large scale data at grids
+- [Cybersecurity platform](./concepts/use-cases/muni-kypo)
+- Sensitive data obtaining to processing on cloud infrastructure _(TODO)_
+- Computing large scale data at grids _(TODO)_

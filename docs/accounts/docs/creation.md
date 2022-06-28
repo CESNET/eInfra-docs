@@ -1,10 +1,6 @@
 
-CERIT-SC HW resources are part of MetaVO virtual organization of the Czech National Grid Organization MetaCentrum NGI. A registration in MetaVO is required. 
-
-Using of MetaVO is free of charge, we only require agreement with usage rules, acknowlegement in user's publications, and annual report of achieved results.
-
 ## Usage rules
-The membership in MetaVO is allowed without any restrictions only to persons from academic environment of the Czech republic, for research purposes only.
+The membership in e-INFRA VO is allowed without any restrictions only to persons from academic environment of the Czech republic, for research purposes only.
 By submitting an application form you agree with MetaVO usage rules and you certify that you have read and understood terms and conditions of use of MetaVO hardware and software equipment and applications. 
 The user of MetaCentrum is obliged to use the acknowledgement formula in all publications created with the support of CERIT-SC equipment:
 

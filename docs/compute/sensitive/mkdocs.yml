@@ -1,4 +1,4 @@
-site_name: "sensitivecloud"
+site_name: "compute/sensitive-cloud"
 
 nav:
   - Overview: index.md

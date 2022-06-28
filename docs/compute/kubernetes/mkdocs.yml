@@ -1,4 +1,4 @@
-site_name: "Kubernetes"
+site_name: "compute/containers"
 
 nav:
   - 'Overview': index.md
