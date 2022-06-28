@@ -1,4 +1,4 @@
-site_name: "storage"
+site_name: "compute/grid"
 
 nav:
   - Overview: index.md

@@ -1,4 +1,4 @@
-site_name: "OpenStack"
+site_name: "compute/openstack"
 
 nav:
   - index.md

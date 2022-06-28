@@ -1,4 +1,4 @@
-site_name: Cloud Concepts
+site_name: "compute/concepts"
 
 nav:
   - Overview: index.md

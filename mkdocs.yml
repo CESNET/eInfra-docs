@@ -9,8 +9,8 @@ extra_javascript:
    - https://unpkg.com/mermaid@7.0.5/dist/mermaid.min.js
 
 # Repository
-# repo_name: sccs/docs.it4i.cz
-# repo_url: https://code.it4i.cz/sccs/docs.it4i.cz
+repo_name: einfra-docs/documentation
+repo_url: https://gitlab.ics.muni.cz/einfra-docs/documentation
 
 # Copyright
 copyright: Copyright (c) 2021-2022 e-infra.cz - documentation portal
@@ -50,10 +50,11 @@ nav:
   - Compute:
     - ./compute/index.md
     - Concepts: '!include ./docs/compute/concepts/mkdocs.yml'
+    - Grid computing: '!include ./docs/compute/grid/mkdocs.yml'
     - Supercomputer: '!include ./docs/compute/supercomputing/mkdocs.yml'
     - Kubernetes: '!include ./docs/compute/kubernetes/mkdocs.yml'
     - OpenStack: '!include ./docs/compute/openstack/mkdocs.yml'
-    - Sensitive: '!include ./docs/compute/sensitive/mkdocs.yml'
+    - SensitiveCloud: '!include ./docs/compute/sensitive/mkdocs.yml'
   - Storage: '!include ./docs/storage/mkdocs.yml'
   - Managed services: '!include ./docs/managed/mkdocs.yml'
   - About Us: about-us.md
