@@ -32,6 +32,11 @@ theme:
     - 404.html
   features:
     - navigation.tabs
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
+    - navigation.indexes
+    - toc.follow
+    - navigation.prune
+    - content.tooltips
     #- tabs
     #- instant
   icon:
@@ -73,6 +78,11 @@ plugins:
       separator: '[\s\.]+'
       lang:
         - en
+  - git-committers
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+      type: date
 
 markdown_extensions:
   - abbr

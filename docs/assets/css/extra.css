@@ -380,3 +380,26 @@ html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_
 .md-typeset .grid > .card > :last-child {
   margin-bottom: 0;
 }
+
+.md-source-file {
+  margin: 1em 0;
+}
+[dir=ltr] .md-source-file__fact {
+  margin-right: .6rem;
+}
+
+.md-source-file__fact {
+  align-items: center;
+  color: var(--md-default-fg-color--light);
+  display: inline-flex;
+  font-size: .68rem;
+  gap: .3rem;
+}
+
+.md-typeset a {
+  color: var(--md-primary-fg-color--light);
+}
+
+.md-typeset a:hover, .md-typeset a:focus {
+  color: var(--md-primary-fg-color);
+}
