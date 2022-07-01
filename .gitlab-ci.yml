@@ -119,7 +119,7 @@ docker-build:
 
 mkdocs:
   image: 
-      name: "registry.gitlab.ics.muni.cz:443/einfra-docs/main:$CI_COMMIT_REF_SLUG"
+      name: "http://registry.gitlab.ics.muni.cz:443/einfra-docs/documentation:${CI_COMMIT_REF_SLUG}"
       entrypoint: ["/bin/sh", "-c"]
   stage: build
   script:
