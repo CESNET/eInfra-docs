@@ -403,3 +403,9 @@ html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_
 .md-typeset a:hover, .md-typeset a:focus {
   color: var(--md-primary-fg-color);
 }
+
+.md-contributors img {
+  max-width: 28px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
