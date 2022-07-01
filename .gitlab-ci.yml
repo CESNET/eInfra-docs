@@ -107,7 +107,7 @@ docker-build:
         tag=""
         echo "Running on default branch '$CI_DEFAULT_BRANCH': tag = 'latest'"
       else
-        tag=":$CI_COMMIT_REF_NAME"
+        tag=":$CI_COMMIT_SHORT_SHA"
         echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
       fi
     - docker build --pull -t "$CI_REGISTRY_IMAGE${tag}" .
@@ -119,7 +119,7 @@ docker-build:
 
 mkdocs:
   image: 
-      name: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_NAME}"
+      name: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
       entrypoint: ["/bin/sh", "-c"]
   stage: build
   script:
