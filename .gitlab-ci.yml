@@ -5,12 +5,10 @@ stages:
   - deploy
   - after_test
 
-image: docker:dind
-before_script:
-  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
-
 variables:
     PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+    CI_REGISTRY: "hub.cerit.io"
+    CI_REGISTRY_IMAGE: $CI_REGISTRY"/einfracz/mkdocs"
 
 docs:
   stage: test
@@ -104,7 +102,7 @@ docker-build:
   services:
     - docker:dind
   before_script:
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker login -u "$HUB_REGISTRY_USER" -p "$HUB_REGISTRY_PASSWORD" $CI_REGISTRY
   script:
     - |
       if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
