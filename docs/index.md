@@ -4,6 +4,7 @@ hide:
   - navigation
   - toc
   - breadcrumbs
+  - contributors
 ---
 # Welcome to the e-INFRA CZ documentation!
 

@@ -1,11 +1,14 @@
 stages:
   - test
+  - build_img
   - build
   - deploy
   - after_test
 
 variables:
     PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+    CI_REGISTRY: "hub.cerit.io"
+    CI_REGISTRY_IMAGE: "${CI_REGISTRY}/einfracz/mkdocs"
 
 docs:
   stage: test
@@ -93,9 +96,32 @@ ext_links:
 #     - site
 #     expire_in: 1 week
 
+docker-build:
+  image: docker:latest
+  stage: build_img
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$HUB_REGISTRY_USER" -p "$HUB_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - |
+      if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
+        tag=""
+        echo "Running on default branch '$CI_DEFAULT_BRANCH': tag = 'latest'"
+      else
+        tag=":$CI_COMMIT_SHORT_SHA"
+        echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
+      fi
+    - docker build --pull -t "$CI_REGISTRY_IMAGE${tag}" .
+    - docker push "$CI_REGISTRY_IMAGE${tag}"
+  rules:
+    - if: $CI_COMMIT_BRANCH
+      exists:
+        - Dockerfile
+
 mkdocs:
   image: 
-      name: registry.gitlab.ics.muni.cz:443/einfra-docs/main
+      name: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
       entrypoint: ["/bin/sh", "-c"]
   stage: build
   script:

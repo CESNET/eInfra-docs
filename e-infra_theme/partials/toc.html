@@ -4,7 +4,7 @@
   {% if toc_ | first is defined and "\x3ch1 id=" in page.content %}
     {% set toc_ = (toc_ | first).children %}
   {% endif %}
-  {% if page.url == '' %}
+  {% if page is none %}
     {% set it4i_link = config.repo_url + '/edit/master/docs.it4i/index.md' %}
     {% set it4i_page = '/index.md' %}
     {% set it4i_url = 'https://docs.e-infra.cz' %}
