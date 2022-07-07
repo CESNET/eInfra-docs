@@ -8,7 +8,8 @@ print_usage() {
 
 DOCKER_BIN=${DOCKER_BIN:-"docker"}
 # DOCS_IMAGE="it4innovations/docker-mkdocscheck"
-DOCS_IMAGE="e-infra_mkdocs"
+# DOCS_IMAGE="einfra/mkdocs-test"
+DOCS_IMAGE="hub.cerit.io/einfracz/mkdocs:latest"
 
 while getopts 'pbh' option
 do
@@ -23,7 +24,7 @@ done
 shift $OPTIND-1
 
 ${DOCKER_BIN} run -it --rm \
-	-v ${PWD}:/docs \
+	-v ${PWD}:/docs:z \
 	-p 8080:80 \
   -e SITE_VERSION="rev. development / "$(env TZ=Europe/Prague date -I) \
-	${DOCS_IMAGE}:latest serve -a 0.0.0.0:80 $@
+	${DOCS_IMAGE} serve -a 0.0.0.0:80 $@
