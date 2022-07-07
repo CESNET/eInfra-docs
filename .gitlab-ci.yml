@@ -121,7 +121,7 @@ docker-build:
 
 mkdocs:
   image: 
-      name: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
+      name: "${CI_REGISTRY_IMAGE}:latest"
       entrypoint: ["/bin/sh", "-c"]
   stage: build
   script:
@@ -131,6 +131,25 @@ mkdocs:
     paths:
       - site
     expire_in: 1 week
+  only:
+    - master
+
+mkdocs-dev:
+  image:
+      name: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
+      entrypoint: ["/bin/sh", "-c"]
+  stage: build
+  script:
+    - export SITE_VERSION="review version; rev. $CI_COMMIT_SHORT_SHA / "$(env TZ=Europe/Prague date -I)
+    - mkdocs build
+  artifacts:
+    paths:
+      - site
+    expire_in: 1 week
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never
+    - if: $CI_COMMIT_BRANCH
 
 .prepare_deploy: &prepare_deploy
   stage: deploy
@@ -155,7 +174,7 @@ deploy production:
   <<: *prepare_deploy
 
 deploy dev:
-  needs: ["mkdocs"]
+  needs: ["mkdocs-dev"]
   environment:
       name: review/$CI_COMMIT_REF_SLUG
       url: https://${HOSTING_HOST}/review/$CI_COMMIT_REF_SLUG
