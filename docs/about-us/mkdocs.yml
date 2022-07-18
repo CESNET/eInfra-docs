@@ -1,0 +1,8 @@
+site_name: "about"
+
+nav:
+  - Overview: about-us.md
+  - e-INFRA contributor guide:
+    - Set up and work localy: ./contribute/overview.md
+    - Writing practices: ./contribute/best-practices.md
+    - Style guide: ./contribute/style.md
