@@ -1,81 +1,49 @@
-# Contribute to the documentation
+# Documentation overview
 
-There are several ways to contribute to the documentation
-based on the user's proficiency with Git/GitLab. From the least to most proficient, these are:    
+## Structure of the documentation
+Thanks to the [Monorepo][1] plugin for the mkdocs platform, it is possible to enable a documentation structure consisting of sub-topic-related documentation.
 
-- [Forking Repository](#forking-repository)    
-- [Simple Merge Request (using GitLab web interface)](/#simple-merge-request-using-gitlab-web-interface)    
-
-## Prerequisites
-- [Git][4]
-- [Docker][5]
-
-## Forking Repository
-
-### Fork Repository
-See GitLab @ ICS MU for details. This will create your own clone of our repository where you will be able to make changes. Once you are happy with your changes, use GitLab to submit them to our original repository.
-
-### Clone Repository
-
+The documentation is organized to categories (2nd level folders) and topics (3rd level folders). See following output for reference.   
 ```console
-# after creating your own copy of the repository on GitLab
-git clone git@gitlab.ics.muni.cz:einfra-docs/documentation.git
+.
+├── docs
+│   ├── about-us
+|   |   |-- docs
+│   │   └── mkdocs.yml
+│   ├── ...
+│   ├── compute
+│   │   ├── concepts
+|   |   |   |-- docs
+|   |   |   └── mkdocs.yml
+|   |   |-- ...
+│   │   └── supercomputing
+|   |       |-- docs
+|   |       └── mkdocs.yml
+│   └── assets
+│       ├── css
+│       └── js
+|── e-infra_theme
+|── mkdocs.yml
 ```
 
-### Create New Branch
+Earch e-INFRA service is represented by it's own topic, therefore folder structure consisting of `mkdocs.yml` file and `docs` folder.
 
-```console
-# in `documentation` folder
-git checkout -b my_change
+## Documentation configuration - mkdocs.yml
+
+The most important part of the child documentation is `mkdocs.yml` file, where the navigation and structure of the documentation is defined. The important options are:
+```yml title="Example of mkdocs.yml"
+site_name: "computing/cloud/openstack"
+nav:
+    - 'index.md'
+    - 'about.md'
 ```
 
-### Make Changes & Run Local Server
+## Building documentation
 
-Use our `start.sh`, which will use our production [Docker][4] container and will create production version server of the documentation locally on your PC.
-```console
-# in `mkdocs-material`
-./start.sh
-```
+It is possible to build whole documentation or just it's small fraction.   
 
-!!! note
-    Edits will be shown live in your browser window, no need to restart the server.
+[See how to build documentation here][2].
 
-If you don't want to build the whole documentation (due to it's big build time), you can choose to build only subset of the whole documentation site by using argument `-f <path to mkdocs.yml of subdocumnetation>`
-```console
-./start.sh -f /docs/compute/kubernetes/mkdocs.yml
-```
 
-### Commit and Push Changes
-
-If you are satisfied with your changes and you did build the whole documentation to review you changes in the context of the whole site commit and push changes to main respository:
-
-```console
-git commit -am "Commit message"
-git push --set-upstream origin my_change
-```
-
-### Submit Changes
-
-Create a *Merge Request* via GitLab @ ICS MU.
-
-## Simple Merge Request (using GitLab web interface)
-
-This option is suitable for less extensive contribution
-(e.g. a section or a subsection) of an already existing page).
-
-In this case, simply:
-
-1. click the **Edit this page**
-under the Table of Content on the right side of the respective page;
-1. make the changes;
-1. create a merge request.
-
-## Contacting Support
-
-The easiest way is to contact us at [support@e-infra.cz][3] with your contribution.
-
-[1]: https://github.com/squidfunk/mkdocs-material
-[2]: https://squidfunk.github.io/mkdocs-material/getting-started/
-[3]: mailto:support@e-infra.cz
-[4]: https://git-scm.com/downloads
-[5]: https://docs.docker.com/get-docker/
+[1]: https://github.com/backstage/mkdocs-monorepo-plugin
+[2]: ./set-up-and-work-localy
