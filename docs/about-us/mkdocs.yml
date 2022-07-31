@@ -1,0 +1,10 @@
+site_name: "about"
+
+nav:
+  - Overview: about-us.md
+  - e-INFRA contributor guide:
+    - Overview: ./contribute/overview.md
+    - Set up and work localy: ./contribute/set-up-and-work-localy.md
+    - Work within the GitLab UI: ./contribute/work-within-gitlab-ui.md
+    - Writing practices: ./contribute/writing-practices.md
+    - Style guide: ./contribute/style.md

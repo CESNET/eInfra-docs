@@ -62,7 +62,7 @@ nav:
     - SensitiveCloud: '!include ./docs/compute/sensitive/mkdocs.yml'
   - Storage: '!include ./docs/storage/mkdocs.yml'
   - Managed services: '!include ./docs/managed/mkdocs.yml'
-  - About Us: about-us.md
+  - General Information: '!include ./docs/about-us/mkdocs.yml'
 
 #extra:
 #  disqus: 'test-3whnesz3gq'
