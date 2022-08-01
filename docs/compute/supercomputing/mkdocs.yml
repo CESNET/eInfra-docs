@@ -1,3 +1,3 @@
-INHERIT: ./docs.it4i.cz/mkdocs.yml
+INHERIT: ./docs/mkdocs.yml
 site_name: "compute/supercomputing"
-docs_dir: ./docs.it4i.cz/docs.it4i
+docs_dir: ./docs/docs.it4i

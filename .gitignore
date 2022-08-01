@@ -3,4 +3,4 @@ scripts/*.csv
 venv/
 cpanel*
 
-docs/compute/supercomputing/docs.it4i.cz/
+docs/compute/supercomputing/docs/
