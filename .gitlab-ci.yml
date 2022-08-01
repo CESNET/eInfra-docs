@@ -9,6 +9,9 @@ variables:
     PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
     CI_REGISTRY: "hub.cerit.io"
     CI_REGISTRY_IMAGE: "${CI_REGISTRY}/einfracz/mkdocs"
+    GIT_SUBMODULE_STRATEGY: recursive
+
+
 
 docs:
   stage: test

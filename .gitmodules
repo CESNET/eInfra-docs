@@ -1,0 +1,3 @@
+[submodule "docs/compute/supercomputing/docs.it4i.cz"]
+	path = docs/compute/supercomputing/docs.it4i.cz
+	url = https://code.it4i.cz/sccs/docs.it4i.cz.git
