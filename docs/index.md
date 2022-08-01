@@ -38,7 +38,7 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
 
     [:octicons-arrow-right-24: Overview](/compute/)   
     [:octicons-arrow-right-24: Batch computing (Metacentrum Grid)](/compute/grid)   
-    [:octicons-arrow-right-24: Compute Cloud (Vritualization)](/compute/openstack/)   
+    [:octicons-arrow-right-24: Compute Cloud (Virtualization)](/compute/openstack/)   
     [:octicons-arrow-right-24: Containers Cloud](/compute/containers/)   
     [:octicons-arrow-right-24: Supercomputing](/compute/supercomputing/)   
     [:octicons-arrow-right-24: Sensitive data processing](/compute/sensitive-cloud)   

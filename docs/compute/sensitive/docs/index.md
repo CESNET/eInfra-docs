@@ -7,6 +7,11 @@ The environment is built on modern container technology using Kubernetes platfor
 The SensitiveCloud environment is provided by CERIT-SC, which is an organisational unit of the Institute of Computing at Masaryk University and one of the three members of the large research infrastructure e-INFRA CZ.
 
 ## What's next?
-- [How to create new project in SensitiveCloud](./getting-started/new-project.md)
-- [Connecting to the SensitiveCloud management](./getting-started/new-project.md)
-- [Working with the SensitiveCloud](https://docs.cerit.io/)
+- [How to create new project in SensitiveCloud][1]
+- [Connecting to the SensitiveCloud management][2]
+- [Working with the SensitiveCloud][3]
+
+
+[1]: ./getting-started/new-project
+[2]: ./getting-started/connecting-to-sensitive-cloud
+[3]: https://docs.cerit.io

@@ -10,7 +10,7 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-fingerprint:{ .md .middle } __Cloud services__
+-   :fontawesome-solid-server:{ .md .middle } __Cloud services__
 
     ---
 
@@ -21,7 +21,7 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
     [:octicons-arrow-right-24: Sensitive Proccessing](./sensitive/)   
     [:octicons-arrow-right-24: More](./concepts/)
 
--   :fontawesome-solid-microchip:{ .md .middle } __Batch computing__
+-   :fontawesome-solid-microchip:{ .md .middle } __Metacentrum Grid services__
 
     ---
 
@@ -31,7 +31,7 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
     [:octicons-arrow-right-24: Running first job](./grid/)   
     [:octicons-arrow-right-24: More](./grid/)   
 
--   :fontawesome-solid-floppy-disk:{ .md .middle } __Supercomputing__
+-   :fontawesome-solid-file-binary:{ .md .middle } __Supercomputing__
 
     ---
 

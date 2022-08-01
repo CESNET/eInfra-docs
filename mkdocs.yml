@@ -55,7 +55,7 @@ nav:
   - Compute:
     - ./compute/index.md
     - Concepts: '!include ./docs/compute/concepts/mkdocs.yml'
-    - Grid computing: '!include ./docs/compute/grid/mkdocs.yml'
+    - MetaCentrum Grid: '!include ./docs/compute/grid/mkdocs.yml'
     - Supercomputer: '!include ./docs/compute/supercomputing/mkdocs.yml'
     - Kubernetes: '!include ./docs/compute/kubernetes/mkdocs.yml'
     - OpenStack: '!include ./docs/compute/openstack/mkdocs.yml'
