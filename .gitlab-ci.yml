@@ -9,6 +9,10 @@ variables:
     PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
     CI_REGISTRY: "hub.cerit.io"
     CI_REGISTRY_IMAGE: "${CI_REGISTRY}/einfracz/mkdocs"
+    GIT_SUBMODULE_STRATEGY: recursive
+    GIT_DEPTH: 0
+
+
 
 docs:
   stage: test
@@ -17,50 +21,50 @@ docs:
   script:
   - mdl -r ~MD013,~MD010,~MD014,~MD024,~MD026,~MD029,~MD033,~MD036,~MD037,~MD046 *.md docs.it4i # BUGS
 
-pylint:
-  stage: test
-  image: it4innovations/docker-pycheck:latest
-  before_script:
-  - source /opt/.venv3/bin/activate
-  script:
-  - pylint $(find . -name "*.py" -not -name "feslicescript.py")
+# pylint:
+#   stage: test
+#   image: it4innovations/docker-pycheck:latest
+#   before_script:
+#   - source /opt/.venv3/bin/activate
+#   script:
+#   - pylint $(find . -name "*.py" -not -name "feslicescript.py")
 
-pysafety:
-  stage: test
-  image: it4innovations/docker-pycheck:latest
-  allow_failure: true
-  before_script:
-  - source /opt/.venv3/bin/activate
-  script:
-  - cat requirements.txt | safety check --stdin --full-report
+# pysafety:
+#   stage: test
+#   image: it4innovations/docker-pycheck:latest
+#   allow_failure: true
+#   before_script:
+#   - source /opt/.venv3/bin/activate
+#   script:
+#   - cat requirements.txt | safety check --stdin --full-report
 
-capitalize:
-  stage: test
-  image: it4innovations/docker-mkdocscheck:latest
-  script:
-  - find mkdocs.yml docs.it4i/ \( -name '*.md' -o -name '*.yml' \) -print0 | xargs -0 -n1 scripts/titlemd.py --test
+# capitalize:
+#   stage: test
+#   image: it4innovations/docker-mkdocscheck:latest
+#   script:
+#   - find mkdocs.yml docs/ \( -name '*.md' -o -name '*.yml' \) -print0 | xargs -0 -n1 scripts/titlemd.py --test
 
-ext_links:
-  stage: after_test
-  image: it4innovations/docker-mdcheck:latest
-  allow_failure: true
-  after_script:
-  # remove JSON results
-  - rm *.json
-  script:
-  - find docs.it4i/ -name '*.md' -exec grep --color -l http {} + | xargs awesome_bot -t 10 --allow-dupe --allow-redirect
-  only:
-  - master
+# ext_links:
+#   stage: after_test
+#   image: it4innovations/docker-mdcheck:latest
+#   allow_failure: true
+#   after_script:
+#   # remove JSON results
+#   - rm *.json
+#   script:
+#   - find docs.it4i/ -name '*.md' -exec grep --color -l http {} + | xargs awesome_bot -t 10 --allow-dupe --allow-redirect
+#   only:
+#   - master
 
-404s:
-  stage: after_test
-  image: it4innovations/docker-mkdocscheck:latest
-  before_script:
-  - wget -V
-  - echo https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/
-  - wget --spider -e robots=off -o wget.log -r -p https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/ || true
-  script:
-  - cat wget.log | awk '/^Found [0-9]+ broken link[s]?.$/,/FINISHED/ { rc=-1; print $0 }; END { exit rc }'
+# 404s:
+#   stage: after_test
+#   image: it4innovations/docker-mkdocscheck:latest
+#   before_script:
+#   - wget -V
+#   - echo https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/
+#   - wget --spider -e robots=off -o wget.log -r -p https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/ || true
+#   script:
+#   - cat wget.log | awk '/^Found [0-9]+ broken link[s]?.$/,/FINISHED/ { rc=-1; print $0 }; END { exit rc }'
 
 # mkdocs:
 #   stage: build

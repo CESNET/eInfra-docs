@@ -2,3 +2,5 @@ site/
 scripts/*.csv
 venv/
 cpanel*
+
+docs/compute/supercomputing/docs/
