@@ -1,3 +1,0 @@
-# Info
-
-TODO: managed overview
