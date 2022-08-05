@@ -1,0 +1,3 @@
+site_name: "compute"
+nav:
+  - Overview: index.md

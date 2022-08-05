@@ -1,5 +1,5 @@
 site_name: Documentation
-docs_dir: docs
+docs_dir: main
 site_url: https://docs.e-infra.cz/
 extra_css:
    - assets/css/extra.css?id=2018100501
@@ -10,7 +10,8 @@ extra_javascript:
 
 # Repository
 repo_name: einfra-docs/documentation
-repo_url: https://gitlab.ics.muni.cz/einfra-docs/documentation
+repo_url: https://gitlab.ics.muni.cz/einfra-docs/documentation/
+edit_uri: edit/master/docs/
 
 # Copyright
 copyright: Copyright (c) 2021-2022 e-infra.cz - documentation portal
@@ -51,19 +52,18 @@ theme:
 
 nav:
   - 'Overview': index.md
-  - Accounts: '!include ./docs/accounts/mkdocs.yml'
-  - Compute:
-    - ./compute/index.md
-    - Concepts: '!include ./docs/compute/concepts/mkdocs.yml'
-    - MetaCentrum Grid: '!include ./docs/compute/grid/mkdocs.yml'
-    - Supercomputer: '!include ./docs/compute/supercomputing/mkdocs.yml'
-    # - Supercomputer: '!include ./docs/compute/docs.it4i.cz/mkdocs.yml'
-    - Kubernetes: '!include ./docs/compute/kubernetes/mkdocs.yml'
-    - OpenStack: '!include ./docs/compute/openstack/mkdocs.yml'
-    - SensitiveCloud: '!include ./docs/compute/sensitive/mkdocs.yml'
-  - Storage: '!include ./docs/storage/mkdocs.yml'
-  - Managed services: '!include ./docs/managed/mkdocs.yml'
-  - General Information: '!include ./docs/about-us/mkdocs.yml'
+  - Accounts: '!include ./topics/accounts/mkdocs.yml'
+  - Data processing:
+    - compute/index.md
+    - Concepts: '!include ./topics/compute/concepts/mkdocs.yml'
+    - MetaCentrum Grid: '!include ./topics/compute/grid/mkdocs.yml'
+    - Supercomputer: '!include ./topics/compute/supercomputing/mkdocs.yml'
+    - Kubernetes: '!include ./topics/compute/kubernetes/mkdocs.yml'
+    - OpenStack: '!include ./topics/compute/openstack/mkdocs.yml'
+    - SensitiveCloud: '!include ./topics/compute/sensitive/mkdocs.yml'
+  - Data Storage: '!include ./topics/storage/mkdocs.yml'
+  - Managed Data Services: '!include ./topics/managed/mkdocs.yml'
+  - General Information: '!include ./topics/about-us/mkdocs.yml'
 
 #extra:
 #  disqus: 'test-3whnesz3gq'
@@ -79,7 +79,7 @@ plugins:
       separator: '[\s\.]+'
       lang:
         - en
-  - git-committers
+  # - git-committers
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true

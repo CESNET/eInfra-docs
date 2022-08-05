@@ -1,3 +1,3 @@
-[submodule "docs/compute/supercomputing/docs"]
-	path = docs/compute/supercomputing/docs
+[submodule "topics/compute/supercomputing/docs"]
+	path = topics/compute/supercomputing/docs
 	url = https://code.it4i.cz/sccs/docs.it4i.cz.git
