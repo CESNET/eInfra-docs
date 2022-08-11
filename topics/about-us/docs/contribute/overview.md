@@ -1,56 +1,43 @@
+---
+hide:
+  - toc
+authors:
+  - rosinec
+---
 # Documentation overview
 
-## Structure of the documentation
-Thanks to the [Monorepo][1] plugin for the mkdocs platform, it is possible to create a documentation structure consisting of sub-topic-related documentation.
+This section is about how to contribute to the e-INFRA CZ documentation. The guide is intended for service providers but also for users of the documentation and e-INFRA CZ services, who can participate in building the documentation and thus help other users.
 
-The documentation is organized to categories (2nd level folders) and topics (3rd level folders). See following output for reference.   
-```console
-.
-├── docs
-│   ├── about-us
-|   |   |-- docs
-│   │   └── mkdocs.yml
-│   ├── ...
-│   ├── compute
-│   │   ├── concepts
-|   |   |   |-- docs
-|   |   |   └── mkdocs.yml
-|   |   |-- ...
-│   │   └── supercomputing
-|   |       |-- docs
-|   |       └── mkdocs.yml
-│   └── assets
-│       ├── css
-│       └── js
-|── e-infra_theme
-|── mkdocs.yml
-```
+For service providers, a detailed specification of how the documentation is built and works can be useful.
 
-Each e-INFRA service is represented by it's own topic, therefore folder structure consisting of `mkdocs.yml` file and `docs` folder.
+<div class="grid cards" markdown>
 
-## Documentation configuration - mkdocs.yml
+-   :fontawesome-solid-server:{ .md .middle } __Open to contributions__
 
-The most important part of the child documentation is `mkdocs.yml` file, where the navigation and structure of the documentation is defined. The important options are:
-```yml title="Example of mkdocs.yml"
-site_name: "computing/cloud/openstack"
-nav:
-    - 'index.md'
-    - 'about.md'
-```
+    ---
 
-## Building documentation
+    Anyone can contribute. You can work with web editor or run whole documentation on your PC.
 
-It is possible to build whole documentation or just it's small fraction.   
+    [:octicons-arrow-right-24: Contribute within web editor](../contributing/work-within-gitlab-ui)   
+    [:octicons-arrow-right-24: Contribute locally](../contributing/set-up-and-work-localy)      
 
-[See how to build documentation here][2].
+-   :fontawesome-solid-microchip:{ .md .middle } __Technical details__
 
-## Publishing changes
+    ---
 
-Once the changes to the documentation has beed made locally or within the Gitlab graphical editor, it is important to publish it a make it visible on the main documentation domain. The changes will go through automatic checks and final review of our editor staff.
+    All technical information about the documentation. Targets e-INFRA CZ service providers.
 
-[Please refer to this documentation page to see how][3]
+    [:octicons-arrow-right-24: Technical details](../technical-details)   
+    [:octicons-arrow-right-24: Integration of the new service](../technical-details/#integration-of-the-new-service)   
+
+-   :fontawesome-solid-atom:{ .md .middle } __Language of the documentation__
+
+    ---
+
+    How to write documentation to make it useful, and what elements are available.
+
+    [:octicons-arrow-right-24: Writing practices](../style-guide/writing-practices)      
+    [:octicons-arrow-right-24: Style](../style-guide/style)   
 
 
-[1]: https://github.com/backstage/mkdocs-monorepo-plugin
-[2]: ../set-up-and-work-localy
-[3]: ../push-contribution-to-the-repository
+</div>

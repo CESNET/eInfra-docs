@@ -5,6 +5,19 @@ This section contains conventions and best practices for writing the best possib
 !!! note
     The section is work in progress.
 
+## Authoring and responsibility
+
+Each topic has responsible department or person which will be responsible for approving changes.
+
+| Area      | Responsible                          |
+| ----------- | ------------------------------------ |
+| Homepage, navigation, general site       | @rosinec, Jan Siwiec |
+| Accounts      | Pavel Zlamal |
+| Data processing    | @rosinec |
+| Data storage    | du.cesnet.cz |
+| Managed Data Services | @rosinec |
+| General Information    | @rosinec, Jan Siwiec |
+
 ## Passing Test in Doc Build
 
 Each pipeline starts with four test jobs:

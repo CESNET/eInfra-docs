@@ -97,7 +97,7 @@ a:not([href*="//"]) {
     /* CSS for internal links */
 }
 
-a[href*="//"]:not( [href*='127.0.0.1'] ):not( [href*='docs.it4i.cz'] ):not( [href*='gitlab.it4i.cz'] ):not( [href*='code.it4i.cz'] ):not( [href*='https://www.it4i.cz'] ):not( [href*='https://support.it4i.cz'] ):not( [href*='docs.e-infra.cz'] ) {
+a[href*="//"]:not( [href*='127.0.0.1'] ):not( [href*='docs.it4i.cz'] ):not( [href*='gitlab.it4i.cz'] ):not( [href*='code.it4i.cz'] ):not( [href*='https://www.it4i.cz'] ):not( [href*='https://e-infra.cz'] ):not( [href*='https://support.it4i.cz'] ):not( [href*='docs.e-infra.cz'] ):not( [href*='gitlab.ics.muni.cz'] )  {
     background: transparent no-repeat right 0px top 1px;
     background-size: 12px;
     padding: 0px 16px 1px 0px;

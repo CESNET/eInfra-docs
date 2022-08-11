@@ -7,11 +7,12 @@ extra_css:
 
 extra_javascript:
    - https://unpkg.com/mermaid@7.0.5/dist/mermaid.min.js
+   - assets/js/hotjar.js
 
 # Repository
 repo_name: einfra-docs/documentation
 repo_url: https://gitlab.ics.muni.cz/einfra-docs/documentation/
-edit_uri: edit/master/docs/
+edit_uri: edit/master/
 
 # Copyright
 copyright: Copyright (c) 2021-2022 e-infra.cz - documentation portal
@@ -104,7 +105,11 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - footnotes
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

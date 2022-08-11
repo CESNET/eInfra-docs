@@ -1,7 +1,5 @@
 # Contribute within Gitlab GUI
 
-## Simple Merge Request (using GitLab web interface)
-
 This option is suitable for less extensive contribution
 (e.g. a section or a subsection) of an already existing page).
 
@@ -14,4 +12,6 @@ under the Table of Content on the right side of the respective page;
 
 ## Contacting Support
 
-The easiest way is to contact us at [support@e-infra.cz][3] with your contribution.
+The easiest way is to contact us at [support@e-infra.cz][1] with your contribution.
+
+[1]: mailto:support@e-infra.cz
