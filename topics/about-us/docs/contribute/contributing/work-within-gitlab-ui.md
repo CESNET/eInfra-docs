@@ -1,7 +1,7 @@
 # Contribute within Gitlab GUI
 
-This option is suitable for less extensive contribution
-(e.g. a section or a subsection) of an already existing page).
+This option is suitable for less extensive contribution,
+e.g. a section or a subsection of an already existing page.
 
 In this case, simply:
 
