@@ -22,7 +22,7 @@ Each topic has responsible department or person which will be responsible for ap
 
 Each pipeline starts with four test jobs:
 
-1. **capitalize** - checks capitalization of (sub)titles. Every word should start with a capital letter except for prepositions. Non-standard words with mixed lower- and uppercase letters (e.g. eINFRA) should be added to the *.spelling* file.
+1. **capitalize** - checks capitalization of (sub)titles. Every word should start with a capital letter except for prepositions. Specific words with mixed lower- and uppercase letters (e.g. eINFRA) should be added as exceptions to the *.spelling* file.
 
 1. **docs** - checks some standard rules of formatting to make the source code more "readable".
 The most frequently occuring errors being: **trailing spaces** (i.e. multiple spaces at the EOL), **consecutive blank lines** or,
