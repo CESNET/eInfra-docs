@@ -25,8 +25,9 @@ Each pipeline starts with four test jobs:
 1. **capitalize** - checks capitalization of (sub)titles. Every word should start with a capital letter except for prepositions. Non-standard words with mixed lower- and uppercase letters (e.g. eINFRA) should be added to the *.spelling* file.
 
 1. **docs** - checks some standard rules of formatting to make the source code more "readable".
-The most important being: **trailing spaces** (multiple spaces at the EOL), **consecutive blank lines** or,
-alternatively, **missing blank lines** (each element -- admonition, codeblock, (sub)title, img link -- must be divided by a blank line).
+The most frequently occuring errors being: **trailing spaces** (i.e. multiple spaces at the EOL), **consecutive blank lines** or,
+alternatively, **missing blank lines** (each element -- admonition, codeblock, (sub)title, image link, etc. -- must be divided by a blank line).
+For a detailed list of the rules, see [https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md][1].
 
 1. **pylint** - don't know, but always passes :)
 
@@ -35,3 +36,5 @@ alternatively, **missing blank lines** (each element -- admonition, codeblock, (
 ## Contribution and Revision Process
 
 TODO. Here we should write down some processess for revisions and merging requests for change.
+
+[1]: https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md
