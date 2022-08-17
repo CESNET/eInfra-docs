@@ -2,7 +2,7 @@ site_name: "compute/concepts"
 
 edit_uri: edit/master/topics/compute/
 nav:
-  - Comparisson: comparisson.md
+  - Comparisson: comparison.md
   - Use-cases:
     - use-cases/muni-kypo.md
     - use-cases/mmci-muni-bbmri.md
