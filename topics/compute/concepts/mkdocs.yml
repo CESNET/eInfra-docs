@@ -1,8 +1,8 @@
 site_name: "compute/concepts"
 
-edit_uri: edit/master/topics/compute/
+edit_uri: edit/master/topics/compute/concepts/docs
 nav:
-  - Comparisson: comparison.md
+  - Comparison: comparison.md
   - Use-cases:
     - use-cases/muni-kypo.md
     - use-cases/mmci-muni-bbmri.md
