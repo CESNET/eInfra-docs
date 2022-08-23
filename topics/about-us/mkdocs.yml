@@ -5,7 +5,7 @@ nav:
   - e-INFRA contributor guide:
     - Overview: ./contribute/overview.md
     - Contributing:
-      - Set up and work localy: ./contribute/contributing/set-up-and-work-localy.md
+      - Set up and work locally: ./contribute/contributing/set-up-and-work-locally.md
       - Work within the GitLab UI: ./contribute/contributing/work-within-gitlab-ui.md
     - Style Guide:
       - Writing practices: ./contribute/style-guide/writing-practices.md
