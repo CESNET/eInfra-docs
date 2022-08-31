@@ -19,26 +19,26 @@ Below, you can find notes and recommendations on how to contribute to the docume
 ### Text
  
 * **Abbreviations and acronyms**
-  * Spell them out the first time and add the abbreviation/acronym into brackets.
+    * Spell them out the first time and add the abbreviation/acronym into brackets.
 * **Data**
-  * Treat the noun as singular, i.e. *Data is...*.
+    * Treat the noun as singular, i.e. *Data is...*.
 * **Email**
-  * Use non-hyphenated version, i.e. **not** e-mail.
+    * Use non-hyphenated version, i.e. **not** e-mail.
 * **Gender**
-  * If the gender is unknown, use neutral *they*.
+    * If the gender is unknown, use neutral *they*.
 * **Heading**
-  * Each word start with a capital letter, except for very short prepositions.
-  * If it's not a standard word, e.g. e-INFRA CZ, it must be included in the `.spelling` file.
+    * Each word start with a capital letter, except for very short prepositions.
+    * If it's not a standard word, e.g. e-INFRA CZ, it must be included in the `.spelling` file.
 * **Link**
-  * The text of a link should indicate where it leads, e.g. *see section 2* instead of *see here*.
-  * Avoid using long URLs as link text.
-  * For email addresses, spell out the address and link it.
+    * The text of a link should indicate where it leads, e.g. *see section 2* instead of *see here*.
+    * Avoid using long URLs as link text.
+    * For email addresses, spell out the address and link it.
 * **List**
-  * TODO
+    * TODO
 * **Numbers**
-  * Spell out the numbers from one to ten.
+    * Spell out the numbers from one to ten.
 * **Oxford comma**
-  * Put a comma before the last element in a list before the coordinating conjunction,
+    * Put a comma before the last element in a list before the coordinating conjunction,
   such as *and* or *or* in a series of three or more terms,
   e.g. *The e-INFRA CZ research infrastructure is being built in cooperation between CERIT-SC, CESNET, and IT4I.*
   
