@@ -107,6 +107,9 @@ docker-build:
     - docker:dind
   before_script:
     - docker login -u "$HUB_REGISTRY_USER" -p "$HUB_REGISTRY_PASSWORD" $CI_REGISTRY
+    - mkdir -p .docker
+    - "docker load -q -i .docker/fs.tar 2>&1 || :"
+    - rm -rf .docker
   script:
     - |
       if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
@@ -116,18 +119,25 @@ docker-build:
         tag=":$CI_COMMIT_SHORT_SHA"
         echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
       fi
-    - docker build --pull -t "$CI_REGISTRY_IMAGE${tag}" .
+    - docker build --cache-from="$CI_REGISTRY_IMAGE${tag}" -t "$CI_REGISTRY_IMAGE${tag}" .
     - docker push "$CI_REGISTRY_IMAGE${tag}"
+  after_script:
+      - mkdir -p .docker
+      - "docker save -o .docker/fs.tar $CI_REGISTRY_IMAGE${tag} 2>&1 || :"
+  cache:
+    - key: $CI_COMMIT_REF_SLUG
+      paths:
+        - .docker
+      when: on_success
   rules:
     - if: $CI_COMMIT_BRANCH
       exists:
         - Dockerfile
 
-mkdocs:
-  image: 
-      name: "${CI_REGISTRY_IMAGE}:latest"
-      entrypoint: ["/bin/sh", "-c"]
+.mkdocs-build: &mkdocs-build
   stage: build
+  before_script:
+    - git submodule update --remote --recursive
   script:
     - export SITE_VERSION="rev. $CI_COMMIT_SHORT_SHA / "$(env TZ=Europe/Prague date -I)
     - mkdocs build
@@ -135,6 +145,12 @@ mkdocs:
     paths:
       - site
     expire_in: 1 week
+
+mkdocs:
+  image: 
+      name: "${CI_REGISTRY_IMAGE}:latest"
+      entrypoint: ["/bin/sh", "-c"]
+  <<: *mkdocs-build
   only:
     - master
 
@@ -142,14 +158,7 @@ mkdocs-dev:
   image:
       name: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
       entrypoint: ["/bin/sh", "-c"]
-  stage: build
-  script:
-    - export SITE_VERSION="review version; rev. $CI_COMMIT_SHORT_SHA / "$(env TZ=Europe/Prague date -I)
-    - mkdocs build
-  artifacts:
-    paths:
-      - site
-    expire_in: 1 week
+  <<: *mkdocs-build
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: never
