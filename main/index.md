@@ -8,7 +8,7 @@ hide:
 ---
 # Welcome to the e-INFRA CZ documentation!
 
-The home for documentation of all e-INFRA CZ services that are provided to scientific community in Czech Republic.
+The home for documentation of all e-INFRA CZ services that are provided to scientific community in the Czech Republic.
 
 !!! attention "Building in progress"
 
@@ -79,7 +79,7 @@ Security and certificates
 
 ## How to Read the Documentation
 
-1. Select the subject of interest from the left column or use the Search tool in the upper right corner.
+1. Select the subject of interest from the left column (where applicable) or use the Search tool in the upper right corner.
 1. Scan for all the notes and reminders on the page.
 1. If more information is needed, read the details and **look for examples** illustrating the concepts.
 
@@ -89,7 +89,7 @@ Security and certificates
     Basic proficiency in Linux environments is required.
 
 In order to use the system for your calculations, you need basic proficiency in Linux environments.
-To gain this proficiency, we recommend you read the [introduction to Linux][e] operating system environments,
+To gain this proficiency, we recommend you to read the [Introduction to Linux][e] operating system environments,
 and install a Linux distribution on your personal computer.
 For example, the [CentOS][f] distribution is similar to systems on the clusters at IT4Innovations and it is easy to install and use,
 but any Linux distribution would do.
