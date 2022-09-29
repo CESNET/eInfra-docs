@@ -34,7 +34,8 @@ Below, you can find notes and recommendations on how to contribute to the docume
     * Avoid using long URLs as link text.
     * For email addresses, spell out the address and link it.
 * **List**
-    * TODO
+    * Short list/enumeration entries start with bullet point, end without punctuation.
+    * Entries in a list following incomplete sentence start with a lower case letter and end with a semicolon. Last entry ends with a full stop.
 * **Numbers**
     * Spell out the numbers from one to ten.
 * **Oxford comma**
