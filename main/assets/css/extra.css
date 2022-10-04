@@ -73,6 +73,9 @@ html .md-nav__link[for=__toc]~.md-nav {
   display: none;
 }
 
+.md-nav {
+  font-size: 0.8rem
+}
 
 .md-nav__icon.md-icon svg {
     display: inline-block;

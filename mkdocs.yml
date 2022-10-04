@@ -48,7 +48,7 @@ theme:
   include_search_page: false
   search_index_only: true
   font:
-    text: 'Ubuntu'
+    text: 'Montserrat'
     code: 'Source Code Pro'
 
 nav:
