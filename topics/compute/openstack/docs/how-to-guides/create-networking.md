@@ -17,26 +17,26 @@ We can create a virtual network in OpenStack for the project, which can be used 
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/net1.png)
+        ![](/compute/openstack/images/networks/net1.png)
 
 
     **1.** Type in the network name
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/net2.png)
+        ![](/compute/openstack/images/networks/net2.png)
 
     **2.** Move to the **Subnet** section either by clicking next or by clicking on the **Subnet** tab. You may choose to enter the network range manually (recommended for advanced users to not interfere with the public IP address ranges), or select **Allocate Network Address from a pool**. In the **Address pool** section select a `private-192-168`. Select Network mask which suits your needs (`27` as default can hold up to 29 machines).
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/net3.png)
+        ![](/compute/openstack/images/networks/net3.png)
 
     **3.** For the last tab **Subnet Details** just check that a DNS is present and the DHCP box is checked, alternatively you can create the allocation pool or specify static routes.
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/net4.png)
+        ![](/compute/openstack/images/networks/net4.png)
 
 === "CLI"
 
@@ -66,13 +66,13 @@ We can create a virtual network in OpenStack for the project, which can be used 
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/router1.png)
+        ![](/compute/openstack/images/networks/router1.png)
 
     Enter router name and select external gateway with the `-GROUP` suffix.
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/router2.png)
+        ![](/compute/openstack/images/networks/router2.png)
 
     Now you need to attach your internal network to the router.
 
@@ -80,20 +80,20 @@ We can create a virtual network in OpenStack for the project, which can be used 
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/router3.png)
+        ![](/compute/openstack/images/networks/router3.png)
 
     **2.** Move to the **Interfaces** tab and click on the **Add interface**.
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/router4.png)
-        ![](/compute/openstack/docs/images/networks/router5.png)
+        ![](/compute/openstack/images/networks/router4.png)
+        ![](/compute/openstack/images/networks/router5.png)
 
     **3.** Select a previously created subnet and submit.
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/router6.png)
+        ![](/compute/openstack/images/networks/router6.png)
 
 === "CLI"
 

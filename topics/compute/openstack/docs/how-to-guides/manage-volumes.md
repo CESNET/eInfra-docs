@@ -17,7 +17,7 @@ __1.__ In **Project &gt; Volumes &gt; Volumes**, select **Create Volume**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/volume1.png)
+    ![](/compute/openstack/images/volumes/volume1.png)
 
 __2.__ Provide name, description, and size in GBs. If not instructed otherwise, leave all other fields unchanged and click on **Create Volume**.
 
@@ -38,19 +38,19 @@ __1.__ __(optional)__ In **Project &gt; Compute &gt; Instances** Turn off the af
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/instance-shutoff.png)
+    ![](/compute/openstack/images/volumes/instance-shutoff.png)
 
 __2.__ In **Project &gt; Volumes &gt; Volumes** open the **Actions** menu of selected volume an select **Create Backup**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/backup1.png)
+    ![](/compute/openstack/images/volumes/backup1.png)
 
 __3.__ Specify Backup Name and optional information and press **Create Volume Backup**
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/backup2.png)
+    ![](/compute/openstack/images/volumes/backup2.png)
 
 __3.__ Wait for the Backup to be created, it will be then stored in **Project &gt; Volumes &gt; Backups**.
 
@@ -60,13 +60,13 @@ __1.__ __(optional)__ In **Project &gt; Compute &gt; Instances** Turn off the af
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/instance-shutoff.png)
+    ![](/compute/openstack/images/volumes/instance-shutoff.png)
 
 __2.__ In **Project &gt; Volumes &gt; Backups** open the **Actions** menu of selected backup and select **Restore Backup**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/backup3.png)
+    ![](/compute/openstack/images/volumes/backup3.png)
 
 __3.__ Wait for the Backup to be restored.
 
@@ -85,37 +85,37 @@ __1.__ Turn off the instance in **Project &gt; Compute &gt; Instances**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/instance-shutoff.png)
+    ![](/compute/openstack/images/volumes/instance-shutoff.png)
 
 __2.__ Detach the volume from the instance in **Project &gt; Volumes &gt; Volumes**. On selected volume open the **Actions** menu and select **Manage Attachments**
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/attachment1.png)
+    ![](/compute/openstack/images/volumes/attachment1.png)
 
 __3.__ Select **Detach Volume** and confirm.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/attachment2.png)
+    ![](/compute/openstack/images/volumes/attachment2.png)
 
 __4.__ Open the **Actions** menu again an select **Extend Volume**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/extend1.png)
+    ![](/compute/openstack/images/volumes/extend1.png)
 
 __5.__ Specify new size of the volume and press **Extend Volume**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/extend2.png)
+    ![](/compute/openstack/images/volumes/extend2.png)
 
 __6.__ Attach the volume back to the instance via **Manage Attachments**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/attachment1.png)
+    ![](/compute/openstack/images/volumes/attachment1.png)
 
 __7.__ Verify correct mounting of the volume in the instance.
 
@@ -128,7 +128,7 @@ __1.__ Turn off the instance in **Project &gt; Compute &gt; Instances**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/instance-shutoff.png)
+    ![](/compute/openstack/images/volumes/instance-shutoff.png)
 
 __2.__ First [create a volume backup](#creating-volume-backup).
 
@@ -138,16 +138,16 @@ __4.__ In **Project &gt; Volumes &gt; Volumes** find created backup volume, its 
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/extend1.png)
+    ![](/compute/openstack/images/volumes/extend1.png)
 
 __5.__ Specify new volume size and press **Extend Volume**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/extend2.png)
+    ![](/compute/openstack/images/volumes/extend2.png)
 
 __6.__ In **Actions** menu select **Launch as Instance** and deploy a new instance with this volume, or if you need to make additional changes to the volume, you can attach it to another instance via **Manage Attachments**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/volumes/launch1.png)
+    ![](/compute/openstack/images/volumes/launch1.png)

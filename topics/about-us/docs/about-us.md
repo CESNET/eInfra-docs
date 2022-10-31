@@ -27,7 +27,31 @@ which is to assist in meeting the trends and requirements of coming years, it is
 * rebuild and further enhance the capacity of infrastructure for demanding calculations;
 * boost technological development and expand the capacity of data storage infrastructure.
 
+## How to Read the Documentation
+
+1. Select the subject of interest from the left column (where applicable) or use the Search tool in the upper right corner.
+1. Scan for all the notes and reminders on the page.
+1. If more information is needed, read the details and **look for examples** illustrating the concepts.
+
+## Required Proficiency
+
+!!! note
+    Basic proficiency in Linux environments is required.
+
+In order to use the system for your calculations, you need basic proficiency in Linux environments.
+To gain this proficiency, we recommend you to read the [Introduction to Linux][e] operating system environments,
+and install a Linux distribution on your personal computer.
+For example, the [CentOS][f] distribution is similar to systems on the clusters at IT4Innovations and it is easy to install and use,
+but any Linux distribution would do.
+
+## Feedback
+
+If you find any inconsistency or error, please contact [support][g] with details or create a merge request by clicking on **Edit This Page**.
+Thank you for helping us improve and provide better content for the readers.
+
 [a]: https://www.cesnet.cz/?lang=en
 [b]: https://www.cerit-sc.cz/
 [c]: https://www.it4i.cz/en
 [d]: https://du.cesnet.cz/en/start
+[e]: http://www.tldp.org/LDP/intro-linux/html/
+[f]: http://www.centos.org/

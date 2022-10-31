@@ -34,7 +34,7 @@ __2.__ Click on **Sign In**.
 
 !!! example
 
-    ![login](/compute/openstack/docs/images/instance/login.png)
+    ![login](/compute/openstack/images/instance/login.png)
 
 
 __3.__ Select your institution from the drop-down list.
@@ -58,13 +58,13 @@ __1.__ Navigate to **Project &gt; Compute &gt; Key Pairs** and click the **Creat
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/keypair1.png)
+    ![](/compute/openstack/images/instance/keypair1.png)
 
 __2.__ In the **Create key Pair** insert the **Key Pair Name**. Avoid using special characters, if possible. Next select SSH key for **Key Type** and finally confirm with **Done**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/keypair2.png)
+    ![](/compute/openstack/images/instance/keypair2.png)
 
 __3.__ Download the private key to your local computer and move it to the `~/.ssh/` folder. If you are using windows, refer to [accessing from windows](/OpenStack/technical-reference/remote-access/#accessing-from-windows).
 
@@ -89,14 +89,14 @@ __1.__ Go to **Project &gt;  Network &gt; Security Groups**. Click on **Manage R
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/sec_group1.png)
+    ![](/compute/openstack/images/instance/sec_group1.png)
 
 __2.__ Click on **Add rule**, choose **SSH**, and leave the remaining fields unchanged.
    This will allow you to access your instance via IPv4.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/sec_group2.png)
+    ![](/compute/openstack/images/instance/sec_group2.png)
 
 !!! caution
 
@@ -114,26 +114,26 @@ __1.__ In **Compute &gt; Instances**, click the **Launch Instance** button.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/instance1.png)
+    ![](/compute/openstack/images/instance/instance1.png)
 
 __2.__ Choose **Instance Name**, Description, and number of instances.
    If you are creating more instances, `-%i` will be automatically appended to the name of each instance. Continue via **Next**
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/instance2.png)
+    ![](/compute/openstack/images/instance/instance2.png)
 
 __3.__ Choose an image from which to boot the instance. Choose to delete the volume after instance delete. This is not recommended for production deployment.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/instance3.png)
+    ![](/compute/openstack/images/instance/instance3.png)
 
 __4.__ Choose the hardware resources of the instance by selecting a flavor. Additional volumes for data can be attached later on.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/instance4.png)
+    ![](/compute/openstack/images/instance/instance4.png)
 
 __5.__ Select appropriate network based on your project type. and continue to **Key Pair** in the left menu.
 
@@ -143,7 +143,7 @@ __5.__ Select appropriate network based on your project type. and continue to **
 
     !!! example
 
-        ![](/compute/openstack/docs/images/instance/instance5.png)
+        ![](/compute/openstack/images/instance/instance5.png)
 
 === "Group project"
 
@@ -151,13 +151,13 @@ __5.__ Select appropriate network based on your project type. and continue to **
 
     !!! example
 
-        ![](/compute/openstack/docs/images/tutorial/instance_launch_network-group.png)
+        ![](/compute/openstack/images/tutorial/instance_launch_network-group.png)
 
 __6.__ In **Key Pair** select the key that was created in section [Create Key Pair](#create-key-pair) in the Available list and finally **Launch Instance**.
 
 !!! example
 
-    ![](/compute/openstack/docs/images/instance/instance6.png)
+    ![](/compute/openstack/images/instance/instance6.png)
 
 __9.__ Wait until instance initialization finishes and
 [Associate Floating IP](/OpenStack/how-to-guides/allocating-floating-ips/#allocation-and-assignment-of-fip).
@@ -166,7 +166,7 @@ For group project always select the same network as used in
 
 !!! example
 
-    ![](/compute/openstack/docs/images/tutorial/instance_associate_ip.png)
+    ![](/compute/openstack/images/tutorial/instance_associate_ip.png)
 
 __10.__ Login using your SSH key as selected in Key pair above
 

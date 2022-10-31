@@ -10,7 +10,7 @@ hide:
 
 The home for documentation of all e-INFRA CZ services that are provided to scientific community in the Czech Republic.
 
-!!! attention "Building in progress"
+!!! attention "Documentation is getting ready"
 
     Please note, that the documentation portal is in the early stages of development. Do not use any information from the portal to run mission critical solutions, yet. :-)
 
@@ -61,48 +61,23 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
 
 ## Other e-INFRA Services
 
-<div class="grid" markdown>
+<div class="grid grid-sm" markdown>
 
-Network access and Eduroam
+Research and Education Networking   
 { .card }
 
-Videoconferences, streaming and collaboration
+Multimedia and collaboration   
 { .card }
 
-Comprehensive identity solution
+Digital identity solution   
 { .card }
 
-Security and certificates
+Data Security   
 { .card }
 
 </div>
 
-## How to Read the Documentation
-
-1. Select the subject of interest from the left column (where applicable) or use the Search tool in the upper right corner.
-1. Scan for all the notes and reminders on the page.
-1. If more information is needed, read the details and **look for examples** illustrating the concepts.
-
-## Required Proficiency
-
-!!! note
-    Basic proficiency in Linux environments is required.
-
-In order to use the system for your calculations, you need basic proficiency in Linux environments.
-To gain this proficiency, we recommend you to read the [Introduction to Linux][e] operating system environments,
-and install a Linux distribution on your personal computer.
-For example, the [CentOS][f] distribution is similar to systems on the clusters at IT4Innovations and it is easy to install and use,
-but any Linux distribution would do.
-
-## Feedback
-
-If you find any inconsistency or error, please contact [support][g] with details or create a merge request by clicking on **Edit This Page**.
-Thank you for helping us improve and provide better content for the readers.
-
-
 [a]: https://www.cesnet.cz/?lang=en
 [b]: https://www.cerit-sc.cz/
 [c]: https://www.it4i.cz/en
-[e]: http://www.tldp.org/LDP/intro-linux/html/
-[f]: http://www.centos.org/
 [g]: emailto:support

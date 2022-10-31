@@ -25,13 +25,13 @@ This guide shows how to attach additional interfaces to running instances. This 
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/attach_interface.png)
+        ![](/compute/openstack/images/networks/attach_interface.png)
 
     In the **Network** dropdown menu select available IPv6 network.
 
     !!! example
 
-        ![](/compute/openstack/docs/images/networks/ipv6_attach.png)
+        ![](/compute/openstack/images/networks/ipv6_attach.png)
 
 === "CLI"
 

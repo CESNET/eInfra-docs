@@ -1,8 +1,8 @@
 ---
 
-title: Creating project
+title: Creating group project
 search:
   exclude: false
 ---
 
-# Creating project
+# Creating group project

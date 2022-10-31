@@ -1,4 +1,5 @@
 site_name: "compute/openstack"
+docs_dir: ./docs/
 
 nav:
   - index.md
