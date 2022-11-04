@@ -53,7 +53,7 @@ theme:
 
 nav:
   - 'Overview': index.md
-  - Accounts: '!include ./topics/accounts/mkdocs.yml'
+  - e-INFRA CZ Account: '!include ./topics/account/mkdocs.yml'
   - Data processing:
     - compute/index.md
     - Concepts: '!include ./topics/compute/concepts/mkdocs.yml'
@@ -94,6 +94,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
   - pymdownx.betterem:
       smart_enable: all
+  - pymdownx.details
   - markdown.extensions.toc:
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify

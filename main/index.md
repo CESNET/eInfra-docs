@@ -22,13 +22,15 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
 
     ---
 
-    Start by setting up your **e-INFRA CZ** identity, which will give you an access to all services.
+    Start by setting up your **e-INFRA CZ Account**, which will give you access to all services.
 
-    [:octicons-arrow-right-24: Account creation](/accounts/creation)   
-    [:octicons-arrow-right-24: Accessing your account](/accounts/access)   
-    [:octicons-arrow-right-24: Account properties and lifecycle](/accounts/properties)   
-    [:octicons-arrow-right-24: Account management](/accounts/properties)   
-    [:octicons-arrow-right-24: Multi-Factor Authentication](/accounts/properties)   
+    [:octicons-arrow-right-24: Account creation](/account/creation)   
+    [:octicons-arrow-right-24: Accessing your account and services](/account/access)   
+    [:octicons-arrow-right-24: Account management](/account/management/)   
+    [:octicons-arrow-right-24: Multi-Factor Authentication](/account/mfa/setup)
+<!---  [:octicons-arrow-right-24: Account properties and lifecycle](/account/properties)    
+--->
+
 
 -   :fontawesome-solid-microchip:{ .lg .middle } __Data processing__
 

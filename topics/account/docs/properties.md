@@ -1,5 +1,5 @@
 ## Membership Renewal
-Once a year, usualy at the end of calendar year, the user asks for renewal of the memebrship in order to continue using CERIT-SC Services. It is accompanied by annual report with achieved results and filling publications with acknowledgement to CERIT-SC to Perun system.
+Once a year, usually at the end of the calendar year, the user asks for renewal of the membership in order to continue using CERIT-SC Services. It is accompanied by an annual report with achieved results and filling publications with acknowledgement to CERIT-SC to Perun system.
 
 ## Annual report
 

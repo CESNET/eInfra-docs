@@ -1,7 +1,0 @@
-site_name: "accounts"
-
-nav:
-  - Overview: index.md
-  - Membership Registration: creation.md
-  - Membership Properties: properties.md
-  - Account Management: access.md
