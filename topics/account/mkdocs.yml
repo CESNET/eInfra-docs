@@ -1,0 +1,13 @@
+site_name: "account"
+
+nav:
+  - Overview: index.md
+  - Account creation: creation.md
+  - Accessing your account and services: access.md
+#  - Account properties and lifecycle: properties.md
+  - Account Management:
+    - Overview: management/index.md
+    - Multi-Factor Authentication (MFA):
+      - MFA overview: mfa/index.md
+      - Set up MFA: mfa/setup.md
+      - Perform MFA: mfa/perform.md
