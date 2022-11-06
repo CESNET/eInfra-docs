@@ -3,7 +3,7 @@ edit_uri: edit/master/topics/about-us/docs
 nav:
   - Overview: about-us.md
   - e-INFRA contributor guide:
-    - Overview: ./contribute/overview.md
+    - Overview: ./contribute/index.md
     - Contributing:
       - Set up and work locally: ./contribute/contributing/set-up-and-work-locally.md
       - Work within the GitLab UI: ./contribute/contributing/work-within-gitlab-ui.md
