@@ -238,7 +238,19 @@ html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_
     height: 1.5rem !important;
     width: auto !important;
   }
-  
+
+  .md-footer {
+    background-color: var(--md-primary-fg-color);
+  }
+
+  .md-footer a {
+    color: var(--md-primary-fg-color--dark) !important;
+  }
+
+  .md-footer a:active, .md-footer a:focus, .md-footer a:hover {
+    color: var(--md-accent-bg-color--light) !important;
+  }
+
   .md-footer__grid {
     display: flex
   }
@@ -252,8 +264,19 @@ html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_
     font-size: 1.2rem;
     font-weight: bold;
   }
-  
-  .md-footer__organizations > img,
+
+  .md-footer__organizations {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .md-footer__organizations > img {
+    display: flex;
+    margin: 0 22px;
+    width: 150px;
+  }
+
   .md-footer__terms > a {
     display: block;
   }
