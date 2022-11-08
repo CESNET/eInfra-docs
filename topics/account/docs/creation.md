@@ -24,7 +24,7 @@ Exact description can be found in *Access Conditions* document (
     may require its own access conditions usually described on the service 
     registration page.
 
-### Compliance with access conditions
+### Compliance With Access Conditions
 
 Your compliance with *Access Conditions* (especially your affiliation with 
 academic organization) is usually evaluated automatically during your 
@@ -40,7 +40,7 @@ In case your compliance can't be evaluated automatically (information is not
 provided by your organization) you might be asked to perform some additional 
 steps by service operators.
 
-## Users´ duties
+## Users' Duties
 
 Based on the amendment of Act No. 130/2002 Coll. on the support of research 
 and development from public funds and on the amendment to some related acts, 
@@ -57,7 +57,7 @@ reporting obligations.
     computational resources to all academic and research institutions** in the 
     Czech Republic.
 
-### Mandatory acknowledgment phrase
+### Mandatory Acknowledgment Phrase
 
 Your publications must contain following acknowledgment phrase.
 
@@ -71,7 +71,7 @@ English version
     This work was supported by the Ministry of Education, Youth and Sports of 
     the Czech Republic through the e-INFRA CZ (ID:90140).
 
-### Attachment of e-INFRA CZ to R&D results generated using this LRI
+### Attachment of e-INFRA CZ to R&D Results Generated Using This LRI
 
 When entering a record with your R&D result obtained with the support of e-INFRA CZ into an information system used to centralize the collection and export of your organization's R&D results to RIV, select the e-INFRA CZ research infrastructure from the code list of financial resources.
 
