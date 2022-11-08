@@ -1,4 +1,4 @@
-# Account management
+# Account Management
 
 Your e-INFRA CZ Account and access to the e-INFRA CZ services is managed by 
 **e-INFRA CZ AAI** (e-INFRA CZ Authentication and Authorization 
