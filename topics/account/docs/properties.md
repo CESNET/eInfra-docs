@@ -1,7 +1,8 @@
 ## Membership Renewal
+
 Once a year, usually at the end of the calendar year, the user asks for renewal of the membership in order to continue using CERIT-SC Services. It is accompanied by an annual report with achieved results and filling publications with acknowledgement to CERIT-SC to Perun system.
 
-## Annual report
+## Annual Report
 
 Users groups and users with large CPU time used are obliged to send their annual report to: annual-report@metacentrum.cz
 
