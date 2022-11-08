@@ -1,6 +1,6 @@
 # Perform MFA
 
-## When is MFA required?
+## When is MFA Required?
 
 MFA is required at login if **the service you are accessing requires it**.
 This is usually true for the services which works with sensitive data or
@@ -10,7 +10,7 @@ You can also **enable MFA for all services**, which effectively
 means verifying it every time you log in with your e-INFRA CZ Account. This 
 setting can be enabled in your [e-INFRA CZ User Profile](https://profile.e-infra.cz/profile/settings/auth).
 
-## Performing MFA verification at login
+## Performing MFA Verification at Login
 
 The first steps of login process are the same. You select your home
 organization and log in with your home organization account, or you choose
@@ -31,7 +31,7 @@ choose any of the options.
 You will be displayed an error message if you cannot fulfil MFA
 requirement - e.g. you don't have any registered tokens or verification fails.
 
-### MFA from your home organization login
+### MFA from Your Home Organization Login
 
 If you perform MFA during the login process within the context of your home
 organization account and information about it is released to us by the identity
