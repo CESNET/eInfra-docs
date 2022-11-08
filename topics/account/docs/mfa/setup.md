@@ -1,4 +1,4 @@
-# Set up MFA
+# Set Up MFA
 
 Before you start using Multi-Factor Authentication, you **need to register 
 at least one authentication token**. **The first one has to be a TOTP app**, 
@@ -10,7 +10,7 @@ authenticators. You can read more about the both methods in [MFA overview](/acco
     whenever you want to add/remove another tokens or otherwise change MFA
     related settings.
 
-## Add first token
+## Add First Token
 
 1. Go to the token management page
    * Either directly visit [https://mfa.login.e-infra.cz](https://mfa.login.e-infra.cz) or
@@ -36,7 +36,7 @@ authenticators. You can read more about the both methods in [MFA overview](/acco
     you will have to perform Multi-Factor Authentication with your first 
     token.**
 
-## Add more tokens
+## Add More Tokens
 
 1. Click on *Enroll Token* in the left menu. If you opened the page 
    on a WebAuthn capable device, choose token type WebAuthn, enter a 
@@ -56,7 +56,7 @@ authenticators. You can read more about the both methods in [MFA overview](/acco
    highly recommend adding at least two devices and at least one of them 
    with TOTP app.**
 
-## Recovery codes
+## Recovery Codes
 
 To prevent losing access to your e-INFRA CZ Account in case you lose all 
 registered devices, it is possible to **generate one-time recovery codes**, 
@@ -71,7 +71,7 @@ which you can securely store or print out.
    them out or download as PDF by clicking on *Print the OTP list*.
    <br/>![](recovery03.jpeg)
 
-## Enable/Disable MFA for all services
+## Enable/Disable MFA for All Services
 
 Multi-Factor Authentication is performed if it is **required by the service you 
 are accessing** or if it is **set to be required for all services** in your 
