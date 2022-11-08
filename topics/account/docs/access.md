@@ -1,6 +1,6 @@
-# Accessing your account and services
+# Accessing Your Account and Services
 
-In a principle and by default **e-INFRA CZ Account doesn't have own
+In principle and by default, **e-INFRA CZ Account doesn't have own
 credentials**. **You are supposed to log in with your home organization account**,
 which is something you should use and know from your daily work/study life.
 
@@ -18,7 +18,7 @@ Google or Facebook accounts.
     You can even add private accounts from social providers like *Google*, 
     *Microsoft*, *ORCID* or Czech *MojeID*.
 
-## Login process
+## Login Process
 
 The following section describes the generic login process, which is the same 
 for all services with web-based interfaces managed by e-INFRA CZ AAI. Such 
@@ -27,7 +27,7 @@ services usually provide one or both of the following ways to log in.
 - Log in with your home organization account
 - Log in with your e-INFRA CZ password
 
-### Log in with your home organization account
+### Log in With Your Home Organization Account
 
 The first way to log in, where you choose from a different options, is more 
 commonly used as it can also contain the second way to log in under the name 
@@ -58,7 +58,7 @@ commonly used as it can also contain the second way to log in under the name
     <br/><br/>You can read more about it in [MFA overview](/account/mfa)
     section.
 
-### Log in with your e-INFRA CZ password
+### Log in With Your e-INFRA CZ Password
 
 In this case service usually displays simple login form where you fill in your 
 credentials (your e-INFRA CZ login and password) and submit the form.
@@ -66,7 +66,7 @@ credentials (your e-INFRA CZ login and password) and submit the form.
 Alternatively if the service is actually using the first way to log in, this 
 option is called *e-INFRA CZ password*.  
 
-### Non-web services
+### Non-web Services
 
 Non-web services are by their nature using different means to authenticate 
 the user and exact description of how to access them should be a part of 
@@ -76,7 +76,7 @@ They often use either login / password combination or SSH keys. In such a
 case it usually means *e-INFRA CZ login/password* and SSH keys associated 
 with your e-INFRA CZ Account (managed on User Profile application).
 
-## e-INFRA CZ login / password
+## e-INFRA CZ Login/Password
 
 As stated above, by default e-INFRA CZ Account doesn't have or require you
 to create any new credentials. However, **some e-INFRA CZ services might**, by
