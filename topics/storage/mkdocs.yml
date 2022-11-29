@@ -1,4 +1,2 @@
 site_name: "storage"
-
-nav:
-  - Overview: index.md
+INHERIT: ./docs/mkdocs.yml

@@ -1,3 +1,6 @@
 [submodule "topics/compute/supercomputing/docs"]
 	path = topics/compute/supercomputing/docs
 	url = https://code.it4i.cz/sccs/docs.it4i.cz.git
+[submodule "du-docs"]
+	path = topics/storage/docs
+	url = https://gitlab.cesnet.cz/703/docs/du-docs.git
