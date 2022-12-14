@@ -10,5 +10,5 @@ nav:
     - Style Guide:
       - Writing practices: ./contribute/style-guide/writing-practices.md
       - Style guide: ./contribute/style-guide/style.md
-      - List of checks: ./contribute/style-guide/test-rules.md
+      - List of rules: ./contribute/style-guide/test-rules.md
     - Technical Details: ./contribute/technical-details.md
