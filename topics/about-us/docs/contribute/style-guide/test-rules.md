@@ -1,4 +1,4 @@
-# Rules
+# List of Rules
 
 Below is an excerpt from the list of rules, what they are checking for,
 as well as an examples of documents that break the rule and corrected
