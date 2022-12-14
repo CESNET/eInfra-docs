@@ -72,7 +72,7 @@ Each pipeline starts with four test jobs:
 1. **docs** - checks some standard rules of formatting to make the source code more "readable".
 The most frequently occuring errors being: **trailing spaces** (i.e. multiple spaces at the EOL), **consecutive blank lines** or,
 alternatively, **missing blank lines** (each element -- admonition, codeblock, (sub)title, image link, etc. -- must be divided by a blank line).
-For the list of most frequent check fails, see the List of checks section.
+For the list of most frequent check fails, see the [List of checks section][1].
 
 1. **pylint** - don't know, but always passes :)
 
@@ -81,3 +81,5 @@ For the list of most frequent check fails, see the List of checks section.
 ## Contribution and Revision Process
 
 TODO. Here we should write down some processess for revisions and merging requests for change.
+
+[1]: test-rules.md
