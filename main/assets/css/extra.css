@@ -280,6 +280,10 @@ html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_
   .md-footer__terms > a {
     display: block;
   }
+
+  .md-footer .md-copyright {
+    width: 100%
+  }
   
   /* .md-nav--lifted > ul > .md-nav__item--nested > label {
     font-size: 1rem
