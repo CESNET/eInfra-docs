@@ -2,7 +2,9 @@
     {% if config.copyright %}
       <div class="md-copyright__highlight">
         {{ config.copyright }}
-        {{ config.extra.version }}
+        <span style="float: right">
+          {{ config.extra.version }} ({{ config.extra.build_date }})
+        </span>
       </div>
     {% endif %}
     {% if not config.extra.generator == false %}

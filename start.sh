@@ -26,5 +26,6 @@ shift $OPTIND-1
 ${DOCKER_BIN} run -it --rm \
 	-v ${PWD}:/docs:z \
 	-p 8080:80 \
-  -e SITE_VERSION="rev. development / "$(env TZ=Europe/Prague date -I) \
+  -e SITE_VERSION="undef version" \
+  -e SITE_BUILD_DATE="$(env TZ=Europe/Prague date -I)" \
 	${DOCS_IMAGE} serve -a 0.0.0.0:80 $@

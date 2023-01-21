@@ -1,4 +1,5 @@
 stages:
+  - prepare
   - test
   - build_img
   - build
@@ -12,14 +13,24 @@ variables:
     GIT_SUBMODULE_STRATEGY: recursive
     GIT_DEPTH: 0
 
-
+check_current_version:
+  before_script:
+    - apk add html-xml-utils curl jq
+  stage: prepare
+  script: 
+    - echo https://$HOSTING_HOST
+    - 'export CSITE_VERSION=$(curl -s https://${HOSTING_HOST} | hxnormalize -xe | hxselect -c "script#__config" | hxuncdata | jq -r .version)'
+    - echo "Found site version $CSITE_VERSION"
+    - '[[ "$CSITE_VERSION" != "$CI_COMMIT_SHORT_SHA" ]]'
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
 
 docs:
   stage: test
   image: it4innovations/docker-mdcheck:latest
   allow_failure: true
   script:
-  - mdl -r ~MD013,~MD010,~MD014,~MD024,~MD026,~MD029,~MD033,~MD036,~MD037,~MD046 *.md docs.it4i # BUGS
+    - mdl -r ~MD013,~MD010,~MD014,~MD024,~MD026,~MD029,~MD033,~MD036,~MD037,~MD046 *.md main/ topics/ # BUGS
 
 # pylint:
 #   stage: test
@@ -38,33 +49,37 @@ docs:
 #   script:
 #   - cat requirements.txt | safety check --stdin --full-report
 
-# capitalize:
-#   stage: test
-#   image: it4innovations/docker-mkdocscheck:latest
-#   script:
-#   - find mkdocs.yml docs/ \( -name '*.md' -o -name '*.yml' \) -print0 | xargs -0 -n1 scripts/titlemd.py --test
+capitalize:
+  stage: test
+  image: it4innovations/docker-mkdocscheck:latest
+  allow_failure: true
+  script:
+    - find mkdocs.yml topics/ main/ \( -name '*.md' -o -name '*.yml' \) -print0 | xargs -0 -n1 scripts/titlemd.py --test
 
-# ext_links:
-#   stage: after_test
-#   image: it4innovations/docker-mdcheck:latest
-#   allow_failure: true
-#   after_script:
-#   # remove JSON results
-#   - rm *.json
-#   script:
-#   - find docs.it4i/ -name '*.md' -exec grep --color -l http {} + | xargs awesome_bot -t 10 --allow-dupe --allow-redirect
-#   only:
-#   - master
+ext_links:
+  stage: after_test
+  image: it4innovations/docker-mdcheck:latest
+  allow_failure: true
+  after_script:
+    # remove JSON results
+    - rm *.json
+  script:
+    - find topics/ main/ -name '*.md' -exec grep --color -l http {} + | xargs awesome_bot -t 10 --allow-dupe --allow-redirect
 
-# 404s:
-#   stage: after_test
-#   image: it4innovations/docker-mkdocscheck:latest
-#   before_script:
-#   - wget -V
-#   - echo https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/
-#   - wget --spider -e robots=off -o wget.log -r -p https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/ || true
-#   script:
-#   - cat wget.log | awk '/^Found [0-9]+ broken link[s]?.$/,/FINISHED/ { rc=-1; print $0 }; END { exit rc }'
+404s:
+  stage: after_test
+  image: it4innovations/docker-mkdocscheck:latest
+  allow_failure: true
+  before_script:
+    - wget -V
+    - echo https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/
+    - wget --spider -e robots=off -o wget.log -r -p https://${HOSTING_HOST}/review/$CI_BUILD_REF_NAME/ || true
+  script:
+    - cat wget.log | awk '/^Found [0-9]+ broken link[s]?.$/,/FINISHED/ { rc=-1; print $0 }; END { exit rc }'
+  rules:
+  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    when: never
+  - if: $CI_COMMIT_BRANCH
 
 # mkdocs:
 #   stage: build
@@ -139,7 +154,8 @@ docker-build:
   before_script:
     - git submodule update --remote --recursive
   script:
-    - export SITE_VERSION="rev. $CI_COMMIT_SHORT_SHA / "$(env TZ=Europe/Prague date -I)
+    - export SITE_VERSION="$CI_COMMIT_SHORT_SHA"
+    - export SITE_BUILD_DATE="$(env TZ=Europe/Prague date -I)"
     - mkdocs build
   artifacts:
     paths:

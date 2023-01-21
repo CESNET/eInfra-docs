@@ -15,12 +15,13 @@ repo_url: https://gitlab.ics.muni.cz/einfra-docs/documentation/
 edit_uri: edit/master/
 
 # Copyright
-copyright: Copyright (c) 2021-2022 e-infra.cz - documentation portal
+copyright: Copyright (c) 2021-2023 e-INFRA CZ Documentation Portal
 
 extra:
   generator: false
   version: !ENV [SITE_VERSION, 'undef_build_number']
-  site_title: e-INFRA CZ Documentation
+  build_date: !ENV [SITE_BUILD_DATE, 'today']
+  site_title: e-INFRA CZ Documentation"
 
 theme:
   name: material
