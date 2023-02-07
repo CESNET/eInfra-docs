@@ -56,7 +56,7 @@ We recommend downloading [Windows Installer](https://www.chiark.greenend.org.uk/
 
 ### Connect to the Instance
 
-* Run PuTTY and enter Host name in format "login@Floating IP address" where login is for example debian for Debian OS and Floating IP is [IP address](/OpenStack/how-to-guides/associate-floating-ips) to access instance from internet.
+* Run PuTTY and enter Host name in format "login@Floating IP address" where login is for example debian for Debian OS and Floating IP is [IP address](../how-to-guides/associate-floating-ips.md) to access instance from internet.
 * In Category -> Connection -> SSH -> Auth:
     *  Select **Attempt authentication using Pageant**
     *  Select **Allow agent forwarding**

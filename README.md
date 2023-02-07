@@ -16,7 +16,8 @@ $ pip install -r requirements.txt
 or using docker
 
 ```console
-$ ./start.sh -b
+$ git submodule update --init --recursive
+$ sudo ./start.sh
 ```
 
 the `-b` parameter builds the container with required dependencies.

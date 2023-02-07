@@ -16,7 +16,7 @@ The following guide will take you through the steps necessary to start your firs
 Prerequisites:
 
 * Up-to-date web browser
-* Active account in MetaCentrum (https://metavo.metacentrum.cz/en/application/index.html)
+* Active account in [MetaCentrum](https://metavo.metacentrum.cz/en/application/index.html)
 * Basic knowledge of SSH (for remote connections)
 
 ## Sign In
@@ -25,7 +25,7 @@ The dashboard is available at [https://dashboard.cloud.muni.cz](https://dashboar
 
 !!! note
 
-    International users may choose <strong>EGI Check-in</strong>, <strong>DEEP AAI</strong> or <strong>ELIXIR AAI</strong>, depending on their membership in these projects.
+    International users may choose <strong>EGI Check-in</strong>, <strong>DEEP AAI</strong> or <strong>LIFESCIENCE AAI</strong>, depending on their membership in these projects.
 
 
 __1.__ Select `EINFRA CESNET`.
@@ -66,7 +66,7 @@ __2.__ In the **Create key Pair** insert the **Key Pair Name**. Avoid using spec
 
     ![](/compute/openstack/images/instance/keypair2.png)
 
-__3.__ Download the private key to your local computer and move it to the `~/.ssh/` folder. If you are using windows, refer to [accessing from windows](../technical-reference/remote-access.md/#accessing-from-windows).
+__3.__ Download the private key to your local computer and move it to the `~/.ssh/` folder. If you are using windows, refer to [accessing from windows](../technical-reference/remote-access.md#accessing-from-windows).
 
 __4.__ Set access privileges on `~/.ssh/` folder:
 
@@ -147,7 +147,7 @@ __5.__ Select appropriate network based on your project type. and continue to **
 
 === "Group project"
 
-    For group project select group-project-network-subnet from network group-project-network (check if [Router gateway](../how-to-guides/create-networking.md/#router-creation) is set)
+    For group project select group-project-network-subnet from network group-project-network (check if [Router gateway](../how-to-guides/create-networking.md#router-creation) is set)
 
     !!! example
 
@@ -160,9 +160,9 @@ __6.__ In **Key Pair** select the key that was created in section [Create Key Pa
     ![](/compute/openstack/images/instance/instance6.png)
 
 __9.__ Wait until instance initialization finishes and
-[Associate Floating IP](../how-to-guides/allocating-floating-ips.md/#allocation-and-assignment-of-fip).
+[Associate Floating IP](../how-to-guides/allocating-floating-ips.md#allocation-and-assignment-of-fip).
 For group project always select the same network as used in
-[Router gateway](../how-to-guides/create-networking.md/#router-creation).
+[Router gateway](../how-to-guides/create-networking.md#router-creation).
 
 !!! example
 
@@ -175,6 +175,6 @@ Connect to the instance using **ssh system@floating-ip**, as described on page [
 
 !!! info
 
-    On Linux and Mac, you can use the already present SSH client. On Windows, there are other possibilities for how to connect via SSH. One of the most common is [PuTTy](https://en.wikipedia.org/wiki/PuTTY) SSH client. How to configure and use PuTTy you can visit our [tutorial](../technical-reference/remote-access.md/#accessing-from-windows).
+    On Linux and Mac, you can use the already present SSH client. On Windows, there are other possibilities for how to connect via SSH. One of the most common is [PuTTy](https://en.wikipedia.org/wiki/PuTTY) SSH client. How to configure and use PuTTy you can visit our [tutorial](../technical-reference/remote-access.md#accessing-from-windows).
 
 For details, refer to [the official documentation](https://docs.openstack.org/horizon/train/user/launch-instances.html).

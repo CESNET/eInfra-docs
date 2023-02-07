@@ -8,7 +8,8 @@ search:
 # How to Get Access
 
 Access to MetaCentrum Cloud is granted to users with active accounts in
-one of the following identity federations
+one of the following identity federations:
+
 * __EINFRA CESNET__,
 * __LIFESCIENCE AAI__`*`.
 * __EGI Check-in__`*`,
@@ -20,6 +21,7 @@ Identity providers marked with `*` should only be used by international
 communities with explicitly negotiated resource allocations.
 
 MetaCentrum Cloud provides the following ways for allocating resources
+
 * __personal project__,
 * __group project__.
 
@@ -27,12 +29,8 @@ MetaCentrum Cloud provides the following ways for allocating resources
 
 A personal project goal is to gain cloud environment knowledge, resource allocation quotas can not be increased.
 
-{{< hint danger >}}
-**WARNING**
-
-A personal project resource allocation quotas can not be increased.
-{{</hint>}}
-
+!!! caution
+	A personal project resource allocation quotas can not be increased.
 
 Personal projects are available automatically to all users of the Czech
 e-infrastructure for science, development, and education.
@@ -45,6 +43,7 @@ into the infrastructure for testing and exploration of features. Any
 serious resource usage requires the use of a group project, see below.
 
 The following already established terms and conditions apply
+
 * [Terms and Conditions for Access to the CESNET e-infrastructure](https://www.cesnet.cz/conditions/?lang=en)
 * [MetaCentrum End User Statement and Usage Rules](https://www.metacentrum.cz/en/about/rules/index.html)
 * [Appreciation Formula / Acknowlegement in Publications](https://wiki.metacentrum.cz/wiki/Usage_rules/Acknowledgement)
@@ -53,16 +52,13 @@ The following already established terms and conditions apply
 
 ## Group Project
 
-{{< hint info >}}
-**NOTICE**
-
-Preferred way to request new <a href="https://cloud.gitlab-pages.ics.muni.cz/documentation/register/#group-project">GROUP</a> project is through this online application form: <a href="https://projects.cloud.muni.cz/">https://projects.cloud.muni.cz/</a>
-{{</hint>}}
-
+!!! notice
+	Preferred way to request new <a href="https://cloud.gitlab-pages.ics.muni.cz/documentation/register/#group-project">GROUP</a> project is through this online application form: <a href="https://projects.cloud.muni.cz/">https://projects.cloud.muni.cz/</a>
 
 Group projects are the primary resource allocation unit for MetaCentrum Cloud.
 Any user or a group of users requiring a non-trivial amount of resources must
 request a group project using [this form](https://projects.cloud.muni.cz/) and provide the following basic information:
+
 * __name of the project__,
 * __purpose of the project__,
 * __contact information__,
@@ -87,6 +83,7 @@ If you already have VO/group, and already using services
 provided by the __CESNET e-Infrastructure__ e.g. MetaCentrum, Data Care,
 or you represent a project internal to __Masaryk University__,
 please visit OpenID Connect User Profile according to your federation:
+
  - [EINFRA CESNET](https://login.cesnet.cz/oidc/manage/user/profile)
  - [LIFESCIENCE](https://profile.aai.lifescience-ri.eu/profile)
  - EGI (contact EGI support)
@@ -97,6 +94,7 @@ If you don't have VO/group or you know nothing about it, please contact the MUNI
 to create a new group within the Unified Login service.
 
  In the request, describe that you need a group for accessing MetaCentrum Cloud and provide the following information:
+
 * Project/group name
 * Project members
 
