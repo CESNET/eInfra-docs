@@ -7,7 +7,7 @@ search:
 
 # Image rotation
 
-Image rotation in our cloud is done on 2 month basis. Timestamps are added to old images. For exact timestamp please refer to [News](/news/).
+Image rotation in our cloud is done on 2 month basis. Timestamps are added to old images.
 
 The naming convention for our images is:
 

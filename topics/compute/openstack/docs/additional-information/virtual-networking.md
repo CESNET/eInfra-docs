@@ -17,9 +17,9 @@ Prerequisites:
 
 In How-to guides we have prepared several scenarios:
 
-- [Accessing instances](/OpenStack/how-to-guides/accessing-instances/)
-- [Allocating floating IPs](/OpenStack/how-to-guides/allocating-floating-ips/)
-- [Create networking](/OpenStack/how-to-guides/create-networking/)
-- [High Availability deployment](/OpenStack/how-to-guides/high-availability-deployment/)
+- [Accessing instances](../how-to-guides/accessing-instances.md)
+- [Allocating floating IPs](../how-to-guides/allocating-floating-ips.md)
+- [Create networking](../how-to-guides/create-networking.md)
+- [High Availability deployment](../how-to-guides/high-availability-deployment.md)
 
 For details, refer to [the official documentation](https://docs.openstack.org/horizon/train/user/create-networks.html).

@@ -9,11 +9,11 @@ search:
 
 ## Prerequisites
 
-- Created [networking](/OpenStack/how-to-guides/create-networking/)
-- Configured [Security groups](/OpenStack/how-to-guides/configuring-security-groups/)
-- Imported [SSH key](/OpenStack/getting-started/creating-first-infrastructure/)
-- Created [Virtual machine](/OpenStack/getting-started/creating-first-infrastructure/)
-- Associated [Floating IP](/OpenStack/how-to-guides/allocating-floating-ips/)
+- Created [networking](../how-to-guides/create-networking.md)
+- Configured [Security groups](../how-to-guides/configuring-security-groups.md)
+- Imported [SSH key](../getting-started/creating-first-infrastructure.md)
+- Created [Virtual machine](../getting-started/creating-first-infrastructure.md)
+- Associated [Floating IP](../how-to-guides/allocating-floating-ips.md)
 
 ## Connecting to VM
 
@@ -23,7 +23,7 @@ connect to the VM via SSH.
 === "Linux"
 
     Make sure to add your private ssh key in `$HOME/.ssh/id_rsa` or refer to
-    [Technical reference](/OpenStack/technical-reference/remote-access/)
+    [Technical reference](../technical-reference/remote-access.md)
     for additional possibilities as the first connection must be always done via SSH key.
 
     Now you should be able to connect to the VM via SSH:
@@ -36,7 +36,7 @@ connect to the VM via SSH.
 
     Windows users need to use third party program [PuTTY](https://www.putty.org/).
     Before the connection via putty is possible it is first necessary to import
-    private ssh key as is explained in [Technical reference](/OpenStack/technical-reference/remote-access/).
+    private ssh key as is explained in [Technical reference](../technical-reference/remote-access.md).
 
 ## Default users
 
@@ -49,6 +49,6 @@ connect to the VM via SSH.
 ## Problems
 
 If you have problems connecting to the VM, verify correct configuration of
-[Security groups](/OpenStack/how-to-guides/configuring-security-groups/).
+[Security groups](../how-to-guides/configuring-security-groups.md).
 
 If you receive an error after connecting to the VM, verify your SSH key.

@@ -9,7 +9,7 @@ search:
 
 ## Prerequisites
 
-- Created [networking](/OpenStack/how-to-guides/create-networking/)
+- Created [networking](../how-to-guides/create-networking.md)
 
 ## Allocation and assignment of FIP
 

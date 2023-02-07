@@ -7,7 +7,7 @@ search:
 
 # Quota limits
 
-Quotas are used to specify individual resources for each project. In the following tables you can see the default resources available for each project. If you need to increase these resources, you can contact [support](/OpenStack/technical-reference/get-support/).
+Quotas are used to specify individual resources for each project. In the following tables you can see the default resources available for each project. If you need to increase these resources, you can contact [support](../technical-reference/get-support.md).
 
 ## Compute resources (Nova)
 | resource             | quota |
