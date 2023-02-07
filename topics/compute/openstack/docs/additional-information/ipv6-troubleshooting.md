@@ -21,7 +21,7 @@ Some Linux images have SLAAC disabled by default. In this case, you can either a
 
 ## Security groups
 
-If you have been using your VM with IPv4, make sure to update your [Security groups](/OpenStack/additional-information/security-groups/) to also allow IPv6 traffic, otherwise it will be inaccessible. For configuration refer to tutorial [Creating first infrastructure](/OpenStack/getting-started/creating-first-infrastructure/#update-security-group).
+If you have been using your VM with IPv4, make sure to update your [Security groups](../additional-information/security-groups.md) to also allow IPv6 traffic, otherwise it will be inaccessible. For configuration refer to tutorial [Creating first infrastructure](/OpenStack/getting-started/creating-first-infrastructure/#update-security-group).
 
 ## DNS records
 

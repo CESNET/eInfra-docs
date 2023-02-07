@@ -9,11 +9,11 @@ search:
 
 ## Prerequisites
 
-- Created [instance](/OpenStack/getting-started/creating-first-infrastructure/).
+- Created [instance](../getting-started/creating-first-infrastructure.md).
 
 ## Resizing image
 
-In this guide we will shoud you how to change the VM resources by changing [flavor](/OpenStack/technical-reference/flavors/).
+In this guide we will shoud you how to change the VM resources by changing [flavor](../technical-reference/flavors.md).
 
 Before resizing you should save all your unsaved work and you should also consider making data backup in case if something goes wrong.
 

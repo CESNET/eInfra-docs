@@ -16,7 +16,7 @@ Instructions for uploading a custom image:
 
 1. Upload only images in RAW format (not qcow2, vmdk, etc.).
 
-2. Upload is supported only through OpenStack [CLI](/cloud/cli/) with Application Credentials.
+2. Upload is supported only through OpenStack [CLI](../how-to-guides/obtaining-api-key.md) with Application Credentials.
 
 3. Each image needs to contain metadata:
 
@@ -49,7 +49,7 @@ You can view these images via **CLI** or in **dashboard**.
 
 In **dashboard** visit section *Images* and then you can search via listed image and/or set searching criteria in search bar. There is a parameter *Visibility* where you can specify visibility of image you are searching for. These visibility parameters are explained below.
 
-![](/compute/openstack/docs/images/image_visibility.png)
+![](/compute/openstack/images/image_visibility.png)
 
 
 ### Public images

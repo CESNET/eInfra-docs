@@ -9,7 +9,7 @@ search:
 
 ## Prerequisites
 
-- Created [instance](/OpenStack/getting-started/creating-first-infrastructure/).
+- Created [instance](../getting-started/creating-first-infrastructure.md).
 
 ## Attaching interface
 
@@ -17,7 +17,7 @@ This guide shows how to attach additional interfaces to running instances. This 
 
 !!! info
 
-    If you approach a problem with your IPv6 deployment, please refer to [IPv6 troubleshooting](/OpenStack/additional-information/ipv6-troubleshooting/).
+    If you approach a problem with your IPv6 deployment, please refer to [IPv6 troubleshooting](../additional-information/ipv6-troubleshooting.md).
 
 === "GUI"
 

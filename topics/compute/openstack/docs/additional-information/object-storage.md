@@ -20,7 +20,7 @@ In both cases, you will need application credentials to be able to manage your d
 
 ### Swift credentials
 
-The easiest way to generate **Swift** storage credentials is through [MetaCentrum cloud dashboard](https://dashboard.cloud.muni.cz). You can generate application credentials as described [here](/cloud/cli/#getting-credentials). You must have role **heat_stack_owner**.
+The easiest way to generate **Swift** storage credentials is through [MetaCentrum cloud dashboard](https://dashboard.cloud.muni.cz). You can generate application credentials as described [here](../how-to-guides/obtaining-api-key.md). You must have role **heat_stack_owner**.
 
 ### S3 credentials
 
@@ -61,4 +61,4 @@ host_bucket = object-store.cloud.muni.cz
 use_https = True
 ```
 
-For more info please refer to [https://docs.openstack.org/swift/latest/s3_compat.html](https://docs.openstack.org/swift/latest/s3_compat.html) and [https://docs.openstack.org/train/config-reference/object-storage/configure-s3.html](https://docs.openstack.org/train/config-reference/object-storage/configure-s3.html).
+For more info please refer to [https://docs.openstack.org/swift/latest/s3_compat.html](https://docs.openstack.org/swift/latest/s3_compat.html) and [https://docs.openstack.org/mitaka/config-reference/object-storage/configure-s3.html](https://docs.openstack.org/mitaka/config-reference/object-storage/configure-s3.html).

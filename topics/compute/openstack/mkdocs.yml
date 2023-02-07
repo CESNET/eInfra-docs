@@ -40,7 +40,8 @@ nav:
     # - additional-information/concepts-of-cloud-computing.md
     # - additional-information/contribute.md
     - additional-information/custom-images.md
-    # - additional-information/gpu-computing.md
+    - additional-information/faq.md
+    - additional-information/gpu-computing.md
     - additional-information/ip-allocation-policy.md
     - additional-information/ipv6-troubleshooting.md
     - additional-information/load-balancers.md
@@ -48,6 +49,7 @@ nav:
     - additional-information/orchestration.md
     - additional-information/project-expiration.md
     - additional-information/python-libraries.md
+    - additional-information/register.md
     - additional-information/security-groups.md
     # - additional-information/storage-capabilities.md
     - additional-information/terms-of-service.md
