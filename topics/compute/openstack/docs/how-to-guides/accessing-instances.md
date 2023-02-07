@@ -10,9 +10,9 @@ search:
 ## Prerequisites
 
 - Created [networking](../how-to-guides/create-networking.md)
-- Configured [Security groups](../how-to-guides/configuring-security-groups.md)
-- Imported [SSH key](../getting-started/creating-first-infrastructure.md)
-- Created [Virtual machine](../getting-started/creating-first-infrastructure.md)
+- Configured [Security groups](../getting-started/creating-first-infrastructure.md#update-security-group)
+- Imported [SSH key](../getting-started/creating-first-infrastructure.md#create-key-pair)
+- Created [Virtual machine](../getting-started/creating-first-infrastructure.md#create-virtual-machine-instance)
 - Associated [Floating IP](../how-to-guides/allocating-floating-ips.md)
 
 ## Connecting to VM
@@ -49,6 +49,6 @@ connect to the VM via SSH.
 ## Problems
 
 If you have problems connecting to the VM, verify correct configuration of
-[Security groups](../how-to-guides/configuring-security-groups.md).
+[Security groups](../how-to-guides/managing-security-groups.md).
 
 If you receive an error after connecting to the VM, verify your SSH key.
