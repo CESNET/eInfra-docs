@@ -35,14 +35,14 @@ You can edit the documentation and run local server to see changes live. Use our
 ./start.sh
 ```
 
-By default the URL where the server [listens is http://localhost:8080][4]
+By default the URL where the server listens is [http://localhost:8080][4]
 
 !!! note
     Edits will be shown live in your browser window, no need to restart the server.
 
 ### Partial documentation building
 
-If you don't want to build the whole documentation (due to it's big build time), you can choose to build only subset of the whole documentation site by using argument `-f <path to mkdocs.yml of subdocumentation>`
+If you don't want to build the whole documentation (due to its big build time), you can choose to build only subset of the whole documentation site by using argument `-f <path to mkdocs.yml of subdocumentation>`
 
 ```console
 ./start.sh -f topics/about-us/mkdocs.yml
