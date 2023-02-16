@@ -23,7 +23,7 @@ There are always two variants of the release:
 * Commercial or so-called COM variant, which can used also for commercial activities. Commercial licenses are much more expensive, so usually the commercial license has only a subset of features compared to the available EDU license.
 
 !!! info
-    Version 2021a is e-infra license, without cluster licenses - only basic functionality.
+    Version 2021a is an e-INFRA CZ license, without cluster licenses - only basic functionality.
 
 ## Usage
 
@@ -93,8 +93,7 @@ $ qsub ./jobscript
 
 ## Resources
 
-[MATLAB official page][1]
-
+[MATLAB official page][1]<br>
 [MATLAB documentation][2]
 
 [1]: https://www.mathworks.com/products/matlab.html
