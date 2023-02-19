@@ -12,7 +12,7 @@ For example, it is possible to simulate page layouts or store authors.
 
 ## Page Layouts
 
-The e-INFRA CZ recognizes three types of page layout:
+The e&#8209;INFRA&#160;CZ recognizes three types of page layout:
 
 === "SignPost"
 
