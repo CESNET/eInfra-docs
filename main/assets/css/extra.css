@@ -4,6 +4,7 @@
   --md-primary-fg-color--light: #8634fc;
   --md-primary-fg-color--dark:  #f2f6f8;
   --md-text-font-family: "canada-type-gibson";
+  --md-text-font: "Open Sans";
 }
 
 .md-typeset details {
@@ -100,7 +101,7 @@ a:not([href*="//"]) {
     /* CSS for internal links */
 }
 
-a[href*="//"]:not( [href*='127.0.0.1'] ):not( [href*='docs.it4i.cz'] ):not( [href*='gitlab.it4i.cz'] ):not( [href*='code.it4i.cz'] ):not( [href*='https://www.it4i.cz'] ):not( [href*='https://e-infra.cz'] ):not( [href*='https://support.it4i.cz'] ):not( [href*='docs.e-infra.cz'] ):not( [href*='gitlab.ics.muni.cz'] )  {
+a[href*="//"]:not( [href*='127.0.0.1'] ):not( [href*='docs.it4i.cz'] ):not( [href*='gitlab.it4i.cz'] ):not( [href*='code.it4i.cz'] ):not( [href*='https://www.it4i.cz'] ):not( [href*='https://e-infra.cz'] ):not( [href*='https://support.it4i.cz'] ):not( [href*='docs.e-infra.cz'] ):not( [href*='gitlab.ics.muni.cz'] ):not( .md-button ):not( a[data-bi-name="contributorprofile"])  {
     background: transparent no-repeat right 0px top 1px;
     background-size: 12px;
     padding: 0px 16px 1px 0px;
@@ -444,3 +445,60 @@ html .md-nav__it4i_link[for=toc],html .md-nav__it4i_link[for=toc]+.md-nav__it4i_
 .md-nav__link--active {
   color: var(--md-primary-fg-color--light) !important;
 }
+
+/* .md-tabs {
+  background: #000000c2;
+  color: white;
+  padding-bottom: 1em;
+} */
+
+.md-typeset h1, .md-typeset h2 {
+  font-weight: 500;
+  color: var(--md-primary-fg-color) 
+}
+
+/* .md-header {
+    background: black
+}
+
+.md-sidebar[data-md-type="toc"] .md-sidebar__inner {
+    border-radius: 3px;
+    border: 0.05rem solid var(--md-default-fg-color--lightest);
+    border-radius: 0.1rem;
+}
+
+.md-sidebar[data-md-type="toc"] .md-nav__title {
+    box-shadow: none;
+    border-bottom: 1px solid;
+}
+
+.md-nav__item.md-nav__item--nested {
+  background: hsl(0deg 0% 88% / 49%);
+  padding-top: 1px;
+  padding-bottom: 10px;
+  margin: 10px 0px;
+}
+
+.md-nav--primary  .md-nav__item--active {
+  background: white;
+  color: initial
+}
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+  box-shadow: none;
+  background: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.md-sidebar__inner > .md-nav {
+  border-left: 5px solid black
+}
+
+.md-nav.md-nav--secondary > .md-nav__title {
+  background: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+} */
