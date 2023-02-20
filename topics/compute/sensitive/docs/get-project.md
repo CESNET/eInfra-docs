@@ -43,6 +43,6 @@ We will arrange a meeting, where details of your use-case will be discussed.
 - [Connecting to the SensitiveCloud environment][1]
 - [Manage who has access to your SensitiveCloud project and data][2]
 
-[1]: ./getting-started/
-[2]: ./manage-project
+[1]: ../getting-started/connecting-to-sensitive-cloud
+[2]: ../manage-project
 

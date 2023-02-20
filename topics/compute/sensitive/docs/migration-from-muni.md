@@ -8,10 +8,12 @@ We understand that changes like this can be disruptive, and we apologize for any
 
 # How will this change affect you?
 
+**No users deployment and running applications will be affected by this change.**
+
 ## Principal investigators
 
-- From now on, you will have to manage the persons who have the right to access SensitiveCloud resources exclusively from the identity management system e&#8209;INFRA&#160;CZ. It is located at: [perun.e‑infra.cz](https://perun.e-infra.cz).
-- New mechanism for managing collaborators over SensitiveCloud resources via logins. [How to add/remove collaborators to SensitiveCloud project](./manage-project)
+- From now on, you will have to manage the access to the SensitiveCloud resources for your collaborators exclusively from the identity management system of e&#8209;INFRA&#160;CZ. The system is located at: [perun.e‑infra.cz](https://perun.e-infra.cz).
+- New mechanism for managing collaborators over SensitiveCloud resources via applications. [How to add/remove collaborators to SensitiveCloud project](../manage-project)
 
 ## Users of SensitiveCloud
 

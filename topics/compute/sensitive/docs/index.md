@@ -22,7 +22,7 @@ The environment is built on modern container technology using Kubernetes platfor
 [Read more at SensitiveCloud product page][1]
 
 ## Getting access to the SensitiveCloud
-If you want to use the SensitiveCloud services and you are a principal investigator (PI), ask to be allocated a computing time in the SensitiveCloud. The PI is responsible for the data and access to the data.
+If you want to use the SensitiveCloud services and you are a principal investigator (PI), ask to be allocated a computing time in the SensitiveCloud. The PI should be a research group/activity leader, and is responsible for the access to the data and utilization of computing time.
 
 - [Requesting project in SensitiveCloud][2]    
 - [Manage access to the project in SensitiveCloud][3]
