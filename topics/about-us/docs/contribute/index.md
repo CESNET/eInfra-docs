@@ -6,7 +6,7 @@ authors:
 ---
 # Documentation overview
 
-This section is about how to contribute to the e-INFRA CZ documentation. The guide is intended for service providers but also for users of the documentation and e-INFRA CZ services, who can participate in building the documentation and thus help other users.
+This section is about how to contribute to the e&#8209;INFRA&#160;CZ documentation. The guide is intended for service providers but also for users of the documentation and e&#8209;INFRA&#160;CZ services, who can participate in building the documentation and thus help other users.
 
 For service providers, a detailed specification of how the documentation is built and works can be useful.
 
@@ -25,7 +25,7 @@ For service providers, a detailed specification of how the documentation is buil
 
     ---
 
-    All technical information about the documentation. Targets e-INFRA CZ service providers.
+    All technical information about the documentation. Targets e&#8209;INFRA&#160;CZ service providers.
 
     [:octicons-arrow-right-24: Technical details](../technical-details)   
     [:octicons-arrow-right-24: Integration of the new service](../technical-details/#integration-of-the-new-service)   

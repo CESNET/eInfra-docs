@@ -2,7 +2,10 @@ site_name: "compute/sensitive-cloud"
 
 nav:
   - Overview: index.md
+  - Get Project: get-project.md
   - Getting started:
-    - getting-started/new-project.md
     - getting-started/connecting-to-sensitive-cloud.md
+  - How-Tos:
+    - Manage Project: manage-project.md
+    - Migration from MUNI IDP: migration-from-muni.md
   - Technical documentation: https://docs.cerit.io

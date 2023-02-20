@@ -24,10 +24,10 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
 
     Start by setting up your **e-INFRA CZ Account**, which will give you access to all services.
 
-    [:octicons-arrow-right-24: Account creation](/account/creation)   
-    [:octicons-arrow-right-24: Accessing your account and services](/account/access)   
-    [:octicons-arrow-right-24: Account management](/account/management/)   
-    [:octicons-arrow-right-24: Multi-Factor Authentication](/account/mfa/setup)
+    [:octicons-arrow-right-24: Account creation](./account/creation)   
+    [:octicons-arrow-right-24: Accessing your account and services](./account/access)   
+    [:octicons-arrow-right-24: Account management](./account/management/)   
+    [:octicons-arrow-right-24: Multi-Factor Authentication](./account/mfa/setup)
 <!---  [:octicons-arrow-right-24: Account properties and lifecycle](/account/properties)    
 --->
 
@@ -39,11 +39,11 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
     Focus on what's important, your research can be accelerated with our **big** servers.
 
     [:octicons-arrow-right-24: Overview](/compute/)   
-    [:octicons-arrow-right-24: Batch computing (Metacentrum Grid)](/compute/grid)   
-    [:octicons-arrow-right-24: Compute Cloud (Virtualization)](/compute/openstack/)   
-    [:octicons-arrow-right-24: Containers Cloud](/compute/containers/)   
-    [:octicons-arrow-right-24: Supercomputing](/compute/supercomputing/)   
-    [:octicons-arrow-right-24: Sensitive data processing](/compute/sensitive-cloud)   
+    [:octicons-arrow-right-24: Batch computing (Metacentrum Grid)](./compute/grid)   
+    [:octicons-arrow-right-24: Compute Cloud (Virtualization)](./compute/openstack/)   
+    [:octicons-arrow-right-24: Containers Cloud](./compute/containers/)   
+    [:octicons-arrow-right-24: Supercomputing](./compute/supercomputing/)   
+    [:octicons-arrow-right-24: Sensitive data processing](./compute/sensitive-cloud)   
 
 -   :fontawesome-solid-floppy-disk:{ .lg .middle } __Data Management & Storage__
 
@@ -51,12 +51,12 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
 
     Need to store **terabytes** of data? No problem. Read what capabilities you have.
 
-    [:octicons-arrow-right-24: Overview](/storage/)   
-    [:octicons-arrow-right-24: Storing data](/storage/)   
-    [:octicons-arrow-right-24: Sharing data](/storage/)   
-    [:octicons-arrow-right-24: Data archivation/backups](/storage/)   
-    [:octicons-arrow-right-24: Sensitive data](/storage/)   
-    [:octicons-arrow-right-24: More (data repositories, ...)](/storage/)   
+    [:octicons-arrow-right-24: Overview](./storage/)   
+    [:octicons-arrow-right-24: Storing data](./storage/)   
+    [:octicons-arrow-right-24: Sharing data](./storage/)   
+    [:octicons-arrow-right-24: Data archivation/backups](./storage/)   
+    [:octicons-arrow-right-24: Sensitive data](./storage/)   
+    [:octicons-arrow-right-24: More (data repositories, ...)](./storage/)   
 
 
 </div>
