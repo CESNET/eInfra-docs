@@ -9,7 +9,7 @@ authors:
 
 !!! warning "Planned changes to the SensitiveCloud service"
 
-    We would like to inform you that on February 26th, 2022 at 5 p.m. (UTC+1), SensitiveCloud service will be undergoing scheduled maintenance to change the login method from MUNI IDP to e-INFRA CZ IDP.
+    We would like to inform you that on February 26th, 2023 at 5 p.m. (UTC+1), SensitiveCloud service will be undergoing scheduled maintenance to change the login method from MUNI IDP to e-INFRA CZ IDP.
 
     The expected downtime should not exceed one hour, during which the Rancher portal login will be temporarily unavailable. We apologize for any inconvenience this may cause and assure you that we will work diligently to ensure a swift and seamless transition.
 
