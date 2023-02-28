@@ -17,6 +17,7 @@ nav:
     # - how-to-guides/high-availability-deployment.md
     # - how-to-guides/maintaining-cloud-resources.md
     - how-to-guides/manage-volumes.md
+    - how-to-guides/volume-transfer.md
     - how-to-guides/managing-security-groups.md
     - how-to-guides/obtaining-api-key.md
     # - how-to-guides/using-custom-linux-images.md
