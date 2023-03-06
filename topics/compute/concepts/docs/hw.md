@@ -10,7 +10,7 @@ sidebar:
 ---
 ## Kubernetes Clusters
 
-### kuba-cluster
+### Kuba-Cluster
 
 This cluster comprises 2560 *hyperthreaded* CPU cores, 2530 available to users, 9.84TB RAM, 9.72TB available to users, and 20 NVIDIA A40 GPU accelerators. It consists of 20 nodes with the following configuration:
 
