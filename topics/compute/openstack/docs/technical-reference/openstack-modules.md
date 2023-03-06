@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# OpenStack modules
+# OpenStack Modules
 
 The following table contains a list of deployed OpenStack services. Services are separated
 into two groups based on their stability and the level of support we are able to provide. All services in the production

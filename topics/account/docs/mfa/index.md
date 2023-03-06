@@ -118,13 +118,13 @@ can be used.
 The [Touch ID](https://support.apple.com/en-in/guide/mac-help/mchl16fbf90a/mac) 
 feature can be used.
 
-#### WebAuthN on Linux PC with FIDO2-compatible Hardware Token
+#### WebAuthN on Linux PC With FIDO2-compatible Hardware Token
 
 USB hardware tokens that support [FIDO2](https://en.wikipedia.org/wiki/FIDO2_Project)
 , like [Yubikey](https://www.yubico.com/authentication-standards/fido2/), 
 can be used.
 
-#### WebAuthN on Linux PC with Android Phone Used for Second Factor
+#### WebAuthN on Linux PC With Android Phone Used for Second Factor
 
 This use case requires a rather specific setup. The Linux PC must have 
 Bluetooth enabled, Google Chrome browser must be used on the PC, and an 

@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# Obtaining API key
+# Obtaining API Key
 
 __1.__ In **Identity &gt; Application Credentials**, click on **Create Application Credential**.
 __2.__ Choose name, description and expiration date & time.

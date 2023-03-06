@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# Data storage
+# Data Storage
 
 Every project generates an amount of data that needs to be stored. There are options (sorted by preference):
 

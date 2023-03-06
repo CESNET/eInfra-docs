@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# IP allocation policy
+# IP Allocation Policy
 
 In MetaCentrum Cloud (MCC) we support both IPv4 and IPv6. IPv4 allocation policies are based on Floating IPs (FIP). This type of networking requires the user to first connect virtual network containing specific VM to the public network before allocating a FIP for specific VM. Further information is available on page [Virtual networking](../additional-information/virtual-networking.md). IPv6 allocation policy is based on common IPv6 public network, which can be directly attached to VMs.
 
@@ -40,7 +40,7 @@ The situation is rather different for group projects. You cannot use the same ap
 
     If you use a MUNI account, you can use `private-muni-10-16-116` and log into the network via MUNI VPN or you can set up Proxy networking, which is described on page [Proxy networking](../additional-information/proxy-networking.md).
 
-### Floating IP conversion
+### Floating IP Conversion
 
 One floating IP per project should generally suffice. All OpenStack instances are deployed on top of internal OpenStack networks. These internal networks are not by default accessible from outside of OpenStack, but instances on top of the same internal network can communicate with each other.
 
@@ -58,6 +58,6 @@ In case, that these options are not suitable for your use case, you can still re
 
 ## IPv6 Networking
 
-### IPv6 Shared network
+### IPv6 Shared Network
 
 We have prepared an IPv6 prefix `public-muni-v6-432`, which is available for both personal and group projects. The network is available as an attachable network for VMs with no limits. For more information please refer to page [Attaching interface](../how-to-guides/attaching-interface.md).

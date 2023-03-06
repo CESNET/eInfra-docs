@@ -5,25 +5,25 @@ search:
   exclude: false
 ---
 
-# IPv6 troubleshooting
+# IPv6 Troubleshooting
 
 Public IPv6 addresses are assigned via SLAAC. After assigning an interface in OpenStack to your instance, verify correct configuration of your VM. You can assign interface by directly connecting your VM to the network upon creation or by assigning secondary interface.
 
-## Metadata service
+## Metadata Service
 
 There is an issue with metadata service in IPv6 only environment in our OpenStack Cloud. If you decide to use IPv6 for public access, we recommend to add a local IPv4 network to your VM for deployment of initial configuration via metadata service. This problem can be usually linked to missing ssh keys in your VM in IPv6 only deployment.
 
-## IPv6 address not obtained
+## IPv6 Address Not Obtained
 
 This problem should occur only when assigning additional interfaces to your existing VM. First verify the interface is enabled in the system via `ip addr` and if the interface is down, run `ifconfig ETH_NAME up`.
 
 Some Linux images have SLAAC disabled by default. In this case, you can either assign the address allocated by OpenStack manually, or setup SLAAC configuration on your VM.
 
-## Security groups
+## Security Groups
 
 If you have been using your VM with IPv4, make sure to update your [Security groups](../additional-information/security-groups.md) to also allow IPv6 traffic, otherwise it will be inaccessible. For configuration refer to tutorial [Creating first infrastructure](../getting-started/creating-first-infrastructure.md#update-security-group).
 
-## DNS records
+## DNS Records
 
 By default, OpenStack injects DNS records to new VMs upon creation. If you are missing IPv6 DNS records on your VM and you decide to completely remove IPv4, you should setup IPv6 records in folder `/etc/resolv.conf`.
 

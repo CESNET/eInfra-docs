@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Computing services
+# Computing Services
 
 e-INFRA CZ provides a wide range of computational services for the scientific community. In the following sections of the documentation you will learn how to choose the right service and how to make the most of it.
 
@@ -44,12 +44,12 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
 </div>
 
-## How to choose between computing services?
+## How to Choose Between Computing Services?
 
 - [Read computing service overview](./concepts/)
 - Check comparision between computing services _(TODO)_
 
-## See how different scientific use-cases are implemented.
+## See How Different Scientific Use-Cases Are Implemented.
 
 - [Cybersecurity platform](./concepts/use-cases/muni-kypo)
 - Sensitive data obtaining to processing on cloud infrastructure _(TODO)_

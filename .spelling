@@ -1,3 +1,12 @@
+KYPO
+Cerit-SC
+WS-PGRADE
+DIRAC
+ppk
+sshuttle
+pip
+TESK
+WES
 NVIDIA DGX-2
 nvidia
 smi
@@ -812,3 +821,4 @@ PROJECT
 e-INFRA
 e-INFRA CZ
 DICE
+TOTP

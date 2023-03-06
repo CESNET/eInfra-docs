@@ -5,4 +5,4 @@ search:
   exclude: false
 ---
 
-# Maintaining cloud resources
+# Maintaining Cloud Resources

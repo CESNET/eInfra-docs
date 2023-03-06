@@ -1,4 +1,4 @@
-# User documentation
+# User Documentation
 
 This project contains e-INFRA CZ documentation portal source.
 
@@ -22,7 +22,7 @@ $ sudo ./start.sh
 
 the `-b` parameter builds the container with required dependencies.
 
-### Package upgrade with pip
+### Package Upgrade With pip
 
 ```console
 $ pip list -o
@@ -50,7 +50,7 @@ Mellanox
 
 ## Mathematical Formulae
 
-### Formulas are made with:
+### Formulas Are Made With:
 
 * [https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)
 * [https://www.mathjax.org/](https://www.mathjax.org/)

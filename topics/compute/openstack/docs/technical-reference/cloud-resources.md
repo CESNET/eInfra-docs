@@ -5,9 +5,9 @@ search:
   exclude: false
 ---
 
-# Cloud resources
+# Cloud Resources
 
-## Classification of application
+## Classification of Application
 
 Your application may be:
 
@@ -17,7 +17,7 @@ Your application may be:
 
 Applications running in a single cloud resource (`A.` and `B.`) are a direct match for MetaCentrum Cloud OpenStack. Distributed applications (`C.`) are best handled by [MetaCentrum PBS system](https://metavo.metacentrum.cz/cs/state/personal).
 
-## Maintaining cloud resources
+## Maintaining Cloud Resources
 
 Your project is computed within the MetaCentrum Cloud Openstack project where you can claim MetaCentrum Cloud Openstack resources (for example virtual machine, floating IP, ...). There are multiple ways how to set up the MetaCentrum Cloud Openstack resources:
 
@@ -29,7 +29,7 @@ Your project is computed within the MetaCentrum Cloud Openstack project where yo
 
 If your project infrastructure (MetaCentrum Cloud Openstack resources) within the cloud is static you may select a manual approach with [MetaCentrum Cloud Openstack Dashboard UI](https://dashboard.cloud.muni.cz). There are projects which need to allocate MetaCentrum Cloud Openstack resources dynamically, in such cases we strongly encourage automation even at this stage.
 
-## Transfering data to cloud
+## Transferring Data to Cloud
 
 There are several options how to transfer the project to cloud resources:
 
@@ -40,11 +40,11 @@ There are several options how to transfer the project to cloud resources:
  * indirectly in OpenStack (glance) image (you need to obtain image-uploader role)
    * OpenStack Glance images may be public, private, community or shared.
 
-### SSH to cloud VM resources and manual update
+### SSH to Cloud VM Resources and Manual Update
 
 In this scenario, you log into your cloud VM and perform all needed actions manually. This approach does not scale well, is not effective enough as different users may configure cloud VM resources in different ways resulting sometimes in different resource behavior.
 
-### Automated work transfer and synchronization with docker (or podman)
+### Automated Work Transfer and Synchronization With Docker (Or Podman)
 
 There are automation tools that may help you to ease your cloud usage:
 
@@ -55,7 +55,6 @@ Ansible is a cloud automation tool that helps you with:
 
 * keeping your VM updated
 * automatically migrating your applications or data to/from cloud VM
-
 
 Container runtime engine helps you to put yours into a container stored in a container registry.
 Putting your work into a container has several advantages:
@@ -74,7 +73,7 @@ As a container registry we suggest either:
 
 An example of such an approach is demonstrated in [`cloud-estimate-pi` project](https://gitlab.ics.muni.cz/cloud/cloud-estimate-pi).
 
-## Receiving data from experiments to your workstation
+## Receiving Data From Experiments to Your Workstation
 
 It certainly depends on how your data are stored, the options are:
 
@@ -85,8 +84,7 @@ It certainly depends on how your data are stored, the options are:
   * data stored in the S3 compatible database may be easily received via [minio client application MC](https://docs.min.io/docs/minio-client-complete-guide)
   * date stored in [OpenStack Swift python client `swift`](https://docs.openstack.org/python-swiftclient/train/swiftclient.html)
 
-
-## Highly available cloud application
+## Highly Available Cloud Application
 
 Let's assume your application is running in multiple instances in the cloud already.
 To make your application highly available (HA) you need to
@@ -96,8 +94,7 @@ To make your application highly available (HA) you need to
 
 Your application surely needs a Fully Qualified Domain Name (FQDN) address to become popular. Setting FQDN is done on the public floating IP linked to the load-balancer.
 
-
-## Cloud project example and workflow recommendations
+## Cloud Project Example and Workflow Recommendations
 
 This chapter summarizes effective cloud workflows on the (example) [`cloud-estimate-pi` project](https://gitlab.ics.muni.cz/cloud/cloud-estimate-pi).
 
@@ -117,7 +114,6 @@ The project recommendations are:
    * multiple ways how to execute the application (container cloud support advanced container life-cycle management)
 1. The project should have a changelog (either manually written or generated) (for instance [`CHANGELOG.md`](https://gitlab.ics.muni.cz/cloud/cloud-estimate-pi/-/blob/master/CHANGELOG.md))
 
-
 We recommend every project defines cloud usage workflow which may consist of:
 
 1. Cloud resource initialization, performing
@@ -133,7 +129,7 @@ We recommend every project defines cloud usage workflow which may consist of:
    * download of project data from cloud to user's workstation
 1. Cloud resource destroy
 
-## Road-map to effective cloud usage
+## Road-Map to Effective Cloud Usage
 
 Project automation is usually done in CI/CD pipelines. Read [Gitlab CI/CD article](https://docs.gitlab.com/ee/ci/introduction/) for more details.
 ![](https://docs.gitlab.com/ee/ci/introduction/img/gitlab_workflow_example_extended_v12_3.png)
@@ -147,9 +143,7 @@ The following table shows the different cloud usage phases:
 | [continuous delivery](https://docs.gitlab.com/ee/ci/introduction/#continuous-delivery) (automated, but deploy manual) | semi-automated (GUI + `ansible` executed manually) | container ([semver](https://semver.org) versioned) | semi-automated (`ansible` executed manually) | semi-automated (`ansible` executed manually) | semi-automated (`ansible` executed manually) | semi-automated (`ansible` and `ssh` manually)  |
 | [continuous deployment](https://docs.gitlab.com/ee/ci/introduction/#continuous-deployment) (fully-automated) | automated (`terraform` and/or `ansible` in CI/CD) | container ([semver](https://semver.org) versioned) | automated (`ansible` in CI/CD) | automated (`ansible` in CI/CD) | automated (`ansible` in CI/CD) | semi-automated (`ansible` in CI/CD and `ssh` manually)  |
 
-
-
-## How to convert the legacy application into a container for a cloud?
+## How to Convert Legacy Application Into Container for Cloud?
 
 Containerization of applications is one of the best practices when you want to share your application and execute it in the cloud. Read about [the benefits](https://cloud.google.com/containers).
 

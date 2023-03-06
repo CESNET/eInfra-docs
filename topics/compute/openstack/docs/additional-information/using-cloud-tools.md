@@ -5,11 +5,12 @@ search:
   exclude: false
 ---
 
-# Using Cloud tools
+# Using Cloud Tools
 
 [Cloud tools](https://gitlab.ics.muni.cz/cloud/cloud-tools) is a docker container prepared with modules required for cloud management.
 
 ## Setup
+
 In order to use the container, you have to [install docker](https://docs.docker.com/engine/install/centos/) and start the service.
 The next step is to clone the [cloud tools](https://gitlab.ics.muni.cz/cloud/cloud-tools) repository
 and start the docker container by running:

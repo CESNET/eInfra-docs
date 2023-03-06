@@ -62,7 +62,7 @@ Aligning columns to left/center/right is done by placing `:` characters at the b
 | Content      |     Content    |      Content |
 ```
 
-## Code blocks
+## Code Blocks
 
 Starts and ends with three backticks `\``.
 You can specify the environment/language (console in the example below) at the beginning. But not necessary.

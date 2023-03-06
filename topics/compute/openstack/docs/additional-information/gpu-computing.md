@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# GPU computing
+# GPU Computing
 
 On this page you can find static list of offered GPUs in Metacentrum Cloud.
 

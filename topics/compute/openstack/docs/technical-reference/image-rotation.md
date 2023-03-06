@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# Image rotation
+# Image Rotation
 
 Image rotation in our cloud is done on 2 month basis. Timestamps are added to old images.
 

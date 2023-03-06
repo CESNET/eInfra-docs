@@ -1,4 +1,4 @@
-# We are expanding to help all scientists in the Czech Republic
+# We Are Expanding to Help All Scientists in the Czech Republic
 
 We are excited to announce that we are expanding our SensitiveCloud service beyond Masaryk University and making it available to the entire e&#8209;INFRA&#160;CZ community. This means that our platform will be accessible to a wider range of researchers and organizations, increasing the potential for collaboration and innovation.
 
@@ -6,11 +6,11 @@ As part of this expansion, we will be changing the way users access the manageme
 
 We understand that changes like this can be disruptive, and we apologize for any inconvenience this may cause. However, we believe that this change will help us to provide an even better service to our users by making the platform more accessible and easier to use.
 
-# How will this change affect you?
+# How Will This Change Affect You?
 
 **No users deployment and running applications will be affected by this change.**
 
-## Principal investigators
+## Principal Investigators
 
 - From now on, you will have to manage the access to the SensitiveCloud resources for your collaborators exclusively from the identity management system of e&#8209;INFRA&#160;CZ. The system is located at: [perun.e‑infra.cz](https://perun.e-infra.cz).
 - New mechanism for managing collaborators over SensitiveCloud resources via applications. [How to add/remove collaborators to SensitiveCloud project](../manage-project)

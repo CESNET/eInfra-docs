@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# Accessing instances
+# Accessing Instances
 
 ## Prerequisites
 
@@ -38,9 +38,9 @@ connect to the VM via SSH.
     Before the connection via putty is possible it is first necessary to import
     private ssh key as is explained in [Technical reference](../technical-reference/remote-access.md).
 
-## Default users
+## Default Users
 
-| OS     | login for ssh command |
+| OS     | Login for SSH command |
 |--------|-----------------------|
 | Debian | debian                |
 | Ubuntu | ubuntu                |

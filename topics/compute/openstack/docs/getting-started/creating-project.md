@@ -5,4 +5,4 @@ search:
   exclude: false
 ---
 
-# Creating group project
+# Creating Group Project

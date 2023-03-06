@@ -27,8 +27,7 @@ Once the huge images in Mirax format enter the raw data storage, they are transf
 
 There is an directory structure optimized within the data storage enabling imediate usage of the TIFF files by the pathologist via Hospital Information System (HIS).
 
-
-## Target cloud mapping
+## Target Cloud Mapping
 
 TODO
 
@@ -37,8 +36,8 @@ TODO
 Conversion from Mirax proprietary format to TIFF open format is done by using open-source convertor [Vips](https://libvips.github.io/pyvips/intro.html).
 Virtual server visualizing the TIFF images uses open-source [OpenSeadragon project](https://openseadragon.github.io/).
 
-
 ## References
+
 * https://www.bbmri.cz/
 * https://www.mou.cz/en/about-the-mmci/t1632
 * https://libvips.github.io/pyvips/intro.html

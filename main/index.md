@@ -6,7 +6,7 @@ hide:
   - breadcrumbs
   - contributors
 ---
-# Welcome to the e-INFRA CZ documentation!
+# Welcome to e-INFRA CZ Documentation!
 
 The home for documentation of all e-INFRA CZ services that are provided to scientific community in the Czech Republic.
 

@@ -5,13 +5,13 @@ search:
   exclude: false
 ---
 
-# Manage volumes
+# Manage Volumes
 
 When storing a large amount of data in a virtual machine instance, it is advisable to use a separate volume and not the
 root file system containing the operating system. It adds flexibility and often prevents data loss. Volumes can be
 attached and detached from instances at any time, their creation and deletion are managed separately from instances.
 
-## Creating volume
+## Creating Volume
 
 __1.__ In **Project &gt; Volumes &gt; Volumes**, select **Create Volume**.
 
@@ -32,7 +32,7 @@ For details, refer to [the official documentation](https://docs.openstack.org/ho
 
 It is possible to create volume snapshots or backups. In this guide we will focus on volume backups. When creating a backup it is recommended to turn off the instance if possible to prevent data errors.
 
-### Creating volume backup
+### Creating Volume Backup
 
 __1.__ __(optional)__ In **Project &gt; Compute &gt; Instances** Turn off the affected instance.
 
@@ -54,7 +54,7 @@ __3.__ Specify Backup Name and optional information and press **Create Volume Ba
 
 __3.__ Wait for the Backup to be created, it will be then stored in **Project &gt; Volumes &gt; Backups**.
 
-### Restoring volume backup
+### Restoring Volume Backup
 
 __1.__ __(optional)__ In **Project &gt; Compute &gt; Instances** Turn off the affected instance.
 
@@ -70,14 +70,14 @@ __2.__ In **Project &gt; Volumes &gt; Backups** open the **Actions** menu of sel
 
 __3.__ Wait for the Backup to be restored.
 
-## Volume resize
+## Volume Resize
 
 We can distinghuish two types of volumes, namely
 
 - Attachable volumes: additional volumes that don't contain the system image and the VM can startup without their presence.
 - System volumes: The boot image must be always present.
 
-### Resizing attachable volume
+### Resizing Attachable Volume
 
 When working with volumes, we highly recommend to always make a [volume backup](#creating-volume-backup) before any operations with the volume.
 
@@ -120,7 +120,7 @@ __6.__ Attach the volume back to the instance via **Manage Attachments**.
 __7.__ Verify correct mounting of the volume in the instance.
 
 
-### Resizing system volume
+### Resizing System Volume
 
 Resizing the system volume is not possible. It is however possible to create a backup of the system volume, make necessary changes and deploy new VM with the modified volume.
 

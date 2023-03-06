@@ -20,7 +20,7 @@ Following the steps below, you can run ownCloud client application. This applica
 * Important prerequisite: application pod needs to use [PVC](pvc.html) in order to ownCloud client can sync data into the pod. If no PVC is used, no sync is possible.
   * For most applications here it is possible to select *persistent home* which implies using *PVC*.
 
-### Check your Application
+### Check Your Application
 
 Select your `Namespace` (1),  navigate through `Workload` (2), `Pods` (3), and name of the application (4), e.g., `ansys-0` -- click on the name. See screenshot below.
 
@@ -42,13 +42,13 @@ Navigate through `App & Marketplace` (2), `Charts` (3), limit charts only to `ce
 
 ![selectapp](selectapp.png)
 
-### Select Version of the Application
+### Select Version of Application
 
 When you click on the chart, hit `Install` to continue.
 
 ![selectversion](selectversion.png)
 
-### Install the Application
+### Install Application
 
 Now you can install the ownCloud application. In most cases, keep both `Namespace` (1) and `Name` (2) intact, however, you can select namespace as desired except `default`. The `default` namespace is available but it is not meant to be used. The `Name` will be in URL to access the application. The `Name` must be unique in the `Namespace`, i.e., you cannot run two or more instances with the same `Name` in the same `Namespace`. If you delete the application and later install the application again preserving its `Name`, content of home directory will be preserved. 
 

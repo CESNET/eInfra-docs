@@ -12,14 +12,16 @@ sidebar:
 This tutorial shows how to set up the basic GitLab pipeline to automaticaly build Docker image and publish it to a container registry.
 
 ## Prerequisites
+
 - Gitlab repository
 - Dockerfile in the repository with desired container configuration
 
-## Configure CI/CD Gitlab Pipeline file
-- In your desired repository, use **Set up CI/CD** button as shown in the following image. 
+## Configure CI/CD Gitlab Pipeline File
+
+- In your desired repository, use **Set up CI/CD** button as shown in the following image.
 ![setup](./gitops/container_build/containers_1.png)
 
-- In the `.gitlab-ci.yml` editor copy and paste following snippet:    
+- In the `.gitlab-ci.yml` editor copy and paste following snippet:
 
 ```yaml
 docker-build:
@@ -45,9 +47,10 @@ docker-build:
       exists:
         - Dockerfile
 ```
+
 This will use the standard Gitlab Container Registry available within your own project. Note the variable `$CI_REGISTRY`, which is specific for the repository.
 
-- Commit changes 
+- Commit changes
 ![commit](./gitops/container_build/containers_2.png)
 
 - Pipeline will be triggered and it's status could be shown within the last commit information.
@@ -61,11 +64,14 @@ The `Packages & Registries > Container registry` is available here:
 
 For advanced information please refer to the [official documentation](https://docs.gitlab.com/ee/user/packages/container_registry/#container-registry-examples-with-gitlab-cicd)
 
-## How to use images from Gitlab Registry
+## How to Use Images From GitLab Registry
+
 If the project's visibility within GitLab is public and container registry is not limited to authenticated users, simply use:
+
 ```bash
 docker run [options] registry.example.com/group/project/image [arguments]
 ```
+
 > If you are using MUNI ICS GitLab, the registry URL is: registry.gitlab.ics.muni.cz
 
 If project visibility or container registry are set to private, authentication to container registry is needed. You will need to create deploy token and use it as descibed in the [official documentation](https://docs.gitlab.com/ee/user/packages/container_registry/#authenticate-with-the-container-registry)
@@ -73,7 +79,9 @@ If project visibility or container registry are set to private, authentication t
 For more information please refer to [official documentation](https://docs.gitlab.com/ee/user/packages/container_registry/#use-images-from-the-container-registry).
 
 ## Upload image to custom container registry
-Change the options of `docker login` command in `before_script` part of your definition of pipeline (`gitlab-ci.yml`). 
+
+Change the options of `docker login` command in `before_script` part of your definition of pipeline (`gitlab-ci.yml`).
+
 ```yaml
   before_script:
     - docker login -u "username" -p "password" example.io

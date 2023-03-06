@@ -1,6 +1,6 @@
 # Perform MFA
 
-## When is MFA Required?
+## When Is MFA Required?
 
 MFA is required at login if **the service you are accessing requires it**.
 This is usually true for the services which works with sensitive data or
@@ -31,7 +31,7 @@ choose any of the options.
 You will be displayed an error message if you cannot fulfil MFA
 requirement - e.g. you don't have any registered tokens or verification fails.
 
-### MFA from Your Home Organization Login
+### MFA From Your Home Organization Login
 
 If you perform MFA during the login process within the context of your home
 organization account and information about it is released to us by the identity

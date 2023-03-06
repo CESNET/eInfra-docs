@@ -5,13 +5,13 @@ search:
   exclude: false
 ---
 
-# Changing VM resources
+# Changing VM Resources
 
 ## Prerequisites
 
 - Created [instance](../getting-started/creating-first-infrastructure.md).
 
-## Resizing image
+## Resizing Image
 
 In this guide we will shoud you how to change the VM resources by changing [flavor](../technical-reference/flavors.md).
 

@@ -1,4 +1,4 @@
-# Documentation style
+# Documentation Style
 
 This section focuses on the best practise of usage of various components (code blocks, notes, diagrams, ...) used within the documentation.
 
@@ -61,7 +61,7 @@ authors
 ---
 ```
 
-## Hiding breadcrumbs
+## Hiding Breadcrumbs
 
 It is possible to hide __breadcrumbs__ by adding to metadata:
 ``` markdown
