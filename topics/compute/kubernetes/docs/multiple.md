@@ -10,12 +10,14 @@ sidebar:
 ---
 
 One person can posses access rights to multiple clusters. To work with them, every cluster's `config` must be available in either:
+
 - `$HOME/.kube/config`
 - in separate file but then `-f [filename]` must be specified when using `kubectl`
 
 It's much more convenient to squash multiple cluster configs into one because you don't have to worry where your namespace lies. 
 
-## Merging configs
+## Merging Configs
+
 If your `config` already has some content, it looks similar to:
 
 ```yaml
