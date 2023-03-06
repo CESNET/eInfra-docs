@@ -78,7 +78,7 @@ If project visibility or container registry are set to private, authentication t
 
 For more information please refer to [official documentation](https://docs.gitlab.com/ee/user/packages/container_registry/#use-images-from-the-container-registry).
 
-## Upload image to custom container registry
+## Upload Image to Custom Container Registry
 
 Change the options of `docker login` command in `before_script` part of your definition of pipeline (`gitlab-ci.yml`).
 
