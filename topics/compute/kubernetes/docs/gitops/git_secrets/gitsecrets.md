@@ -16,15 +16,16 @@ git repository they will be able to view the secrets in plaintext.
 The following article explains how to store Kubernetes Secrets in git securely.
 
 ## Prerequisites
+
 - Namespace on your cluster
 - kubectl
 - kubeseal
 
-## Kubeseal installation
+## Kubeseal Installation
 
 To store secrets securely you will need a program called `kubeseal`. This program can be downloaded as a standalone binary from this [GitHub repository](https://github.com/bitnami-labs/sealed-secrets/releases).
 
-## How to store your secrets
+## How to Store Your Secrets
 
 First you will need a YAML file defining your secret such as this (note that the secret data must be base64 encoded):
 
