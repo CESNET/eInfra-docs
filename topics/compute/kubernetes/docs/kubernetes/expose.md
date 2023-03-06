@@ -8,13 +8,14 @@ aside:
 sidebar:
   nav: docs
 ---
+
 ## Exposing Applications
 
 Basically, there are two kinds of exposable applications: *web-based* applications, *other* applications. The difference between these types is in required IP address. The Web-based application shares IP address with other Web-based applications while the other applications require new IP address for each service. Number of IP addresses is limited so if possible, use the Web-based approach.
 
 In the following documentation, there are YAML fragments, they are meant to be deployed using the `kubectl` like this: `kubectl create -f file.yaml -n namespace` where `file.yaml` contains those YAMLs below and `namespace` is the namespace with the application. Furthermore, this part of documentation suppose, that the application (deployment) already exists. If not sure, read again [hello example](/containers/get-started/hello-world/).
 
-### Web-based Applications
+### Web-Based Applications
 
 Web-based applications are those that communicate via `HTTP` protocol. These applications are exposed using `Ingress` rules. 
 
@@ -162,4 +163,3 @@ spec:
   selector:
     app: application
 ```
-
