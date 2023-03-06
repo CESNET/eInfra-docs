@@ -1,11 +1,11 @@
 ---
 
-title: Load balancers
+title: Load Balancers
 search:
   exclude: false
 ---
 
-# Load balancers
+# Load Balancers
 
 Load balancers serve as a proxy between virtualised infrastructure and clients in the outside network. This is essential in OpenStack since it can be used in a scenario where the infrastructure dynamically starts new VMs and adds them into the load balancing pool in order to mitigate inaccessibility of services.
 
@@ -16,6 +16,7 @@ When modifying a load balancer, each operation changes the database into immutab
     We are currently observing inaccessibility of some load balancers on floating IP after creation. If this happens, please try to rebuild the load balancer before contacting support.
 
 ## Provisioning Status
+
 This status represents the overall state of the load balancer backend.
 
 - `ACTIVE`: the load balancer backend is working as intended.
@@ -23,7 +24,8 @@ This status represents the overall state of the load balancer backend.
 - `ERROR`: the provisioning has failed. This load balancer can't be modified and usually is not working. Therefore we encourage our users to remove these load balancers. If this happens more often, please make sure to report this problem at `cloud@metacentrum.cz`.
 - `DELETED`: entity has been deleted.
 
-## Operating status
+## Operating Status
+
 Operating status is managed by health monitor service of the load balancer and reflects the availibility of endpoint service.
 
 - `ONLINE`: all endpoint services are available.
