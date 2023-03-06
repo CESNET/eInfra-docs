@@ -1,11 +1,11 @@
 ---
 
-title: Python libraries
+title: Python Libraries
 search:
   exclude: false
 ---
 
-# Python libraries
+# Python Libraries
 
 Other than Terraform and OpenStack CLI, it is also possible to manage the OpenStack
 by Python SDK and create custom Python scripts for cloud management.
