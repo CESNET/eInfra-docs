@@ -1,11 +1,11 @@
 ---
 
-title: Volume transfer between projects
+title: Volume Transfer Between Projects
 search:
   exclude: false
 ---
 
-# Volume transfer between projects
+# Volume Transfer Between Projects
 
 __1.__ Shut off instance and make copy of volume which you want to transfer using
 **Create volume backup** you can follow
