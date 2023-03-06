@@ -1,11 +1,11 @@
 ---
 
-title: Project expiration policy
+title: Project Expiration Policy
 search:
   exclude: false
 ---
 
-# Project expiration policy
+# Project Expiration Policy
 
 Every group project has its expiration date. The date is set when creating the project. Expired project are to be disabled and its data later removed.
 
