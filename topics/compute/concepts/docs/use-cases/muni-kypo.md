@@ -9,7 +9,7 @@ sidebar:
 
 ## Goals
 
-1. To research methods and develop software for enhancing cybersecurity knowledge and skills. 
+1. To research methods and develop software for enhancing cybersecurity knowledge and skills.
 1. To provide tools for economically-and-time efficient simulation of real Critical Information Infrastructures (CIIs), detecting of cyber-threats, and then mitigation.
 1. Support for research and development of new methods to protect critical infrastructure against attacks.
 
@@ -17,7 +17,7 @@ sidebar:
 
 The architecture consists of several components briefly described [here](https://docs.crp.kypo.muni.cz/basic-concepts/conceptual-architecture/).
 
-## Target cloud mapping
+## Target Cloud Mapping
 
 As the architecture requires dynamic creation of following resources
 
@@ -36,12 +36,11 @@ KYPO CRP uses the same open approach for the content as for its architecture to 
 
 The KYPO CRP sources are currently hosted at https://gitlab.ics.muni.cz/muni-kypo-crp.
 
-
 ## References
+
 * https://crp.kypo.muni.cz/
 * https://docs.crp.kypo.muni.cz/
 * https://www.muni.cz/en/research/projects/48647
 * https://www.muni.cz/en/research/projects/31984
 * https://www.muni.cz/en/research/projects/23884
 * https://www.muni.cz/en/research/projects/43025
-

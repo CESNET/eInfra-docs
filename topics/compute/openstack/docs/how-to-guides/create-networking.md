@@ -5,11 +5,11 @@ search:
   exclude: false
 ---
 
-# Create networking
+# Create Networking
 
 We can create a virtual network in OpenStack for the project, which can be used by multiple VMs and divides the logical topology for each user.
 
-## Network and subnet creation
+## Network and Subnet Creation
 
 === "GUI"
 
@@ -58,7 +58,7 @@ We can create a virtual network in OpenStack for the project, which can be used 
     Additional subnet configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/subnet.html).
 
 
-## Router creation
+## Router Creation
 
 === "GUI"
 

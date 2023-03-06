@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# Get support
+# Get Support
 
 If you approach a problem regarding OpenStack or other problems regarding MetaCentrum Cloud
 that are not described in this documentation, you can use our support.

@@ -5,4 +5,4 @@ search:
   exclude: true
 ---
 
-# Attaching remote storage
+# Attaching Remote Storage

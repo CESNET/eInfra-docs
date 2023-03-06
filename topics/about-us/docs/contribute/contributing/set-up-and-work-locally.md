@@ -1,4 +1,4 @@
-# Set up and work locally
+# Set Up and Work Locally
 
 One of the mechanisms to work with the documentation is to run it on your computer using Docker. This allows you to work offline and see the documentation rendered in a web browser.
 
@@ -40,7 +40,7 @@ By default the URL where the server listens is [http://localhost:8080][4]
 !!! note
     Edits will be shown live in your browser window, no need to restart the server.
 
-### Partial documentation building
+### Partial Documentation Building
 
 If you don't want to build the whole documentation (due to its big build time), you can choose to build only subset of the whole documentation site by using argument `-f <path to mkdocs.yml of subdocumentation>`
 
@@ -48,7 +48,7 @@ If you don't want to build the whole documentation (due to its big build time), 
 ./start.sh -f topics/about-us/mkdocs.yml
 ```
 
-## Publishing changes
+## Publishing Changes
 
 Now you are ready to send changes to your forked repository of the e-INFRA CZ documentation.
 

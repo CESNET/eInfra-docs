@@ -8,7 +8,7 @@ aside:
 sidebar:
   nav: docs
 ---
-## Kubernetes clusters
+## Kubernetes Clusters
 
 ### kuba-cluster
 
@@ -22,7 +22,8 @@ This cluster comprises 2560 *hyperthreaded* CPU cores, 2530 available to users, 
 | GPU:      | none or 1 or 2 NVIDIA A40 per node  |
 | Network:  | 2x 10Gbps NIC                       |
 
-## OpenStack clusters
+## OpenStack Clusters
+
 _TBD_
 
 ## Storage

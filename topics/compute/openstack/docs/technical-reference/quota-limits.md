@@ -5,11 +5,12 @@ search:
   exclude: false
 ---
 
-# Quota limits
+# Quota Limits
 
 Quotas are used to specify individual resources for each project. In the following tables you can see the default resources available for each project. If you need to increase these resources, you can contact [support](../technical-reference/get-support.md).
 
-## Compute resources (Nova)
+## Compute Resources (Nova)
+
 | resource             | quota |
 |----------------------|-------|
 | instances            | 5     |
@@ -19,7 +20,8 @@ Quotas are used to specify individual resources for each project. In the followi
 | server_groups        | 10    |
 | server_group_members | 10    |
 
-## Network resources (Neutron)
+## Network Resources (Neutron)
+
 | resource            | quota |
 |---------------------|-------|
 | network             | 1     |
@@ -30,7 +32,8 @@ Quotas are used to specify individual resources for each project. In the followi
 | security_group      | 10    |
 | security_group_rule | 100   |
 
-## Load balancer resources (Octavia)
+## Load Balancer Resources (Octavia)
+
 | resource        | quota |
 |-----------------|-------|
 | loadbalancer    | 1     |
@@ -39,7 +42,8 @@ Quotas are used to specify individual resources for each project. In the followi
 | pool            | 5     |
 | health_monitors | 10    |
 
-## Data storage (Cinder)
+## Data Storage (Cinder)
+
 | resource             | quota     |
 |----------------------|-----------|
 | gigabytes            | 1000      |
@@ -49,13 +53,15 @@ Quotas are used to specify individual resources for each project. In the followi
 | backups              | 10        |
 | groups               | 10        |
 
-## Image storage (Glance)
+## Image Storage (Glance)
+
 | resource      | quota |
 |---------------|-------|
 | properties    | 128   |
 | image_storage | 2000  |
 
-## Secret storage (Barbican)
+## Secret Storage (Barbican)
+
 | resource    | quota |
 |-------------|-------|
 | secrets     | 20    |

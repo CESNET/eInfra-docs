@@ -11,7 +11,7 @@ search:
 
 - Created [networking](../how-to-guides/create-networking.md)
 
-## Allocation and assignment of FIP
+## Allocation and Assignment of FIP
 
 Floating IPs are used to assign public IP address to VMs.
 

@@ -5,6 +5,6 @@ search:
   exclude: true
 ---
 
-# OpenStack status
+# OpenStack Status
 
 TODO: export status of openstack services.

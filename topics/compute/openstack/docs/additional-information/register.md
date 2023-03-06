@@ -67,12 +67,12 @@ request a group project using [this form](https://projects.cloud.muni.cz/) and p
 * __estimated length of the project__,
 * __access control information__ _[(info)](#get-access-control-information)_.
 
+## Increase Quotas for Existing Group Project
 
-## Increase quotas for existing group project
 To request quota increase or access to particular [flavor](../technical-reference/flavors.md), please use [this form](https://projects.cloud.muni.cz/). 
 
+## Get Access Control Information
 
-## Get access control information
 __Access control__ is based on information provided by the selected identity federation
 and is presented in the form of a VO name and, optionally, a group name. Every user
 with active membership in the specified VO/group will have full access to all resources

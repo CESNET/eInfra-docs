@@ -21,23 +21,24 @@ The environment is built on modern container technology using Kubernetes platfor
 
 [Read more at SensitiveCloud product page][1]
 
-## Getting access to the SensitiveCloud
+## Getting Access to SensitiveCloud
+
 If you want to use the SensitiveCloud services and you are a principal investigator (PI), ask to be allocated a computing time in the SensitiveCloud. The PI should be a research group/activity leader, and is responsible for the access to the data and utilization of computing time.
 
 - [Requesting project in SensitiveCloud][2]    
 - [Manage access to the project in SensitiveCloud][3]
 
 ## Using SensitiveCloud
+
 Let’s deep into the technical aspects of working with SensitiveCloud. This section is dedicated to anyone, who will be deploying its computing job or run applications.
 
 - [Connecting to the SensitiveCloud management][4]
 - [Working with the SensitiveCloud][5]
 - Deploying applications in the SensitiveCloud (TODO)
 
-## Learn more
+## Learn More
 
 > The SensitiveCloud environment is provided by CERIT-SC, which is an organisational unit of the Institute of Computing at Masaryk University and one of the three members of the large research infrastructure e-INFRA CZ.
-
 
 [1]: https://cerit-sc.cz/infrastructure-services/trusted-environment-for-sensitive-data
 [2]: ./get-project

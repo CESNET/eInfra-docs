@@ -51,7 +51,7 @@ Below, you can find notes and recommendations on how to contribute to the docume
   * Use descriptive name for an image.
   * Use images in the `png` format.
 
-## Authoring and responsibility
+## Authoring and Responsibility
 
 Each topic has responsible department or person which will be responsible for approving changes.
 

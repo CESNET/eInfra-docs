@@ -1,4 +1,4 @@
-# New project in the SensitiveCloud
+# New Project in SensitiveCloud
 
 We are committed to providing a secure and reliable research environment for data processing, storage, and sharing. Therefore, we have created an on-boarding process for every principal investigator who wants to use the SensitiveCloud.
 
@@ -6,7 +6,7 @@ During this process, our team will work closely with you to determine if our Tru
 
 Ready?
 
-# Requesting project 
+# Requesting Project 
 
 Resources of SensitiveCloud can be obtained by contacting support@e-infra.cz. 
 
@@ -38,11 +38,10 @@ We will arrange a meeting, where details of your use-case will be discussed.
     Principal investigator's name    
     (Digitaly signed)
 
-# What's next?
+# What's Next?
 
 - [Connecting to the SensitiveCloud environment][1]
 - [Manage who has access to your SensitiveCloud project and data][2]
 
 [1]: ../getting-started/connecting-to-sensitive-cloud
 [2]: ../manage-project
-

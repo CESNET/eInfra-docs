@@ -7,6 +7,7 @@ search:
 # About MetaCentrum Cloud
 
 ## Hardware
+
 MetaCentrum Cloud consists of 17 computational clusters containing 277 hypervisors
 with a sum of 8968 cores, 96 GPU cards, and 178 TB RAM. Special demand applications
 can utilize our clusters with local SSDs and GPU cards. OpenStack instances, object
@@ -20,12 +21,13 @@ and one of the top 3 most active open source projects in the world. New OpenStac
 released twice a year. OpenStack functionality is separated into more than 50 services.
 
 ## Application
+
 More than 400 users are using the MetaCentrum Cloud platform and more than 130k VMs were started last year.
 
-## MetaCentrum Cloud current release
+## MetaCentrum Cloud Current Release
 
 [OpenStack Train](https://www.openstack.org/software/train/)
 
-## Deployed services
+## Deployed Services
 
 The list of deployed services in MetaCentrum Cloud is available in [Technical reference](../technical-reference/openstack-modules.md).

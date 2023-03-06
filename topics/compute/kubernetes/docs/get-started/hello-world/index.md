@@ -1,20 +1,22 @@
-# Hello world tutorial
+# Hello World Tutorial
 
 Here we provide a short tutorial on how to deploy a custom webserver in Kubernetes with `kubectl`. We shall use already existing example from [hello-kubernetes](https://github.com/paulbouwer/hello-kubernetes) but with a bit more explanation. This tutorial by far doesn't include everything that can be configured and done but rather provides first experience with Kubernetes.
 
 We are going to deploy a simple web that runs from Docker image and displays "Hello world" together with `Pod` name and `node OS` information. 
 
-*IMPORTANT*
-Unless agreed beforehand, for personal projects and experiments you can use `kuba-cluster`. Here, you have to work in your namespace and its name is derived from your last name with added `-ns`. However, names are not unique and therefore we recommend to check yours on `Rancher` in the drop-down menu in the upper left corner `kuba-cluster` and `Project/Namespaces`.
+!!! important
+    Unless agreed beforehand, for personal projects and experiments you can use `kuba-cluster`. Here, you have to work in your namespace  and its name is derived from your last name with added `-ns`. However, names are not unique and therefore we recommend to check yours   on `Rancher` in the drop-down menu in the upper left corner `kuba-cluster` and `Project/Namespaces`.
 
 ![kube ns](ns.jpg)
 
-## Create files
+## Create Files
 
 We have to create at least 3 Kubernetes resources to deploy the app -- `Deployment`, `Service`, `Ingress`.
 
 ### 1. Deployment
+
 Create new directory, e.g. `hellok` and inside, create new file `deployment.yaml `with content:
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -38,6 +40,7 @@ spec:
         ports:
         - containerPort: 8080
 ```
+
 This example file is composed of fields:
 - `.metadata` 
   - `.name` denotes deployment's name
@@ -53,6 +56,7 @@ This example file is composed of fields:
 Complete reference docs for resources and their allowed fields and subfields is available [online](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/). Don't forget right indentation! 
 
 ### 2. Service
+
 Secondly, we have to create `Service` which is abstract way to expose an application as a network service.
 
 ```yaml
@@ -78,6 +82,7 @@ A Service can map any incoming port to a targetPort. By default, the targetPort 
 Lastly, we have to create `Ingress` which exposes HTTP and HTTPS routes from outside world to the cluster world. Traffic is controled by rules set in the resource.
 It is possible to expose your deployments in [2 ways](/docs/kubectl-expose.html) but here we will use cluster LoadBalancer with creation of just new DNS name.
 You can use whatever name you want but it has to fullfill 2 requirements:
+
 - name is composed only from letters, numbers and '-'
 - name ends with `.dyn.cloud.e-infra.cz`
 
@@ -110,6 +115,7 @@ spec:
 ```
 
 This example file is composed of fields:
+
 - `.metadata` 
   - `.name` denotes name
   - `.annotations` ingress frequently uses annotations to configure options depending on ingress controller. We use `nginx` controller and possible annotations are listed [here](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/). The ones used here are necessary for right functionality and they automatically create TLS ceritificate therefore you don't need to worry about HTTPS - it's provided automatically
@@ -122,7 +128,9 @@ This example file is composed of fields:
     - `paths` (for example, `/testpath`), each of which has an associated backend defined with a `service.name` and a `service.port.name` or `service.port.number`. `service.port.number` is the port which is exposed by the service therefore in service denoted as `spec.ports.port`, similarly `service.ports.[i].name` is equivalent to `spec.ports.[i].name`. Path type can be specified, more about it [here](https://kubernetes.io/docs/concepts/services-networking/ingress/#path-types)
 
 ### 4. Create
-Now, create all resources with using whole directory as an argument and specify your namespace 
+
+Now, create all resources with using whole directory as an argument and specify your namespace
+
 ```bash
 kubectl apply -f hello-world -n [namespace]                     
 deployment.apps/hello-kubernetes created
@@ -133,7 +141,8 @@ service/hello-kubernetes-svc created
 You can check status of deplyed resources with `kubectl get pods/services/ingress -n [namespace]` and when all of them are up and running, you can access the URL and you will be presented with sample page.
 ![hello](hello.png)
 
-## Further customization
+## Further Customization
+
 You can specify various fields in every resource's file, many of them not used here. One of more wanted features is passing environment variables into `Deployments` in case spawned containers need some. We will use one environment variable in our deployment to change displayed message. At the end, add new section `env` which will forward the value into the pod. Then, run again `kubectl apply -f hello-world -n [namespace]` to apply changes. When you access the website now, new message is displayed!
 
 ```yaml
@@ -173,9 +182,11 @@ Other customization can include:
 
 
 ## Creating PersistentVolumeClaim
+
 If you need to use some persistent storage, you can demand a NFS volume and mount it in `Deployment`. 
 
 Example: create file `claim.yaml` with content
+
 ```yaml
 apiVersion: v1                                                                                                                                                                                              
 kind: PersistentVolumeClaim                                                     
@@ -189,7 +200,9 @@ spec:
       storage: 1Gi                                                              
   storageClassName: nfs-csi
 ```
+
 The `spec.resources.requests` field has to be specified but doesn't really mean anything. Then perform `kubectl apply -f claim.yaml -n [namespace]`. You can check if everything went fine by running
+
 ```bash
 kubectl get pvc -n [namespace]
 NAME                                                               STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
@@ -228,6 +241,7 @@ spec:
 ```
 
 ## Pod Security Policy
+
 For security reasons, not everything is allowed in `kuba-cluster`. 
 
 List of (dis)allowed actions:
@@ -238,20 +252,25 @@ List of (dis)allowed actions:
 - Volumes: can mount `configMap, emptyDir, projected, secret, downwardAPI, persistentVolumeClaim`
 
 Any deployment that will attempt to run as root won't be created and will persist in state similar to (notice READY 0/3 and AVAILABLE 0, logs and describe would tell more)
+
 ```bash
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 hello-kubernetes   0/3     3            0           7m8s
 ```
 
-## Kubectl command
+## Kubectl Command
+
 There are many useful `kubectl` commands that can be used to verify status of deployed resources or get information about them. To list some of the most handy:
 - `kubectl get [resource]` provides basic information about resource e.g. if we query service, we can see IP address
+
 ```bash
  kubectl get service hello-kubernetes-svc -n [namespace]
 NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)        AGE
 hello-kubernetes-svc   LoadBalancer   10.43.124.251   147.251.253.243   80:31334/TCP   3h23m
 ```
+
 - `kubectl describe [resource]` offers detailed information about resource (output is heavily trimmed)
+
 ```bash
 kubectl describe pod hello-kubernetes -n test-ns
 Name:         hello-kubernetes-5547c96ddc-4hxnf

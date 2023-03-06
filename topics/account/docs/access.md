@@ -66,7 +66,7 @@ credentials (your e-INFRA CZ login and password) and submit the form.
 Alternatively if the service is actually using the first way to log in, this 
 option is called *e-INFRA CZ password*.  
 
-### Non-web Services
+### Non-Web Services
 
 Non-web services are by their nature using different means to authenticate 
 the user and exact description of how to access them should be a part of 

@@ -9,7 +9,7 @@ search:
   img[alt=login] { height: 300px; }
 </style>
 
-# Create first instance
+# Create First Instance
 
 The following guide will take you through the steps necessary to start your first virtual machine instance.
 

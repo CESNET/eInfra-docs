@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# Terms of service
+# Terms of Service
 
 The following documents and rules describe your rights and responsibilities as a user of MetaCentrum Cloud.
 

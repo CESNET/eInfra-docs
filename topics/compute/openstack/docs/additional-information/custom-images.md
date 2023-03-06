@@ -5,12 +5,12 @@ search:
   exclude: false
 ---
 
-# Custom images
+# Custom Images
 
 We don't support uploading personal images by default. MetaCentrum Cloud images are optimized for running in the cloud and we recommend users
 customize them instead of building their own images from scratch. If you need to upload a custom image, please contact user support at cloud@metacentrum.cz for appropriate permissions.
 
-## Image upload
+## Image Upload
 
 Instructions for uploading a custom image:
 
@@ -42,7 +42,8 @@ os_distro=ubuntu # example
 
 For a more detailed explanation about CLI work with images, please refer to [official documentation](https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/image.html).
 
-## Image visibility
+## Image Visibility
+
 In OpenStack there are 4 possible visibilities of a particular image:  **public, private, shared, community**.
 
 You can view these images via **CLI** or in **dashboard**.
@@ -51,20 +52,19 @@ In **dashboard** visit section *Images* and then you can search via listed image
 
 ![](/compute/openstack/images/image_visibility.png)
 
-
-### Public images
+### Public Images
 
 **Public image** is an image visible and readable to everyone. Only OpenStack admins can modify them.
 
-### Private images
+### Private Images
 
 **Private image** is an image visible only to the owner of that image. This is the default setting for all newly created images.
 
-### Shared images
+### Shared Images
 
 **Shared image** is an image visible only to the owner and possibly certain groups that the owner specified. How to share an image between projects, please read the following [tutorial](#image-sharing-between-projects) below. Image owners are responsible for managing shared images.
 
-### Community images
+### Community Images
 
 **Community image** is an image that is accessible to everyone. Image owners are responsible for managing community images.
 Community images are visible in the dashboard using `Visibility: Community` query. These images can be listed via CLI command:
@@ -86,17 +86,17 @@ Creating a new **Community image** can look like this:
 openstack image create --file test-cirros.raw --property hw_scsi_model=virtio-scsi --property hw_disk_bus=scsi --property hw_rng_model=virtio --property hw_qemu_guest_agent=yes --property os_require_quiesce=yes --property os_type=linux --community test-cirros
 ```
 
-
 !!! note
 
     References to existing community images should use `<image-id>` instead of `<image-name>`. See [image visibility](https://wiki.openstack.org/wiki/Glance-v2-community-image-visibility-design) document for more details.
 
 
-## Image sharing between projects
+## Image Sharing Between Projects
 
 There are two ways sharing an OpenStack Glance image among projects, using `shared` or `community` image visibility.
 
-### Shared image approach
+### Shared Image Approach
+
 Image sharing allows you to share your image between different projects and then it is possible to launch instances from that image in those projects with other collaborators etc. As mentioned in a section about CLI, you will need to use your OpenStack credentials from ```openrc``` or ```cloud.yaml``` file.
 
 Then to share an image you need to know its ID, which you can find with the command:
@@ -150,7 +150,7 @@ When you find ```<ID_project_to_unshare>``` of project, you can cancel the acces
 openstack image remove project <image ID> <ID_project_to_unshare>
 ```
 
-### Community image approach
+### Community Image Approach
 
 This approach is very simple:
 

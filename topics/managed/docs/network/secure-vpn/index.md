@@ -3,10 +3,13 @@
 Virtual Private Network (VPN) is used to connect to the secure environment that is **isloated from the Internet**. The CERIT-SC VPN solution is based on [WireGuard](https://www.wireguard.com/) software.   
 
 To use the VPN you will need to request access and configuration, please refer to the next section.
-## Obtaining access to VPN
+
+## Obtaining Access to VPN
 
 If you are interested in using the VPN to connect to secured network and resources isolated from public network, please contact us at `k8s(at)ics.muni.cz`.
+
 ## Connecting to VPN
+
 Tutorials will show how to setup **WireGuard** with the configuration you have otained from CERIT-SC Team.
 
 === "Windows"
@@ -48,7 +51,8 @@ Tutorials will show how to setup **WireGuard** with the configuration you have o
       Endpoint = SERVER_IP_ADDRESS:PORT
       AllowedIPs = 0.0.0.0/0
       ```
-      3. In order to activate the tunnel, enter into `terminal` and use following command:   
+      3. In order to activate the tunnel, enter into `terminal` and use following command:
+         
       ```
       wg-quick up wg0
       ```

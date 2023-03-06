@@ -5,4 +5,4 @@ search:
   exclude: false
 ---
 
-# High availability deployment
+# High Availability Deployment

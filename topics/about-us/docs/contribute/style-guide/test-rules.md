@@ -55,7 +55,7 @@ But this is not allowed:
     - Item 1
     - Item 2
 
-## MD005 - Inconsistent Indentation For List Items at Same Level
+## MD005 - Inconsistent Indentation for List Items at Same Level
 
 This rule is triggered when list items are parsed as being at the same level,
 but don't have the same indentation:

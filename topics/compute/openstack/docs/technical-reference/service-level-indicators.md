@@ -5,6 +5,6 @@ search:
   exclude: true
 ---
 
-# SLI
+# Service Level Indicators
 
 TODO: obtain SLI of our cloud

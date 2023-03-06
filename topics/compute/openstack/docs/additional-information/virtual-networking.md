@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-# Virtual networking
+# Virtual Networking
 
 MetaCentrum Cloud offers software-defined networking as one of its services. Users can create their own
 networks and subnets, connect them with routers and set up tiered network topologies.

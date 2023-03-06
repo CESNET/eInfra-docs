@@ -5,7 +5,7 @@ search:
   exclude: false
 ---
 
-## Object storage
+## Object Storage
 
 OpenStack supports object storage based on [OpenStack Swift](https://docs.openstack.org/swift/latest/api/object_api_v1_overview.html). Creation of object storage container (database) is done by clicking on `+Container` on [Object storage containers page](https://dashboard.cloud.muni.cz/project/containers).
 
@@ -17,12 +17,11 @@ Every object typically contains data along with metadata and a unique global ide
 
 In both cases, you will need application credentials to be able to manage your data.
 
-
-### Swift credentials
+### Swift Credentials
 
 The easiest way to generate **Swift** storage credentials is through [MetaCentrum cloud dashboard](https://dashboard.cloud.muni.cz). You can generate application credentials as described [here](../how-to-guides/obtaining-api-key.md). You must have role **heat_stack_owner**.
 
-### S3 credentials
+### S3 Credentials
 
 If you want to use **S3 API** you will need to generate ec2 credentials for access. Note that to generate ec2 credentials you will also need credentials containing the role of **heat_stack_owner**. Once you sourced your credentials for CLI you can generate ec2 credentials by the following command:
 

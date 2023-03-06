@@ -5,4 +5,4 @@ search:
   exclude: false
 ---
 
-# Concepts of cloud computing
+# Concepts of Cloud Computing

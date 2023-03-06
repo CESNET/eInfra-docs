@@ -14,12 +14,13 @@ The following text describes how to install GitLab Kubernetes Agent step by step
 Following the steps should leave you with functional agent and knowledge of making manifest files.
 
 ## Prerequisites
+
 - Namespace on your cluster
 - Gitlab repository
 - kubectl
 
 
-## Define a configuration repository
+## Define Configuration Repository
 
 In your desired repository, add the agent configuration file: `.gitlab/agents/<agent-name>/config.yaml`
 
@@ -37,7 +38,7 @@ gitops:
 **Note**: `<Your Project ID>` can be replaced by your project path.
 
 
-## Connect to cluster
+## Connect to Cluster
 
 - Register agent and get agent token.
   
@@ -79,10 +80,9 @@ gitops:
 
 - Check if the agent is running. Either in rancher or using kubectl `kubectl get pods -n <Your Namespace>`
 
-## Manage deployments
+## Manage Deployments
 
 - In your repository make manifest file: `/manifest/manifest.yaml`
- 
  
 For the purpose of testing the agent, we will make simple manifest file that will create ConfigMap in `<Your Namespace>`.
 

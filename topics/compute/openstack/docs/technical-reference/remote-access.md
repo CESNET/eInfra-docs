@@ -5,11 +5,11 @@ search:
   exclude: false
 ---
 
-# Remote access
+# Remote Access
 
-## Accessing from Linux
+## Accessing From Linux
 
-### Setting up VPN tunnel via encrypted SSH with [sshuttle](https://github.com/sshuttle/sshuttle)
+### Setting Up VPN Tunnel Via Encrypted SSH With [sshuttle](https://github.com/sshuttle/sshuttle)
 
 ``` sh
 # terminal A
@@ -31,7 +31,7 @@ fi
 sshuttle -r centos@147.251.21.72 172.16.0.0/22
 ```
 
-### Accessing (hidden) project VMs through the VPN tunnel
+### Accessing (Hidden) Project VMs Through VPN Tunnel
 
 ``` sh
 # terminal B
@@ -44,17 +44,18 @@ $ curl 172.16.1.67:8080
 Hello, world, cnt=1, hostname=freznicek-ubu
 ```
 
-## Accessing from Windows
+## Accessing From Windows
 
 [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/faq.html#faq-what) is a client program for the SSH on Windows OS.
 
 ### PuTTY Installer
+
 We recommend downloading [Windows Installer](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) with PuTTY utilities as:
 
 * Pageant (SSH authentication agent) - store the private key in memory without the need to retype a passphrase on every login
 * PuTTYgen (PuTTY key generator) - convert OpenSSH format of id_rsa to PuTTY ppk private key and so on
 
-### Connect to the Instance
+### Connect to Instance
 
 * Run PuTTY and enter Host name in format "login@Floating IP address" where login is for example debian for Debian OS and Floating IP is [IP address](../how-to-guides/associate-floating-ips.md) to access instance from internet.
 * In Category -> Connection -> SSH -> Auth:
@@ -68,7 +69,6 @@ We recommend downloading [Windows Installer](https://www.chiark.greenend.org.uk/
 
 ![](/compute/openstack/images/putty/putty-connect2instance.png)
 
-
 ### Pageant SSH Agent
 
 * Run Pageant from Windows menu
@@ -81,26 +81,23 @@ We recommend downloading [Windows Installer](https://www.chiark.greenend.org.uk/
 
 ![](/compute/openstack/images/putty/pageant-add-key.png)
 
-
 ### Key Generator
 
 PuTTYgen is the PuTTY key generator. You can load in an existing private key and change your passphrase or generate a new public/private key pair or convert to/from OpenSSH/PuTTY ppk formats.
 
-### Convert OpenSSH format to PuTTY ppk format
+### Convert OpenSSH Format to PuTTY ppk Format
 
 * Run PuTTYgen, in the menu Conversion -> Import key browse and load your OpenSSH format id_rsa private key using your passphrase
 * Save PuTTY ppk private key using button **Save private key**, browse destination for PuTTY format id_rsa.ppk, and save file
 
 ![](/compute/openstack/images/putty/puttygen-openssh2ppk.png)
 
-
-### Convert PuTTY ppk private key to OpenSSH format
+### Convert PuTTY ppk Private Key to OpenSSH Format
 
 * Run PuTTYgen, in the menu File -> Load private key browse and open your private key in format PuTTY ppk using your passphrase
 * In the menu Conversion -> Export OpenSSH key browse destination for OpenSSH format id_rsa and save file
 
 ![](/compute/openstack/images/putty/puttygen-ppk2openssh.png)
-
 
 ### Change Password for Existing Private Key Pair
 
@@ -110,8 +107,7 @@ PuTTYgen is the PuTTY key generator. You can load in an existing private key and
 
 ![](/compute/openstack/images/putty/puttygen-passphrase.png)
 
-
-### Generate a New Key Pair
+### Generate New Key Pair
 
 * Start with **Generate button**
 * Generate some randomness by moving your mouse over the dialog

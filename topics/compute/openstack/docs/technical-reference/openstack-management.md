@@ -5,4 +5,4 @@ search:
   exclude: false
 ---
 
-# OpenStack management
+# OpenStack Management

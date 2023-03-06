@@ -5,11 +5,11 @@ search:
   exclude: false
 ---
 
-# Deploying loadbalancers
+# Deploying Loadbalancers
 
 Load balancers serve as a proxy between virtualised infrastructure and clients in the outside network. This is essential in OpenStack since it can be used in a scenario where the infrastructure dynamically starts new VMs and adds them into the load balancing pool in order to mitigate inaccessibility of services.
 
-## Create loadbalancers
+## Create Loadbalancers
 
 To create a load balancer, first prepare a pool of VMs with operational service you wish to balance to. Next create the load balancer in the same network and assaign the pool as well as listeners on specific ports.
 
@@ -39,7 +39,8 @@ To create a load balancer, first prepare a pool of VMs with operational service 
     openstack loadbalancer member create --address vm_ip_address --protocol-port 80 --wait my_pool
     ```
 
-## Delete loadbalancers
+## Delete Loadbalancers
+
 When deleting a loadbalancer, first unassign the floating IP address used by the loadbalancer.
 
 === "CLI"

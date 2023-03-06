@@ -5,4 +5,4 @@ search:
   exclude: false
 ---
 
-# Using object storage
+# Using Object Storage

@@ -5,13 +5,13 @@ search:
   exclude: false
 ---
 
-# Attaching network interface
+# Attaching Network Interface
 
 ## Prerequisites
 
 - Created [instance](../getting-started/creating-first-infrastructure.md).
 
-## Attaching interface
+## Attaching Interface
 
 This guide shows how to attach additional interfaces to running instances. This approach can be used for both IPv4 and IPv6 networks.
 
