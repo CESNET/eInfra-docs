@@ -112,7 +112,7 @@ kubectl logs POD -n NAMESPACE
     ```
     where `POD` is the name of the *worker* (e.g., `nf-81dae79db8e5e2c7a7c3ad5f6c7d59c6`) and `NAMESPACE` is used namespace.
 
-## nf-core/sarek pipeline
+## nf-core/sarek Pipeline
 
 [nf-core/sarek](https://nf-co.re/sarek) is analysis pipeline to detect germline
 or somatic variants (pre-processing, variant calling and annotation) from WGS /
@@ -174,8 +174,7 @@ the PVC.
 
 * Manual resuming of Sarek is possible using different `--input` spec. See [here](https://nf-co.re/sarek/2.7.1/usage#troubleshooting).
 
-
-## vib-singlecell-nf/vsn-pipelines pipeline
+## vib-singlecell-nf/vsn-pipelines Pipeline
 
 [vsn-pipelines](https://vsn-pipelines.readthedocs.io/en/latest/) contain multiple workflows for analyzing single cell transcriptomics data, and depends on a number of tools.
 
