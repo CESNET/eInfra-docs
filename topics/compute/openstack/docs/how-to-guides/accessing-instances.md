@@ -46,6 +46,8 @@ connect to the VM via SSH.
 | Ubuntu | ubuntu                |
 | Centos | centos                |
 
+In more general the default user is the value of *default_user* property of image.
+
 ## Problems
 
 If you have problems connecting to the VM, verify correct configuration of

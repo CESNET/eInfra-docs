@@ -1,5 +1,5 @@
 ---
-title: About MetaCentrum Cloud
+title: About e-INFRA CZ openstack cloud site in Brno
 search:
   exclude: false
 ---
@@ -30,4 +30,14 @@ More than 400 users are using the MetaCentrum Cloud platform and more than 130k 
 
 ## Deployed Services
 
-The list of deployed services in MetaCentrum Cloud is available in [Technical reference](../technical-reference/openstack-modules.md).
+The list of deployed services in MetaCentrum Cloud is available in [Modules overview](./openstack-modules.md).
+
+## Other techical info specific for this site
+
+ * [List of flavors](./flavors.md)
+ * [How to get access](./get-access.md)
+ * [Info on networking](./networking.md)
+ * [Support](./get-support.md)
+ * [Info on quotas](./quota-limits.md)
+ * [Specific FAQ](./faq.md)
+ * [GPU computing](gpu-computing.md)

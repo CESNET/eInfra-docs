@@ -46,7 +46,7 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
 ## How to Choose Between Computing Services?
 
-- [Read computing service overview](./concepts/)
+- Read computing service overview
 - Check comparision between computing services _(TODO)_
 
 ## See How Different Scientific Use-Cases Are Implemented.
