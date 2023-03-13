@@ -2,6 +2,7 @@ site_name: "compute/concepts"
 
 edit_uri: edit/master/topics/compute/
 nav:
+  - Overview: index.md
   - Comparison: comparison.md
   - Use-cases:
     - use-cases/muni-kypo.md

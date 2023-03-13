@@ -57,7 +57,7 @@ nav:
   - e-INFRA CZ Account: '!include ./topics/account/mkdocs.yml'
   - Data processing:
     - compute/index.md
-    - Concepts: '!include ./topics/compute/concepts/mkdocs.yml'
+    - Computing Concepts: '!include ./topics/compute/concepts/mkdocs.yml'
     - MetaCentrum Grid: '!include ./topics/compute/grid/mkdocs.yml'
     - Supercomputer: '!include ./topics/compute/supercomputing/mkdocs.yml'
     - Kubernetes: '!include ./topics/compute/kubernetes/mkdocs.yml'
