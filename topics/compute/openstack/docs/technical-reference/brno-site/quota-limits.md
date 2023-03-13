@@ -7,7 +7,7 @@ search:
 
 # Quota Limits
 
-Quotas are used to specify individual resources for each project. In the following tables you can see the default resources available for each project. If you need to increase these resources, you can contact [support](../technical-reference/get-support.md).
+Quotas are used to specify individual resources for each project. In the following tables you can see the default resources available for each project. If you need to increase these resources, you can contact [support](./get-support.md).
 
 ## Compute Resources (Nova)
 

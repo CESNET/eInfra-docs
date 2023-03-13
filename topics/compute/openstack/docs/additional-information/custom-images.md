@@ -7,8 +7,8 @@ search:
 
 # Custom Images
 
-We don't support uploading personal images by default. MetaCentrum Cloud images are optimized for running in the cloud and we recommend users
-customize them instead of building their own images from scratch. If you need to upload a custom image, please contact user support at cloud@metacentrum.cz for appropriate permissions.
+We don't support uploading personal images by default. e-INFRA CZ Cloud images are optimized for running in the cloud and we recommend users
+customize them instead of building their own images from scratch. If you need to upload a custom image, please contact user support for appropriate permissions.
 
 ## Image Upload
 

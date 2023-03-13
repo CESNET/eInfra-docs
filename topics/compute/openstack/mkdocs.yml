@@ -24,26 +24,21 @@ nav:
     # - how-to-guides/using-custom-linux-images.md
     # - how-to-guides/using-object-storage.md
   - Technical reference:
+    - technical-reference/brno-site/index.md
+    - technical-reference/ostrava-site/index.md
     - technical-reference/cloud-resources.md
     - technical-reference/data-storage.md
-    - technical-reference/flavors.md
-    - technical-reference/get-support.md
     - technical-reference/image-rotation.md
     # - technical-reference/openstack-management.md
-    - technical-reference/openstack-modules.md
     # - technical-reference/openstack-status.md
-    - technical-reference/quota-limits.md
     - technical-reference/remote-access.md
     # - technical-reference/service-level-indicators.md
     # - technical-reference/volume-usage.md
   - Additional information:
-    - additional-information/about.md
     # - additional-information/computing-on-hpc.md
     # - additional-information/concepts-of-cloud-computing.md
-    # - additional-information/contribute.md
     - additional-information/custom-images.md
     - additional-information/faq.md
-    - additional-information/gpu-computing.md
     - additional-information/ip-allocation-policy.md
     - additional-information/ipv6-troubleshooting.md
     - additional-information/load-balancers.md
