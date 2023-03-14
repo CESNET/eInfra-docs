@@ -13,9 +13,9 @@ Quotas are used to specify individual resources for each project. In the followi
 
 | resource             | quota |
 |----------------------|-------|
-| instances            | 5     |
-| cores                | 10    |
-| ram                  | 25600 |
+| instances            | 3     |
+| cores                | 8     |
+| ram                  | 20500 |
 | metadata_items       | 128   |
 | key_pairs            | 10    |
 | server_groups        | 10    |
@@ -25,10 +25,10 @@ Quotas are used to specify individual resources for each project. In the followi
 
 | resource             | quota |
 |----------------------|-------|
-| network              | 0     |
-| subnet               | 0     |
+| network              | 1     |
+| subnet               | 1     |
 | floatingip           | 1     |
-| port                 | 15    |
+| port                 | 10    |
 | router               | 0     |
 | security_group       | 10    |
 | security_group_rule  | 100   |
