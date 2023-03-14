@@ -1,6 +1,6 @@
 ---
 
-title: Attaching network interface
+title: Attaching Network Interface
 search:
   exclude: false
 ---

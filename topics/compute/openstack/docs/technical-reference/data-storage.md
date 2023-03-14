@@ -1,6 +1,6 @@
 ---
 
-title: Data storage
+title: Data Storage
 search:
   exclude: false
 ---

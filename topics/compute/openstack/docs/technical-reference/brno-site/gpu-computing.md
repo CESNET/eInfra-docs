@@ -1,6 +1,6 @@
 ---
 
-title: GPU computing
+title: GPU Computing
 search:
   exclude: false
 ---

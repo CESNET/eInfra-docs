@@ -1,6 +1,6 @@
 ---
 
-title: Image rotation
+title: Image Rotation
 search:
   exclude: false
 ---

@@ -10,6 +10,7 @@ hide:
 # Frequently Asked Questions
 
 Also you can access site specific FAQ:
+
  - [Brno site FAQ](../technical-reference/brno-site/faq.md)
  - [Ostrava site FAQ](../technical-reference/ostrava-site/faq.md)
 

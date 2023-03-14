@@ -1,6 +1,6 @@
 ---
 
-title: IPv6 troubleshooting
+title: IPv6 Troubleshooting
 search:
   exclude: false
 ---

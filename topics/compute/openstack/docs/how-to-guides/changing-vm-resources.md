@@ -1,6 +1,6 @@
 ---
 
-title: Changing VM resources
+title: Changing VM Resources
 search:
   exclude: false
 ---

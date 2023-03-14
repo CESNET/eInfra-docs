@@ -1,6 +1,6 @@
 ---
 
-title: Custom images
+title: Custom Images
 search:
   exclude: false
 ---

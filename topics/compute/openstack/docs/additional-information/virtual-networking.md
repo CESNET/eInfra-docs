@@ -1,6 +1,6 @@
 ---
 
-title: Virtual networking
+title: Virtual Networking
 search:
   exclude: false
 ---

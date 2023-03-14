@@ -1,6 +1,6 @@
 ---
 
-title: OpenStack status
+title: OpenStack Status
 search:
   exclude: true
 ---

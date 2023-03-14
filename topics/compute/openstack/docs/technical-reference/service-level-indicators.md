@@ -1,6 +1,6 @@
 ---
 
-title: Service level indicators
+title: Service Level Indicators
 search:
   exclude: true
 ---

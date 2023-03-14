@@ -1,6 +1,6 @@
 ---
 
-title: Using object storage
+title: Using Object Storage
 search:
   exclude: false
 ---

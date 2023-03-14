@@ -1,6 +1,6 @@
 ---
 
-title: Create first instance
+title: Create First Instance
 search:
   exclude: false
 ---

@@ -1,6 +1,6 @@
 ---
 
-title: High availability deployment
+title: High Availability Deployment
 search:
   exclude: false
 ---

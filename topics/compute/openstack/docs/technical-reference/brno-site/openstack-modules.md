@@ -1,6 +1,6 @@
 ---
 
-title: OpenStack modules
+title: OpenStack Modules
 search:
   exclude: false
 ---

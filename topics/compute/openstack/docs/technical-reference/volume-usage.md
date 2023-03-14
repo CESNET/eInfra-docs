@@ -1,6 +1,6 @@
 ---
 
-title: Volume usage
+title: Volume Usage
 search:
   exclude: false
 ---

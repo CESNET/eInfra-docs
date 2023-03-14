@@ -1,5 +1,5 @@
 ---
-title: About e-INFRA CZ openstack cloud site in Brno
+title: About e-INFRA CZ Openstack Cloud Site in Brno
 search:
   exclude: false
 ---
@@ -32,7 +32,7 @@ More than 400 users are using the MetaCentrum Cloud platform and more than 130k 
 
 The list of deployed services in MetaCentrum Cloud is available in [Modules overview](./openstack-modules.md).
 
-## Other techical info specific for this site
+## Other Techical Info Specific for This Site
 
  * [List of flavors](./flavors.md)
  * [How to get access](./get-access.md)

@@ -1,6 +1,6 @@
 ---
 
-title: Create networking
+title: Create Networking
 search:
   exclude: false
 ---

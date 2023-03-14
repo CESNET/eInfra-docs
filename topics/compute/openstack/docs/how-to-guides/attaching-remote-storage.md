@@ -1,6 +1,6 @@
 ---
 
-title: Attaching remote storage
+title: Attaching Remote Storage
 search:
   exclude: true
 ---
