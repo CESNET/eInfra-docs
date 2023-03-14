@@ -1,10 +1,8 @@
 ---
 
-title: Get support
+title: Get Support
 search:
   exclude: false
 ---
 
 # Get Support
-
-TODO

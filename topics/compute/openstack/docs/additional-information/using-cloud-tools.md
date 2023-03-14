@@ -1,6 +1,6 @@
 ---
 
-title: Using Cloud tools
+title: Using Cloud Tools
 search:
   exclude: false
 ---

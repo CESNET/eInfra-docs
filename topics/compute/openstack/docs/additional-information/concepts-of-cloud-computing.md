@@ -1,6 +1,6 @@
 ---
 
-title: Concepts of cloud computing
+title: Concepts of Cloud Computing
 search:
   exclude: false
 ---

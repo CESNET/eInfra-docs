@@ -1,6 +1,6 @@
 ---
 
-title: Using custom linux images
+title: Using Custom Linux Images
 search:
   exclude: false
 ---

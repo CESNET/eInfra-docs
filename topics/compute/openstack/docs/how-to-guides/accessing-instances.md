@@ -1,6 +1,6 @@
 ---
 permalink: /docs/accessing-instances.html
-title: Accessing instances
+title: Accessing Instances
 search:
   exclude: false
 ---

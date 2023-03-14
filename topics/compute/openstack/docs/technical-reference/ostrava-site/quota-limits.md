@@ -1,6 +1,6 @@
 ---
 
-title: Quota limits
+title: Quota Limits
 search:
   exclude: false
 ---

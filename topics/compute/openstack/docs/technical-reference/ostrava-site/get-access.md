@@ -1,11 +1,11 @@
 ---
 
-title: Get access
+title: Get Access
 search:
   exclude: false
 ---
 
-# How to get access
+# How to Get Access
 
 Valid e-INFRA CZ indentity is necessary to log in to Ostrava openstack site.
 

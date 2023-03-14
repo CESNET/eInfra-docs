@@ -1,6 +1,6 @@
 ---
 
-title: IP allocation policy
+title: IP Allocation Policy
 search:
   exclude: false
 ---

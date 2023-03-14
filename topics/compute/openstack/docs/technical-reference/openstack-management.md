@@ -1,6 +1,6 @@
 ---
 
-title: OpenStack management
+title: OpenStack Management
 search:
   exclude: false
 ---

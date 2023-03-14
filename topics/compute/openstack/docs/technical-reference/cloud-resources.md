@@ -1,6 +1,6 @@
 ---
 
-title: Cloud resources
+title: Cloud Resources
 search:
   exclude: false
 ---

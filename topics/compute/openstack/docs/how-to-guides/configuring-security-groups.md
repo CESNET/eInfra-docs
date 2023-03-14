@@ -1,6 +1,6 @@
 ---
 
-title: Accessing instances
+title: Accessing Instances
 search:
   exclude: false
 ---

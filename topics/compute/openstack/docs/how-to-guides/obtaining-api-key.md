@@ -1,6 +1,6 @@
 ---
 
-title: Obtaining API key
+title: Obtaining API Key
 search:
   exclude: false
 ---

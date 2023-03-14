@@ -1,6 +1,6 @@
 ---
 
-title: Remote access
+title: Remote Access
 search:
   exclude: false
 ---

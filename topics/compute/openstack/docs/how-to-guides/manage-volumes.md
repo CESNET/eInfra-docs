@@ -1,6 +1,6 @@
 ---
 
-title: Manage volumes
+title: Manage Volumes
 search:
   exclude: false
 ---

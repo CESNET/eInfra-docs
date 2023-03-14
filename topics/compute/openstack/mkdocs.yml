@@ -24,8 +24,26 @@ nav:
     # - how-to-guides/using-custom-linux-images.md
     # - how-to-guides/using-object-storage.md
   - Technical reference:
-    - technical-reference/brno-site/index.md
-    - technical-reference/ostrava-site/index.md
+    - Brno site:
+      - technical-reference/brno-site/faq.md
+      - technical-reference/brno-site/flavors.md
+      - technical-reference/brno-site/get-access.md
+      - technical-reference/brno-site/get-support.md
+      - technical-reference/brno-site/gpu-computing.md
+      - technical-reference/brno-site/index.md
+      - technical-reference/brno-site/networking.md
+      - technical-reference/brno-site/openstack-modules.md
+      - technical-reference/brno-site/quota-limits.md
+    - Ostrava site:
+      - technical-reference/ostrava-site/faq.md
+      - technical-reference/ostrava-site/flavors.md
+      - technical-reference/ostrava-site/get-access.md
+      - technical-reference/ostrava-site/get-support.md
+      # - technical-reference/ostrava-site/gpu-computing.md
+      - technical-reference/ostrava-site/index.md
+      - technical-reference/ostrava-site/networking.md
+      - technical-reference/ostrava-site/openstack-modules.md
+      - technical-reference/ostrava-site/quota-limits.md
     - technical-reference/cloud-resources.md
     - technical-reference/data-storage.md
     - technical-reference/image-rotation.md

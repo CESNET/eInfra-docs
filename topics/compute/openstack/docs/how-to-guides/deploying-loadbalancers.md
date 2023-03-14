@@ -1,6 +1,6 @@
 ---
 
-title: Deploying loadbalancers
+title: Deploying Loadbalancers
 search:
   exclude: false
 ---

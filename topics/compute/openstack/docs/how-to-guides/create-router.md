@@ -1,6 +1,6 @@
 ---
 
-title: Create router
+title: Create Router
 search:
   exclude: false
 ---
@@ -65,7 +65,7 @@ search:
 
     Additional router configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/router.html).
 
-## Router external gateway assign
+## Router External Gateway Assign
 
 If you have no gateway on you router, you can assign a new one.
 
@@ -93,7 +93,7 @@ If you have no gateway on you router, you can assign a new one.
 
     Additional router configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/router.html).
 
-## Router external gateway release
+## Router External Gateway Release
 
 === "GUI"
 

@@ -1,6 +1,6 @@
 ---
 
-title: Maintaining cloud resources
+title: Maintaining Cloud Resources
 search:
   exclude: false
 ---

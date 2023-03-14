@@ -1,6 +1,6 @@
 ---
 
-title: Creating group project
+title: Creating Group Project
 search:
   exclude: false
 ---
