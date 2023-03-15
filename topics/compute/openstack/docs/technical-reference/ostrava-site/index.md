@@ -25,7 +25,7 @@ released twice a year. OpenStack functionality is separated into more than 50 se
 
 ## Deployed Services
 
-The list of deployed services is available in [Modules overview](./openstack-modules.md).
+The list of deployed services is available in [Components overview](./openstack-components.md).
 
 ## Other Techical Info Specific for This Site
 

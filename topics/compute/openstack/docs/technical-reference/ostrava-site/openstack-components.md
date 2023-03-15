@@ -1,11 +1,11 @@
 ---
 
-title: OpenStack modules
+title: OpenStack Components
 search:
   exclude: false
 ---
 
-# OpenStack Modules
+# OpenStack Components
 
 The following table contains a list of deployed OpenStack services. Services are separated
 into two groups based on their stability and the level of support we are able to provide. All services in the production
@@ -23,5 +23,4 @@ for testing purposes, but its functionality won't be covered by our support.
 | Neutron   | Networking service     | experimental |
 | Nova      | Compute service        | experimental |
 | Placement | Placement service      | experimental |
-| Swift/S3  | Object Storage service | experimental |
 | Barbican  | Key Manager service    | experimental |
