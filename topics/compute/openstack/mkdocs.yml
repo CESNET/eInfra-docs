@@ -32,7 +32,7 @@ nav:
       - technical-reference/brno-site/gpu-computing.md
       - technical-reference/brno-site/index.md
       - technical-reference/brno-site/networking.md
-      - technical-reference/brno-site/openstack-modules.md
+      - technical-reference/brno-site/openstack-components.md
       - technical-reference/brno-site/quota-limits.md
     - Ostrava site:
       - technical-reference/ostrava-site/faq.md
@@ -42,7 +42,7 @@ nav:
       # - technical-reference/ostrava-site/gpu-computing.md
       - technical-reference/ostrava-site/index.md
       - technical-reference/ostrava-site/networking.md
-      - technical-reference/ostrava-site/openstack-modules.md
+      - technical-reference/ostrava-site/openstack-components.md
       - technical-reference/ostrava-site/quota-limits.md
     - technical-reference/cloud-resources.md
     - technical-reference/data-storage.md

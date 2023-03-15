@@ -30,7 +30,7 @@ More than 400 users are using the MetaCentrum Cloud platform and more than 130k 
 
 ## Deployed Services
 
-The list of deployed services in MetaCentrum Cloud is available in [Modules overview](./openstack-modules.md).
+The list of deployed services in MetaCentrum Cloud is available in [Components overview](./openstack-components.md).
 
 ## Other Techical Info Specific for This Site
 
