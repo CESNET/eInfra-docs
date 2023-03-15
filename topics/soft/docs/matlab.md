@@ -7,8 +7,18 @@
 ## Availability
 
 === "IT4I"
+    # Introduction
+
     [Available][1]; for the list of versions, run `ml av matlab`.
 
+    ## Examples
+
+    ```code
+        sdasdsadsasad
+        asdsad
+        asdsad
+    ```
+    
 === "Source 2"
     Available here, as well.
 
