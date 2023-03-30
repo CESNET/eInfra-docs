@@ -7,7 +7,7 @@ search:
 
 # Managing Security Groups
 
-By default each project has a **default** security group that can be assignet to each VM. In this guide we show how to enable ssh connection via the security group.
+By default, each project has a **default** security group that can be assigned to each VM. In this guide, we will show you how to enable SSH connection via the security group.
 
 __1.__ Go to **Project &gt;  Network &gt; Security Groups**. Click on **Manage Rules**, for the **default** security group.
 
