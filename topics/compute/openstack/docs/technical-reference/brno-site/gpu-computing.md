@@ -7,7 +7,7 @@ search:
 
 # GPU Computing
 
-On this page you can find static list of offered GPUs in Metacentrum Cloud.
+On this page, you can find a static list of GPUs offered in Metacentrum Cloud.
 
 | GPU								| Total nodes	| GPUs per node |
 |-----------------------------------|---------------|---------------|
@@ -21,6 +21,6 @@ On this page you can find static list of offered GPUs in Metacentrum Cloud.
 Notes:
 
 - (*) experimental use in academic environment.
-- (**) There are currently operating system limitation of VM servers attaching GPU device. Supported are Debian 10 and Centos 7.
+- (**) There are currently operating system limitations of VM servers attaching GPU device. Supported are Debian 10 and Centos 7.
 
-Current GPU usage can be viewed on [GPU overview dashboard](https://grafana1.cloud.muni.cz/d/J66duZjnk/openstack-gpu-resource-overview) (valid e-infra / MUNI identity needed).
+Current GPU usage can be viewed on [GPU overview dashboard](https://grafana1.cloud.muni.cz/d/J66duZjnk/openstack-gpu-resource-overview) (valid e-infra/MUNI identity needed).
