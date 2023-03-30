@@ -11,7 +11,7 @@ search:
 
 ### IPv4 Personal Floating IPs
 
-Is currently limited to the common internal networks. You can start your machine in network `147-251-115-pers-proj-net` or `78-128-250-pers-proj-net` and allocate floating IP address from pools `public-muni-147-251-115-PERSONAL` or `public-cesnet-78-128-250-PERSONAL` respectively. All VMs need to be connected to the same network. You cannot use virtual routers with personal projects. We encourage users to also use IPv6 addresses for long term use. Unassigned allocated addresses are released daily.
+It is currently limited to the common internal networks. You can start your machine in the `147-251-115-pers-proj-net` or `78-128-250-pers-proj-net` networks and allocate floating IP address from the `public-muni-147-251-115-PERSONAL` or `public-cesnet-78-128-250-PERSONAL` pools respectively. All VMs need to be connected to the same network. You cannot use virtual routers with personal projects. We encourage users to also use IPv6 addresses for long term use. Unassigned allocated addresses are released daily.
 
 ### IPv4 Group Floating IPs
 
@@ -36,4 +36,4 @@ The situation is rather different for group projects. You cannot use the same ap
 
 ### IPv6 Shared Network
 
-We have prepared an IPv6 prefix `public-muni-v6-432`, which is available for both personal and group projects. The network is available as an attachable network for VMs with no limits. For more information please refer to page [Attaching interface](../how-to-guides/attaching-interface.md).
+We have prepared an IPv6 prefix `public-muni-v6-432`, which is available for both personal and group projects. The network is available as an attachable network for VMs with no limits. For more information, refer to the [Attaching interface](../how-to-guides/attaching-interface.md) section.
