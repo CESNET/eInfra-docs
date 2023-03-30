@@ -22,4 +22,4 @@ MetaCentrum Cloud stores raw data:
 - in ceph cloud storage on rotation disks (SSDs will be available soon)
 - in hypervisor (bare metal) disks (rotational, SSD, SSD NVMe)
 
-We encourage all users to backup important data themselves
+We encourage all users to backup important data themselves.
