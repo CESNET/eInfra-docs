@@ -7,7 +7,7 @@ search:
 
 # Get Support
 
-If you approach a problem regarding OpenStack or other problems regarding MetaCentrum Cloud
+If you encounter a problem regarding OpenStack or MetaCentrum Cloud in general
 that are not described in this documentation, you can use our support.
 The support is managed by ticketing system, which is available
 via email cloud@metacentrum.cz.
