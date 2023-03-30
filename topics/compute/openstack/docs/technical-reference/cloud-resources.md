@@ -23,11 +23,11 @@ Your project is computed within the MetaCentrum Cloud Openstack project where yo
 
  * manually using [MetaCentrum Cloud Openstack Dashboard UI](https://dashboard.cloud.muni.cz) (Openstack Horizon)
  * automated approaches
-   * [terraform](https://registry.terraform.io/providers/terraform-provider-OpenStack/OpenStack/latest/docs) ([example 1](https://github.com/terraform-provider-OpenStack/terraform-provider-OpenStack/tree/main/examples/app-with-networking), [example 2](https://gitlab.ics.muni.cz/cloud/terrafrom-demo))
-   * ansible
+   * [Terraform](https://registry.terraform.io/providers/terraform-provider-OpenStack/OpenStack/latest/docs) ([example 1](https://github.com/terraform-provider-OpenStack/terraform-provider-OpenStack/tree/main/examples/app-with-networking), [example 2](https://gitlab.ics.muni.cz/cloud/terrafrom-demo))
+   * Ansible
    * [openstack heat](https://docs.openstack.org/heat/train/template_guide/hello_world.html)
 
-If your project infrastructure (MetaCentrum Cloud Openstack resources) within the cloud is static you may select a manual approach with [MetaCentrum Cloud Openstack Dashboard UI](https://dashboard.cloud.muni.cz). There are projects which need to allocate MetaCentrum Cloud Openstack resources dynamically, in such cases we strongly encourage automation even at this stage.
+If your project infrastructure (MetaCentrum Cloud Openstack resources) within the cloud is static you may select a manual approach with [MetaCentrum Cloud Openstack Dashboard UI](https://dashboard.cloud.muni.cz). There are projects which need to allocate MetaCentrum Cloud Openstack resources dynamically;in such cases, we strongly encourage automation even at this stage.
 
 ## Transferring Data to Cloud
 
@@ -42,14 +42,14 @@ There are several options how to transfer the project to cloud resources:
 
 ### SSH to Cloud VM Resources and Manual Update
 
-In this scenario, you log into your cloud VM and perform all needed actions manually. This approach does not scale well, is not effective enough as different users may configure cloud VM resources in different ways resulting sometimes in different resource behavior.
+In this scenario, you log into your cloud VM and perform all required actions manually. This approach does not scale well –⁠ it is not effective enough as different users may configure cloud VM resources in different ways sometimes resulting in different resource behavior.
 
 ### Automated Work Transfer and Synchronization With Docker (Or Podman)
 
 There are automation tools that may help you to ease your cloud usage:
 
-* ansible and/or terraform
-* container runtime engine (docker, podman, ...)
+* Ansible and/or Terraform
+* container runtime engine (Docker, Podman, ...)
 
 Ansible is a cloud automation tool that helps you with:
 
@@ -60,11 +60,11 @@ Container runtime engine helps you to put yours into a container stored in a con
 Putting your work into a container has several advantages:
 
 * share the code including binaries in a consistent environment (even across different Operating Systems)
-* avoids application [re]compilation in the cloud
+* avoids application (re)compilation in the cloud
 * your application running in the container is isolated from the host's container runtime so
   * you may run multiple instances easily
   * you may easily compare different versions at once without collisions
-* you become ready for future kubernetes cloud
+* you become ready for future Kubernetes cloud
 
 As a container registry we suggest either:
 
@@ -82,7 +82,7 @@ It certainly depends on how your data are stored, the options are:
   * automated file transfer with `scp` + `ansible` (and possibly `sshuttle`), demonstrated in [`cloud-estimate-pi` project](https://gitlab.ics.muni.cz/cloud/cloud-estimate-pi/-/blob/master/ansible/roles/cloud-project-container/tasks/download.yml)
 * database data/objects transfer
   * data stored in the S3 compatible database may be easily received via [minio client application MC](https://docs.min.io/docs/minio-client-complete-guide)
-  * date stored in [OpenStack Swift python client `swift`](https://docs.openstack.org/python-swiftclient/train/swiftclient.html)
+  * date stored in [OpenStack Swift Python client `swift`](https://docs.openstack.org/python-swiftclient/train/swiftclient.html)
 
 ## Highly Available Cloud Application
 
@@ -100,12 +100,12 @@ This chapter summarizes effective cloud workflows on the (example) [`cloud-estim
 
 The project recommendations are:
 
-1. Project files should be versioned in [a VCS](https://en.wikipedia.org/wiki/Version_control) (git)
+1. Project files should be versioned in [a VCS](https://en.wikipedia.org/wiki/Version_control) (Git)
 1. The project repository should
    * contain the documentation
    * follow standard directory structure `src/`, `conf/`, `kubernetes/`
    * include CI/CD process pipeline ([`.gitlab-ci.yml`](https://gitlab.ics.muni.cz/cloud/cloud-estimate-pi/-/blob/master/.gitlab-ci.yml), ...)
-   * contain deployment manifests or scripts (kubernetes manifests or declarative deployment files (ansible, terraform, puppet, ...))
+   * contain deployment manifests or scripts (kubernetes manifests or declarative deployment files (Ansible, Terraform, Puppet, ...))
 1. The project release should be automated and triggered by pushing a [semver v2 compatible](https://semver.org/) [tag](https://dev.to/neshaz/a-tutorial-for-tagging-releases-in-git-147e)
 1. The project should support execution in a container as there are significant benefits: ([`Dockerfile`](https://gitlab.ics.muni.cz/cloud/cloud-estimate-pi/-/blob/master/Dockerfile))
    * consistent environment (surrounding the application)
