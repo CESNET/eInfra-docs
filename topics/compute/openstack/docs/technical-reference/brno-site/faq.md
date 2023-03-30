@@ -12,18 +12,17 @@ hide:
 ??? "Where do I report a problem?"
 	First, try searching the documentation for an answer to your problem. If that does not yield results, open a
 	ticket with [cloud@metacentrum.cz](mailto:cloud@metacentrum.cz). When contacting user support, always
-	include your *username* (upper right corner of the web interface) and *domain* with
-	active *project* (upper left corner of the web interface) as well as a description of
+	include your *username* (upper right corner of the web interface) and the *domain* with
+	an active *project* (upper left corner of the web interface) as well as a description of
 	your problem and/or an error message if available.
 
 ??? "What networks can I use to access my instances?"
-	Personal projects can allocate floating IPs from *public-cesnet-78-128-250-PERSONAL*. Routing is preset for this address pool.
-	Group projects can currently allocate floating IPs from networks ending with *GROUP* suffix as well as *private-muni-10-16-116*.
-	Furthermore, IP addresses allocated from *public-muni-147-251-124-GROUP* and *public-muni-147-251-255-GROUP* are released daily, so we encourage
-	using only *public-cesnet-78-128-251-GROUP* and *private-muni-10-16-116* for group projects.
+	Personal projects can allocate floating IPs from `public-cesnet-78-128-250-PERSONAL*` Routing is preset for this address pool.
+	Group projects can currently allocate floating IPs from networks ending with `GROUP` suffix as well as `private-muni-10-16-116`.
+	Furthermore, IP addresses allocated from `public-muni-147-251-124-GROUP` and `public-muni-147-251-255-GROUP` are released daily, so we encourage using only `public-cesnet-78-128-251-GROUP` and `private-muni-10-16-116` for group projects.
 
 ??? "Issues with network MTU (Docker, kubernetes, custom network overlays)"
-	OpenStack compute server instances should use 1442 bytes MTU (maximum transmission unit) instead of the standard 1500 bytes MTU. The instance itself can set up the correct MTU with its counterpart via Path MTU Discovery. Docker needs MTU set up explicitly. Refer documentation for setting up 1442 MTU in [Docker](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/) or [Kubernetes](https://docs.projectcalico.org/v3.5/usage/configuration/mtu) or change the configuration with the steps below.
+	OpenStack compute server instances should use 1442 bytes MTU (maximum transmission unit) instead of the standard 1500 bytes MTU. The instance itself can set up the correct MTU with its counterpart via Path MTU Discovery. Docker needs MTU set up explicitly. Refer to the documentation for setting up 1442 MTU in [Docker](https://docs.docker.com/v17.09/engine/userguide/networking/default_network/custom-docker0/) or [Kubernetes](https://docs.projectcalico.org/v3.5/usage/configuration/mtu) or change the configuration with the steps below.
 
 	## Changes in Docker daemon
 	```sh
@@ -62,10 +61,9 @@ hide:
 	```    
 
 ??? "Issues with proxy in private networks"
-	OpenStack instances can either use public or private networks. If you are using a private network and you need to access the internet for updates etc.,
-	you can use muni proxy server *proxy.ics.muni.cz*. This server only supports HTTP protocol, not HTTPS. To configure it you must also consider what applications
+	OpenStack instances can either use public or private networks. If you are using a private network and you need to access the internet for updates, etc., you can use the muni proxy server `proxy.ics.muni.cz`. This server only supports HTTP protocol, not HTTPS. To configure it you must also consider what applications
 	will be using it because they can have their configuration files, where this information must be set. If so, you must find the particular setting and set up there
-	mentioned proxy server with port 3128. Most applications use the following setting, which can be done by editing file `/etc/environment` where you need to add a line
+	the mentioned proxy server with port 3128. Most applications use the following settings, which can be done by editing the `/etc/environment` file where you need to add the line
 	`http_proxy="http://proxy.ics.muni.cz:3128/"`. And then you must either restart your machine or use the command `source /etc/environment`.
 
 ??? "I can't log into OpenStack, how is that possible?"
@@ -79,18 +77,17 @@ hide:
 
 	A newly created VM will respond to SSH connection attempts in different ways as it moves through the setup stages:
 
-	* A) VM is booting and network is being established. At this stage, there is no functional connection point, and connection attempts will timeout.
-	* B) SSH connection is being set. At the start of its lifetime, a VM runs the cloud-init process, which enables SSH authentication with the user's SSH key. A connection is refused, because it can't verify the user.  	* C) Connection is finally successfull. All setup processes are finished.
+	* A) VM is booting and network is being established. At this stage, there is no functional connection point, and connection attempts will time out.
+	* B) SSH connection is being set. At the start of its lifetime, a VM runs the cloud-init process, which enables SSH authentication with the user's SSH key. A connection is refused, because it can't verify the user.
+  	* C) Connection is finally successful. All setup processes are finished.
 
-	When a (ssh) brute-force attack is attempted, scenario is very similar. Repeated unsuccessful (unauthorized) connections to the VM are made (resulting in connection reset or timeout). Once the attacker passes the right credentials, gets connected and logged.
-
-  Therefore, when security systems discover such suspicious series of unsuccessfull connections followed by successful one, they likely block Your IP address to the allocated cloud VMs.
+	When a (SSH) brute-force attack is attempted, the scenario is similar. Repeated unsuccessful (unauthorized) connections to the VM are made (resulting in connection reset or timeout). Once the attacker passes the right credentials, gets connected and logged.Therefore, when security systems discover such suspicious series of unsuccessful connections followed by successful one, they likely block Your IP address to the allocated cloud VMs.
 
 	## Best practices for accessing cloud resources without getting blocked
 
 	The key practices helping to avoid source IP address blockage are:
 
-	* connect to cloud infrastructure via single public facing jump / bastion node (using [sshuttle](https://github.com/sshuttle/sshuttle#readme) or [ssh ProxyJump](https://www.jeffgeerling.com/blog/2022/using-ansible-playbook-ssh-bastion-jump-host) or eventually [ssh ProxyCommand](https://blog.ruanbekker.com/blog/2020/10/26/use-a-ssh-jump-host-with-ansible/))
+	* connect to cloud infrastructure via single public facing jump/bastion node (using [sshuttle](https://github.com/sshuttle/sshuttle#readme) or [ssh ProxyJump](https://www.jeffgeerling.com/blog/2022/using-ansible-playbook-ssh-bastion-jump-host) or eventually [ssh ProxyCommand](https://blog.ruanbekker.com/blog/2020/10/26/use-a-ssh-jump-host-with-ansible/))
 	* use OpenStack API to watch whether VM is ACTIVE
   * relax public IP try-connect loop timing
 	* configure SSH client to [reuse connection for instance with `-o ControlMaster=auto -o ControlPersist=60s`](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Multiplexing)
@@ -104,13 +101,14 @@ hide:
   	* Wait for the machine to enter ACTIVE state via Openstack API: `openstack server show <openstack-server-id> -f json | jq -r .status`.
   	* After VM is in ACTIVE state try to open connection to SSH port with timeout of approx. 5 seconds and period of at least 30 seconds.
 
-  	To access other VMs on the same cloud internal network (once ssh connection to 1st is established):
+  	To access other VMs on the same cloud internal network (once SSH connection to 1st is established):
 
   	* The recommended method is to create an SSH VPN using sshuttle with `sshuttle -r user@<public-ip-jump> 10.0.0.0/24`
-  	* Address all internal virtual servers with their internal address (CIDR 10.0.0.0/24) and use the 1st (jump / bastion) machine with the public address as an SSH proxy.
+  	* Address all internal virtual servers with their internal address (CIDR 10.0.0.0/24) and use the 1st (jump/bastion) machine with the public address as an SSH proxy.
   	* Follow the same steps to connect – first wait for ACTIVE state and then try a port connection.
 
 	## How to check, whether you are blocked
+
 	Run the following bash script from the machine, where you believe you got blocked (A), and also from another one located in another IP network segment (B, for instance VM in other cloud):
 
 	```sh
@@ -142,4 +140,5 @@ hide:
 	```
 
 	## How to report network issue and get unblocked
-	If You are suspecting, that Your virtual machines are blocked, You should contact support by sending an email to the address cloud@metacentrum.cz. To make things easier and resolve the issue faster, it is important to add the outputs of the bash function `test_cloud_access()` above, ran from both VMs (A and B).
+
+	If you are suspecting, that Your virtual machines are blocked, You should contact support by sending an email to the address cloud@metacentrum.cz. To make things easier and resolve the issue faster, it is important to add the outputs of the bash function `test_cloud_access()` above, ran from both VMs (A and B).
