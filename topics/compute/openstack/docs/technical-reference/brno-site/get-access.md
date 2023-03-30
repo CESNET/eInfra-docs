@@ -7,8 +7,8 @@ search:
 
 # How to Get Access
 
-Access to MetaCentrum Cloud is granted to users with active accounts in
-one of the following identity federations:
+Access to MetaCentrum Cloud is granted to users
+with active accounts in one of the following identity federations:
 
 * __EINFRA CESNET__,
 * __LIFESCIENCE AAI__`*`.
@@ -27,22 +27,22 @@ MetaCentrum Cloud provides the following ways for allocating resources
 
 ## Personal Project
 
-A personal project goal is to gain cloud environment knowledge, resource allocation quotas can not be increased.
+A personal project goal is to gain cloud environment knowledge.
 
 !!! caution
-	A personal project resource allocation quotas can not be increased.
+	A personal project resource allocation quotas cannot be increased.
 
 Personal projects are available automatically to all users of the Czech
 e-infrastructure for science, development, and education.
 
-To register, follow instructions for
+To register, follow the instructions for
 [registration in the MetaCentrum VO](https://metavo.metacentrum.cz/en/application/index.html).
 
 Personal projects are intended as a low-barrier entry
-into the infrastructure for testing and exploration of features. Any
-serious resource usage requires the use of a group project, see below.
+into the infrastructure for testing and exploration of features.
+Any serious resource usage requires the use of a group project, see below.
 
-The following already established terms and conditions apply
+The following already established terms and conditions apply:
 
 * [Terms and Conditions for Access to the CESNET e-infrastructure](https://www.cesnet.cz/conditions/?lang=en)
 * [MetaCentrum End User Statement and Usage Rules](https://www.metacentrum.cz/en/about/rules/index.html)
@@ -75,7 +75,7 @@ To request quota increase or access to particular [flavor](../technical-referenc
 
 __Access control__ is based on information provided by the selected identity federation
 and is presented in the form of a VO name and, optionally, a group name. Every user
-with active membership in the specified VO/group will have full access to all resources
+with an active membership in the specified VO/group will have full access to all resources
 of the requested group project. Membership is managed with tools provided by the selected
 identity federation, in a self-service manner.
 
