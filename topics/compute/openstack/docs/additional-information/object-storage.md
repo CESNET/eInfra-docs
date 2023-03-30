@@ -7,9 +7,9 @@ search:
 
 ## Object Storage
 
-OpenStack supports object storage based on [OpenStack Swift](https://docs.openstack.org/swift/latest/api/object_api_v1_overview.html). Creation of object storage container (database) is done by clicking on `+Container` on [Object storage containers page](https://dashboard.cloud.muni.cz/project/containers).
+OpenStack supports object storage based on [OpenStack Swift](https://docs.openstack.org/swift/latest/api/object_api_v1_overview.html). Creation of an object storage container (database) is done by clicking on `+Container` on [Object storage containers page](https://dashboard.cloud.muni.cz/project/containers).
 
-Every object typically contains data along with metadata and a unique global identifier to access it. OpenStack allows you to upload your files via HTTPS protocol. There are two ways of managing created object storage container:
+Every object typically contains data along with metadata and a unique global identifier to access it. OpenStack allows you to upload your files via an HTTPS protocol. There are two ways of managing a created object storage container:
 
 1. Use OpenStack component [Swift](https://docs.openstack.org/swift/train/admin/index.html)
 
@@ -19,11 +19,12 @@ In both cases, you will need application credentials to be able to manage your d
 
 ### Swift Credentials
 
-The easiest way to generate **Swift** storage credentials is through [MetaCentrum cloud dashboard](https://dashboard.cloud.muni.cz). You can generate application credentials as described [here](../how-to-guides/obtaining-api-key.md). You must have role **heat_stack_owner**.
+The easiest way to generate **Swift** storage credentials is through [MetaCentrum cloud dashboard](https://dashboard.cloud.muni.cz). You can generate application credentials as described in the [Obtaining API Key](../how-to-guides/obtaining-api-key.md) section.
+You must have the **heat_stack_owner** role.
 
 ### S3 Credentials
 
-If you want to use **S3 API** you will need to generate ec2 credentials for access. Note that to generate ec2 credentials you will also need credentials containing the role of **heat_stack_owner**. Once you sourced your credentials for CLI you can generate ec2 credentials by the following command:
+If you want to use **S3 API** you will need to generate ec2 credentials for access. Note that to generate ec2 credentials you will also need credentials containing the role of **heat_stack_owner**. Once you sourced your credentials for CLI, you can generate ec2 credentials:
 
 ```
 $ openstack ec2 credentials create          
@@ -36,7 +37,6 @@ $ openstack ec2 credentials create
 ...
 | user_id    | e65***********************************************************6a |
 +------------+------------------------------------------------------------------+
-
 ```
 
 Then you may use one of the s3 clients (minio client mc, s3cmd, ...)
@@ -49,8 +49,10 @@ Added `swift-s3` successfully.
 $ MC ls swift-s3
 [2021-04-19 15:13:45 CEST]     0B freznicek-test/
 ```
+
 s3cmd client requires a configuration file that looks like this:
 In this case please open your file with credentials that will look like this:
+
 ```
 [default]
 access_key = 896**************************651
@@ -60,4 +62,4 @@ host_bucket = object-store.cloud.muni.cz
 use_https = True
 ```
 
-For more info please refer to [https://docs.openstack.org/swift/latest/s3_compat.html](https://docs.openstack.org/swift/latest/s3_compat.html) and [https://docs.openstack.org/mitaka/config-reference/object-storage/configure-s3.html](https://docs.openstack.org/mitaka/config-reference/object-storage/configure-s3.html).
+For more information, please refer to [https://docs.openstack.org/swift/latest/s3_compat.html](https://docs.openstack.org/swift/latest/s3_compat.html) and [https://docs.openstack.org/mitaka/config-reference/object-storage/configure-s3.html](https://docs.openstack.org/mitaka/config-reference/object-storage/configure-s3.html).
