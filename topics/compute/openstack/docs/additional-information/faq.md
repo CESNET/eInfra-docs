@@ -37,7 +37,7 @@ Also you can access site specific FAQ:
 
 	To access the internet from an instance, or access an instance from the internet, you could allocate floating public IP per instance. Since there are not many public IP addresses available and assigning public IP to every instance is not a security best practice, both in public and private clouds these two concepts are used:
 
-	* **internet access is provided by virtual router** - all new OpenStack projects are created with *group-project-network* internal network connected to a virtual router with public IP as a gateway. Every instance created with *group-project-network* can access the internet through NAT provided by its router by default.
+	* **internet access is provided by virtual router** - all new OpenStack projects are created with a *group-project-network* internal network connected to a virtual router with a public IP as a gateway. Every instance created with *group-project-network* can access the internet through NAT provided by its router by default.
 	* **accessing the instances:**
 		+ **I need to access instances by myself** - best practice for accessing your instances is creating one server with floating IP called [jump host](https://en.wikipedia.org/wiki/Jump_server) and then access all other instances through this host. Simple setup:
 			1. Create an instance with any Linux.
