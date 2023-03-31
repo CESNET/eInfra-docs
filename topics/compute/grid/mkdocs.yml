@@ -1,4 +1,3 @@
 site_name: "compute/grid"
-
-nav:
-  - Overview: index.md
+INHERIT: ./meta-docs/mkdocs.yml
+docs_dir: ./meta-docs/docs
