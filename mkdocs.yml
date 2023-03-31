@@ -21,7 +21,7 @@ extra:
   generator: false
   version: !ENV [SITE_VERSION, 'undef_build_number']
   build_date: !ENV [SITE_BUILD_DATE, 'today']
-  site_title: e-INFRA CZ Documentation"
+  site_title: e-INFRA CZ Documentation
 
 theme:
   name: material
