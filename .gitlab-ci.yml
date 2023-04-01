@@ -15,7 +15,7 @@ variables:
 
 .default_rules:
   rules:
-    - if: $IS_NEW_VERSION_REQUIRED
+    - if: $CI_PIPELINE_SOURCE == "schedule" && $IS_NEW_VERSION_REQUIRED
 
 check_current_version:
   before_script:
