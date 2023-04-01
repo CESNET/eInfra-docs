@@ -161,10 +161,10 @@ docker-build:
         - .docker
       when: on_success
   rules:
+    - !reference [.default_rules, rules]
     - if: $CI_COMMIT_BRANCH
       exists:
         - Dockerfile
-    - !reference [.default_rules, rules]
 
 .mkdocs-build: &mkdocs-build
   stage: build
@@ -185,8 +185,8 @@ mkdocs:
       entrypoint: ["/bin/sh", "-c"]
   <<: *mkdocs-build
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
     - !reference [.default_rules, rules]
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 mkdocs-dev:
   image:
@@ -218,8 +218,8 @@ deploy production:
     - rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete --exclude=/review site/ ${HOSTING_USERNAME}@${HOSTING_HOST}:~/public_html
   <<: *prepare_deploy
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
     - !reference [.default_rules, rules]
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 deploy dev:
   needs: ["mkdocs-dev"]
