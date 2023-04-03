@@ -13,10 +13,6 @@ variables:
     GIT_SUBMODULE_STRATEGY: recursive
     GIT_DEPTH: 0
 
-.default_rules:
-  rules:
-    - if: ($CI_PIPELINE_SOURCE == "schedule" && $IS_NEW_VERSION_REQUIRED) || $CI_PIPELINE_SOURCE != "schedule"
-
 check_current_version:
   before_script:
     - apk add html-xml-utils curl jq
@@ -24,15 +20,10 @@ check_current_version:
   script: 
     - echo https://$HOSTING_HOST
     - 'export CSITE_VERSION=$(curl -s https://${HOSTING_HOST} | hxnormalize -xe | hxselect -c "script#__config" | hxuncdata | jq -r .version)'
-    - 'export IS_NEW_VERSION_REQUIRED=$([[ "$CSITE_VERSION" == "$CI_COMMIT_SHORT_SHA" ]] && echo "false" || echo "true")'
-    - echo "Found site version $CSITE_VERSION therefore NEW VERSION IS REQUIRED $IS_NEW_VERSION_REQUIRED"
-    - echo "CURRENT_SITE_VERSION=$CSITE_VERSION" >> version.env
-    - echo "IS_NEW_VERSION_REQUIRED=$IS_NEW_VERSION_REQUIRED" >> version.env
+    - echo "Found site version $CSITE_VERSION"
+    - '[[ "$CSITE_VERSION" != "$CI_COMMIT_SHORT_SHA" ]]'
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
-  artifacts:
-    reports:
-      dotenv: version.env
 
 docs:
   stage: test
@@ -40,8 +31,6 @@ docs:
   allow_failure: true
   script:
     - mdl -r ~MD013,~MD010,~MD014,~MD024,~MD026,~MD029,~MD033,~MD036,~MD037,~MD046 *.md main/ topics/ # BUGS
-  rules:
-    - !reference [.default_rules, rules]
 
 # pylint:
 #   stage: test
@@ -66,8 +55,6 @@ capitalize:
   allow_failure: true
   script:
     - find mkdocs.yml topics/ main/ \( -name '*.md' -o -name '*.yml' \) -print0 | xargs -0 -n1 scripts/titlemd.py --test
-  rules:
-    - !reference [.default_rules, rules]
 
 ext_links:
   stage: after_test
@@ -78,8 +65,6 @@ ext_links:
     - rm *.json
   script:
     - find topics/ main/ -name '*.md' -exec grep --color -l http {} + | xargs awesome_bot -t 10 --allow-dupe --allow-redirect
-  rules:
-    - !reference [.default_rules, rules]
 
 404s:
   stage: after_test
@@ -95,7 +80,6 @@ ext_links:
   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
     when: never
   - if: $CI_COMMIT_BRANCH
-  - !reference [.default_rules, rules]
 
 # mkdocs:
 #   stage: build
@@ -161,7 +145,6 @@ docker-build:
         - .docker
       when: on_success
   rules:
-    - !reference [.default_rules, rules]
     - if: $CI_COMMIT_BRANCH
       exists:
         - Dockerfile
@@ -184,9 +167,8 @@ mkdocs:
       name: "${CI_REGISTRY_IMAGE}:latest"
       entrypoint: ["/bin/sh", "-c"]
   <<: *mkdocs-build
-  rules:
-    - !reference [.default_rules, rules]
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  only:
+    - master
 
 mkdocs-dev:
   image:
@@ -216,10 +198,9 @@ deploy production:
       url: https://${HOSTING_HOST}
   script:
     - rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete --exclude=/review site/ ${HOSTING_USERNAME}@${HOSTING_HOST}:~/public_html
+  only:
+    - master
   <<: *prepare_deploy
-  rules:
-    - !reference [.default_rules, rules]
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 deploy dev:
   needs: ["mkdocs-dev"]
