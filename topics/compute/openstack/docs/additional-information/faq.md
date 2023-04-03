@@ -56,3 +56,14 @@ Also you can access site specific FAQ:
 	- Use OpenStack Snapshots for local backup.
 	- Use backup software like Borg or Restic to create an offsite incremental backup.
 	- Use backup/data storage services provided by your local it support or CESNET (e. g. on MU [https://it.muni.cz/sluzby/zalohovani-bacula](https://it.muni.cz/sluzby/zalohovani-bacula)).
+
+??? "What is the default user for my VM?"
+  Default users are usually the same as the name of the operating system you are running.
+
+  | OS     | Login for SSH command |
+  |--------|-----------------------|
+  | Debian | debian                |
+  | Ubuntu | ubuntu                |
+  | Centos | centos                |
+
+  In more general the default user is the value of the `default_user` property of the image.
