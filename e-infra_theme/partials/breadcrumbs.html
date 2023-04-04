@@ -1,8 +1,17 @@
 {% if page %}
+<ul>
+
     {% for parent in page.ancestors|reverse %}
-    <span class="md-header-nav__parent">
-        {{parent.title}} /
+    <!-- <span class="md-header-nav__parent">
+        <a href="{{ parent.url|url }}">{{ parent.title }}</a>
     </span>
+    <span>></span> -->
+    {%- if parent.link %}
+    <li><a href="{{ parent.link|e }}">{{ parent.title }}</a></li>
+    {%- else %}
+    <li>{{ parent.title }}</li>
+    {% endif %}
     {% endfor %}
-{% endif %}
-{{ page.title | default(config.site_name, true) }}
+    {% endif %}
+    <li>{{ page.title | default(config.site_name, true) }}</li>
+</ul>

@@ -10,12 +10,12 @@ extra_javascript:
    - assets/js/hotjar.js
 
 # Repository
-repo_name: einfra-docs/documentation
-repo_url: https://gitlab.ics.muni.cz/einfra-docs/documentation/
+repo_name: Docs on GitHub
+repo_url: https://github.com/CESNET/eInfra-docs/
 edit_uri: edit/master/
 
 # Copyright
-copyright: Copyright (c) 2021-2023 e-INFRA CZ Documentation Portal
+copyright: Copyright &copy; 2021-2023 e-INFRA CZ
 
 extra:
   generator: false
@@ -30,21 +30,19 @@ theme:
   custom_dir: e-infra_theme
   language: 'en'
 
-  # 404 page
   static_templates:
     - 404.html
   features:
     - navigation.tabs
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
+    - navigation.instant
+    - navigation.tracking
     - toc.follow
     - navigation.prune
     - content.tooltips
-    #- tabs
-    #- instant
   icon:
     logo: fontawesome/solid/book-open
-    repo: fontawesome/brands/gitlab
+    repo: fontawesome/brands/github
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
@@ -59,26 +57,18 @@ nav:
     - compute/index.md
     - Concepts: '!include ./topics/compute/concepts/mkdocs.yml'
     - MetaCentrum Grid: '!include ./topics/compute/grid/mkdocs.yml'
-    - Supercomputer: '!include ./topics/compute/supercomputing/mkdocs.yml'
-    - Kubernetes: '!include ./topics/compute/kubernetes/mkdocs.yml'
+    # - Supercomputer: '!include ./topics/compute/supercomputing/mkdocs.yml'
+    # - Kubernetes: '!include ./topics/compute/kubernetes/mkdocs.yml'
     - OpenStack: '!include ./topics/compute/openstack/mkdocs.yml'
     - SensitiveCloud: '!include ./topics/compute/sensitive/mkdocs.yml'
   - Data Storage: '!include ./topics/storage/mkdocs.yml'
   - Managed Data Services: '!include ./topics/managed/mkdocs.yml'
   - General Information: '!include ./topics/about-us/mkdocs.yml'
 
-#extra:
-#  disqus: 'test-3whnesz3gq'
-#  social:
-#    - icon: 'fontawesome/brands/gitlab'
-#      link: 'https://code.it4i.cz/sccs/docs.it4i.cz'
-#    - icon: fontawesome/solid/globe-europe
-#      link: https://www.it4i.cz
-
 plugins:
   - monorepo
   - search:
-      separator: '[\s\.]+'
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)'
       lang:
         - en
   # - git-committers
