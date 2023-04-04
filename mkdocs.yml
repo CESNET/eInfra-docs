@@ -57,8 +57,8 @@ nav:
     - compute/index.md
     - Concepts: '!include ./topics/compute/concepts/mkdocs.yml'
     - MetaCentrum Grid: '!include ./topics/compute/grid/mkdocs.yml'
-    # - Supercomputer: '!include ./topics/compute/supercomputing/mkdocs.yml'
-    # - Kubernetes: '!include ./topics/compute/kubernetes/mkdocs.yml'
+    - Supercomputer: '!include ./topics/compute/supercomputing/mkdocs.yml'
+    - Kubernetes: '!include ./topics/compute/kubernetes/mkdocs.yml'
     - OpenStack: '!include ./topics/compute/openstack/mkdocs.yml'
     - SensitiveCloud: '!include ./topics/compute/sensitive/mkdocs.yml'
   - Data Storage: '!include ./topics/storage/mkdocs.yml'
