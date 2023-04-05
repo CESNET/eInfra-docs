@@ -131,22 +131,28 @@ a[href*="//"]
 }
 
 .md-footer__grid {
-  display: flex
-}
-
-.md-footer__grid {
-  padding: 20px 0;
+  display: flex;
+  padding: 20px;
   font-size: 0.7rem;
   flex-flow: column
 }
 
 .md-footer__column {
-  flex: 1 1 0px;
-  margin: 10px auto;
+  margin: 10px 0;
+}
+
+.md-footer__terms span {
+  display: block;
+}
+
+.md-footer__terms span img {
+  margin: 0px 2px 4px 0px;
+  width: 8px;
+  vertical-align: middle;
 }
 
 .md-footer__heading {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
@@ -163,7 +169,7 @@ a[href*="//"]
 .md-footer__organizations > img {
   display: flex;
   margin: 0 22px;
-  width: 150px;
+  width: 90px;
 }
 
 .md-footer__terms > a {
@@ -221,6 +227,10 @@ a[href*="//"]
     padding: 10px;
     flex-flow: row;
     align-items: center;
+  }
+  .md-footer__column {
+    margin: 10px auto;
+    max-width: 33%;
   }
 }
 
