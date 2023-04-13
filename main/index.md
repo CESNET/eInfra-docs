@@ -10,11 +10,7 @@ hide:
 
 The home for documentation of all e-INFRA CZ services that are provided to scientific community in the Czech Republic.
 
-!!! attention "Documentation is getting ready"
-
-    Please note, that the documentation portal is in the early stages of development. Do not use any information from the portal to run mission critical solutions, yet. :-)
-
-# e-INFRA CZ Data Services
+<!-- # e-INFRA CZ Data Services -->
 
 <div class="grid cards" markdown>
 
@@ -26,19 +22,19 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
 
     [:octicons-arrow-right-24: Account creation](./account/creation)   
     [:octicons-arrow-right-24: Accessing your account and services](./account/access)   
-    [:octicons-arrow-right-24: Account management](./account/management/)   
+    [:octicons-arrow-right-24: Account settings](./account/management/)   
     [:octicons-arrow-right-24: Multi-Factor Authentication](./account/mfa/setup)
 <!---  [:octicons-arrow-right-24: Account properties and lifecycle](/account/properties)    
 --->
 
 
--   :fontawesome-solid-microchip:{ .lg .middle } __Data processing__
+-   :fontawesome-solid-microchip:{ .lg .middle } __Data Processing__
 
     ---
 
     Focus on what's important, your research can be accelerated with our **big** servers.
 
-    [:octicons-arrow-right-24: Overview](/compute/)   
+    [:octicons-arrow-right-24: Overview](./compute/)   
     [:octicons-arrow-right-24: Batch computing (Metacentrum Grid)](./compute/grid)   
     [:octicons-arrow-right-24: Compute Cloud (Virtualization)](./compute/openstack/)   
     [:octicons-arrow-right-24: Containers Cloud](./compute/containers/)   
@@ -58,24 +54,6 @@ The home for documentation of all e-INFRA CZ services that are provided to scien
     [:octicons-arrow-right-24: Sensitive data](./storage/)   
     [:octicons-arrow-right-24: More (data repositories, ...)](./storage/)   
 
-
-</div>
-
-## Other e-INFRA Services
-
-<div class="grid grid-sm" markdown>
-
-Research and Education Networking   
-{ .card }
-
-Multimedia and collaboration   
-{ .card }
-
-Digital identity solution   
-{ .card }
-
-Data Security   
-{ .card }
 
 </div>
 
