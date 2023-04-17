@@ -14,7 +14,7 @@ In OpenStack, you can attach a network interface to an instance to provide addit
 Before you begin, you should have the following:
 
 - An [instance](../getting-started/creating-first-infrastructure.md) that you want to attach a network interface to
-- A pre-existing OpenStack network that you want to attach to the instance
+- A pre-existing OpenStack [network](../how-to-guides/create-networking.md) that you want to attach to the instance
 
 ## Attaching Interface
 
@@ -100,6 +100,6 @@ $ openstack server show <server_id>
 
 ## Security Considerations
 
-- Limit the use of network interfaces: Only attach network interfaces to instances that require them. Avoid attaching network interfaces to instances that do not require them to minimize the attack surface.
-- Review firewall rules: Review and update firewall rules to ensure that only necessary ports and services are accessible from the network interface.
-- Use security groups: Use security groups to define the network traffic that is allowed to or from the instance.
+- **Limit the use of network interfaces**: Only attach network interfaces to instances that require them. Avoid attaching network interfaces to instances that do not require them to minimize the attack surface.
+- **Review firewall rules**: Review and update firewall rules to ensure that only necessary ports and services are accessible from the network interface.
+- **Use security groups**: Use security groups to define the network traffic that is allowed to or from the instance.
