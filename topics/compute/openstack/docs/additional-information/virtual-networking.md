@@ -18,7 +18,7 @@ Prerequisites:
 In How-to guides we have prepared several scenarios:
 
 - [Accessing instances](../how-to-guides/accessing-instances.md)
-- [Allocating floating IPs](../how-to-guides/allocating-floating-ips.md)
+- [Allocating floating IPs](../how-to-guides/managing-floating-ips.md)
 - [Create networking](../how-to-guides/create-networking.md)
 - [High Availability deployment](../how-to-guides/high-availability-deployment.md)
 
