@@ -160,7 +160,7 @@ __6.__ In **Key Pair** select the key that was created in section [Create Key Pa
     ![](/compute/openstack/images/instance/instance6.png)
 
 __9.__ Wait until instance initialization finishes and
-[Associate Floating IP](../how-to-guides/allocating-floating-ips.md#allocation-and-assignment-of-fip).
+[Associate Floating IP](../how-to-guides/managing-floating-ips.md).
 For group project always select the same network as used in
 [Router gateway](../how-to-guides/create-networking.md#router-creation).
 

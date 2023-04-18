@@ -15,7 +15,7 @@ It is currently limited to the common internal networks. You can start your mach
 
 ### IPv4 Group Floating IPs
 
-The situation is rather different for group projects. You cannot use the same approach as for personal projects. You should create a virtual network as described on page [Create networking](../../how-to-guides/create-networking.md) instead and select one of the pools with `-GROUP` suffix as show on page [Allocating floating IPs](../../how-to-guides/allocating-floating-ips.md). Namely:
+The situation is rather different for group projects. You cannot use the same approach as for personal projects. You should create a virtual network as described on page [Create networking](../../how-to-guides/create-networking.md) instead and select one of the pools with `-GROUP` suffix as show on page [Allocating floating IPs](../../how-to-guides/managing-floating-ips.md). Namely:
 
  - `public-cesnet-78-128-251-GROUP`
  - `public-cesnet-195-113-167-GROUP`

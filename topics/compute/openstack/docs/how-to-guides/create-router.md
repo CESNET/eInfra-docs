@@ -111,6 +111,6 @@ If you have no gateway on you router, you can assign a new one.
     openstack router unset --external-gateway my-router1
     ```
 
-    Make sure to first [release FIPs](../how-to-guides/allocating-floating-ips.md#release-of-floating-ip) from the network.
+    Make sure to first [release FIPs](../how-to-guides/managing-floating-ips.md#releasing-floating-ip) from the network.
 
     Additional router configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/router.html).

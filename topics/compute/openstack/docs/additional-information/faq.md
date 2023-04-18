@@ -58,12 +58,12 @@ Also you can access site specific FAQ:
 	- Use backup/data storage services provided by your local it support or CESNET (e. g. on MU [https://it.muni.cz/sluzby/zalohovani-bacula](https://it.muni.cz/sluzby/zalohovani-bacula)).
 
 ??? "What is the default user for my VM?"
-  Default users are usually the same as the name of the operating system you are running.
+	Default users are usually the same as the name of the operating system you are running.
 
-  | OS     | Login for SSH command |
-  |--------|-----------------------|
-  | Debian | debian                |
-  | Ubuntu | ubuntu                |
-  | Centos | centos                |
+	| OS     | Login for SSH command |
+	|--------|-----------------------|
+	| Debian | debian                |
+	| Ubuntu | ubuntu                |
+	| Centos | centos                |
 
-  In more general the default user is the value of the `default_user` property of the image.
+	In more general the default user is the value of the `default_user` property of the image.
