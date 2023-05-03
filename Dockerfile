@@ -2,6 +2,10 @@ FROM squidfunk/mkdocs-material
 
 LABEL maintainer="adrian@ics.muni.cz"
 
-RUN pip install mkdocs-monorepo-plugin Pygments pymdown-extensions mkdocs-git-committers-plugin-2 mkdocs-git-revision-date-localized-plugin
+COPY ./plugins/ /docs/plugins/
+COPY ./requirements.txt .
+
+RUN pip install -r requirements.txt ./plugins/mkdocs-monorepo-plugin
+
 
 RUN git config --global --add safe.directory /docs

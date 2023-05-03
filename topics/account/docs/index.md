@@ -2,6 +2,7 @@
 # template: home.html
 hide:
   - toc
+title: e-INFRA CZ Account
 ---
 # e-INFRA CZ Account
 
