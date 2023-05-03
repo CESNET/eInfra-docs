@@ -1,3 +1,8 @@
+---
+languages:
+  - en
+  - cs
+---
 Your e-INFRA CZ Account is **automatically created when you try to access
 and register within the first service** provided by one or more Operators of
 the e-INFRA CZ. You can also *[create your account](https://signup.e-infra.cz/anyfed/registrar/?vo=e-infra.cz)* 

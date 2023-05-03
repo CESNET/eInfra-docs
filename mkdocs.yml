@@ -67,6 +67,25 @@ nav:
 
 plugins:
   - monorepo
+  - i18n:
+      default_language: en
+      material_alternate: true
+      languages:
+        en:
+          name: English
+          build: true
+        cs:
+          name: Česky
+          build: true
+      nav_translations:
+        cs:
+          e-INFRA CZ Account: Účet e-INFRA CZ
+          Data processing: Zpracování dat
+          Data Storage: Datova Úložiště
+          Managed Data Services: Spravované datové služby
+          General Information: Obecné informace
+          Account Management: Správa účtů
+  
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)'
       lang:
