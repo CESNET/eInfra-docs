@@ -4,3 +4,6 @@ venv/
 cpanel*
 
 topics/compute/supercomputing/docs/
+
+*.iml
+.idea
