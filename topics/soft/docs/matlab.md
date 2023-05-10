@@ -6,99 +6,138 @@
 
 ## Availability
 
-=== "IT4I"
-    # Introduction
-
-    [Available][1]; for the list of versions, run `ml av matlab`.
-
-    ## Examples
-
-    ```code
-        sdasdsadsasad
-        asdsad
-        asdsad
-    ```
+=== "MetaCentrum"
+    ## Licences
     
-=== "Source 2"
-    Available here, as well.
+    There is a permanent licence type `College` (for UNIX and MS Windows) available
+    to all the national grid infrastructure MetaCentrum users as well as to all students and employees of:
 
-=== "Source 3"
-    Not available here :(
+    * Masaryk university in Brno
+    * University of West Bohemia in Pilsen
+    * Czech Technical University in Prague
+    
+    MATLAB can be installed freely on any computer at these universities
+    and once running it takes licences from a pool of available licences.
+    The licences are currently maintained by three licence servers:
+    
+    * ZČU in Plzeň,
+    * ÚVT UK in Praha,
+    * ÚVT MU in Brno.
 
-## License
+    !!!important
+        The purchased licenses permit just an academic use of the program!
 
-There are always two variants of the release:
+    ### List of Licences
 
-* Non-commercial or so-called EDU variant, which can be used for common research and educational purposes.
-* Commercial or so-called COM variant, which can used also for commercial activities. Commercial licenses are much more expensive, so usually the commercial license has only a subset of features compared to the available EDU license.
+    | Name                       | Number |
+    | -------------------------- | ------ |
+    | MATLAB                     | 450    |
+    | Aerospace_Toolbox          | 1      |
+    | Antenna_Toolbox            | 1      |
+    | Bioinformatics_Toolbox     | 15     |
+    | Communication_Toolbox      | 25     |
+    | Compiler                   | 7      |
+    | Control_Toolbox            | 50     |
+    | Curve_Fitting_Toolbox      | 52     |
+    | Data_Acq_Toolbox           | 2      |
+    | Database_Toolbox           | 12     |
+    | Datafeed_Toolbox           | 1      |
+    | Distrib_Computing_Toolbox  | 53     |
+    | Econometrics_Toolbox       | 6      |
+    | Embedded_IDE_Link          | 1      |
+    | Excel_Link                 | 1      |
+    | Financial_Toolbox          | 2      |
+    | Fin_Instruments_Toolbox    | 2      |
+    | Fixed_Point_Toolbox        | 3      |
+    | Fuzzy_Toolbox              | 51     |
+    | GADS_Toolbox               | 4      |
+    | Identification_Toolbox     | 51     |
+    | Image_Acquisition_Toolbox  | 5      |
+    | Image_Toolbox              | 94     |
+    | Instr_Control_Toolbox      | 1      |
+    | MAP_Toolbox                | 4      |
+    | MATLAB_Builder_for_Java    | 7      |
+    | MATLAB_Coder               | 8      |
+    | MATLAB_Distrib_Comp_Engine | 384    |
+    | MPC_Toolbox                | 1      |
+    | Neural_Network_Toolbox     | 153    |
+    | Optimization_Toolbox       | 153    |
+    | PDE_Toolbox                | 50     |
+    | Power_System_Blocks        | 2      |
+    | Real-Time_Win_Target       | 51     |
+    | Real-Time_Workshop         | 3      |
+    | Robotics_System_Toolbox    | 7      |
+    | Robust_Toolbox             | 1      |
+    | RTW_Embedded_Coder         | 2      |
+    | Signal_Blocks              | 50     |
+    | Signal_Toolbox             | 87     |
+    | SimBiology                 | 5      |
+    | SimDriveline               | 1      |
+    | SimHydraulics              | 3      |
+    | SimMechanics               | 5      |
+    | Simscape                   | 7      |
+    | Simulink_Control_Design    | 50     |
+    | Simulink_HDL_Coder         | 3      |
+    | Simulink_PLC_Coder         | 1      |
+    | SIMULINK                   | 150    |
+    | Stateflow                  | 25     |
+    | Statistics_Toolbox         | 87     |
+    | Symbolic_Toolbox           | 153    |
+    | Target_Support_Package     | 1      |
+    | Vehicle_Network_Toolbox    | 1      |
+    | Video_and_Image_Blockset   | 12     |
+    | Virtual_Reality_Toolbox    | 6      |
+    | Wavelet_Toolbox            | 8      |
 
-!!! info
-    Version 2021a is an e-INFRA CZ license, without cluster licenses - only basic functionality.
+    Together with the permanent licence, a complete maintenance
+    (including new version updates of all mentioned products) is also available and it is annually renewed.
 
-## Usage
+    A list of licenses and its usage can be obtained by
 
-If you need to use the MATLAB GUI to prepare your MATLAB programs, you can use MATLAB directly on the login nodes. However, for all computations, use MATLAB on the compute nodes via PBS Pro scheduler.
+    ```console
+    $ /software/matlab-9.8/etc/lmstat -a | grep "in use"
+    ```
 
-If you require the MATLAB GUI, follow the general information about running graphical applications.
+    ### Licences and Scheduler
 
-MATLAB GUI is quite slow using the X forwarding built in the PBS (`qsub -X`), so using X11 display redirection either via SSH or directly by `xauth` (see the GUI Applications on Compute Nodes over VNC section) is recommended.
+    You need to tell the PBS scheduler that the job will require a licence.
+    Each MATLAB package has its own licence.
+    For exasmple, if you need to use `Statistics_Toolbox`, submit your job like this:
 
-To run MATLAB with GUI, use:
+    ```console
+    qsub ... -l matlab=1 -l matlab_Statistics_Toolbox=1 ...
+    ```
+
+    Names of toolboxes with the `matlab_` prefix are required by PBS scheduling system for the purpose of license reservation.
+    During MATLAB usage, don't use these prefixes and use only the base name of the selected toolbox.
+
+=== "IT4Innovations"
+    ## Versions
+
+    For the list of versions, run `ml av matlab`.
+
+    ## Licenses
+
+    There are always two variants of the release:
+
+    * Non-commercial or so-called EDU variant, which can be used for common research and educational purposes.
+    * Commercial or so-called COM variant, which can used also for commercial activities. Commercial licenses are much more expensive, so usually the commercial license has only a subset of features compared to the available EDU license.
+
+    !!! info
+        Version 2021a is an e-INFRA CZ license, without cluster licenses - only basic functionality.
+
+## Documentation
+
+From the MATLAB command window one can use the command help to get help with a a particular command, e.g.
 
 ```console
-$ matlab
+>> help rand
 ```
 
-To run MATLAB in text mode, without the MATLAB Desktop GUI environment, use:
+in the desktop environment one can use also the command doc
 
 ```console
-$ matlab -nodesktop -nosplash
-```
-
-plots, images, etc. will be still available.
-
-### Examples
-
-### Parallel MATLAB Batch Job in Local Mode
-
-To run MATLAB in a batch mode, write a MATLAB script, then write a bash jobscript and execute via the `qsub` command. By default, MATLAB will execute one MATLAB worker instance per allocated core.
-
-```bash
-#!/bin/bash
-#PBS -A PROJECT ID
-#PBS -q qprod
-#PBS -l select=1:ncpus=128:mpiprocs=128:ompthreads=1
-
-# change to shared scratch directory
-DIR=/scratch/project/PROJECT_ID/$PBS_JOBID
-mkdir -p "$DIR"
-cd "$DIR" || exit
-
-# copy input file to scratch
-cp $PBS_O_WORKDIR/matlabcode.m .
-
-# load modules
-ml MATLAB/R2015b
-
-# execute the calculation
-matlab -nodisplay -r matlabcode > output.out
-
-# copy output file to home
-cp output.out $PBS_O_WORKDIR/.
-
-# remove scratch folder
-rm -rf $SCR
-
-# exit
-exit
-```
-
-This script may be submitted directly to the PBS workload manager via the `qsub` command.  The inputs and the MATLAB script are in the matlabcode.m file, outputs in the output.out file. Note the missing .m extension in the `matlab -r matlabcodefile` call, **the .m must not be included**.  Note that the **shared /scratch must be used**. Further, it is **important to include the `quit`** statement at the end of the matlabcode.m script.
-
-Submit the jobscript using `qsub`:
-
-```console
-$ qsub ./jobscript
+>> doc rand
 ```
 
 ## Resources
