@@ -12,7 +12,6 @@ nav:
     - how-to-guides/attaching-interface.md
     # - how-to-guides/attaching-remote-storage.md
     - how-to-guides/changing-vm-resources.md
-    - how-to-guides/command-line-interface.md
     - how-to-guides/create-networking.md
     - how-to-guides/create-router.md
     - how-to-guides/deploying-loadbalancers.md

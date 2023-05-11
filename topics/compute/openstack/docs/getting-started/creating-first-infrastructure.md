@@ -18,6 +18,7 @@ Prerequisites:
 * Up-to-date web browser
 * Active account in [MetaCentrum](https://metavo.metacentrum.cz/en/application/index.html)
 * Basic knowledge of SSH (for remote connections)
+* [API key and CLI client](../how-to-guides/obtaining-api-key.md) (needed only if You want to use CLI)
 
 ## Sign In
 
@@ -54,27 +55,43 @@ __5.__ Wait to be redirected back to our dashboard.
 All virtual machine instances running in the cloud have to be accessed remotely. The most common way of accessing
 an instance remotely is SSH. Using SSH requires a pair of keys - a public key and a private key.
 
-__1.__ Navigate to **Project &gt; Compute &gt; Key Pairs** and click the **Create Key Pair** button.
+=== "GUI"
 
-!!! example
+    __1.__ Navigate to **Project &gt; Compute &gt; Key Pairs** and click the **Create Key Pair** button.
+    
+    !!! example
+    
+        ![](/compute/openstack/images/instance/keypair1.png)
+    
+    __2.__ In the **Create key Pair** insert the **Key Pair Name**. Avoid using special characters, if possible. Next select SSH key for **Key Type** and finally confirm with **Done**.
+    
+    !!! example
+    
+        ![](/compute/openstack/images/instance/keypair2.png)
+    
+    __3.__ Download the private key to your local computer and move it to the `~/.ssh/` folder. If you are using windows, refer to [accessing from windows](../technical-reference/remote-access.md#accessing-from-windows).
+    
+    __4.__ Set access privileges on `~/.ssh/` folder:
+    
+    ```
+    chmod 700 .ssh/
+    chmod 644 .ssh/id_rsa.pub
+    chmod 600 .ssh/id_rsa
+    ```
 
-    ![](/compute/openstack/images/instance/keypair1.png)
+=== "CLI"
 
-__2.__ In the **Create key Pair** insert the **Key Pair Name**. Avoid using special characters, if possible. Next select SSH key for **Key Type** and finally confirm with **Done**.
+    You can use the **ssh-keygen** command to create a new private key:
+    ```
+    ssh-keygen -b 4096
+    ```
 
-!!! example
+    You will be asked to specify the output file and passphrase for your key.
 
-    ![](/compute/openstack/images/instance/keypair2.png)
-
-__3.__ Download the private key to your local computer and move it to the `~/.ssh/` folder. If you are using windows, refer to [accessing from windows](../technical-reference/remote-access.md#accessing-from-windows).
-
-__4.__ Set access privileges on `~/.ssh/` folder:
-
-```
-chmod 700 .ssh/
-chmod 644 .ssh/id_rsa.pub
-chmod 600 .ssh/id_rsa
-```
+    Assuming your ssh public key is stored in `~/.ssh/id_rsa.pub`:
+    ```
+    openstack keypair create --public-key ~/.ssh/id_rsa.pub my-key1
+    ```
 
 ## Update Security Group
 
@@ -85,81 +102,133 @@ You need to add at least one new rule to be able to connect to your new instance
 This is similar to setting up firewall rules on your router or server. If set up correctly, you will be able to access
 your virtual machine via SSH from your local terminal.
 
-__1.__ Go to **Project &gt;  Network &gt; Security Groups**. Click on **Manage Rules**, for the **default** security group.
+=== "GUI"
 
-!!! example
+    __1.__ Go to **Project &gt; Network &gt; Security Groups**. Click on **Manage Rules**, for the **default** security group.
+    
+    !!! example
+    
+        ![](/compute/openstack/images/instance/sec_group1.png)
+    
+    __2.__ Click on **Add rule**, choose **SSH**, and leave the remaining fields unchanged.
+       This will allow you to access your instance via IPv4.
+    
+    !!! example
+    
+        ![](/compute/openstack/images/instance/sec_group2.png)
+    
+    !!! caution
+    
+        You have 2 possibilities for how to configure security groups policy.
+    
+        - One is through CIDR which specifies rules for concrete network range.
+        - The second one specifies rules for members of a specified security group,
+        i.e. policy will be applied on instances that belong to the selected security group.
+    
+    For details, refer to [the official documentation](https://docs.openstack.org/horizon/train/user/configure-access-and-security-for-instances.html).
 
-    ![](/compute/openstack/images/instance/sec_group1.png)
+=== "CLI"
 
-__2.__ Click on **Add rule**, choose **SSH**, and leave the remaining fields unchanged.
-   This will allow you to access your instance via IPv4.
+    __1.__ Add SSH rule to the default security group:
+        ```
+        openstack security group rule create --description "Permit SSH" --remote-ip 0.0.0.0/0 --protocol tcp --dst-port 22 --ingress default
+        ```
+        
+      Optionally, add ICMP rule (to allow ping):
+        ```
+        openstack security group rule create --description "Permit ICMP (any)" --remote-ip 0.0.0.0/0 --protocol icmp --icmp-type -1 --ingress default
+        ```
 
-!!! example
-
-    ![](/compute/openstack/images/instance/sec_group2.png)
-
-!!! caution
-
-    You have 2 possibilities for how to configure security groups policy.
-
-    - One is through CIDR which specifies rules for concrete network range.
-    - The second one specifies rules for members of a specified security group,
-    i.e. policy will be applied on instances that belong to the selected security group.
-
-For details, refer to [the official documentation](https://docs.openstack.org/horizon/train/user/configure-access-and-security-for-instances.html).
+    __2.__ Verify:
+        ```
+        openstack security group show default
+        ```
 
 ## Create Virtual Machine Instance
 
-__1.__ In **Compute &gt; Instances**, click the **Launch Instance** button.
+=== "GUI"
 
-!!! example
-
-    ![](/compute/openstack/images/instance/instance1.png)
-
-__2.__ Choose **Instance Name**, Description, and number of instances.
-   If you are creating more instances, `-%i` will be automatically appended to the name of each instance. Continue via **Next**
-
-!!! example
-
-    ![](/compute/openstack/images/instance/instance2.png)
-
-__3.__ Choose an image from which to boot the instance. Choose to delete the volume after instance delete. This is not recommended for production deployment.
-
-!!! example
-
-    ![](/compute/openstack/images/instance/instance3.png)
-
-__4.__ Choose the hardware resources of the instance by selecting a flavor. Additional volumes for data can be attached later on.
-
-!!! example
-
-    ![](/compute/openstack/images/instance/instance4.png)
-
-__5.__ Select appropriate network based on your project type. and continue to **Key Pair** in the left menu.
-
-=== "Personal project"
-
-    For personal project select personal-project-network-subnet from network `147-251-115-pers-proj-net`
-
+    __1.__ In **Compute &gt; Instances**, click the **Launch Instance** button.
+    
     !!! example
-
-        ![](/compute/openstack/images/instance/instance5.png)
-
-=== "Group project"
-
-    For group project select group-project-network-subnet from network group-project-network (check if [Router gateway](../how-to-guides/create-networking.md#router-creation) is set)
-
+    
+        ![](/compute/openstack/images/instance/instance1.png)
+    
+    __2.__ Choose **Instance Name**, Description, and number of instances.
+       If you are creating more instances, `-%i` will be automatically appended to the name of each instance. Continue via **Next**
+    
     !!! example
+    
+        ![](/compute/openstack/images/instance/instance2.png)
+    
+    __3.__ Choose an image from which to boot the instance. Choose to delete the volume after instance delete. This is not recommended for production deployment.
+    
+    !!! example
+    
+        ![](/compute/openstack/images/instance/instance3.png)
+    
+    __4.__ Choose the hardware resources of the instance by selecting a flavor. Additional volumes for data can be attached later on.
+    
+    !!! example
+    
+        ![](/compute/openstack/images/instance/instance4.png)
+    
+    __5.__ Select appropriate network based on your project type. and continue to **Key Pair** in the left menu.
+    
+    === "Personal project"
+    
+        For personal project select personal-project-network-subnet from network `147-251-115-pers-proj-net`
+    
+        !!! example
+    
+            ![](/compute/openstack/images/instance/instance5.png)
+    
+    === "Group project"
+    
+        For group project select group-project-network-subnet from network group-project-network (check if [Router gateway](../how-to-guides/create-networking.md#router-creation) is set)
+    
+        !!! example
+    
+            ![](/compute/openstack/images/tutorial/instance_launch_network-group.png)
+    
+    __6.__ In **Key Pair** select the key that was created in section [Create Key Pair](#create-key-pair) in the Available list and finally **Launch Instance**.
+    
+    !!! example
+    
+        ![](/compute/openstack/images/instance/instance6.png)
 
-        ![](/compute/openstack/images/tutorial/instance_launch_network-group.png)
+=== "CLI"
 
-__6.__ In **Key Pair** select the key that was created in section [Create Key Pair](#create-key-pair) in the Available list and finally **Launch Instance**.
+    __1.__ **Create volume**
 
-!!! example
+      Volumes are created automatically when creating an instance in GUI, but we need to create them manually in the case of CLI.
+        
+      Create bootable volume from image (e.g. centos):
+        ```
+        openstack volume create --image "centos-7-1809-x86_64" --size 40 my_vol1
+        ```
 
-    ![](/compute/openstack/images/instance/instance6.png)
+      To get a list of available images:
+        ```
+        openstack image list
+        ```
+    
+    __2.__ **Create instance**
+        ```
+        openstack server create --flavor "standard.small" --volume my_vol1 \
+         --key-name my-key1 --security-group default --network 147-251-115-pers-proj-net my-server1
+        ```
 
-__9.__ Wait until instance initialization finishes and
+      To get a list of available flavors:
+        ```
+        openstack flavor list
+        ```
+
+      In case of a group project use `--network group-project-network`.
+
+## Associate Floating IP
+
+Wait until instance initialization finishes and
 [Associate Floating IP](../how-to-guides/managing-floating-ips.md).
 For group project always select the same network as used in
 [Router gateway](../how-to-guides/create-networking.md#router-creation).
@@ -168,7 +237,10 @@ For group project always select the same network as used in
 
     ![](/compute/openstack/images/tutorial/instance_associate_ip.png)
 
-__10.__ Login using your SSH key as selected in Key pair above
+
+## Login
+
+Login using your SSH key as selected in Key pair above
 
 Connect to the instance using **ssh system@floating-ip**, as described on page [Accessing instances](../how-to-guides/accessing-instances.md).
 
