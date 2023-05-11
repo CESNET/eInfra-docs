@@ -2,4 +2,5 @@ site_name: "soft"
 edit_uri: edit/master/topics/soft/docs
 nav:
   - MATLAB: matlab.md
-    - Metacentrum: matlab-mc.md
+    - MetaCentrum: matlab-mc.md
+    - IT4Innovation: matlab-it4i.md
