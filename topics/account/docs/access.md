@@ -1,3 +1,8 @@
+---
+languages:
+  - en
+  - cs
+---
 # Accessing Your Account and Services
 
 In principle and by default, **e-INFRA CZ Account doesn't have own

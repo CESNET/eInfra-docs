@@ -430,3 +430,29 @@ a[href*="//"]
   padding-top: 10px;
   padding-bottom: 10px;
 } */
+
+.md-language-switcher .md-select a button svg {
+  float: left;
+  margin-right: 0.3em;
+}
+.md-language-switcher .md-select a button span {
+  display: block;
+  margin-top: 4px;
+}
+
+.md-language-switcher {
+  float: right
+}
+
+.md-language-switcher .md-select__item {
+  list-style-type: none;
+  margin-left: 0 !important;
+}
+
+.md-typeset .md-banner {
+  background-color: var(--md-accent-bg-color);
+  color: var(--md-footer-bg-color);
+  overflow: auto;
+  border: 1px solid #ff9100;
+  margin-bottom: 1em;
+}

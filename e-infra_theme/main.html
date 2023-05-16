@@ -1,14 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if i18n_page_locale == 'cs' and (i18n_page_file_locale == 'en' or not i18n_page_file_locale) %}
+  <div data-md-component="announce">
+    <aside class="md-banner">
+      <div class="md-banner__inner md-grid md-typeset">
+        Tento obsah ve vašem jazyce není k dispozici. Zobrazujeme proto anglickou verzi.  
+      </div>
+    </aside>
+  </div>
+{% endif %}
 {% if "breadcrumbs" not in page.meta.hide %}
-{% block breadcrumbs %}
-<nav class="md-breadcrumbs" data-md-component="breadcrumbs">
-    <div class="md-breadcrumbs__inner md-typeset md-grid">
-        {% include "partials/breadcrumbs.html" %}
-    </div> 
-</nav>
-{% endblock %}
+  {% block breadcrumbs %}
+  <nav class="md-breadcrumbs" data-md-component="breadcrumbs">
+      <div class="md-breadcrumbs__inner md-typeset md-grid">
+          {% include "partials/breadcrumbs.html" %}
+      </div> 
+  </nav>
+  {% endblock %}
+{% endif %}
+
+{% if "language_switcher" not in page.meta.hide %}
+  {% block language_switcher %}
+  <div class="md-language-switcher" data-md-component="language-switcher">
+      {% include "partials/i18n_language_switcher.html" %}
+  </div>
+  {% endblock %}
 {% endif %}
 {{ super() }}
 {% endblock %}
