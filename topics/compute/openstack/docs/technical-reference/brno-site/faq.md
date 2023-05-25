@@ -89,56 +89,56 @@ hide:
 
 	* connect to cloud infrastructure via single public facing jump/bastion node (using [sshuttle](https://github.com/sshuttle/sshuttle#readme) or [ssh ProxyJump](https://www.jeffgeerling.com/blog/2022/using-ansible-playbook-ssh-bastion-jump-host) or eventually [ssh ProxyCommand](https://blog.ruanbekker.com/blog/2020/10/26/use-a-ssh-jump-host-with-ansible/))
 	* use OpenStack API to watch whether VM is ACTIVE
-  * relax public IP try-connect loop timing
+    * relax public IP try-connect loop timing
 	* configure SSH client to [reuse connection for instance with `-o ControlMaster=auto -o ControlPersist=60s`](https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Multiplexing)
 
-  !!! example
+    !!! example
 
-  	As an example, consider a group of virtual machines, where at least one has access to the internet using an IPv4 or IPv6 public address, and they are connected by an internal network (e.g. 10.0.0.0/24).
+    	As an example, consider a group of virtual machines, where at least one has access to the internet using an IPv4 or IPv6 public address, and they are connected by an internal network (e.  g. 10.0.0.0/24).
 
-    To access the first VM with a public address `<public-ip-jump>`:
+      To access the first VM with a public address `<public-ip-jump>`:
 
-  	* Wait for the machine to enter ACTIVE state via Openstack API: `openstack server show <openstack-server-id> -f json | jq -r .status`.
-  	* After VM is in ACTIVE state try to open connection to SSH port with timeout of approx. 5 seconds and period of at least 30 seconds.
+    	* Wait for the machine to enter ACTIVE state via Openstack API: `openstack server show <openstack-server-id> -f json | jq -r .status`.
+    	* After VM is in ACTIVE state try to open connection to SSH port with timeout of approx. 5 seconds and period of at least 30 seconds.
 
-  	To access other VMs on the same cloud internal network (once SSH connection to 1st is established):
+    	To access other VMs on the same cloud internal network (once SSH connection to 1st is established):
 
-  	* The recommended method is to create an SSH VPN using sshuttle with `sshuttle -r user@<public-ip-jump> 10.0.0.0/24`
-  	* Address all internal virtual servers with their internal address (CIDR 10.0.0.0/24) and use the 1st (jump/bastion) machine with the public address as an SSH proxy.
-  	* Follow the same steps to connect – first wait for ACTIVE state and then try a port connection.
+    	* The recommended method is to create an SSH VPN using sshuttle with `sshuttle -r user@<public-ip-jump> 10.0.0.0/24`
+    	* Address all internal virtual servers with their internal address (CIDR 10.0.0.0/24) and use the 1st (jump/bastion) machine with the public address as an SSH proxy.
+    	* Follow the same steps to connect – first wait for ACTIVE state and then try a port connection.
 
-	## How to check, whether you are blocked
+  	## How to check, whether you are blocked
 
-	Run the following bash script from the machine, where you believe you got blocked (A), and also from another one located in another IP network segment (B, for instance VM in other cloud):
+  	Run the following bash script from the machine, where you believe you got blocked (A), and also from another one located in another IP network segment (B, for instance VM in other cloud):
 
-	```sh
-	# Test Cloud Accessibility for a linux or Windows WSDL 2 environments
-	# BASH function requires following tools to be installed:
-	#   ip, host tracepath traceroute ping, curl, ncat, timeout, bash
-	# Execution example: test_cloud_access 178.128.250.99 22
+  	```sh
+  	# Test Cloud Accessibility for a linux or Windows WSDL 2 environments
+  	# BASH function requires following tools to be installed:
+  	#   ip, host tracepath traceroute ping, curl, ncat, timeout, bash
+  	# Execution example: test_cloud_access 178.128.250.99 22
 
-	function test_cloud_access() {
-	local basion_vm_public_ip="$1"
-	local basion_vm_public_port="${2:-22}"
-	local cloud_identity_host=${3:-identity.cloud.muni.cz}
-	local timeout=60
-	set -x
-	cmds=("ip a" "ip -4 r l" "ip -6 r l")
-	for i_cmd in "${cmds[@]}"; do
-		${i_cmd}; echo "ecode:$?";
-  done
-	for i_cmd in host tracepath traceroute ping ; do
-		timeout --signal=2 ${timeout} ${i_cmd} "${cloud_identity_host}"
-		echo "ecode:$?"
-	done
-	timeout --signal=2 ${timeout} curl -v "https://${cloud_identity_host}"
-	echo "ecode:$?"
-	timeout --signal=2 ${timeout} ncat -z "${basion_vm_public_ip}" "${basion_vm_public_port}"
-	echo "ecode:$?"
-	set +x
-	}
-	```
+  	function test_cloud_access() {
+  	local basion_vm_public_ip="$1"
+  	local basion_vm_public_port="${2:-22}"
+  	local cloud_identity_host=${3:-identity.cloud.muni.cz}
+  	local timeout=60
+  	set -x
+  	cmds=("ip a" "ip -4 r l" "ip -6 r l")
+  	for i_cmd in "${cmds[@]}"; do
+  		${i_cmd}; echo "ecode:$?";
+    done
+  	for i_cmd in host tracepath traceroute ping ; do
+  		timeout --signal=2 ${timeout} ${i_cmd} "${cloud_identity_host}"
+  		echo "ecode:$?"
+  	done
+  	timeout --signal=2 ${timeout} curl -v "https://${cloud_identity_host}"
+  	echo "ecode:$?"
+  	timeout --signal=2 ${timeout} ncat -z "${basion_vm_public_ip}" "${basion_vm_public_port}"
+  	echo "ecode:$?"
+  	set +x
+  	}
+  	```
 
-	## How to report network issue and get unblocked
+  	## How to report network issue and get unblocked
 
-	If you are suspecting, that Your virtual machines are blocked, You should contact support by sending an email to the address cloud@metacentrum.cz. To make things easier and resolve the issue faster, it is important to add the outputs of the bash function `test_cloud_access()` above, ran from both VMs (A and B).
+  	If you are suspecting, that Your virtual machines are blocked, You should contact support by sending an email to the address cloud@metacentrum.cz. To make things easier and resolve the   issue faster, it is important to add the outputs of the bash function `test_cloud_access()` above, ran from both VMs (A and B).

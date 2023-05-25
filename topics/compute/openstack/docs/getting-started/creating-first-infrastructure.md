@@ -178,6 +178,8 @@ your virtual machine via SSH from your local terminal.
     === "Personal project"
     
         For personal project select personal-project-network-subnet from network `147-251-115-pers-proj-net`.
+        Here is more information on available networks in [Brno](../technical-reference/brno-site/networking.md#ipv4-personal-floating-ips)
+        and [Ostrava](../technical-reference/ostrava-site/networking.md#floating-ip-networks).
     
         !!! example
     
@@ -234,6 +236,9 @@ At this point, you want to [Allocate IP Address](../how-to-guides/managing-float
 and [Assign IP Address](../how-to-guides/managing-floating-ips.md#assigning-ip-address).
 You don't have to care about the other sections unless you need them.
 
+Possible IP address pools are described separately for [Brno](../technical-reference/brno-site/networking.md)
+and [Ostrava](../technical-reference/ostrava-site/networking.md).
+
 For group projects, always select the same network as used in
 [Router gateway](../how-to-guides/create-router.md#router-creation).
 
@@ -241,7 +246,10 @@ For group projects, always select the same network as used in
 
 Login using your SSH key as selected in Key pair above.
 
-Connect to the instance using **ssh system@floating-ip**, where `system` refers to the image OS (ubuntu, debian, centos) and `floating-ip` is the one associated.
+Connect to the instance using **ssh username@floating-ip**.
+
+- `username` differs based on the selected image ("ubuntu", "debian", "centos", "almalinux"). The username topic is also discussed in [FAQ](../additional-information/faq.md).
+- `floating-ip` is the one previously associated.
 
 More information about login options is described on the [Accessing Instances](../how-to-guides/accessing-instances.md) page.
 
