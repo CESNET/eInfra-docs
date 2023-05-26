@@ -63,13 +63,13 @@ an instance remotely is SSH. Using SSH requires a pair of keys - a public key an
     
         ![](/compute/openstack/images/instance/keypair1.png)
     
-    __2.__ In the **Create key Pair** insert the **Key Pair Name**. Avoid using special characters, if possible. Next select SSH key for **Key Type** and finally confirm with **Done**.
+    __2.__ In the **Create Key Pair** insert the **Key Pair Name**. Avoid using special characters, if possible. Next select SSH key for **Key Type** and finally confirm with **Create Key Pair**.
     
     !!! example
     
         ![](/compute/openstack/images/instance/keypair2.png)
     
-    __3.__ Download the private key to your local computer and move it to the `~/.ssh/` folder. If you are using windows, refer to [accessing from windows](../technical-reference/remote-access.md#accessing-from-windows).
+    __3.__ Download the private key to your local computer and move it to the `~/.ssh/` folder. If you are using Windows, refer to [Accessing From Windows](../technical-reference/remote-access.md#accessing-from-windows).
     
     __4.__ Set access privileges on `~/.ssh/` folder:
     
@@ -144,7 +144,7 @@ your virtual machine via SSH from your local terminal.
         openstack security group show default
         ```
 
-## Create Virtual Machine Instance
+## Create a Virtual Machine Instance
 
 === "GUI"
 
@@ -155,7 +155,7 @@ your virtual machine via SSH from your local terminal.
         ![](/compute/openstack/images/instance/instance1.png)
     
     __2.__ Choose **Instance Name**, Description, and number of instances.
-       If you are creating more instances, `-%i` will be automatically appended to the name of each instance. Continue via **Next**
+       If you are creating more instances, `-%i` will be automatically appended to the name of each instance. Continue via **Next**.
     
     !!! example
     
@@ -173,11 +173,13 @@ your virtual machine via SSH from your local terminal.
     
         ![](/compute/openstack/images/instance/instance4.png)
     
-    __5.__ Select appropriate network based on your project type. and continue to **Key Pair** in the left menu.
+    __5.__ Select appropriate network based on your project type and continue to **Key Pair** in the left menu.
     
     === "Personal project"
     
-        For personal project select personal-project-network-subnet from network `147-251-115-pers-proj-net`
+        For personal project select personal-project-network-subnet from network `147-251-115-pers-proj-net`.
+        Here is more information on available networks in [Brno](../technical-reference/brno-site/networking.md#ipv4-personal-floating-ips)
+        and [Ostrava](../technical-reference/ostrava-site/networking.md#floating-ip-networks).
     
         !!! example
     
@@ -185,7 +187,7 @@ your virtual machine via SSH from your local terminal.
     
     === "Group project"
     
-        For group project select group-project-network-subnet from network group-project-network (check if [Router gateway](../how-to-guides/create-networking.md#router-creation) is set)
+        For group project select group-project-network-subnet from network `group-project-network` (check if [Router gateway](../how-to-guides/create-router.md#router-creation) is set).
     
         !!! example
     
@@ -228,21 +230,28 @@ your virtual machine via SSH from your local terminal.
 
 ## Associate Floating IP
 
-Wait until instance initialization finishes and
-[Associate Floating IP](../how-to-guides/managing-floating-ips.md).
-For group project always select the same network as used in
-[Router gateway](../how-to-guides/create-networking.md#router-creation).
+Floating IP is the OpenStack name for a public IP. It makes the instance accessible from an external network (e.g., the Internet).
 
-!!! example
+At this point, you want to [Allocate IP Address](../how-to-guides/managing-floating-ips.md#allocating-ip-address)
+and [Assign IP Address](../how-to-guides/managing-floating-ips.md#assigning-ip-address).
+You don't have to care about the other sections unless you need them.
 
-    ![](/compute/openstack/images/tutorial/instance_associate_ip.png)
+Possible IP address pools are described separately for [Brno](../technical-reference/brno-site/networking.md)
+and [Ostrava](../technical-reference/ostrava-site/networking.md).
 
+For group projects, always select the same network as used in
+[Router gateway](../how-to-guides/create-router.md#router-creation).
 
 ## Login
 
-Login using your SSH key as selected in Key pair above
+Login using your SSH key as selected in Key pair above.
 
-Connect to the instance using **ssh system@floating-ip**, as described on page [Accessing instances](../how-to-guides/accessing-instances.md).
+Connect to the instance using **ssh username@floating-ip**.
+
+- `username` differs based on the selected image ("ubuntu", "debian", "centos", "almalinux"). The username topic is also discussed in [FAQ](../additional-information/faq.md).
+- `floating-ip` is the one previously associated.
+
+More information about login options is described on the [Accessing Instances](../how-to-guides/accessing-instances.md) page.
 
 
 !!! info
