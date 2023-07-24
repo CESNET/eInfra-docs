@@ -9,9 +9,9 @@ search:
 
 [OpenStack instance shelving](https://docs.openstack.org/ocata/user-guide/cli-stop-and-start-an-instance.html#shelve-and-unshelve-an-instance) allows you to stop an instance without having it consume any cloud hypervisor resources. A shelved instance will be retained as a bootable instance, as well as its resources assigned, such as an IP address in distributed storage, for a configurable amount of time, and then deleted. This is useful as part of an instance life cycle process or to conserve resources.
 
-## What instance shelving does ?
+## What does instance shelving do ?
 
-It creates a snapshot of the state of **running** instance, containing instance data and resource allocations. Data in memory is **not** retained, however. The instance then goes into **Shelved Offloaded** state and shuts itself down. Once the instance is required again, it is **unshelved** and restored to a running state with all resources and data.
+It creates a snapshot of the state of the **running** instance, containing instance data and resource allocations. Data in memory is **not** retained, however. The instance then goes into a **Shelved Offloaded** state and shuts itself down. Once the instance is required again, it is **unshelved** and restored to a running state with all resources and data.
 
 ## How to shelve your instance ?
 
@@ -26,18 +26,17 @@ Go into your instance list, located at the left menu bar on the path **Project>C
 
 ![](/compute/openstack/images/instance-shelving/shelving.png)
 
-Once the shelving process is finished, you can check that the instance is in the status **Shelved Offloaded** and its power state is **Shut Down**.
+Once the shelving process finishes, you can check that the instance is in the status **Shelved Offloaded** and its power state is **Shut Down**.
 
 ![](/compute/openstack/images/instance-shelving/shelving_status.png)
 
 Now the instance is offloaded from the computational host, and you can use resources from the shelved instance.
 
-Once you are finished and wish to restore your instance into a running state, go and select from **Actions** menu the option **Unshelve Instance** and click it.
+Once you are finished and wish to restore your instance to a running state, go and select the option **Unshelve Instance** from **Actions** menu and click it.
  
  ![](/compute/openstack/images/instance-shelving/unshelving_status.png)
 
 ### CLI shelving
-
 
 Select an instance in **Active** status from the list of instances you wish to shelve.
 
