@@ -20,8 +20,9 @@ check_current_version:
   script: 
     - echo https://$HOSTING_HOST
     - 'export CSITE_VERSION=$(curl -s https://${HOSTING_HOST} | hxnormalize -xe | hxselect -c "script#__config" | hxuncdata | jq -r .version)'
-    - echo "Found site version $CSITE_VERSION"
-    - '[[ "$CSITE_VERSION" != "$CI_COMMIT_SHORT_SHA" ]]'
+    - echo "Found https://${HOSTING_HOST} site version ${CSITE_VERSION}, git commit version ${CI_COMMIT_SHORT_SHA}."
+    - test "$CSITE_VERSION" != "$CI_COMMIT_SHORT_SHA"
+    - echo "There is change in content so we need to deploy."
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
 
