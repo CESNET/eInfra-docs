@@ -9,6 +9,17 @@ search:
 
 ## Accessing From Linux
 
+### Using jump host and SSH ProxyJump
+
+To access an individual instance via a jump host/bastion server, the ProxyJump option (-J) of the SSH client can be used. This feature was introduced in [SSH 7.3](https://www.openssh.com/txt/release-7.3).
+
+To use it, provide the username and hostname of the jump host as an argument to the `-J` parameter followed by the username and hostname of the target instance:
+
+```shell
+ssh -J user@jump.host user@target.host
+```
+
+
 ### Setting Up VPN Tunnel Via Encrypted SSH With [sshuttle](https://github.com/sshuttle/sshuttle)
 
 ``` sh

@@ -79,8 +79,8 @@ To connect to instances running on OpenStack, you can use one of the available a
 - **Contact support**: If you are unable to resolve the issue on your own, contact your OpenStack support team for further assistance. Be sure to provide as much information as possible, including error messages and steps you have already taken to troubleshoot the issue.
 
 ## Security Considerations
-- **Use SSH keys**: When accessing instances, it is important to use SSH keys. Avoid using keys that are easy to guess or brute force.
+- **Use SSH keys**: Always use SSH keys (instead of passwords) to access instances. Passwords are susceptible to brute force attacks.
 - **Restrict network access**: To minimize the risk of unauthorized access, it is recommended to restrict network access to only the necessary ports and protocols needed to access the instances. Security groups can be used to control inbound and outbound traffic to instances.
 - **Limit user access**: Only users who need to access instances should have the necessary credentials to do so. It is important to restrict user access to only the instances they need to work on and remove access when it is no longer needed.
 - **Monitor access logs**: Monitoring access logs can help detect and prevent unauthorized access. OpenStack provides logs that track user access and activity within the environment, and users should review these logs on a regular basis.
-- **Keep instances up-to-date**: Keeping instances up-to-date with the latest security patches and updates can help prevent security vulnerabilities from being exploited. It is recommended to regularly apply updates and patches to instances to maintain their security posture.
+- **Keep instances up-to-date**: Keeping instances up-to-date with the latest security patches and updates can help prevent security vulnerabilities from being exploited. It is recommended to regularly apply updates and patches to instances to maintain their security posture. Utilities like [unattended-upgrades](https://wiki.debian.org/UnattendedUpgrades) or [dnf-automatic](https://dnf.readthedocs.io/en/latest/automatic.html) can help you automate security updates.
