@@ -16,7 +16,7 @@ The following guide will take you through the steps necessary to start your firs
 Prerequisites:
 
 * Up-to-date web browser
-* Active account, see [Accessing Brno site](../technical-reference/brno-site/get-access.md) and [Acessing Ostrava site](../technical-reference/ostrava-site/get-access.md)
+* Active account, see [Accessing Brno site](../technical-reference/brno-site/get-access.md) and [Accessing Ostrava site](../technical-reference/ostrava-site/get-access.md)
 * Basic knowledge of SSH (for remote connections)
 * [API key and CLI client](../how-to-guides/obtaining-api-key.md) (needed only if You want to use CLI)
 
