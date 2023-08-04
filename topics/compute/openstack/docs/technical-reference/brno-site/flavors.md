@@ -77,7 +77,7 @@ search:
 | hpc.16core-32ram-100disk                  | 16   | 32       | Yes  | No   | 524.288                | 2000       | 2000.0                     | No  |
 | meta-hdm.38core-300ram-nvidia-a40-quad    | 38   | 300      | Yes  | Yes  | Unlimited              | Unlimited  | Unlimited                  | Yes |
 | hpc.4core-4ram                            | 4    | 4        | Yes  | No   | 524.288                | 2000       | 2000.0                     | No  |
-| a3.32core-120ram-1t4                      | 32   | 120      | No   | No   | Unlimited              | Unlimited  | Unlimited                  | Yes |
-| a3.32core-240ram-1t4                      | 32   | 240      | No   | No   | Unlimited              | Unlimited  | Unlimited                  | Yes |
-| a3.64core-240ram-2t4                      | 64   | 240      | No   | No   | Unlimited              | Unlimited  | Unlimited                  | Yes |
-| a3.64core-480ram-2t4                      | 64   | 480      | No   | No   | Unlimited              | Unlimited  | Unlimited                  | Yes |
+| a3.32core-120ram-1t4                      | 32   | 120      | Yes  | Yes  | Unlimited              | Unlimited  | Unlimited                  | Yes |
+| a3.32core-240ram-1t4                      | 32   | 240      | Yes  | Yes  | Unlimited              | Unlimited  | Unlimited                  | Yes |
+| a3.64core-240ram-2t4                      | 64   | 240      | Yes  | Yes  | Unlimited              | Unlimited  | Unlimited                  | Yes |
+| a3.64core-480ram-2t4                      | 64   | 480      | Yes  | Yes  | Unlimited              | Unlimited  | Unlimited                  | Yes |
