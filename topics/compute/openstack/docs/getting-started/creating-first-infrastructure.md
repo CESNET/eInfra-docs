@@ -22,14 +22,14 @@ Prerequisites:
 
 ## Sign In
 
-The dashboard is available at [https://dashboard.cloud.muni.cz](https://dashboard.cloud.muni.cz).
+The dashboard is available at [https://dashboard.cloud.muni.cz](https://dashboard.cloud.muni.cz) or [https://horizon.ostrava.openstack.cloud.e-infra.cz](https://horizon.ostrava.openstack.cloud.e-infra.cz).
 
 !!! note
 
     International users may choose <strong>EGI Check-in</strong>, <strong>DEEP AAI</strong> or <strong>LIFESCIENCE AAI</strong>, depending on their membership in these projects.
 
 
-__1.__ Select `EINFRA CESNET`.
+__1.__ Select `EINFRA CESNET` in Brno or `e-INFRA CZ federation` in Ostrava site.
 
 __2.__ Click on **Sign In**.
 
