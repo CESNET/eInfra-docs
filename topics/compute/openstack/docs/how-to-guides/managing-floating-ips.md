@@ -46,6 +46,9 @@ Before you begin, you should have the following:
             The `<external_network_name_or_id>` is an external IP address pool managed by OpenStack administrators. Full list of available floating IP address pools can be found in [Technical reference](../../technical-reference/brno-site/networking/#ipv4-group-floating-ips).
 
     Additional floating IP configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/floating-ip.html).
+    
+    Also, refer to [example of how floating IP allocation](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) is handled within creation of VM.
+
 
 ## Assigning IP Address
 
@@ -84,6 +87,7 @@ Before you begin, you should have the following:
 
     Additional floating IP configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/floating-ip.html).
 
+    Also, refer to [example of how floating IP assignment](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) is handled within creation of VM.
 ## Disassociating Floating IP
 
 === "Horizon"

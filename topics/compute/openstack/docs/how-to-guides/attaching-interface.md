@@ -41,10 +41,13 @@ This guide shows how to attach additional interfaces to running instances. This 
     VM_ID=$(openstack server list --name my-vm -f value -c ID)
     ```
 
-    **Create port for the network**
+    **Create port for the network and add it to your VM**
 
     ```
-    openstack port create --network public-muni-v6-432 --security-group default --host ${VM_ID} ipv6-port
+    openstack port create --network <my-network> --security-group default --host ${VM_ID} <my-port-name>
+
+    openstack server add port <VM_ID> <my-network>
+
     ```
 
     Additional port configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/port.html).

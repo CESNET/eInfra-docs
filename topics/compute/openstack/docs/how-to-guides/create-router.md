@@ -65,6 +65,8 @@ search:
 
     Additional router configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/router.html).
 
+    Also, refer to the [example of a router creation](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) is handled within creation of VM. 
+
 ## Router External Gateway Assign
 
 If you have no gateway on you router, you can assign a new one.
@@ -92,6 +94,8 @@ If you have no gateway on you router, you can assign a new one.
     ```
 
     Additional router configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/router.html).
+
+    Also, refer to [example of a gateway creation](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) is handled within router setup.
 
 ## Router External Gateway Release
 

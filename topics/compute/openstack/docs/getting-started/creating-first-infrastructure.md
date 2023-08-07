@@ -93,6 +93,7 @@ an instance remotely is SSH. Using SSH requires a pair of keys - a public key an
     openstack keypair create --public-key ~/.ssh/id_rsa.pub my-key1
     ```
 
+    Refer to the [example of Key Pair creation](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) within VM provisioning CLI example.
 ## Update Security Group
 
 In MetaCentrum Cloud, all incoming traffic from external networks to virtual machine instances is blocked by default.
@@ -142,7 +143,7 @@ your virtual machine via SSH from your local terminal.
     __2.__ Verify:
         ```
         openstack security group show default
-        ```
+        ``` 
 
 ## Create a Virtual Machine Instance
 
@@ -252,6 +253,8 @@ Connect to the instance using **ssh username@floating-ip**.
 - `floating-ip` is the one previously associated.
 
 More information about login options is described on the [Accessing Instances](../how-to-guides/accessing-instances.md) page.
+
+Refer to complete [example of creation VM and its components](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh).
 
 
 !!! info
