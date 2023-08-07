@@ -13,8 +13,6 @@ On this page, you can find a static list of GPUs offered in Metacentrum Cloud.
 |-----------------------------------|---------------|---------------|
 | NVIDIA Tesla T4					| 16			| 2				|
 | NVIDIA A40 (**)					| 2				| 4				|
-| NVIDIA TITAN V					| 1				| 1				|
-| NVIDIA GeForce GTX 1080 Ti (*)	| 8				| 2				|
 | NVIDIA GeForce GTX 2080 (*)		| 9				| 2				|
 | NVIDIA GeForce GTX 2080 Ti (*)	| 14			| 2				|
 

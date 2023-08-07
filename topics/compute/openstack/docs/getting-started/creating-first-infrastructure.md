@@ -16,20 +16,20 @@ The following guide will take you through the steps necessary to start your firs
 Prerequisites:
 
 * Up-to-date web browser
-* Active account in [MetaCentrum](https://metavo.metacentrum.cz/en/application/index.html)
+* Active account, see [Accessing Brno site](../technical-reference/brno-site/get-access.md) and [Accessing Ostrava site](../technical-reference/ostrava-site/get-access.md)
 * Basic knowledge of SSH (for remote connections)
 * [API key and CLI client](../how-to-guides/obtaining-api-key.md) (needed only if You want to use CLI)
 
 ## Sign In
 
-The dashboard is available at [https://dashboard.cloud.muni.cz](https://dashboard.cloud.muni.cz).
+The dashboard is available at [https://dashboard.cloud.muni.cz](https://dashboard.cloud.muni.cz) or [https://horizon.ostrava.openstack.cloud.e-infra.cz](https://horizon.ostrava.openstack.cloud.e-infra.cz).
 
 !!! note
 
     International users may choose <strong>EGI Check-in</strong>, <strong>DEEP AAI</strong> or <strong>LIFESCIENCE AAI</strong>, depending on their membership in these projects.
 
 
-__1.__ Select `EINFRA CESNET`.
+__1.__ Select `EINFRA CESNET` in Brno or `e-INFRA CZ federation` in Ostrava site.
 
 __2.__ Click on **Sign In**.
 

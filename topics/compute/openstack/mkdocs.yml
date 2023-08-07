@@ -9,7 +9,7 @@ nav:
   - How-to guides:
     - how-to-guides/accessing-instances.md
     - how-to-guides/managing-floating-ips.md
-    - how-to-guides/attaching-interface.md
+    - how-to-guides/managing-interface.md
     # - how-to-guides/attaching-remote-storage.md
     - how-to-guides/changing-vm-resources.md
     - how-to-guides/create-networking.md
