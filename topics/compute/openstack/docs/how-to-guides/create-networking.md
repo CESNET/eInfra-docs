@@ -56,3 +56,5 @@ We can create a virtual network in OpenStack for the project, which can be used 
     ```
 
     Additional subnet configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/subnet.html).
+
+    Refer to complete [example of creation VM including networking](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh).

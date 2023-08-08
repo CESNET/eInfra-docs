@@ -19,6 +19,8 @@ To use it, provide the username and hostname of the jump host as an argument to 
 ssh -J user@jump.host user@target.host
 ```
 
+To get more detail how a bastion is set up within a cloud project, check the [example](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/tree/master/clouds/g2/ostrava/general/terraform/modules/2tier_public_bastion_private_vm_farm) scripted in Terraform.
+
 
 ### Setting Up VPN Tunnel Via Encrypted SSH With [sshuttle](https://github.com/sshuttle/sshuttle)
 
