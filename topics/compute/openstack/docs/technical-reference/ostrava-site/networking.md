@@ -14,5 +14,5 @@ Currently in Ostrava site you can use following floating IP networks:
 
 ## Security groups
 
-Apart from the `default` [security group](../../../docs/additional-information/security-groups.md), every personal project in OpenStack cloud is associated with security group `ssh`. Rules of the `ssh` groups enables access to other VMS via SSH protocol.   
+Apart from the `default` [security group](../../../docs/additional-information/security-groups.md), every project in OpenStack cloud contains also pre-generated security group `ssh`. Rules of the `ssh` groups enables access to virtual servers via SSH protocol.
 
