@@ -6,7 +6,7 @@ To use the VPN you will need to request access and configuration, please refer t
 
 ## Obtaining Access to VPN
 
-If you are interested in using the VPN to connect to secured network and resources isolated from public network, please contact us at `k8s(at)ics.muni.cz`.
+If you are interested in using the VPN to connect to secured network and resources isolated from public network, please contact us at `trusted(at)e-infra.cz`.
 
 ## Connecting to VPN
 
