@@ -64,3 +64,23 @@ Tutorials will show how to setup **WireGuard** with the configuration you have o
       ```
       wg-quick down wg0
       ```
+
+=== "Mac OS"
+
+      1. Install WireGuard, download for Mac OS [from the Apple App Store](https://apps.apple.com/us/app/wireguard/id1451685025?ls=1&mt=12)
+      2. Create configuration file `sensitive-vpn.conf` in your personal, safe directory, e.g., `/home/<username>/sensitive-vpn.conf` with content that you obtained from our team. Example of configuration file:
+
+      ```
+      [Interface]
+      PrivateKey = DESKTOP_CLIENT_PRIVATE_KEY
+      Address = 10.0.0.2/24
+
+      [Peer]
+      PublicKey = SERVER_PUBLIC_KEY
+      Endpoint = SERVER_IP_ADDRESS:PORT
+      AllowedIPs = 0.0.0.0/0
+      ```
+      3. Run `WireGuard` application.   
+      4. In the `WireGuard` application, choose `Import tunnel(s) from file` and select the `sensitive-vpn.conf` stored in the 2nd step.   
+      5. In order to activate the tunnel `Select the tunnel you want to activate` and `Activate the tunnel`   
+      6. Tunnel is activated, to disable tunnel use `Deactivate` button.
