@@ -55,8 +55,9 @@ nav:
   - Additional information:
     # - additional-information/computing-on-hpc.md
     # - additional-information/concepts-of-cloud-computing.md
-    - additional-information/custom-images.md
     - additional-information/faq.md
+    - additional-information/known-issues.md
+    - additional-information/custom-images.md
     - additional-information/ip-allocation-policy.md
     - additional-information/ipv6-troubleshooting.md
     - additional-information/load-balancers.md

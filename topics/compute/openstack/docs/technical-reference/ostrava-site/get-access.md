@@ -7,7 +7,8 @@ search:
 
 # How to Get Access
 
-Valid e-INFRA CZ indentity is necessary to log in to Ostrava openstack site.
+As of 2023-08-23, Ostrava OpenStack site is available to anyone with valid e-INFRA CZ identity who is explicitly granted by IT4I representatives.
+
 
 See [e-INFRA CZ](https://docs.e-infra.cz/account/access/) documentation on access.
 
