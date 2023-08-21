@@ -8,7 +8,7 @@ search:
 
 ## Hardware
 
-Ostrava cloud site consists of 28 nodes from [Karolina supercomputer](../../../supercomputing/karolina/compute-nodes/#cloud-compute-node).
+Ostrava cloud site consists of 22 nodes from [Karolina supercomputer](../../../supercomputing/karolina/compute-nodes/#cloud-compute-node).
 
 ## Software
 
