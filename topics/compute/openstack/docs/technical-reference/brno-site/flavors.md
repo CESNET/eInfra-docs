@@ -20,6 +20,23 @@ search:
 
 # Flavors
 
+OpenStack flavor entity defines compute virtual server parameters such as:
+ * virtual server specifications
+   * vCPU count
+   * memory amount
+   * storage size (both distributed, ephemeral)
+   * defines QoS (IOPs, network bandwith, ...)
+ * grants access to additional resources (hardware cards for instance GPU)
+ * defines set of compute hypervisors where can be virtual server scheduled
+
+## Flavor types
+
+We differentiate following flavor types:
+ * Standard flavors `standard.*` focused on high availability, support for (live) VM migration but lower performance.
+ * HPC flavors `hpc.*` are focused on performance (NUMA, local ephemeral disks), access to premium HW (GPUs).
+
+## Most frequently used flavors
+
 | Flavor name                               | CPU  | RAM (GB) | HPC  | SSD  | Disc throughput (MB/s) | IOPS       | Average throughput (MB/s)  | GPU |
 |-------------------------------------------|------|----------|------|------|------------------------|------------|----------------------------|-----|
 | elixir.hda1                               | 30   | 724      | Yes  | No   | Unlimited              | Unlimited  | Unlimited                  | No  |
