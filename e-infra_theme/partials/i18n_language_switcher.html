@@ -23,10 +23,10 @@
     </a>
     <!-- <div class="md-select__inner">
       <ul class="md-select__list">
-        {% for lang, display in config.plugins.i18n.config.languages.items() -%}
+        {% for lang_config in config.plugins.i18n.config.languages -%}
           <li class="md-select__item">
-            <a href="/{{ lang }}/" hreflang="{{ lang }}" class="md-select__link">
-              {{ display.name }}
+            <a href="/{{ lang_config.locale }}/" hreflang="{{ lang_config.locale }}" class="md-select__link">
+              {{ lang_config.name }}
             </a>
           </li>
           {% endfor %}
