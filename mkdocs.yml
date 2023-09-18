@@ -68,17 +68,16 @@ nav:
 plugins:
   - monorepo
   - i18n:
-      default_language: en
-      material_alternate: true
+      reconfigure_material: true
       languages:
-        en:
-          name: English
-          build: true
-        cs:
-          name: Česky
-          build: true
-      nav_translations:
-        cs:
+      - locale: en
+        name: English
+        build: true
+        default: true
+      - locale: cs
+        name: Česky
+        build: true
+        nav_translations:
           e-INFRA CZ Account: Účet e-INFRA CZ
           Data processing: Zpracování dat
           Data Storage: Datova Úložiště
