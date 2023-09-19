@@ -161,7 +161,8 @@ docker-build:
   artifacts:
     when: always
     paths:
-      - site
+      - "*"
+      - "**/*"
     expire_in: 1 week
 
 mkdocs:
