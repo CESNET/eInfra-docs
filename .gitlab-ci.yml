@@ -159,6 +159,7 @@ docker-build:
     - export SITE_BUILD_DATE="$(env TZ=Europe/Prague date -I)"
     - mkdocs build
   artifacts:
+    when: always
     paths:
       - site
     expire_in: 1 week
