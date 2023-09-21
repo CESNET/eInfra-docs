@@ -22,13 +22,13 @@ search:
 
 OpenStack flavor entity defines compute virtual server parameters such as:
 
-- virtual server specifications
-  * vCPU count
-  * memory amount
-  * storage size (both distributed, ephemeral)
-  * defines QoS (IOPs, network bandwith, ...)
-- grants access to additional resources (hardware cards for instance GPU)
-- defines set of compute hypervisors where can be virtual server scheduled
+* virtual server specifications
+    * vCPU count
+    * memory amount
+    * storage size (both distributed, ephemeral)
+    * defines QoS (IOPs, network bandwith, ...)
+* grants access to additional resources (hardware cards for instance GPU)
+* defines set of compute hypervisors where can be virtual server scheduled
 
 ## Flavor types and naming schema
 
@@ -64,6 +64,7 @@ Notes:
 | g2.3xlarge | No | 16 | 65536 | No | No | No | 1049 | 1000 | 256 |
 | c2.2core-8ram | No | 2 | 8192 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.2core-16ram | No | 2 | 16384 | Yes | No | No | 2097 | 1000 | 2560 |
+| c2.2core-30ram | No | 2 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.4core-8ram | No | 4 | 8192 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.4core-16ram | No | 4 | 16384 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.4core-30ram | No | 4 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
@@ -71,21 +72,29 @@ Notes:
 | c2.8core-30ram | No | 8 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.16core-30ram | No | 16 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.16core-60ram | No | 16 | 61440 | Yes | No | No | 2097 | 1000 | 2560 |
+| c2.24core-30ram | No | 24 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.24core-60ram | No | 24 | 61440 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.32core-30ram | No | 32 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.32core-60ram | No | 32 | 61440 | Yes | No | No | 2097 | 1000 | 2560 |
-| c3.128core-240ram | No | 128 | 245760 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.16core-30ram | No | 16 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.16core-60ram | No | 16 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.2core-16ram | No | 2 | 16384 | Yes | No | No | 2097 | 2000 | 10240 |
+| c2.32core-120ram | No | 32 | 122880 | Yes | No | No | 2097 | 1000 | 2560 |
 | c3.2core-8ram | No | 2 | 8192 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.24core-60ram | No | 24 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.32core-120ram | No | 32 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.32core-60ram | No | 32 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.2core-16ram | No | 2 | 16384 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.2core-30ram | No | 2 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.4core-8ram | No | 4 | 8192 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.4core-16ram | No | 4 | 16384 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.4core-30ram | No | 4 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.4core-8ram | No | 4 | 8192 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.64core-120ram | No | 64 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.8core-16ram | No | 8 | 16384 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.8core-30ram | No | 8 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.8core-60ram | No | 8 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.16core-30ram | No | 16 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.16core-60ram | No | 16 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.24core-30ram | No | 24 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.24core-60ram | No | 24 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.32core-30ram | No | 32 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.32core-60ram | No | 32 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.32core-120ram | No | 32 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.64core-60ram | No | 64 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.64core-120ram | No | 64 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.64core-240ram | No | 64 | 245760 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.128core-120ram | No | 128 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.128core-240ram | No | 128 | 245760 | Yes | No | No | 2097 | 2000 | 10240 |

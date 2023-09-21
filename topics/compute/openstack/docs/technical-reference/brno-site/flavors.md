@@ -22,13 +22,13 @@ search:
 
 OpenStack flavor entity defines compute virtual server parameters such as:
 
-- virtual server specifications
-  * vCPU count
-  * memory amount
-  * storage size (both distributed, ephemeral)
-  * defines QoS (IOPs, network bandwith, ...)
-- grants access to additional resources (hardware cards for instance GPU)
-- defines set of compute hypervisors where can be virtual server scheduled
+* virtual server specifications
+    * vCPU count
+    * memory amount
+    * storage size (both distributed, ephemeral)
+    * defines QoS (IOPs, network bandwith, ...)
+* grants access to additional resources (hardware cards for instance GPU)
+* defines set of compute hypervisors where can be virtual server scheduled
 
 ## Flavor types
 
