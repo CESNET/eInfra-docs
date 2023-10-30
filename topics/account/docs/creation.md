@@ -68,13 +68,13 @@ Your publications must contain following acknowledgment phrase.
 
 Czech version
 
-    Tato práce byla podpořena Ministerstvem školství, mládeže a tělovýchovy 
-    České republiky prostřednictvím e-INFRA CZ (ID:90140).
+    Tato práce byla podpořena Ministerstvem školství, mládeže a tělovýchovy
+    České republiky prostřednictvím e-INFRA CZ (ID:90254).
 
 English version
 
-    This work was supported by the Ministry of Education, Youth and Sports of 
-    the Czech Republic through the e-INFRA CZ (ID:90140).
+    This work was supported by the Ministry of Education, Youth and Sports of
+    the Czech Republic through the e-INFRA CZ (ID:90254).
 
 ### Attachment of e-INFRA CZ to R&D Results Generated Using This LRI
 
@@ -85,9 +85,9 @@ If this resource is not in your code list, ask the administrator of this informa
 The complete information required to add the large e-INFRA CZ research infrastructure to the financial resources code list is as follows:
 
     LRI name: e-INFRA CZ
-    Implementation period: from 1st January 2020 to 31st December 2022
-    LRI Number/code: 90140
+    Implementation period: January 1st 2023 - December 31st 2026
+    LRI Number/code: 90254
     Type of LRI funding for RIV: J – Large Research Infrastructure
     Funding provider: MEYS
     Programme: LM – Large Research Infrastructure projects for R&D&I
-    Principal Investigator: Ing. Jan Gruntorád, CSc.
+    Principal Investigator: Ing. Jakub Papírník
