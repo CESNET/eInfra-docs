@@ -2,52 +2,45 @@
 languages:
   - en
   - cs
-title: Vytvorenie účtu
 ---
-!!!warning ""
-    This is Czech version of the article.
-
-Váš účet e-INFRA CZ sa **automaticky vytvorí pri pokuse o prístup
-a zaregistrovať sa v rámci prvej služby** poskytovanej jedným alebo viacerými prevádzkovateľmi
-e-INFRA CZ. Môžete si tiež *[vytvoriť svoj účet](https://signup.e-infra.cz/anyfed/registrar/?vo=e-infra.cz)* 
-vopred.
+Váš účet e-INFRA CZ je **automaticky vytvořen při pokusu o přístup
+a zaregistrovat se v rámci první služby** poskytované jedním nebo více provozovateli systému
+e-INFRA CZ. Můžete si také *[vytvořit svůj účet](https://signup.e-infra.cz/anyfed/registrar/?vo=e-infra.cz)* předem.
 
 !!!note ""
-    During the registration **you are required to log in with an 
-    account from your home organization (e.g. University)** in order to prove 
-    your identity and compliance with *Access Conditions*. Later, you can 
-    access your account and services in the same way. See more in 
-    [Accessing your account and services](/account/access) section.
+    Během registrace **se musíte přihlásit pomocí 
+    z vaší domovské organizace (např. univerzity)**, abyste mohli prokázat, že jste se přihlásili. 
+    vaší totožnosti a dodržení *Podmínek přístupu*. Později můžete 
+    přistupovat ke svému účtu a službám stejným způsobem. Více informací naleznete v části 
+    [Přístup k účtu a službám](/account/access).
 
-## Access Conditions
+## Podmínky přístupu
 
-The creation of e-INFRA CZ Account is open to all persons from the 
-academic community in the Czech Republic for the research purposes only.
+Založení účtu e-INFRA CZ je přístupné všem osobám ze zemí EU. 
+akademické obce v České republice pouze pro výzkumné účely.
 
-Exact description can be found in *Access Conditions* document (
-[English version](https://www.e-infra.cz/cs/file/8c17a18b8d2d21bade1fe2b4b0efe81c/525/20210408_Podminky_e-INFRA-CZ_EN.pdf)
+Přesný popis naleznete v dokumentu *Podmínky přístupu* (
+[anglická verze](https://www.e-infra.cz/cs/file/8c17a18b8d2d21bade1fe2b4b0efe81c/525/20210408_Podminky_e-INFRA-CZ_EN.pdf)
  / [Czech version](https://www.e-infra.cz/cs/file/59a671ec983f99f18cdf162f4d6cd9ea/380/20210408_Podminky_e-INFRA-CZ_schvaleni.pdf)).
 
-!!! note "Service-specific access conditions"
-    In addition to above *Access Conditions*, each e-INFRA CZ sub-service 
-    may require its own access conditions usually described on the service 
-    registration page.
+!!! note "Podmínky přístupu ke specifickým službám"
+    Kromě výše uvedených *Podmínek přístupu* platí pro každou dílčí službu e-INFRA CZ. 
+    může vyžadovat své vlastní přístupové podmínky, které jsou obvykle popsány na stránkách služby 
+    registrační stránce.
 
-### Compliance With Access Conditions
+### Dodržování podmínek přístupu
 
-Your compliance with *Access Conditions* (especially your affiliation with 
-academic organization) is usually evaluated automatically during your 
-registration or when accessing the service. Alternatively, you can be 
-asked to renew your account periodically, during which the compliance is 
-checked again.
+Dodržování *Podmínek přístupu* (zejména vaše příslušnost k 
+akademické organizace) je obvykle automaticky vyhodnoceno během vašeho pobytu na akademické půdě. 
+při registraci nebo při přístupu ke službě. Případně můžete být 
+požádáni o pravidelné obnovení účtu, při kterém je soulad s předpisy 
+znovu kontrolováno.
 
-Technically, when you log in to your e-INFRA CZ Account or service with an 
-account from your home organization (e.g. University), your organization
-will issue necessary information about you to us.
+Technicky vzato, když se přihlásíte ke svému účtu nebo službě e-INFRA CZ s tzv. účtem vaší domovské organizace (např. univerzity), vaše organizace
+nám o Vás vydá potřebné informace.
 
-In case your compliance can't be evaluated automatically (information is not 
-provided by your organization) you might be asked to perform some additional 
-steps by service operators.
+V případě, že vaše shoda nemůže být vyhodnocena automaticky (informace 
+vaše organizace neposkytla), můžete být požádáni o provedení některých dalších úkonů ze strany provozovatelů služeb e-INFRA CZ.
 
 ## Users' Duties
 
@@ -72,13 +65,13 @@ Your publications must contain following acknowledgment phrase.
 
 Czech version
 
-    Tato práce byla podpořena Ministerstvem školství, mládeže a tělovýchovy 
-    České republiky prostřednictvím e-INFRA CZ (ID:90140).
+    Tato práce byla podpořena Ministerstvem školství, mládeže a tělovýchovy
+    České republiky prostřednictvím e-INFRA CZ (ID:90254).
 
 English version
 
-    This work was supported by the Ministry of Education, Youth and Sports of 
-    the Czech Republic through the e-INFRA CZ (ID:90140).
+    This work was supported by the Ministry of Education, Youth and Sports of
+    the Czech Republic through the e-INFRA CZ (ID:90254).
 
 ### Attachment of e-INFRA CZ to R&D Results Generated Using This LRI
 
@@ -89,9 +82,9 @@ If this resource is not in your code list, ask the administrator of this informa
 The complete information required to add the large e-INFRA CZ research infrastructure to the financial resources code list is as follows:
 
     LRI name: e-INFRA CZ
-    Implementation period: from 1st January 2020 to 31st December 2022
-    LRI Number/code: 90140
+    Implementation period: January 1st 2023 - December 31st 2026
+    LRI Number/code: 90254
     Type of LRI funding for RIV: J – Large Research Infrastructure
     Funding provider: MEYS
     Programme: LM – Large Research Infrastructure projects for R&D&I
-    Principal Investigator: Ing. Jan Gruntorád, CSc.
+    Principal Investigator: Ing. Jakub Papírník
