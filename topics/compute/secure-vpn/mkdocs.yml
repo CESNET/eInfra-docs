@@ -1,0 +1,4 @@
+site_name: "compute/secure-vpn"
+
+nav:
+  - Overview: index.md

@@ -1,0 +1,4 @@
+site_name: "compute/jupyterhub"
+
+nav:
+  - Overview: index.md

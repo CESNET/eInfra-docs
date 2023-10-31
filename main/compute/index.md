@@ -49,10 +49,10 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
     [:octicons-arrow-right-24: Galaxy](https://wiki.metacentrum.cz/wiki/Galaxy#RepeatExplorer_Galaxy)   
     [:octicons-arrow-right-24: GitLab](https://gitlab.ics.muni.cz)   
     [:octicons-arrow-right-24: e-INFRA CZ Private Docker Registry](https://hub.cerit.io)   
-    [:octicons-arrow-right-24: JupyerHub - e-INFRA Notebooks](./portals/jupyterhub/)   
-    [:octicons-arrow-right-24: BinderHub](./portals/binderhub/)   
-    [:octicons-arrow-right-24: Kubeflow](./portals/kubeflow/)   
-    [:octicons-arrow-right-24: Sensitive Data VPN](./network/secure-vpn/)   
+    [:octicons-arrow-right-24: JupyerHub - e-INFRA Notebooks](./jupyterhub/)   
+    [:octicons-arrow-right-24: BinderHub](./binderhub/)   
+    [:octicons-arrow-right-24: Kubeflow](./kubeflow/)   
+    [:octicons-arrow-right-24: Sensitive Data VPN](./secure-vpn/)   
 
 </div>
 

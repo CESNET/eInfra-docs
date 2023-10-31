@@ -1,0 +1,4 @@
+site_name: "compute/galaxy"
+
+nav:
+  - Overview: index.md
