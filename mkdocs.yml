@@ -51,7 +51,7 @@ theme:
     code: 'Source Code Pro'
 
 nav:
-  - 'Overview': index.md
+  - 'Home': index.md
   - e-INFRA CZ Account: '!include ./topics/account/mkdocs.yml'
   - Data processing:
     - compute/index.md
@@ -62,8 +62,11 @@ nav:
     - OpenStack: '!include ./topics/compute/openstack/mkdocs.yml'
     - SensitiveCloud: '!include ./topics/compute/sensitive/mkdocs.yml'
   - Data Storage: '!include ./topics/storage/mkdocs.yml'
-  - Managed Data Services: '!include ./topics/managed/mkdocs.yml'
-  - General Information: '!include ./topics/about-us/mkdocs.yml'
+  - 'Software': '!include ./topics/software/mkdocs.yml'
+  - 'FAQs': '!include ./topics/faqs/mkdocs.yml'
+  - 'Contact': '!include ./topics/contact/mkdocs.yml'
+# - Managed Data Services: '!include ./topics/managed/mkdocs.yml'
+# - General Information: '!include ./topics/about-us/mkdocs.yml'
 
 plugins:
   - monorepo
