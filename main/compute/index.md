@@ -7,9 +7,21 @@ hide:
 
 e-INFRA CZ provides a wide range of computational services for the scientific community. In the following sections of the documentation you will learn how to choose the right service and how to make the most of it.
 
+## Large infrastrucures
+
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-server:{ .md .middle } __Cloud services__
+-   :fontawesome-solid-microchip:{ .md .middle } __Grid computing (MetaCentrum)__
+
+    ---
+
+    Traditional distributed computing with software and queues.
+
+    [:octicons-arrow-right-24: How to start](./grid/)   
+    [:octicons-arrow-right-24: Running first job](./grid/)   
+    [:octicons-arrow-right-24: More](./grid/)   
+
+-   :fontawesome-solid-server:{ .md .middle } __Cloud computing__
 
     ---
 
@@ -19,16 +31,6 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
     [:octicons-arrow-right-24: Container Engine (Kubernetes)](./kubernetes/)   
     [:octicons-arrow-right-24: Sensitive Proccessing](./sensitive/)   
     [:octicons-arrow-right-24: More](./concepts/)
-
--   :fontawesome-solid-microchip:{ .md .middle } __Metacentrum Grid services__
-
-    ---
-
-    Traditional distributed computing with software and queues.
-
-    [:octicons-arrow-right-24: How to start](./grid/)   
-    [:octicons-arrow-right-24: Running first job](./grid/)   
-    [:octicons-arrow-right-24: More](./grid/)   
 
 -   :fontawesome-solid-atom:{ .md .middle } __Supercomputing__
 
@@ -40,7 +42,13 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
     [:octicons-arrow-right-24: Get Project](./supercomputing/general/applying-for-resources/)   
     [:octicons-arrow-right-24: LUMI](https://docs.lumi-supercomputer.eu/)   
 
--   :fontawesome-solid-server:{ .md .middle } __Other managed services__
+</div>
+
+## Specialized services
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-solid-server:{ .md .middle } __Specialized services__
 
     ---
 
@@ -55,6 +63,7 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
     [:octicons-arrow-right-24: Sensitive Data VPN](./secure-vpn/)   
 
 </div>
+
 
 ## How to Choose Between Computing Services?
 

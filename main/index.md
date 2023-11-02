@@ -19,7 +19,7 @@ e-INFRA CZ is an integration of three Czech e-infrastructures – [CESNET](https
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-fingerprint:{ .lg .middle } __e-INFRA CZ Account__
+-   :fontawesome-solid-fingerprint:{ .lg .middle } [__e-INFRA CZ Account__](./account)
 
     ---
 
@@ -33,32 +33,51 @@ e-INFRA CZ is an integration of three Czech e-infrastructures – [CESNET](https
 --->
 
 
--   :fontawesome-solid-microchip:{ .lg .middle } __Data Processing__
+-   :fontawesome-solid-microchip:{ .lg .middle } [__Data Processing__](./compute)
 
     ---
 
-    Focus on what's important, your research can be accelerated with our **big** servers.
+    Focus on what's important, your research can be accelerated with our **Large infrastructures**:
 
-    [:octicons-arrow-right-24: Overview](./compute/)   
-    [:octicons-arrow-right-24: Batch computing (Metacentrum Grid)](./compute/grid)   
-    [:octicons-arrow-right-24: Compute Cloud (Virtualization)](./compute/openstack/)   
-    [:octicons-arrow-right-24: Containers Cloud](./compute/containers/)   
+    [:octicons-arrow-right-24: Grid computing (MetaCentrum)](./compute/grid)   
+    [:octicons-arrow-right-24: Cloud computing](./compute/openstack/)   
     [:octicons-arrow-right-24: Supercomputing](./compute/supercomputing/)   
-    [:octicons-arrow-right-24: Sensitive data processing](./compute/sensitive-cloud)   
 
--   :fontawesome-solid-floppy-disk:{ .lg .middle } __Data Management & Storage__
+    Do you search for something more specific? Browse through our **[Specialized services](./compute/#specialized-services)**.
+
+-   :fontawesome-solid-floppy-disk:{ .lg .middle } [__Data Management & Storage__](./storage)
 
     ---
 
     Need to store **terabytes** of data? No problem. Read what capabilities you have.
 
-    [:octicons-arrow-right-24: Overview](./storage/)   
     [:octicons-arrow-right-24: Storing data](./storage/)   
     [:octicons-arrow-right-24: Sharing data](./storage/)   
     [:octicons-arrow-right-24: Data archivation/backups](./storage/)   
     [:octicons-arrow-right-24: Sensitive data](./storage/)   
     [:octicons-arrow-right-24: More (data repositories, ...)](./storage/)   
 
+</div>
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-solid-floppy-disk:{ .lg .middle } [__Software__](./software)
+
+    ---
+
+    Software across eInfra services.
+
+-   :fontawesome-solid-floppy-disk:{ .lg .middle } [__FAQs__](./faqs)
+
+    ---
+
+    Troubleshooting section.
+
+-   :fontawesome-solid-floppy-disk:{ .lg .middle } [__Contact__](./contact)
+
+    ---
+
+    User support.
 
 </div>
 
