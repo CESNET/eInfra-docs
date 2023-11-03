@@ -10,7 +10,7 @@ If you are interested in using the VPN to connect to secured network and resourc
 
 ## Connecting to VPN
 
-Tutorials will show how to setup **WireGuard** with the configuration you have otained from CERIT-SC Team.
+Tutorials will show how to setup **WireGuard** with the configuration you have obtained from CERIT-SC Team.
 
 === "Windows"
 
