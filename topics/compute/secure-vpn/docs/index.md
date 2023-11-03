@@ -1,6 +1,6 @@
 # VPN
 
-Virtual Private Network (VPN) is used to connect to the secure environment that is **isloated from the Internet**. The CERIT-SC VPN solution is based on [WireGuard](https://www.wireguard.com/) software.   
+Virtual Private Network (VPN) is used to connect to the secure environment that is **isolated from the Internet**. The CERIT-SC VPN solution is based on [WireGuard](https://www.wireguard.com/) software.   
 
 To use the VPN you will need to request access and configuration, please refer to the next section.
 

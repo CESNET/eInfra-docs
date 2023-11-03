@@ -8,12 +8,7 @@ hide:
 ---
 # Welcome to e-INFRA CZ Documentation!
 
-The home for documentation of all e-INFRA CZ services that are provided to scientific community in the Czech Republic.
-
-[e-INFRA CZ]( https://du.cesnet.cz/en/start) is a research and development e-infrastructure in the Czech Republic,
-which provides capacities and resources for the transmission, storage, and processing of scientific and research data.
-
-e-INFRA CZ is an integration of three Czech e-infrastructures – [CESNET](https://www.cesnet.cz/?lang=en), [CERIT-SC](https://www.cerit-sc.cz/), and [IT4Innovations](https://www.it4i.cz/en).
+The home for documentation of all [e-INFRA CZ](https://www.e-infra.cz/en) services that are provided to scientific community in the Czech Republic.
 
 <!-- # e-INFRA CZ Data Services -->
 
