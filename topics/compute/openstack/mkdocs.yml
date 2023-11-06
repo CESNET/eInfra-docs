@@ -31,6 +31,7 @@ nav:
       - technical-reference/brno-site/get-support.md
       - technical-reference/brno-site/gpu-computing.md
       - technical-reference/brno-site/index.md
+      - technical-reference/brno-site/instance-shelving.md
       - technical-reference/brno-site/networking.md
       - technical-reference/brno-site/openstack-components.md
       - technical-reference/brno-site/quota-limits.md
