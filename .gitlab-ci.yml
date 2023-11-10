@@ -198,7 +198,7 @@ deploy production:
       name: production
       url: https://${HOSTING_HOST}
   script:
-    - rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete --exclude=/review site/ ${HOSTING_USERNAME}@${HOSTING_HOST}:~/public_html
+    - rsync -a -e "ssh -p ${HOSTING_SSH_PORT_NUMBER} -o StrictHostKeyChecking=no" --delete --exclude=/review site/ ${HOSTING_USERNAME}@${HOSTING_HOST}:~/public_html
   only:
     - master
   <<: *prepare_deploy
@@ -210,7 +210,7 @@ deploy dev:
       url: https://${HOSTING_HOST}/review/$CI_COMMIT_REF_SLUG
   <<: *prepare_deploy
   script:
-    - rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete --exclude=/review site/ ${HOSTING_USERNAME}@${HOSTING_HOST}:~/public_html/review/$CI_COMMIT_REF_SLUG
+    - rsync -a -e "ssh -p ${HOSTING_SSH_PORT_NUMBER} -o StrictHostKeyChecking=no" --delete --exclude=/review site/ ${HOSTING_USERNAME}@${HOSTING_HOST}:~/public_html/review/$CI_COMMIT_REF_SLUG
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: never
@@ -219,7 +219,7 @@ deploy dev:
 stop_review:
   <<: *prepare_deploy
   script:
-    - ssh -o StrictHostKeyChecking=no ${HOSTING_USERNAME}@${HOSTING_HOST} rm -rf ~/public_html/review/$CI_COMMIT_REF_SLUG
+    - ssh -p ${HOSTING_SSH_PORT_NUMBER} -o StrictHostKeyChecking=no ${HOSTING_USERNAME}@${HOSTING_HOST} rm -rf ~/public_html/review/$CI_COMMIT_REF_SLUG
   environment:
     name: review/$CI_COMMIT_REF_SLUG
     action: stop
