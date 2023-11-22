@@ -38,6 +38,17 @@ hide:
 	sudo systemctl restart docker
 	```
 
+	## Changes for Docker Compose
+	Docker Compose does not inherit the network changes in Docker daemon. To set the MTU also for Docker Compose, you need to add the following lines to the `docker-compose.yaml` file in your project.
+
+	```sh
+	networks:
+	  default:
+	    driver: bridge
+	    driver_opts:
+	      com.docker.network.driver.mtu: 1442
+	```
+
 	## MTU detection
 	You can use following bash function to detect end-to-end maximum packet size without packet fragmentation.
 
