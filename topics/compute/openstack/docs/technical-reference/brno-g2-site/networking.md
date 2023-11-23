@@ -7,12 +7,11 @@ search:
 
 # Networking
 
-## Floating IP networks
+Currently in Brno G2 site you can use following floating IP networks:
 
-Currently in Ostrava site you can use following floating IP networks:
- - `provider-ipv4-general-public` (195.113.243.0/24)
+- `external-ipv4-general-public-147-251-255-0` (147.251.255.0/24)
+- `external-ipv4-general-public-2001-718-801-43b` (2001:718:801:43b::/64)
 
 ## Security groups
 
 Apart from the `default` [security group](../../../docs/additional-information/security-groups.md), every project in OpenStack cloud contains also pre-generated security group `ssh`. Rules of the `ssh` groups enables access to virtual servers via SSH protocol.
-

@@ -43,10 +43,10 @@ Before you begin, you should have the following:
 
         !!! info
 
-            The `<external_network_name_or_id>` is an external IP address pool managed by OpenStack administrators. Full list of available floating IP address pools can be found in [Technical reference](../../technical-reference/brno-site/networking/#ipv4-group-floating-ips).
+            The `<external_network_name_or_id>` is an external IP address pool managed by OpenStack administrators. Full list of available floating IP address pools can be found in [Technical reference G1 Brno](../../technical-reference/brno-g1-site/networking/#ipv4-group-floating-ips), [Technical reference G2 Ostrava](../../technical-reference/ostrava-g2-site/networking) and [Technical reference G2 Brno](../../technical-reference/brno-g2-site/networking).
 
     Additional floating IP configuration is available in [official CLI documentation](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/floating-ip.html).
-    
+
     Also, refer to [example of how floating IP allocation](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) is handled within creation of VM.
 
 
