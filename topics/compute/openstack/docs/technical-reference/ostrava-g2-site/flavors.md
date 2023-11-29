@@ -3,20 +3,10 @@
 title: Flavors
 search:
   exclude: false
+hide:
+  - toc
 ---
 
-<style>
-  .md-sidebar--secondary:not([hidden]) {
-    visibility: hidden;
-    display: none;
-  }
-  .md-content {
-    min-width: inherit;
-  }
-  .md-typeset table:not([class]) th {
-    min-width: inherit;
-  }
-</style>
 
 # Flavors
 
