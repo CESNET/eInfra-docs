@@ -75,7 +75,7 @@ To connect to instances running on OpenStack, you can use one of the available a
 - **Verify credentials**: If you are unable to authenticate when attempting to access instances, verify that you are using the correct username and password or SSH key pair. You may also need to check that your credentials have the appropriate permissions to access the instances.
 - **Check instance status**: If you are unable to connect to an instance, check its status in the OpenStack dashboard. If the instance is not in an ACTIVE state, there may be an issue with its configuration or the underlying infrastructure. Try rebooting the instance or creating a new instance with similar configurations.
 - **Check logs**: If you are still unable to connect to an instance, check the logs for any errors or warnings. The OpenStack console log and the instance's system log can provide useful information on what might be causing the issue.
-- [**Check FAQ**](../technical-reference/brno-site/faq.md): If you approach an issue when connecting to our infrastructure, make sure to first check FAQ before contacting support.
+- [**Check FAQ**](../technical-reference/brno-g1-site/faq.md): If you approach an issue when connecting to our infrastructure, make sure to first check FAQ before contacting support.
 - **Contact support**: If you are unable to resolve the issue on your own, contact your OpenStack support team for further assistance. Be sure to provide as much information as possible, including error messages and steps you have already taken to troubleshoot the issue.
 
 ## Security Considerations

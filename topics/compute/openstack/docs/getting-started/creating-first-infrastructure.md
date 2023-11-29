@@ -16,20 +16,20 @@ The following guide will take you through the steps necessary to start your firs
 Prerequisites:
 
 * Up-to-date web browser
-* Active account, see [Accessing Brno site](../technical-reference/brno-site/get-access.md) and [Accessing Ostrava site](../technical-reference/ostrava-site/get-access.md)
+* Active account, see [Accessing G1 Brno site](../technical-reference/brno-g1-site/get-access.md), [Accessing G2 Ostrava site](../technical-reference/ostrava-g2-site/get-access.md) and [Accessing G2 Brno site](../technical-reference/brno-g2-site/get-access.md)
 * Basic knowledge of SSH (for remote connections)
 * [API key and CLI client](../how-to-guides/obtaining-api-key.md) (needed only if You want to use CLI)
 
 ## Sign In
 
-The dashboard is available at [https://dashboard.cloud.muni.cz](https://dashboard.cloud.muni.cz) or [https://horizon.ostrava.openstack.cloud.e-infra.cz](https://horizon.ostrava.openstack.cloud.e-infra.cz).
+The dashboard is available at [https://dashboard.cloud.muni.cz](https://dashboard.cloud.muni.cz) or [https://horizon.ostrava.openstack.cloud.e-infra.cz](https://horizon.ostrava.openstack.cloud.e-infra.cz) or [https://horizon.brno.openstack.cloud.e-infra.cz](https://horizon.brno.openstack.cloud.e-infra.cz).
 
 !!! note
 
     International users may choose <strong>EGI Check-in</strong>, <strong>DEEP AAI</strong> or <strong>LIFESCIENCE AAI</strong>, depending on their membership in these projects.
 
 
-__1.__ Select `EINFRA CESNET` in Brno or `e-INFRA CZ federation` in Ostrava site.
+__1.__ Select `EINFRA CESNET` in G1 Brno or `e-INFRA CZ federation` in G2 Ostrava and G2 Brno site.
 
 __2.__ Click on **Sign In**.
 
@@ -58,21 +58,21 @@ an instance remotely is SSH. Using SSH requires a pair of keys - a public key an
 === "GUI"
 
     __1.__ Navigate to **Project &gt; Compute &gt; Key Pairs** and click the **Create Key Pair** button.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/keypair1.png)
-    
+
     __2.__ In the **Create Key Pair** insert the **Key Pair Name**. Avoid using special characters, if possible. Next select SSH key for **Key Type** and finally confirm with **Create Key Pair**.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/keypair2.png)
-    
+
     __3.__ Download the private key to your local computer and move it to the `~/.ssh/` folder. If you are using Windows, refer to [Accessing From Windows](../technical-reference/remote-access.md#accessing-from-windows).
-    
+
     __4.__ Set access privileges on `~/.ssh/` folder:
-    
+
     ```
     chmod 700 .ssh/
     chmod 644 .ssh/id_rsa.pub
@@ -106,26 +106,26 @@ your virtual machine via SSH from your local terminal.
 === "GUI"
 
     __1.__ Go to **Project &gt; Network &gt; Security Groups**. Click on **Manage Rules**, for the **default** security group.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/sec_group1.png)
-    
+
     __2.__ Click on **Add rule**, choose **SSH**, and leave the remaining fields unchanged.
        This will allow you to access your instance via IPv4.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/sec_group2.png)
-    
+
     !!! caution
-    
+
         You have 2 possibilities for how to configure security groups policy.
-    
+
         - One is through CIDR which specifies rules for concrete network range.
         - The second one specifies rules for members of a specified security group,
         i.e. policy will be applied on instances that belong to the selected security group.
-    
+
     For details, refer to [the official documentation](https://docs.openstack.org/horizon/train/user/configure-access-and-security-for-instances.html).
 
 === "CLI"
@@ -134,7 +134,7 @@ your virtual machine via SSH from your local terminal.
         ```
         openstack security group rule create --description "Permit SSH" --remote-ip 0.0.0.0/0 --protocol tcp --dst-port 22 --ingress default
         ```
-        
+
       Optionally, add ICMP rule (to allow ping):
         ```
         openstack security group rule create --description "Permit ICMP (any)" --remote-ip 0.0.0.0/0 --protocol icmp --icmp-type -1 --ingress default
@@ -143,61 +143,61 @@ your virtual machine via SSH from your local terminal.
     __2.__ Verify:
         ```
         openstack security group show default
-        ``` 
+        ```
 
 ## Create a Virtual Machine Instance
 
 === "GUI"
 
     __1.__ In **Compute &gt; Instances**, click the **Launch Instance** button.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/instance1.png)
-    
+
     __2.__ Choose **Instance Name**, Description, and number of instances.
        If you are creating more instances, `-%i` will be automatically appended to the name of each instance. Continue via **Next**.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/instance2.png)
-    
+
     __3.__ Choose an image from which to boot the instance. Choose to delete the volume after instance delete. This is not recommended for production deployment.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/instance3.png)
-    
+
     __4.__ Choose the hardware resources of the instance by selecting a flavor. Additional volumes for data can be attached later on.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/instance4.png)
-    
+
     __5.__ Select appropriate network based on your project type and continue to **Key Pair** in the left menu.
-    
+
     === "Personal project"
-    
+
         For personal project select personal-project-network-subnet from network `147-251-115-pers-proj-net`.
-        Here is more information on available networks in [Brno](../technical-reference/brno-site/networking.md#ipv4-personal-floating-ips)
-        and [Ostrava](../technical-reference/ostrava-site/networking.md#floating-ip-networks).
-    
+        Here is more information on available networks in [Brno G1](../technical-reference/brno-g1-site/networking.md#ipv4-personal-floating-ips)
+        , [Ostrava G2](../technical-reference/ostrava-g2-site/networking.md#floating-ip-networks) and  [Brno G2](../technical-reference/brno-g2-site/networking.md#ipv4-personal-floating-ips).
+
         !!! example
-    
+
             ![](/compute/openstack/images/instance/instance5.png)
-    
+
     === "Group project"
-    
+
         For group project select group-project-network-subnet from network `group-project-network` (check if [Router gateway](../how-to-guides/create-router.md#router-creation) is set).
-    
+
         !!! example
-    
+
             ![](/compute/openstack/images/tutorial/instance_launch_network-group.png)
-    
+
     __6.__ In **Key Pair** select the key that was created in section [Create Key Pair](#create-key-pair) in the Available list and finally **Launch Instance**.
-    
+
     !!! example
-    
+
         ![](/compute/openstack/images/instance/instance6.png)
 
 === "CLI"
@@ -205,7 +205,7 @@ your virtual machine via SSH from your local terminal.
     __1.__ **Create volume**
 
       Volumes are created automatically when creating an instance in GUI, but we need to create them manually in the case of CLI.
-        
+
       Create bootable volume from image (e.g. centos):
         ```
         openstack volume create --image "centos-7-1809-x86_64" --size 40 my_vol1
@@ -215,7 +215,7 @@ your virtual machine via SSH from your local terminal.
         ```
         openstack image list
         ```
-    
+
     __2.__ **Create instance**
         ```
         openstack server create --flavor "standard.small" --volume my_vol1 \
@@ -237,8 +237,8 @@ At this point, you want to [Allocate IP Address](../how-to-guides/managing-float
 and [Assign IP Address](../how-to-guides/managing-floating-ips.md#assigning-ip-address).
 You don't have to care about the other sections unless you need them.
 
-Possible IP address pools are described separately for [Brno](../technical-reference/brno-site/networking.md)
-and [Ostrava](../technical-reference/ostrava-site/networking.md).
+Possible IP address pools are described separately for [Brno G1](../technical-reference/brno-g1-site/networking.md), [Ostrava G2](../technical-reference/ostrava-g2-site/networking.md)
+and [Brno G2](../technical-reference/brno-g2-site/networking.md).
 
 For group projects, always select the same network as used in
 [Router gateway](../how-to-guides/create-router.md#router-creation).

@@ -28,12 +28,14 @@ Guides aim to show how to solve specific problems.
 **Technical Reference**   
 This section contains mainly operational information about the e-INFRA CZ Openstack Cloud (definition of flavors, networking policy, OpenStack internals) that could be necessary when deploying an infrastructure in Brno or Ostrava site.
 
-  * [Technical details of **Brno** cloud site][tech-brno]   
-  * [Technical details of **Ostrava** cloud site][tech-ost]   
+  * [Technical details of **Brno G1** cloud site][tech-g1-brno]   
+  * [Technical details of **Ostrava G2** cloud site][tech-g2-ost]   
+  * [Technical details of **Brno G2** cloud site][tech-g2-brno]
 
 **Additional Information**   
 This section describes further information and problems that users can approach when using e-INFRA CZ Openstack Cloud.
 
 [readmore]: https://www.cerit-sc.cz/infrastructure-services/data-processing/cloud-service
-[tech-brno]: ./technical-reference/brno-site/
-[tech-ost]: ./technical-reference/ostrava-site/
+[tech-g1-brno]: ./technical-reference/brno-g1-site/
+[tech-g2-ost]: ./technical-reference/ostrava-g2-site/
+[tech-g2-brno]: ./technical-reference/brno-g2-site/

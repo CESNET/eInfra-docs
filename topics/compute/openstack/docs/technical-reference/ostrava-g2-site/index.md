@@ -1,5 +1,5 @@
 ---
-title: About e-INFRA CZ Openstack Cloud Site in Ostrava
+title: About e-INFRA CZ Openstack G2 Cloud Site in Ostrava
 search:
   exclude: false
 ---

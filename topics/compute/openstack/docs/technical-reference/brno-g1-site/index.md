@@ -1,5 +1,5 @@
 ---
-title: About e-INFRA CZ Openstack Cloud Site in Brno
+title: About e-INFRA CZ Openstack G1 Cloud Site in Brno
 search:
   exclude: false
 ---

@@ -11,8 +11,9 @@ hide:
 
 Also you can access site specific FAQ:
 
- - [Brno site FAQ](../technical-reference/brno-site/faq.md)
- - [Ostrava site FAQ](../technical-reference/ostrava-site/faq.md)
+ - [Brno G1 site FAQ](../technical-reference/brno-g1-site/faq.md)
+ - [Ostrava G2 site FAQ](../technical-reference/ostrava-g2-site/faq.md)
+ - [Brno G2 site FAQ](../technical-reference/brno-g2-site/faq.md)
 
 ??? "What to expect from the cloud and cloud computing"
 
