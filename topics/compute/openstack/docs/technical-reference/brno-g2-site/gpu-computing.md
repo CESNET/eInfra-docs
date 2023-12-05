@@ -6,3 +6,5 @@ search:
 ---
 
 # GPU Computing
+
+Coming soon see [cloud roadmap](./roadmap-news.md).

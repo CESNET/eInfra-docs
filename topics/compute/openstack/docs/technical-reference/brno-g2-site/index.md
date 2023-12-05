@@ -1,10 +1,10 @@
 ---
-title: About e-INFRA CZ Openstack G2 Cloud Site in Brno
+title: About e-INFRA CZ Openstack G2 Cloud Brno Site
 search:
   exclude: false
 ---
 
-# [G2 e-INFRA CZ Openstack Cloud Site in Brno (g2-prod-brno)](https://brno.openstack.cloud.e-infra.cz/)
+# [G2 e-INFRA CZ Openstack Cloud Brno Site (g2-prod-brno)](https://brno.openstack.cloud.e-infra.cz/)
 
 IaaS OpenStack cloud providing cloud services for following organizations:
  * [e-INFRA CZ](https://www.e-infra.cz/en) / [MetaCentrum](https://www.metacentrum.cz/en/index.html)
@@ -41,3 +41,4 @@ Cloud workload migration from [G1 Brno Cloud instance](../brno-g1-site/index.md)
  * [Info on quotas](./quota-limits.md)
  * [Specific FAQ](./faq.md)
  * [GPU computing](./gpu-computing.md)
+ * [cloud roadmap and news](./roadmap-news.md)

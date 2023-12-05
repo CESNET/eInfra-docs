@@ -1,10 +1,10 @@
 ---
-title: About e-INFRA CZ Openstack G1 Cloud Site in Brno
+title: About e-INFRA CZ Openstack G1 Cloud Brno Site
 search:
   exclude: false
 ---
 
-# [G1 e-INFRA CZ / MetaCentrum / EGI / LifeScience OpenStack Cloud (g1-production)](https://cloud.metacentrum.cz/)
+# [G1 e-INFRA CZ / MetaCentrum / EGI / LifeScience OpenStack Brno Cloud (g1-production)](https://cloud.metacentrum.cz/)
 
 IaaS OpenStack cloud providing cloud services for following organizations:
  * [e-INFRA CZ](https://www.e-infra.cz/en) / [MetaCentrum](https://www.metacentrum.cz/en/index.html)
