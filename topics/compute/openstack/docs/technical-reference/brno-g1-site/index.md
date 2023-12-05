@@ -4,7 +4,12 @@ search:
   exclude: false
 ---
 
-# About MetaCentrum Cloud
+# [G1 e-INFRA CZ / MetaCentrum / EGI / LifeScience OpenStack Cloud (g1-production)](https://cloud.metacentrum.cz/)
+
+IaaS OpenStack cloud providing cloud services for following organizations:
+ * [e-INFRA CZ](https://www.e-infra.cz/en) / [MetaCentrum](https://www.metacentrum.cz/en/index.html)
+ * [EGI](https://www.egi.eu/)
+ * [Elixir / LifeScience](https://elixir-europe.org/)
 
 ## Hardware
 
@@ -14,23 +19,19 @@ can utilize our clusters with local SSDs and GPU cards. OpenStack instances, obj
 storage and image storage can leverage more than 1.5 PTB of highly available data
 storage provided by the [CEPH](https://docs.ceph.com/en/pacific/) storage system.
 
-## Software
+## Software, cloud versions and components
 
 MetaCentrum Cloud is built on top of [OpenStack](https://www.openstack.org/), which is a free open standard cloud computing platform
 and one of the top 3 most active open source projects in the world. New OpenStack major versions are
 released twice a year. OpenStack functionality is separated into more than 50 services.
 
-## Application
+[OpenStack Train](https://www.openstack.org/software/train/).
 
-More than 400 users are using the MetaCentrum Cloud platform and more than 130k VMs were started last year.
+[Following OpenStack components are available](./openstack-components.md).
 
-## MetaCentrum Cloud Current Release
+## Cloud workload
 
-[OpenStack Train](https://www.openstack.org/software/train/)
-
-## Deployed Services
-
-The list of deployed services in MetaCentrum Cloud is available in [Components overview](./openstack-components.md).
+There are over 1500 unique Cloud platform users working in more than 1200 projects.
 
 ## Other Techical Info Specific for This Site
 
