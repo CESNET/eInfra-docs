@@ -7,7 +7,8 @@ search:
 # [G2 e-INFRA CZ Openstack Cloud Brno Site (g2-prod-brno)](https://brno.openstack.cloud.e-infra.cz/)
 
 IaaS OpenStack cloud providing cloud services for following organizations:
- * [e-INFRA CZ](https://www.e-infra.cz/en) / [MetaCentrum](https://www.metacentrum.cz/en/index.html)
+
+ - [e-INFRA CZ](https://www.e-infra.cz/en) / [MetaCentrum](https://www.metacentrum.cz/en/index.html)
  
 ## Hardware
 
