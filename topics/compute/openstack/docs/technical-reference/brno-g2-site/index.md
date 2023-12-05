@@ -21,7 +21,7 @@ E-INFRA CZ Ostrava cloud site is built on top of [OpenStack](https://www.opensta
 and one of the top 3 most active open source projects in the world. New OpenStack major versions are
 released twice a year. OpenStack functionality is separated into more than 50 services.
 
-[OpenStack Yoga](https://www.openstack.org/software/yoga/) and [Kubernetes 1.24.14](https://kubernetes.io/blog/2022/05/03/kubernetes-1-24-release-announcement/) underneath.
+[OpenStack Yoga](https://www.openstack.org/software/yoga/) and [Kubernetes 1.24.17](https://kubernetes.io/blog/2022/05/03/kubernetes-1-24-release-announcement/) underneath.
 
 [Following OpenStack components are available](./openstack-components.md).
 
