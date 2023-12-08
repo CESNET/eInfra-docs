@@ -1,6 +1,6 @@
 ---
 
-title: Get Access G2 e-INFRA OpenStack Cloud Ostrava
+title: Get Access
 search:
   exclude: false
 ---

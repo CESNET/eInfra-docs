@@ -1,6 +1,6 @@
 ---
 
-title: "How to Get Access"
+title: "Get Access"
 search:
   exclude: false
 ---

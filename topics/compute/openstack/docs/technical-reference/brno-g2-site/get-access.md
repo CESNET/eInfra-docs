@@ -1,6 +1,6 @@
 ---
 
-title: "How to Get Access G2 e-INFRA OpenStack Cloud Brno"
+title: "Get Access"
 search:
   exclude: false
 ---
