@@ -32,7 +32,7 @@ OpenStack flavor entity defines compute virtual server parameters such as:
 
 ## Flavor types and naming schema
 
-| Flavor type | Flavor characteristic | HA support | (live) migration support | GPU support | local ephemeral disk resources | vCPU efficiency, CPU overcommit | old flavor naming |
+| Flavor type | Flavor characteristic | HA support | (live) migration support | GPU support | local ephemeral disk resources | vCPU efficiency, CPU overcommit | old G1 flavor naming |
 |-------------|-----------------------|------------|--------------------------|-------------|--------------------------------|---------------------------------|-------------------|
 | `e1.*` | economic computing, small jobs, limited performance       | Yes | Yes | No       | No                             | ~ PASSMARK 250, 1:8  | `standard.*` |
 | `g2.*` | general purpose, regular jobs / tasks, medium performance | Yes | Yes | No       | No                             | ~ PASSMARK 750, 1:2  | - |
