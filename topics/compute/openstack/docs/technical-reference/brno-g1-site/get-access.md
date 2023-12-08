@@ -30,7 +30,7 @@ MetaCentrum Cloud provides the following ways for allocating resources
 A personal project goal is to gain cloud environment knowledge.
 
 !!! caution
-	A personal project resource allocation quotas cannot be increased.
+	A personal project resource allocation quotas are fixed and cannot be changed.
 
 Personal projects are available automatically to all users of the Czech
 e-infrastructure for science, development, and education.
