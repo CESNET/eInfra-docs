@@ -10,8 +10,8 @@ search:
 ## Reasons behind G2 introduction
 
 1. Difficult and time-consuming cloud upgrades.
-2. Hypervisor operating system deprecation and related lack of support of new hardware features.
-3. High cloud maintenance cost closely related with fact that G1 OpenStack deployment is not close to any upstream OpenStack deployment code anymore.
+2. Hypervisor operating system deprecation and related lack of new hardware features support.
+3. High cloud maintenance cost closely related with fact that G1 OpenStack deployment is not close to any standard upstream OpenStack deployment codebase anymore.
 4. Inconsistent OpenStack external network and flavor naming schemas.
 
 ## G2 cloud highlights
