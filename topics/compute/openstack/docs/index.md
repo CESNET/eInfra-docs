@@ -13,7 +13,7 @@ e-INFRA CZ Cloud consists of 3 cloud instances ([G1 Brno](./technical-reference/
 
 There are over 1500 unique Cloud platform users working in more than 1200 projects.
 
-Read more about [new generation (G2) of e-INFRA CZ OpenStack IaaS clouds](./technical-reference/why-g2-cloud.md) and [related e-INFRA CZ Services][readmore].
+Read more about [new generation (G2) of e-INFRA CZ OpenStack IaaS clouds](./technical-reference/why-g2-cloud.md) and [related services][readmore].
 
 # How to Read the Documentation
 

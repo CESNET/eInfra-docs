@@ -7,7 +7,7 @@ search:
 
 # How to Get Access
 
-Access to MetaCentrum Cloud is granted to users
+[Access to MetaCentrum Cloud](https://cloud.metacentrum.cz/) is granted to users
 with active accounts in one of the following identity federations:
 
 * __EINFRA CESNET__,

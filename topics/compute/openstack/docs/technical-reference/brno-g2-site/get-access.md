@@ -1,13 +1,13 @@
 ---
 
-title: "How to Get Access"
+title: "How to Get Access G2 e-INFRA OpenStack Cloud Brno"
 search:
   exclude: false
 ---
 
 # How to Get Access
 
-Access to MetaCentrum Cloud is granted to users
+[Access to e-INFRA OpenStack Cloud](https://brno.openstack.cloud.e-infra.cz/) is granted to users
 with active accounts in one of the following identity federations:
 
 * __EINFRA CESNET__,

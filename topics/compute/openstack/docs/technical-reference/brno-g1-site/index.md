@@ -6,7 +6,7 @@ search:
 
 # [G1 e-INFRA CZ / MetaCentrum / EGI / LifeScience OpenStack Brno Cloud (g1-production)](https://cloud.metacentrum.cz/)
 
-IaaS OpenStack cloud providing cloud services for following organizations:
+[IaaS OpenStack cloud](https://cloud.metacentrum.cz/) providing cloud services for following organizations:
 
  - [e-INFRA CZ](https://www.e-infra.cz/en) / [MetaCentrum](https://www.metacentrum.cz/en/index.html)
  - [EGI](https://www.egi.eu/)
