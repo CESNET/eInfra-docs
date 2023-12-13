@@ -8,7 +8,7 @@ search:
 # Accessing Horizon Dashboard
 
 
-**1.** Go to https://cloud.metacentrum.cz/ (eventually https://cloud.muni.cz/), click Dashboard
+**1.** Go to [cloud.metacentrum.cz](https://cloud.metacentrum.cz/) (eventually [cloud.muni.cz](https://cloud.muni.cz/)), click Dashboard
 
 !!! example
 
