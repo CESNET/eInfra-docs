@@ -20,9 +20,9 @@ search:
 
     ![](../images/login-project-selection/g1_cloud_project_switch_1.png)
 
-**2.** Clicking on top left project drop down we can select project
+**2.** Clicking on top left project drop down we can select project (selecting project meta-cloud-training)
 
-!!! example (selecting project meta-cloud-training)
+!!! example
 
     ![](../images/login-project-selection/g1_cloud_project_switch_2.png)
 

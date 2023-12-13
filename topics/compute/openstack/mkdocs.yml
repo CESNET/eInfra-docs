@@ -7,6 +7,8 @@ nav:
     # - getting-started/creating-project.md
     - getting-started/creating-first-infrastructure.md
   - How-to guides:
+    - how-to-guides/accessing-openstack-dashboard.md
+    - how-to-guides/selecting-project-openstack-dashboard.md
     - how-to-guides/accessing-instances.md
     - how-to-guides/managing-floating-ips.md
     - how-to-guides/managing-interface.md

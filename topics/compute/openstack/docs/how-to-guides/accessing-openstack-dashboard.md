@@ -20,15 +20,15 @@ search:
 
     ![](../images/login-project-selection/g1_cloud_logon_2.png)
 
-**3.** Select your organization
+**3.** Select your organization (filtering for Masaryk Univerzity)
 
-!!! example (filtering for Masaryk Univerzity)
+!!! example
 
     ![](../images/login-project-selection/g1_cloud_logon_3.png)
 
-**3.** Confirm your identity at your organization page
+**3.** Confirm your identity at your organization page (Masaryk Univerzity)
 
-!!! example (Masaryk Univerzity)
+!!! example
 
     ![](../images/login-project-selection/g1_cloud_logon_3.png)
 
