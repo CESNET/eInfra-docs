@@ -16,8 +16,8 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
     It is possible to choose level of service from virtualization to managed container engine.
 
     [:octicons-arrow-right-24: Virtualization (OpenStack Cloud)](./openstack/)   
-    [:octicons-arrow-right-24: Container Engine (Kubernetes)](./kubernetes/)   
-    [:octicons-arrow-right-24: Sensitive Proccessing](./sensitive/)   
+    [:octicons-arrow-right-24: Container Engine (Kubernetes)](./containers/)   
+    [:octicons-arrow-right-24: Sensitive Proccessing](./sensitive-cloud/)   
     [:octicons-arrow-right-24: More](./concepts/)
 
 -   :fontawesome-solid-microchip:{ .md .middle } __Metacentrum Grid services__
@@ -26,9 +26,9 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
     Traditional distributed computing with software and queues.
 
-    [:octicons-arrow-right-24: How to start](./grid/)   
-    [:octicons-arrow-right-24: Running first job](./grid/)   
-    [:octicons-arrow-right-24: More](./grid/)   
+    [:octicons-arrow-right-24: How to start](./grid/access/)   
+    [:octicons-arrow-right-24: Running first job](./grid/computing/run-basic-job/)   
+    [:octicons-arrow-right-24: More](./grid/computing/)   
 
 -   :fontawesome-solid-atom:{ .md .middle } __Supercomputing__
 
@@ -45,7 +45,7 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
 ## How to Choose Between Computing Services?
 
-- [Read computing service overview](./concepts/)
+- [Read computing service overview](./concepts/comparison/)
 - Check comparision between computing services _(TODO)_
 
 ## See How Different Scientific Use-Cases Are Implemented.
