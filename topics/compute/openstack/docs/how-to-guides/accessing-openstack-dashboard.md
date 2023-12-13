@@ -30,7 +30,7 @@ search:
 
 !!! example
 
-    ![](../images/login-project-selection/g1_cloud_logon_3.png)
+    ![](../images/login-project-selection/g1_cloud_logon_4.png)
 
 **4.** OpenStack Horizon dashboard (personal project)
 
