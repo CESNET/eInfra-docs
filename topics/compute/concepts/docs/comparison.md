@@ -4,9 +4,9 @@
 
 There are multiple MetaCentrum cloud environments:
 
-- MetaCentrum OpenStack
-- MetaCentrum Kubernetes
 - MetaCentrum Sensitive
+- MetaCentrum Kubernetes
+- MetaCentrum OpenStack
 
 Each of them is targetting different use-cases. General rules of thumb are:
 

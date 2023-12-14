@@ -34,13 +34,13 @@ KYPO Cyber Range Platform (KYPO CRP) is developed by Masaryk University since 20
 
 KYPO CRP uses the same open approach for the content as for its architecture to encourage creating a community of trainers and supporting the sharing of training building blocks. For that reason, virtual machines, networks, and trainings are entirely defined in human-readable data-serialization languages JSON and YAML or use open-source software Packer to build virtual machines and Ansible for describing machine content.
 
-The KYPO CRP sources are currently hosted at https://gitlab.ics.muni.cz/muni-kypo-crp.
+The KYPO CRP sources are currently hosted at [https://gitlab.ics.muni.cz/muni-kypo-crp](https://gitlab.ics.muni.cz/muni-kypo-crp).
 
 ## References
 
-* https://crp.kypo.muni.cz/
-* https://docs.crp.kypo.muni.cz/
-* https://www.muni.cz/en/research/projects/48647
-* https://www.muni.cz/en/research/projects/31984
-* https://www.muni.cz/en/research/projects/23884
-* https://www.muni.cz/en/research/projects/43025
+* [https://crp.kypo.muni.cz/](https://crp.kypo.muni.cz/)
+* [https://docs.crp.kypo.muni.cz/](https://docs.crp.kypo.muni.cz/)
+* [https://www.muni.cz/en/research/projects/48647](https://www.muni.cz/en/research/projects/48647)
+* [https://www.muni.cz/en/research/projects/31984](https://www.muni.cz/en/research/projects/31984)
+* [https://www.muni.cz/en/research/projects/23884](https://www.muni.cz/en/research/projects/23884)
+* [https://www.muni.cz/en/research/projects/43025](https://www.muni.cz/en/research/projects/43025)
