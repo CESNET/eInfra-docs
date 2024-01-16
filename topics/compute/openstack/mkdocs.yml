@@ -3,6 +3,7 @@ docs_dir: ./docs/
 
 nav:
   - index.md
+  - new-generation.md
   - Getting started:
     # - getting-started/creating-project.md
     - getting-started/creating-first-infrastructure.md
