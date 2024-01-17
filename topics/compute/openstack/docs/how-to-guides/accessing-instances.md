@@ -54,7 +54,7 @@ To connect to instances running on OpenStack, you can use one of the available a
 === "Windows"
 
     ### PuTTY
-    - Open [PuTTY](https://www.putty.org/) and enter the IP address of your instance in the "Host Name" field.
+    - Open [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/faq.html#faq-what) and enter the IP address of your instance in the "Host Name" field.
     - Select `SSH` as the connection type.
     - Go to `Connection -> SSH -> Auth -> Credentials` and browse to the private key file.
     - Click `Open` to start the connection.

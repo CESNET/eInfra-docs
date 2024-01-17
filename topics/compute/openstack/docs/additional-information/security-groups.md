@@ -15,4 +15,4 @@ Every OpenStack project contains the `default` security group containing only se
 
 Example configuration is available on page [Managing security groups](../how-to-guides/managing-security-groups.md). For full CLI reference please refer to [OpenStack docs](https://docs.openstack.org/python-openstackclient/train/cli/command-objects/security-group.html).
 
-Also refer to the [example of new Security group creation] (https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) containing custom rules within VM provisioning CLI example.
+Also refer to the [example of new Security group creation](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) containing custom rules within VM provisioning CLI example.

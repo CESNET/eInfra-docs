@@ -73,13 +73,13 @@ If you have no gateway on you router, you can assign a new one.
 
 === "GUI"
 
-    1. You can set your gateway by clicking **Set Gateway**.
+    **1.** You can set your gateway by clicking **Set Gateway**.
 
     !!! example
 
         ![](/compute/openstack/images/networks/set-router1.png)
 
-    2. Choose the network you desire to use (e.g. **public-cesnet-78-128-251**) and confirm.
+    **2.** Choose the network you desire to use (e.g. **public-cesnet-78-128-251**) and confirm.
 
     !!! example
 

@@ -29,7 +29,7 @@ The situation is rather different for group projects. You cannot use the same ap
 
 !!! tip
 
-    If you use a MUNI account, you can use `private-muni-10-16-116` and log into the network via MUNI VPN or you can set up Proxy networking, which is described on page [Proxy networking](../../additional-information/proxy-networking.md).
+    If you use a MUNI account, you can use `private-muni-10-16-116` and log into the network via MUNI VPN or you can set up Proxy networking, which is described on page [Proxy networking](https://docs.cloud.muni.cz/cloud/network/#proxy-networking). Please pay attention to the fact that there can be [Issues with proxy in private networks](https://docs.cloud.muni.cz/cloud/faq/#issues-with-proxy-in-private-networks).
 
 ## IPv6 Networking
 

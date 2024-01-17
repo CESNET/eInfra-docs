@@ -54,7 +54,18 @@ Before you begin, you should have the following:
 
 === "Horizon"
 
-    TODO
+    Go to **Project &gt; Compute &gt;  Instances**. Click on the menu **Actions** on the instance you wish to change and click on **Detach interface**.
+
+    !!! example
+
+        ![](/compute/openstack/images/networks/attach_interface.png)
+
+    In the **Port** dropdown menu select port on what you want to detach interface.
+
+    !!! example
+
+        ![](/compute/openstack/images/networks/detach_interface.png)        
+
 
 === "Command Line"
 
