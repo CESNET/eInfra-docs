@@ -34,7 +34,7 @@ default = "~/.ssh/id_rsa"
  You can use OpenStack Provider, which is a tool for managing resources OpenStack supports via Terraform. Terraform has an advantage over Heat because it can be used also in other architectures, not only in OpenStack.
 
 
-For more detail, please refer to [https://registry.terraform.io/providers/terraform-provider-OpenStack/OpenStack/latest/docs](https://registry.terraform.io/providers/terraform-provider-OpenStack/OpenStack/latest/docs) and [https://www.terraform.io/intro/index.html](https://www.terraform.io/intro/index.html).
+For more detail, please refer to [OpenStack Provider documentation](https://registry.terraform.io/providers/terraform-provider-OpenStack/OpenStack/latest/docs) and [Terraform documentation](https://www.terraform.io/intro/index.html).
 
 Also refer to [example of Terraform project](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/tree/master/clouds/g2/ostrava/general/terraform) responsible for creation of two tier infrastructure consisting of several VMs and setting up networking, security and storage.
 

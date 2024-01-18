@@ -66,4 +66,4 @@ request a group project using [this form](https://projects.cloud.muni.cz/) and p
 
 ## Increase Quotas for Existing Group Project
 
-To request quota increase or access to particular [flavor](../technical-reference/flavors.md), please use [this form](https://projects.cloud.muni.cz/).
+To request quota increase or access to particular [flavor](flavors.md), please use [this form](https://projects.cloud.muni.cz/).

@@ -27,7 +27,7 @@ Your project is computed within the MetaCentrum Cloud Openstack project where yo
    * Ansible
    * [openstack heat](https://docs.openstack.org/heat/train/template_guide/hello_world.html)
 
-If your project infrastructure (MetaCentrum Cloud Openstack resources) within the cloud is static you may select a manual approach with [MetaCentrum Cloud Openstack Dashboard UI](https://dashboard.cloud.muni.cz). There are projects which need to allocate MetaCentrum Cloud Openstack resources dynamically;in such cases, we strongly encourage automation even at this stage.
+If your project infrastructure (MetaCentrum Cloud Openstack resources) within the cloud is static you may select a manual approach with [MetaCentrum Cloud Openstack Dashboard UI](https://dashboard.cloud.muni.cz). There are projects which need to allocate MetaCentrum Cloud Openstack resources dynamically. In such cases, we strongly encourage automation even at this stage.
 
 ## Transferring Data to Cloud
 

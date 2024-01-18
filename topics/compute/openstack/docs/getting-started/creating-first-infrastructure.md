@@ -38,7 +38,11 @@ __2.__ Click on **Sign In**.
     ![login](/compute/openstack/images/instance/login.png)
 
 
-__3.__ Select your institution from the drop-down list.
+__3.__ You will be redirected to ds.eduid page, where you select your institution from the drop-down list.
+
+!!! example
+
+    ![institution login](/compute/openstack/images/instance/institution_login.png)
 
 __4.__ Provide your institution-specific sign-in credentials.
 
