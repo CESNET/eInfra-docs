@@ -38,7 +38,7 @@ Let’s deep into the technical aspects of working with SensitiveCloud. This sec
 
 > The SensitiveCloud environment is provided by CERIT-SC, which is an organisational unit of the Institute of Computing at Masaryk University and one of the three members of the large research infrastructure e-INFRA CZ.
 
-[1]: https://cerit-sc.cz/infrastructure-services/trusted-environment-for-sensitive-data
+[1]: https://www.cerit-sc.cz/infrastructure-services/sensitivecloud
 [2]: ./get-project
 [3]: ./manage-project
 [4]: ./getting-started/connecting-to-sensitive-cloud
