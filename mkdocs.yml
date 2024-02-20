@@ -85,7 +85,7 @@ plugins:
           Managed Data Services: Spravované datové služby
           General Information: Obecné informace
           Account Management: Správa účtů
-  
+  - mkdocs-jupyter
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)'
       lang:
