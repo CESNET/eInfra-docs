@@ -18,6 +18,10 @@ ways to verify the second factor during the login process:
 
 ## Available Methods of MFA Verification
 
+### The Interactive Guide to Help You Choose the Right MFA Type
+<iframe src="https://www.figma.com/embed?embed_host=oembed&amp;url=https://www.figma.com/proto/aM6v3459PusLBOCFjYoqJi/Which-MFA-is-right-for-me?type=design&amp;node-id=894-919&amp;t=9mQFJjoDv6pQy4Tg-8&amp;scaling=scale-down-width&amp;page-id=894%3A918&amp;starting-point-node-id=894%3A919&amp;hide-ui=1" data-testid="embed-card-resolved-view-frame" data-iframe-loaded="true" allowfullscreen="" scrolling="yes" allow="autoplay; encrypted-media; clipboard-write" class="cc-1gkak8w" style="width: 100%; height: 600px"></iframe>
+
+
 ### TOTP
 
 TOTP (Time-based One-Time Password) is a standard method for one-time code 
