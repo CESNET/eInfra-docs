@@ -42,6 +42,52 @@ To connect to instances running on OpenStack, you can use one of the available a
     ```
 
     For more detailed instructions on how to connect using SSH, consult the relevant documentation for your operating system.
+
+    ### Remote Desktop on Ubuntu
+    You can connect to a Linux machine in a similar way as to MS Windows using xrdp, which is an open-source version of Microsoft's remote desktop protocol. However, Linux cloud images are not ready for xrpd connection in their basic state and some steps need to be taken.
+
+    1. Install graphical user interface and xrdp service. The installation can be done manually after accessing through ssh, but due to the longer GUI installation time and especially in the case of creating a large number of virtual machines, we recommend using the `Customization Script`. The minimal version of the script for Ubuntu linux looks like this:
+
+        ``` bash
+        #!/bin/bash
+        apt update
+        apt install -y ubuntu-desktop xrdp
+        ```
+
+        !!! example
+
+            ![](../images/instance/customization_script_xrdp.png)
+
+        Since the installation using the Customization Script takes place in the background, it is not entirely clear when it will be completed. You can imagine the installation time as 1 hour, but it's not exact. The presence of the packages can be confirmed by the following command launched through an ssh connection:
+
+        ``` bash
+        sudo apt install ubuntu-desktop xrdp
+        ```
+
+        If the command returns an error message due to being locked by another process, the installation is still running in the background.
+
+    2. The basic user accounts in Ubuntu cloud images are not used for logging in, it is therefore necessary to create a new user account via ssh before logging in via xrdp. In the following example, the creation of a regular (non-root) user `graphical-user` is presented:
+
+        ``` bash
+        sudo useradd -m -g users graphical-user
+        sudo passwd graphical-user
+        ```
+
+    3. Allow xrdp connection by adding appropriate rule to the VM's security group. The port number is `3389`, but direct `Rule: RDP` option is also available.
+
+        !!! example
+
+            ![](../images/instance/sec_group_rdp.png)
+
+        !!! caution
+
+            The virtual machine is ready for connection using xrdp. However, it should be noted that xrdp (as well as the original rdp) were not designed for encrypted communication and a machine configured in this way is not suitable for transferring sensitive information (e.g. logging into web applications used in everyday life, such as banking and the like). For some purposes, unencrypted traffic may be sufficient, but for greater security we recommend setting up additional [SSL/TSL Encryption](https://karthidkk123.medium.com/how-to-secure-xrdp-on-ubuntu-centos-with-ssl-tls-encryption-9258162b24a3).
+
+    4. If the guide above was followed, it should be possible to connect to the Ubuntu VM and use its GUI with the use of an rdp client. RDP client is a desktop application, that understands rdp traffic and opens a window containing interactive desktop of the remote host.
+        - In Windows environment, `Microsoft Remote Desktop` should already be installed inside the operating system.
+        - For MacOS `Microsoft Remote Desktop` can be downloaded from Mac App Store.
+        - Linux workstations offer several clients. One of the wide spread ones (this one is also tested to work) is called `Remmina`.
+
     ### VNC
     - Install a VNC client on your local machine.
     - Obtain the VNC server IP address and port number from your instance's console or dashboard.
