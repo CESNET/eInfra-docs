@@ -42,6 +42,57 @@ To connect to instances running on OpenStack, you can use one of the available a
     ```
 
     For more detailed instructions on how to connect using SSH, consult the relevant documentation for your operating system.
+
+    ### Remote Desktop
+    You can connect to a Linux machine in a similar way to MS Windows using the xrdp protocol, which is an open-source version of Microsoft's rdp protocol. However, Linux cloud images are not ready for xrpd connection in their basic state and some steps need to be taken.
+
+    1. Install graphical user interface and xrdp service. The installation can be done manually after accessing through ssh, but due to the longer GUI installation time and especially in the case of creating a large number of virtual machines, we recommend using the `Customization Script`, which can be found in Horizon (web interface of the OpenStack platform) under the `Configuration` category when creating a virtual machine. The minimal version of the script for Ubuntu linux looks like this:
+
+        ``` bash
+        #!/bin/bash
+        apt update
+        apt install -y ubuntu-desktop xrdp
+        ```
+
+        Since the installation using the Customization Script takes place in the background, it is not entirely clear when it will be completed. You can imagine the installation time as 1 hour, but it's not exact. The presence of the packages can be confirmed by the command `sudo apt install ubuntu-desktop xrdp` launched through an ssh connection. If the command returns an error message due to being locked by another process, the installation is still running in the background.
+
+    2. The basic user accounts in ubuntu cloud images are not used for logging in, it is therefore necessary to create a new user account via ssh before logging in via xrdp. In the following example, the creation of a regular (non-root) user is presented:
+
+        ``` bash
+        sudo useradd -m -g users <username>
+        sudo passwd <username>
+        ```
+
+        The virtual machine is almost ready for connection using the xrpd protocol. However, it should be noted that xrdp (as well as the original rdp) were not designed for encrypted communication and a machine configured in this way is not suitable for transferring sensitive information (e.g. logging into web applications used in everyday life, such as banking and the like). For some purposes, unencrypted traffic may be sufficient (`in which case please proceed to step 3`), but for greater security we recommend using SSH Tunneling described below (`in which case skip step 3 and kindly continue to step 4`).
+
+    3. Without the use of SSH Tunneling, rdp port must be open in the VM's security group. In case of using custom port number, the port is `3389`, but direct `Rule: RDP` option is awailable in the OpenStack web application. Now, it should be possible to connect with an rdp client as described in step 5.
+
+    4. Setting up SSH Tunneling takes just a few more steps:
+
+        1. Change xrdp service setting in the target VM to listen to xrpd session on localhost instead of the default external port 3389. After invoking the configuration file, change line `port=3389` to `port=tcp://.:3389`:
+
+            ``` bash
+            sudo nano /etc/xrdp/xrdp.ini
+            ```
+
+        2. Restart the xrdp service:
+
+            ``` bash
+            sudo systemctl restart xrdp
+            ```
+
+        3. Before connecting with rdp client as described below, start the SSH tunnel. Leave the terminal open, when using remote desktop. This command is run from your workstation (no longer the VM):
+
+            ``` bash
+            ssh ubuntu@[IP] -L 3399:127.0.0.1:3389
+            ```
+
+    5. If the guide above was followed, it should be possible to connect to the Ubuntu VM and use its GUI, with the use of an rdp client. RDP client is any desktop application, that understands rdp traffic and opens a window containing interactive desktop of remote host. In Windows environment, `Microsoft Remote Desktop` should already be installed inside the operating system. For MacOS `Microsoft Remote Desktop` can be downloaded from Mac App Store. Finally, if connecting from a linux workstation, there are many clients to choose from. One of the wide spread ones (this one is also tested to work) is called `Remmina`. Since the clients differ, you might benefit from documentation targeting given software, but general notes are:
+
+        - If connecting without SSH, you do not need to specify the port number and the remote machine is referred to simply as `[IP]`. With the actual floating (public) IP address.
+
+        - With the use of SSH Tunnel, connection is made to localhost with the port number chosen when opening the tunnel. Given the tunnel configuration in this documentation, the remote machine should be referred to as `localhost:3399`.
+
     ### VNC
     - Install a VNC client on your local machine.
     - Obtain the VNC server IP address and port number from your instance's console or dashboard.
