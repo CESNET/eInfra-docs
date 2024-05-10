@@ -44,7 +44,7 @@ To connect to instances running on OpenStack, you can use one of the available a
     For more detailed instructions on how to connect using SSH, consult the relevant documentation for your operating system.
 
     ### Remote Desktop on Ubuntu
-    You can connect to a Linux machine in a similar way as to MS Windows using xrdp, which is an open-source version of Microsoft's remote desktop protocol. However, Linux cloud images are not ready for xrpd connection in their basic state and some steps need to be taken.
+    You can connect to a Linux machine in a similar way as to MS Windows using xrdp, which is an open-source version of Microsoft's remote desktop protocol. However, Linux cloud images are not ready for xrdp connection in their basic state and some steps need to be taken.
 
     1. Install graphical user interface and xrdp service. The installation can be done manually after accessing through ssh, but due to the longer GUI installation time and especially in the case of creating a large number of virtual machines, we recommend using the `Customization Script`. The minimal version of the script for Ubuntu linux looks like this:
 
@@ -86,7 +86,7 @@ To connect to instances running on OpenStack, you can use one of the available a
     4. If the guide above was followed, it should be possible to connect to the Ubuntu VM and use its GUI with the use of an rdp client. RDP client is a desktop application, that understands rdp traffic and opens a window containing interactive desktop of the remote host.
         - In Windows environment, `Microsoft Remote Desktop` should already be installed inside the operating system.
         - For MacOS `Microsoft Remote Desktop` can be downloaded from Mac App Store.
-        - Linux workstations offer several clients. One of the wide spread ones (this one is also tested to work) is called `Remmina`.
+        - Linux workstations offer several clients. One of the widespread ones (this one is also tested to work) is called `Remmina`.
 
     ### VNC
     - Install a VNC client on your local machine.
