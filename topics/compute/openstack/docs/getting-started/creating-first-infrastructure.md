@@ -59,7 +59,48 @@ __5.__ Wait to be redirected back to our dashboard.
 All virtual machine instances running in the cloud have to be accessed remotely. The most common way of accessing
 an instance remotely is SSH. Using SSH requires a pair of keys - a public key and a private key.
 
+=== "CLI"
+
+    !!! note
+
+        Prefer using this method if possible. It is the most secure one, since your private key is kept
+        on your local machine at all times.
+
+
+    !!! note
+
+        You will need the `ssh-keygen` command present on your machine. It is available as a part of SSH-related
+        packages in most Linux distributions:
+
+        * Debian / Ubuntu: `openssh-client`
+        * RHEL / Fedora: `openssh`
+        * Archlinux: `openssh`
+
+
+    Use the **ssh-keygen** command to create a new pair of private and public keys:
+    ```
+    ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_my_cloud_key1
+    ```
+    You will be asked to specify the output file and passphrase for your key.
+
+    Assuming your ssh public key is stored in `~/.ssh/id_rsa_my_cloud_key1.pub`:
+    ```
+    openstack keypair create --public-key ~/.ssh/id_rsa_my_cloud_key1.pub my_cloud_key1
+    ```
+
+    Refer to the [example of Key Pair creation](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) within VM provisioning CLI example.
+
 === "GUI"
+
+    !!! danger
+
+        Prefer using the `CLI` method unless you have no other choice, e.g., you lack access to a local machine
+        with the `ssh-keygen` utility.
+
+        The `GUI` method requires you to create your private key on a remote machine and transfer it over a network.
+        Although both the remote machine and the network transfer should be secure, there is always some risk
+        of a security breach, which could expose your private key to a malicious party.
+
 
     __1.__ Navigate to **Project &gt; Compute &gt; Key Pairs** and click the **Create Key Pair** button.
 
@@ -83,21 +124,6 @@ an instance remotely is SSH. Using SSH requires a pair of keys - a public key an
     chmod 600 .ssh/id_rsa
     ```
 
-=== "CLI"
-
-    You can use the **ssh-keygen** command to create a new private key:
-    ```
-    ssh-keygen -b 4096
-    ```
-
-    You will be asked to specify the output file and passphrase for your key.
-
-    Assuming your ssh public key is stored in `~/.ssh/id_rsa.pub`:
-    ```
-    openstack keypair create --public-key ~/.ssh/id_rsa.pub my-key1
-    ```
-
-    Refer to the [example of Key Pair creation](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g2/ostrava/general/commandline/cmdline-demo.sh) within VM provisioning CLI example.
 ## Update Security Group
 
 In MetaCentrum Cloud, all incoming traffic from external networks to virtual machine instances is blocked by default.
