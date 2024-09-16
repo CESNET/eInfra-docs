@@ -117,15 +117,12 @@ ext_links:
 #     expire_in: 1 week
 
 docker-build:
-  image: docker:latest
   stage: build_img
-  services:
-    - docker:dind
+  image:
+    name: gcr.io/kaniko-project/executor:v1.14.0-debug
+    entrypoint: [""]
   before_script:
-    - docker login -u "$HUB_REGISTRY_USER" -p "$HUB_REGISTRY_PASSWORD" $CI_REGISTRY
-    - mkdir -p .docker
-    - "docker load -q -i .docker/fs.tar 2>&1 || :"
-    - rm -rf .docker
+    - echo "{\"auths\":{\"${CI_REGISTRY}\":{\"auth\":\"$(printf "%s:%s" "${HUB_REGISTRY_USER}" "${HUB_REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json
   script:
     - |
       if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
@@ -135,20 +132,11 @@ docker-build:
         tag=":$CI_COMMIT_SHORT_SHA"
         echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
       fi
-    - docker build --cache-from="$CI_REGISTRY_IMAGE${tag}" -t "$CI_REGISTRY_IMAGE${tag}" .
-    - docker push "$CI_REGISTRY_IMAGE${tag}"
-  after_script:
-      - mkdir -p .docker
-      - "docker save -o .docker/fs.tar $CI_REGISTRY_IMAGE${tag} 2>&1 || :"
-  cache:
-    - key: $CI_COMMIT_REF_SLUG
-      paths:
-        - .docker
-      when: on_success
-  rules:
-    - if: $CI_COMMIT_BRANCH
-      exists:
-        - Dockerfile
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}" 
+      --cache=true
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}${tag}"
 
 .mkdocs-build: &mkdocs-build
   stage: build
