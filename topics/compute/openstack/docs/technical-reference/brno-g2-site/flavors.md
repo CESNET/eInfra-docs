@@ -74,9 +74,9 @@ Notes:
 | c2.16core-60ram | No | 16 | 61440 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.24core-30ram | No | 24 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
 | c2.24core-60ram | No | 24 | 61440 | Yes | No | No | 2097 | 1000 | 2560 |
-| c2.32core-30ram | No | 32 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
-| c2.32core-60ram | No | 32 | 61440 | Yes | No | No | 2097 | 1000 | 2560 |
-| c2.32core-120ram | No | 32 | 122880 | Yes | No | No | 2097 | 1000 | 2560 |
+| c2.30core-30ram | No | 30 | 30720 | Yes | No | No | 2097 | 1000 | 2560 |
+| c2.30core-60ram | No | 30 | 61440 | Yes | No | No | 2097 | 1000 | 2560 |
+| c2.30core-120ram | No | 30 | 122880 | Yes | No | No | 2097 | 1000 | 2560 |
 | c3.2core-8ram | No | 2 | 8192 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.2core-16ram | No | 2 | 16384 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.2core-30ram | No | 2 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
@@ -90,11 +90,25 @@ Notes:
 | c3.16core-60ram | No | 16 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.24core-30ram | No | 24 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
 | c3.24core-60ram | No | 24 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.32core-30ram | No | 32 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.32core-60ram | No | 32 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.32core-120ram | No | 32 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.64core-60ram | No | 64 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.64core-120ram | No | 64 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.64core-240ram | No | 64 | 245760 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.128core-120ram | No | 128 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
-| c3.128core-240ram | No | 128 | 245760 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.30core-30ram | No | 30 | 30720 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.30core-60ram | No | 30 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.30core-120ram | No | 30 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.60core-60ram | No | 60 | 61440 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.60core-120ram | No | 60 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.60core-240ram | No | 60 | 245760 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.120core-120ram | No | 120 | 122880 | Yes | No | No | 2097 | 2000 | 10240 |
+| c3.120core-240ram | No | 120 | 245760 | Yes | No | No | 2097 | 2000 | 10240 |
+| a3.4core-8ram-nvidia-2080 `(1)` | No | 4 | 8192 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.4core-16ram-nvidia-2080 `(1)`| No | 4 | 16384 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.4core-30ram-nvidia-2080 `(1)`| No | 4 | 30720 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.8core-16ram-nvidia-2080 `(1)`| No | 8 | 16384 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.8core-30ram-nvidia-2080 `(1)`| No | 8 | 30720 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.8core-60ram-nvidia-2080 `(1)`| No | 8 | 61440 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.16core-30ram-nvidia-2080 `(1)`| No | 16 | 30720 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.16core-60ram-nvidia-2080 `(1)`| No | 16 | 61440 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.24core-30ram-nvidia-2080 `(1)`| No | 24 | 30720 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+| a3.24core-60ram-nvidia-2080 `(1)`| No | 24 | 61440 | Yes | Yes | Yes | 2097 | 2000 | 10240 |
+
+Notes:
+
+- `(1)` Same flavor with 2 GPU's available aswell.

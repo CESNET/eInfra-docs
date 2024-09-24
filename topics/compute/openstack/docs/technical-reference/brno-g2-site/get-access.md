@@ -50,11 +50,11 @@ The following already established terms and conditions apply:
 ## Group Project
 
 !!! notice
-	Preferred way to request new <a href="https://cloud.gitlab-pages.ics.muni.cz/documentation/register/#group-project">GROUP</a> project is through this online application form: <a href="https://projects.cloud.muni.cz/">https://projects.cloud.muni.cz/</a>
+	Preferred way to request new <a href="https://cloud.gitlab-pages.ics.muni.cz/documentation/register/#group-project">GROUP</a> project is through this online application form: <a href="https://projects.brno.openstack.cloud.e-infra.cz/create.php">https://projects.brno.openstack.cloud.e-infra.cz/create.php</a>
 
 Group projects are the primary resource allocation unit for MetaCentrum Cloud.
 Any user or a group of users requiring a non-trivial amount of resources must
-request a group project using [this form](https://projects.cloud.muni.cz/) and provide the following basic information:
+request a group project using [this form](https://projects.brno.openstack.cloud.e-infra.cz/create.php) and provide the following basic information:
 
 * __name of the project__,
 * __purpose of the project__,
@@ -62,8 +62,10 @@ request a group project using [this form](https://projects.cloud.muni.cz/) and p
 * __amount and type of requested resources__,
 * __impact would the service have on unavailability for 1h, 1d, 1w__,
 * __estimated length of the project__,
+* __project manager (project invertigator)__,
+* __project organization__,
 * __access control information__ _[(info)](#get-access-control-information)_.
 
 ## Increase Quotas for Existing Group Project
 
-To request quota increase or access to particular [flavor](flavors.md), please use [this form](https://projects.cloud.muni.cz/).
+To request quota increase, access to particular [flavor](flavors.md) or extend project lifetime, please use [this form](https://projects.brno.openstack.cloud.e-infra.cz/update.php).
