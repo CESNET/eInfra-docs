@@ -22,6 +22,9 @@ MetaCentrum Cloud provides the following ways for allocating resources
 * __personal project__,
 * __group project__.
 
+!!! caution
+	By the date 1.10.2024, it is necessary to be registered on [MetaCentrum](https://metavo.metacentrum.cz/en/), more information provided on [Necessity of being part of MetaCentrum](metacentrum.md).
+
 ## Personal Project
 
 A personal project goal is to gain cloud environment knowledge.
