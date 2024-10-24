@@ -46,14 +46,14 @@ Migration process steps depend on an approach whow a cloud user deployed existin
 If the pre-migration cloud infrastructure is automated some way (Terraform, OpenTofu, Terragrunt, Pulumi, Heat or openstack client scripts) then it is easier to create identical infrastructure in GEN2 Brno cloud and migrate application data. Detailed migration example and automation code which has to be slightly reconfigured is [discussed below](#gen1-infrastructure-deployment-is-automated-terraform-openstack-client-) in the FAQ section.
 
 #### My GEN1 Brno infrastructure is not automated
-There are of course cases when automation is not in place or cannot be used (as for instance migration of application data is time consuming). In these cases migration is performed by a Continuous Integration pipeline prepared by cloud admins team and performs briefly following steps:   
+There are of course cases when automation is not in place or cannot be used (as for instance migration of application data is time consuming). In these cases migration is performed by a Continuous Integration pipeline prepared by cloud admins team and performs briefly following steps:
 
 * Existing GEN1 VM servers are stopped
-* GEN2 VM servers, including attached volumes and surrounding network, subnet and floating IP entities are created   
-* Block storage data from GEN1 cloud is snapshotted and transferred into pre-created GEN2 cloud infrastructure.   
-* GEN2 infrastructure is started   
-* DNS records changed to GEN2 cloud IP addresses if they exist.   
-* GEN1 infrastructure is deleted once cloud user acknowledges GEN2 infrastructure functionality   
+* GEN2 VM servers, including attached volumes and surrounding network, subnet and floating IP entities are created
+* Block storage data from GEN1 cloud is snapshotted and transferred into pre-created GEN2 cloud infrastructure.
+* GEN2 infrastructure is started
+* DNS records changed to GEN2 cloud IP addresses if they exist.
+* GEN1 infrastructure is deleted once cloud user acknowledges GEN2 infrastructure functionality
 
 See [detailed migration example](#gen1-infrastructure-deployment-is-not-automated) below in FAQ section.
 
@@ -65,7 +65,7 @@ The cloud personal (free-tier) projects which are intended for [testing and lear
 ## Technical migration details
 
 ### Most visible changes in GEN2 Brno cloud
-* [New flavor naming][new-flavor-naming]
+* [New flavor naming][g2b-flavors]
 * New network naming
 * New Horizon and API URLs
 * Different ipv4 public IP network range(s)
@@ -74,7 +74,7 @@ The cloud personal (free-tier) projects which are intended for [testing and lear
 ### GEN1 to GEN2 Brno cloud flavor mapping
 The flavor naming scheme was reworked in GEN2 to be generally more consistent and support fast ceph storage which is planned.
 
-Details on how to map GEN1 flavor names into GEN2 can be found [here][flavor-mapping].
+Details on how to map GEN1 flavor names into GEN2 can be found [here][g2b-flavors].
 
 ## Resources to help with migrations
 [e-INFRA CZ cloud documentation][general-docs] on [GEN1][gen1-docs] and [GEN2 Brno][gen2-docs] clouds discusses most important facts about cloud sites.
@@ -83,17 +83,72 @@ Details on how to map GEN1 flavor names into GEN2 can be found [here][flavor-map
 
 ## e-INFRA CZ IaaS cloud comparison matrix
 
-<table><tr><th colspan="2" valign="top"></th><th valign="top">Brno GEN2</th><th valign="top">Ostrava GEN2</th><th valign="top">Brno GEN1 (will be deprecated)</th></tr>
-<tr><td rowspan="2" valign="top"><p><b>Getting access</b></p><p><b>and cloud resources</b></p></td><td valign="top"><b>Free tier</b></td><td colspan="2" valign="top">Available everyone with an valid e-INFRA CZ ID</td><td valign="top">With e-INFRA CZ ID</td></tr>
-<tr><td valign="top"><b>Guaranteed (group projects) resources</b> </td><td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g2-site/get-access/">See conditions of getting resources</a></td><td valign="top"><p><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/ostrava-g2-site/get-access/">See conditions of getting resources</a></p></td><td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g1-site/get-access/">Conditions of getting resources</a></td></tr>
-<tr><td colspan="2" valign="top"><b><a href="https://docs.e-infra.cz/compute/openstack/">Documentation</a></b></td><td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g1-site/">Link</a></td><td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/ostrava-g2-site/">Link</a></td><td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/">Link</a></td></tr>
-<tr><td colspan="2" valign="top"><b>Cloud welcome page</b></td><td valign="top"><a href="https://brno.openstack.cloud.e-infra.cz/">Link</a> </td><td valign="top"><a href="https://ostrava.openstack.cloud.e-infra.cz">Link</a> </td><td valign="top"><a href="https://cloud.metacentrum.cz/">Link</a> </td></tr>
-<tr><td colspan="2" valign="top"><b>Horizon Dashboard</b></td><td valign="top"><a href="https://horizon.brno.openstack.cloud.e-infra.cz">Horizon Brno</a></td><td valign="top"><a href="https://horizon.ostrava.openstack.cloud.e-infra.cz">Horizon Ostrava</a> </td><td valign="top"><a href="https://dashboard.cloud.muni.cz/">Dashboard Brno</a> </td></tr>
-<tr><td colspan="2" valign="top"><b>Flavors</b></td><td colspan="2" valign="top">New flavor naming scheme</td><td valign="top">Old flavor naming scheme</td></tr>
-<tr><td colspan="2" valign="top"><b>Storage options</b></td><td colspan="2" valign="top">Distributed ceph HDD storage, ephemeral storage</td><td valign="top">Distributed ceph HDD storage, ephemeral storage</td></tr>
-<tr><td colspan="2" valign="top"><b>Networking</b></td><td colspan="2" valign="top">Single external/public ipv4 network, (ipv6 planned)</td><td valign="top">Multiple external/public ipv4 and ipv6 networks</td></tr>
-<tr><td colspan="2" valign="top"><b>Number of cloud hypervisors as of 2024-01-09</b></td><td valign="top">11</td><td valign="top">22</td><td valign="top">290</td></tr>
-<tr><td colspan="2" valign="top"><b>End Of Life</b></td><td colspan="2" valign="top"><i>Not planned at the moment</i></td><td valign="top">Approximately end of 2024</td></tr>
+<table>
+    <tr>
+        <th colspan="2" valign="top"></th>
+        <th valign="top">Brno GEN2</th>
+        <th valign="top">Ostrava GEN2</th>
+        <th valign="top">Brno GEN1 (will be deprecated)</th>
+    </tr>
+    <tr>
+        <td rowspan="2" valign="top">
+            <p><b>Getting access</b></p>
+            <p><b>and cloud resources</b></p>
+        </td>
+        <td valign="top"><b>Free tier</b></td>
+        <td colspan="2" valign="top">Available everyone with an valid e-INFRA CZ ID</td>
+        <td valign="top">With e-INFRA CZ ID</td>
+    </tr>
+    <tr>
+        <td valign="top"><b>Guaranteed (group projects) resources</b></td>
+        <td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g2-site/get-access/">See conditions of getting resources</a></td>
+        <td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/ostrava-g2-site/get-access/">See conditions of getting resources</a></td>
+        <td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g1-site/get-access/">Conditions of getting resources</a></td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top"><b><a href="https://docs.e-infra.cz/compute/openstack/">Documentation</a></b></td>
+        <td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g2-site/">Link</a></td>
+        <td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/ostrava-g2-site/">Link</a></td>
+        <td valign="top"><a href="https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g1-site/">Link</a></td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top"><b>Cloud welcome page</b></td>
+        <td valign="top"><a href="https://brno.openstack.cloud.e-infra.cz/">Link</a> </td>
+        <td valign="top"><a href="https://ostrava.openstack.cloud.e-infra.cz">Link</a> </td>
+        <td valign="top"><a href="https://cloud.metacentrum.cz/">Link</a> </td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top"><b>Horizon Dashboard</b></td>
+        <td valign="top"><a href="https://horizon.brno.openstack.cloud.e-infra.cz">Horizon Brno</a></td>
+        <td valign="top"><a href="https://horizon.ostrava.openstack.cloud.e-infra.cz">Horizon Ostrava</a> </td>
+        <td valign="top"><a href="https://dashboard.cloud.muni.cz/">Dashboard Brno</a> </td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top"><b>Flavors</b></td>
+        <td colspan="2" valign="top">New flavor naming scheme</td>
+        <td valign="top">Old flavor naming scheme</td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top"><b>Storage options</b></td>
+        <td colspan="2" valign="top">Distributed ceph HDD storage, ephemeral storage</td>
+        <td valign="top">Distributed ceph HDD storage, ephemeral storage</td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top"><b>Networking</b></td>
+        <td colspan="2" valign="top">Single external/public ipv4 network, (ipv6 planned)</td>
+        <td valign="top">Multiple external/public ipv4 and ipv6 networks</td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top"><b>Number of cloud hypervisors as of 2024-01-09</b></td>
+        <td valign="top">11</td>
+        <td valign="top">22</td>
+        <td valign="top">290</td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top"><b>End Of Life</b></td>
+        <td colspan="2" valign="top"><i>Not planned at the moment</i></td>
+        <td valign="top">Approximately end of 2024</td>
+    </tr>
 </table>
 
 ## FAQ
@@ -106,11 +161,11 @@ As of 2024-01-09, there is no GPU support yet. Support will be added during 2024
 ### Is there any cloud storage performance improvement in GEN2 Brno cloud?
 Yes, there are minor improvements in ceph distributed storage coming from new ceph clusters connected and increased MTU up to 9000 bytes.
 
-We plan to add additional fast ceph to the GEN2 Brno cloud during 2024. 
+We plan to add additional fast ceph to the GEN2 Brno cloud during 2024.
 ### Why are there changes in flavor naming?
 GEN1 OpenStack cloud flavor naming is not consistent and we see cloud users are having difficulties to find the correct flavor for their use-cases. Moreover multiple OpenStack flavor naming schemas were defined meanwhile.
 
-GEN2 flavor naming schema and mapping is detailed [here](https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g2-site/flavors/). 
+GEN2 flavor naming schema and mapping is detailed [here][g2b-flavors].
 
 ### Why are there changes in network naming?
 GEN2 OpenStack network naming is changed to establish an easily memorable network name which contains multiple pools (automatically selectable via IaC / GitOps tools like Terraform.
@@ -165,8 +220,8 @@ Shared part:
 
 Differentiation based on the target cloud via sourced shell include files:
 
-- [GEN1 Brno specific configuration](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g1-to-g2-migration/general/commandline/g1-prod-brno.sh.inc) 
-- [GEN2 Brno specific configuration](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g1-to-g2-migration/general/commandline/g2-prod-brno.sh.inc) 
+- [GEN1 Brno specific configuration](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g1-to-g2-migration/general/commandline/g1-prod-brno.sh.inc)
+- [GEN2 Brno specific configuration](https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/blob/master/clouds/g1-to-g2-migration/general/commandline/g2-prod-brno.sh.inc)
 
 
 #### GEN1 infrastructure deployment is not automated
@@ -188,9 +243,6 @@ If you have DNS records to the existing infrastructure, it is necessary to doubl
 [gen1-docs]: https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g1-site/
 [gen2-docs]: https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g2-site/
 [general-docs]: https://docs.e-infra.cz/compute/openstack/
-[g2docs]: https://docs.e-infra.cz/compute/openstack/technical-reference/ostrava-g2-site/get-access/
 [iac-repo]: https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation
 [iac-repo-highlights]: https://gitlab.ics.muni.cz/cloud/g2/openstack-infrastructure-as-code-automation/-/tree/master/clouds/g1-to-g2-migration
-[new-flavor-naming]: https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g2-site/flavors/
-[flavor-mapping]: https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g2-site/flavors/
-
+[g2b-flavors]: https://docs.e-infra.cz/compute/openstack/technical-reference/brno-g2-site/flavors/
