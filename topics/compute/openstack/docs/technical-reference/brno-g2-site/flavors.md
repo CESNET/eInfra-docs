@@ -47,5 +47,5 @@ Notes:
 - `(1)` Both cold and live virtual server migrations are generally supported even for VMs with ephemeral storage, but they are not guaranteed as there may not be available ephemeral resources where to migrate.
 
 
-## All awailable flavors
+## All available flavors
 All available flavors can be found on [this page](https://cloud.gitlab-pages.ics.muni.cz/g2/flavors-page/), where a periodically updated table of all possible flavors is provided.
