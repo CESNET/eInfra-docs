@@ -24,6 +24,7 @@ nav:
     - how-to-guides/volume-transfer.md
     - how-to-guides/managing-security-groups.md
     - how-to-guides/obtaining-api-key.md
+    - how-to-guides/instances-with-ephemeral-disk.md
     # - how-to-guides/using-custom-linux-images.md
     # - how-to-guides/using-object-storage.md
   - Technical reference:
