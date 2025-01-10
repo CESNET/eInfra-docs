@@ -20,6 +20,10 @@ OpenStack flavor entity defines compute virtual server parameters such as:
 * grants access to additional resources (hardware cards for instance GPU)
 * defines set of compute hypervisors where can be virtual server scheduled
 
+## What is the right flavor for mine project?
+Purpose of following image is to help you choosing best flavor for your project.
+![](/compute/openstack/images/g2_flavor_map.png)
+
 ## Flavor types and naming schema
 
 | Flavor type | Flavor characteristic | HA support | (live) migration support | GPU support | local ephemeral disk resources | vCPU efficiency, CPU overcommit | old G1 flavor naming |
