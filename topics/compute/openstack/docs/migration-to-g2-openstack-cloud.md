@@ -176,9 +176,9 @@ We made such a change to simplify the process of proper network name selection (
 Sorry, you cannot get exactly the same IP address. Each OpenStack cloud is configured to use exclusively different public network segments. To make transition easy it is possible to create a DNS record to GEN1 IP address, refer at all places service with DNS record and at the end of the migration change the content of DNS record to new GEN2 cloud IP address.
 
 ### May I perform my workload migration on my own?
-All cloud [group projects](./technical-reference/brno-g1-site/get-access.md#group-project) are migrated by the OpenStack cloud team as upfront capacity planning is required.
+All cloud [group projects](./technical-reference/brno-g1-site/get-access.md#group-project) are migrated by the OpenStack cloud team, as upfront capacity planning is required.
 
-Cloud [personal projects as currently defined are likely ephemeral for cloud testing and exploration purposes](./technical-reference/brno-g1-site/get-access.md#personal-project) only. There might be cases you still want to migrate your personal project virtual servers. We created simple one-purpose migration website [cloud-migrations.brno.openstack.cloud.e-infra.cz](https://cloud-migrations.brno.openstack.cloud.e-infra.cz/) which is going to help you with migration.
+Cloud [personal projects as currently defined are likely ephemeral for cloud testing and exploration purposes](./technical-reference/brno-g1-site/get-access.md#personal-project) only. There may be cases where you still want to migrate your personal project virtual servers. We created simple, single-purpose migration website [cloud-migrations.brno.openstack.cloud.e-infra.cz](https://cloud-migrations.brno.openstack.cloud.e-infra.cz/) which is going to help you with migration.
 
 To be able to use migration website you need to have valid MetaCentrum VO membership.
 
