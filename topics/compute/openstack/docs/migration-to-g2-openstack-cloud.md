@@ -176,9 +176,13 @@ We made such a change to simplify the process of proper network name selection (
 Sorry, you cannot get exactly the same IP address. Each OpenStack cloud is configured to use exclusively different public network segments. To make transition easy it is possible to create a DNS record to GEN1 IP address, refer at all places service with DNS record and at the end of the migration change the content of DNS record to new GEN2 cloud IP address.
 
 ### May I perform my workload migration on my own?
-Yes, you can follow the detailed steps once they are ready.
+All cloud [group projects](./technical-reference/brno-g1-site/get-access.md#group-project) are migrated by the OpenStack cloud team, as upfront capacity planning is required.
 
-Self-migration steps will be available soon.
+Cloud [personal projects as currently defined are likely ephemeral for cloud testing and exploration purposes](./technical-reference/brno-g1-site/get-access.md#personal-project) only. There may be cases where you still want to migrate your personal project virtual servers. We created simple, single-purpose migration website [cloud-migrations.brno.openstack.cloud.e-infra.cz](https://cloud-migrations.brno.openstack.cloud.e-infra.cz/) which is going to help you with migration.
+
+To be able to use migration website you need to have valid MetaCentrum VO membership.
+
+Self-migration of personal project resources period starts on 1st February 2025.
 
 ### How many migrations may run in parallel? When do you expect migrations will be completed?
 As above mentioned migrations will be a gradual process which will run for several months. We expect that multiple migrations (approx. 5) will be feasible at every moment. Speed of the migration steps is constrained by the communication between cloud team and cloud users as well as by migration of physical servers from GEN1 to GEN2 Brno cloud.
