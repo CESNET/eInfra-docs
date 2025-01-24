@@ -29,11 +29,13 @@ MetaCentrum Cloud provides the following ways for allocating resources
 
 A personal project goal is to gain cloud environment knowledge.
 
+!!! important
+	Please note that personal projects are intended for temporary use. This means the resources allocated to these projects may be reset periodically, approximately twice a year. The primary reason for this ephemerality is to ensure effective use of cloud resources. Any virtual machines intended for long-term use must be part of group projects. This guideline is in accordance with our [terms of service](../../additional-information/terms-of-service.md).
+
 !!! caution
 	A personal project resource allocation quotas are fixed and cannot be changed.
 
-Personal projects are available automatically to all users of the Czech
-e-infrastructure for science, development, and education.
+Personal projects are available automatically to all users of the MetaCentrum.
 
 To register, follow the instructions for
 [registration in the MetaCentrum VO](https://metavo.metacentrum.cz/en/application/index.html).
