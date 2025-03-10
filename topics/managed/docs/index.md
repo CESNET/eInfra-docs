@@ -17,7 +17,7 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
     <!-- It is possible to choose level of service from virtualization to managed container engine. -->
 
     [:octicons-arrow-right-24: Galaxy](https://wiki.metacentrum.cz/wiki/Galaxy#RepeatExplorer_Galaxy)   
-    [:octicons-arrow-right-24: JupyerHub - e-INFRA Notebooks](./portals/jupyterhub/)   
+    [:octicons-arrow-right-24: JupyterHub - e-INFRA Notebooks](./portals/jupyterhub/)   
     [:octicons-arrow-right-24: BinderHub](./portals/binderhub/)   
     [:octicons-arrow-right-24: Kubeflow](./portals/kubeflow/)   
     [:octicons-arrow-right-24: More](./concepts/)
