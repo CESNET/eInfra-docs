@@ -123,31 +123,35 @@ hide:
   	Run the following bash script from the machine, where you believe you got blocked (A), and also from another one located in another IP network segment (B, for instance VM in other cloud):
 
   	```sh
-  	# Test Cloud Accessibility for a linux or Windows WSDL 2 environments
-  	# BASH function requires following tools to be installed:
-  	#   ip, host tracepath traceroute ping, curl, ncat, timeout, bash
-  	# Execution example: test_cloud_access 178.128.250.99 22
+	# Test Cloud Accessibility for a linux or Windows WSDL 2 environments
+	# BASH function requires following tools to be installed:
+	#   ip, host tracepath traceroute ping, curl, ncat, timeout, bash
+	# To be executed as non-privileged user in a (BASH) shell
+	# Execution example: test_cloud_access 178.128.250.99 22
 
-  	function test_cloud_access() {
-  	local basion_vm_public_ip="$1"
-  	local basion_vm_public_port="${2:-22}"
-  	local cloud_identity_host=${3:-identity.cloud.muni.cz}
-  	local timeout=60
-  	set -x
-  	cmds=("ip a" "ip -4 r l" "ip -6 r l")
-  	for i_cmd in "${cmds[@]}"; do
-  		${i_cmd}; echo "ecode:$?";
-    done
-  	for i_cmd in host tracepath traceroute ping ; do
-  		timeout --signal=2 ${timeout} ${i_cmd} "${cloud_identity_host}"
-  		echo "ecode:$?"
-  	done
-  	timeout --signal=2 ${timeout} curl -v "https://${cloud_identity_host}"
-  	echo "ecode:$?"
-  	timeout --signal=2 ${timeout} ncat -z "${basion_vm_public_ip}" "${basion_vm_public_port}"
-  	echo "ecode:$?"
-  	set +x
-  	}
+	# test_cloud_access <cloud-vm-ip> <cloud-vm-port> <cloud-api-host>
+	# tests the network connection to the cloud and produces traces
+	function test_cloud_access() {
+		local basion_vm_public_ip="$1"
+		local basion_vm_public_port="${2:-22}"
+		local cloud_identity_host=${3:-identity.brno.openstack.cloud.e-infra.cz} # identity.cloud.muni.cz
+		local timeout=30
+		
+		set -x
+		cmds=("ip a" "ip -4 r l" "ip -6 r l" "curl http://ipinfo.io")
+		for i_cmd in "${cmds[@]}"; do
+			${i_cmd}; echo "ecode:$?";
+		done
+		for i_cmd in host tracepath traceroute "ping -c5" ; do
+			timeout --signal=2 ${timeout} ${i_cmd} "${cloud_identity_host}"
+			echo "ecode:$?"
+		done
+		timeout --signal=2 ${timeout} curl -v "https://${cloud_identity_host}"
+		echo "ecode:$?"
+		timeout --signal=2 ${timeout} ncat -zv "${basion_vm_public_ip}" "${basion_vm_public_port}"
+		echo "ecode:$?"
+		set +x
+	}
   	```
 
   	## How to report network issue and get unblocked
