@@ -15,6 +15,7 @@ There are 2 generally available external networks, which you can allocate floati
     - This network has 2 address pools:
         - `147.251.245.0/24`
         - `147.251.255.0/24`
+        - `78.128.235.0/24`
     - FIPs from this network are publicly accessible.
 - `external-ipv4-general-muni`
     - This network has 1 address pool:
@@ -30,23 +31,35 @@ There are 2 generally available external networks, which you can allocate floati
 
 If you want to allocate a Floating IP address (FIP) from a specific subnet, you can do so by specifying the desired subnet during allocation.
 
+To list all possible public segments within network external-ipv4-general-public use command:
+
+```
+openstack subnet list --network external-ipv4-general-public
+```
+
 Example:
 
 To get a FIP from the 147.251.255.0/24 subnet:
 
-```openstack floating ip create --subnet external-ipv4-general-public-147-251-255-0 external-ipv4-general-public```
+```
+openstack floating ip create --subnet external-ipv4-general-public-147-251-255-0 external-ipv4-general-public
+```
 
-This command will return a free floating IP from the specified MUNI subnet.
+This command will return a free floating IP from the specified MUNI subnet `147.251.255.0/24`.
 
 Make sure to include the `--subnet` option with specified subnet name to allocate floating IP address from MUNI range.
 
-To assign the allocated IP to your instance (replace test and the IP accordingly):
+To assign the allocated IP to your instance (replace instance name and the IP accordingly):
 
-```openstack server add floating ip test 147.251.255.123```
+```
+openstack server add floating ip vm-server-1 147.251.255.123
+```
 
 You can verify connectivity like this:
 
-```ncat -zv 147.251.255.123 22```
+```
+ncat -zv 147.251.255.123 22
+```
 
 
 ### Personal Projects
