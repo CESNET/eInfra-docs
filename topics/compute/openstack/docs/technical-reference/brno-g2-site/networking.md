@@ -26,6 +26,28 @@ There are 2 generally available external networks, which you can allocate floati
       and interface in your internal network.
       See [Create Router How-to Guide](../../../how-to-guides/create-router).
 
+### Request a Floating IP from a specific subnet 
+
+If you want to allocate a Floating IP address (FIP) from a specific subnet, you can do so by specifying the desired subnet during allocation.
+
+Example:
+
+To get a FIP from the 147.251.255.0/24 subnet:
+
+```openstack floating ip create --subnet external-ipv4-general-public-147-251-255-0 external-ipv4-general-public```
+
+This command will return a free floating IP from the specified MUNI subnet.
+
+Make sure to include the `--subnet` option with specified subnet name to allocate floating IP address from MUNI range.
+
+To assign the allocated IP to your instance (replace test and the IP accordingly):
+
+```openstack server add floating ip test 147.251.255.123```
+
+You can verify connectivity like this:
+
+```ncat -zv 147.251.255.123 22```
+
 
 ### Personal Projects
 
