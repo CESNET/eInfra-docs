@@ -26,9 +26,7 @@ e-INFRA CZ provides a wide range of computational services for the scientific co
 
     Traditional distributed computing with software and queues.
 
-    [:octicons-arrow-right-24: How to start](./grid/access/)   
-    [:octicons-arrow-right-24: Running first job](./grid/computing/run-basic-job/)   
-    [:octicons-arrow-right-24: More](./grid/computing/)   
+    [:octicons-arrow-right-24: Documentation](https://docs.metacentrum.cz)   
 
 -   :fontawesome-solid-atom:{ .md .middle } __Supercomputing__
 
